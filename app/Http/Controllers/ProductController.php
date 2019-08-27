@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProductValidation;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class ProductController extends Controller
 {
@@ -31,12 +33,10 @@ class ProductController extends Controller
         return view('admin.create');
     }
 
-    public function store(Request $request)
+    public function store(ProductValidation $request)
     {
-//        $request->validated();
+        $request->validated();
 
-
-//        $game =Game::create($request->all());
         $obj = new Product();
         $obj->name = $request->get('name');
         $obj->description = $request->get('description');
@@ -87,16 +87,11 @@ class ProductController extends Controller
         return view('admin.edit')->with('product', $product);
     }
 
-    public function update(Request $request, $id)
+    public function update(ProductValidation $request, $id)
     {
         $product = Product::find($id);
         $request->validated(
-//            [
-//                'name' => 'required',
-//                'category' => 'required',
-//                'thumbnail' => 'required',
-//                'price' => 'required',
-//            ]
+
         );
 
         $product->update($request->all());
@@ -111,10 +106,10 @@ class ProductController extends Controller
         return response()->json(['status' => true, 'message' => "Product deleted successfully"]);
     }
 
-    public function destroyMultiple(Request $request)
-    {
-        Product::whereIn('id', $request->get('ids'))->delete();
-        return response()->json(['status' => true, 'message' => "Product deleted successfully"]);
-//        return back();
-    }
+//    public function destroyMultiple(Request $request)
+//    {
+//        Product::whereIn('id', $request->get('ids'))->delete();
+//        return response()->json(['status' => true, 'message' => "Product deleted successfully"]);
+////        return back();
+//    }
 }
