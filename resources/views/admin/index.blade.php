@@ -1,6 +1,5 @@
 @extends('admin.layout')
 
-
 @section('content')
     <div>
         <br>
@@ -14,12 +13,11 @@
         @endif
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2><i class="fa fa-gamepad" aria-hidden="true"></i> LIST PRODUCT</h2>
+                <h2> LIST PRODUCT</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('product.create') }}"> Create New Product</a>
             </div>
-
 
         </div>
         <div class="row mb-2 mt-2">
@@ -28,10 +26,7 @@
                 <div class="form-group  mr-2">
                     <select class="form-control ">
                         <option>Category 01</option>
-                        <option>Category 01</option>
-                        <option>Category 01</option>
-                        <option>Category 01</option>
-                        <option>Category 01</option>
+                        <option>Category 02</option>
                     </select>
                 </div>
             </div>
@@ -67,7 +62,6 @@
                 <tbody id="myTable">
                 <tr id="tr_{{ $products -> id }}">
                     <td scope="row"><input type="checkbox" class="checkbox" data-id="{{ $products -> id }}"></td>
-                    {{--                    <td>{{ ++$key }}</td>--}}
                     <td scope="col">{{ $products-> id }}</td>
                     <td scope="col">{{ $products->name }}</td>
                     <td scope="col">{{ $products->description }}</td>
@@ -78,7 +72,7 @@
                         @endforeach
                     </td>
                     <td scope="col"> {{ $products->quantity }}</td>
-                    <td scope="col">{{ $game->price }}</td>
+                    <td scope="col">{{ $products->price }}</td>
                     <td>
                         <form action="{{ route('product.destroy',$products->id) }}" method="POST">
                             <a class="btn btn-info" href="{{ route('product.show',$products->id) }}">Show</a>
@@ -87,8 +81,8 @@
 
                             <!-- Button trigger modal -->
 
-{{--                            <a href="javascript:void(0)" id="btn-edit-{{$products->id}}"--}}
-{{--                               class="btn btn-primary mr-2 btn-edit" title="Edit this game">Edit</a>--}}
+                            <a href="javascript:void(0)" id="btn-edit-{{$products->id}}"
+                               class="btn btn-primary mr-2 btn-edit" title="Edit this game">Edit</a>
 
 
                             @csrf
@@ -124,7 +118,7 @@
         <div class="col-sm-6 col-md-4">
             <nav aria-label="Page navigation example">
                 {{$product->links()}}
-                {{--                {!! $games->links() !!}--}}
+
             </nav>
         </div>
     </div>

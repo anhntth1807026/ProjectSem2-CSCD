@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::resource('/admin/product', 'ProductController');
+
+Route::resource('/admin/category', 'CategoryController');
