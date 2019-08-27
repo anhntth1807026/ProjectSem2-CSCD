@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href={{ asset('css/w3CSS.css') }}>
     <link rel="stylesheet" href="{{ asset('css/RalewayCSS.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <style>
     body, h1, h2, h3, h4, h5, h6 {
@@ -108,13 +109,20 @@
 <div class="w3-container w3-light-white" style="padding:100px 16px">
     <div class="w3-row-padding">
         <div class="w3-col m6">
-            <h2>Welcome to Logo</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et
-                dolore.</p>
-            <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+            <div data-aos="zoom-out-up"><h2>Chào mừng bạn đến với LaiDayStation</h2>
+                <p>
+                    Lai Day Station là nơi dành cho những ai quan tâm đến lối sống xanh, bền vững và thân thiện với môi
+                    trường. Tại LaiDay, bạn sẽ cảm thấy hạnh phúc, tình yêu và lòng biết ơn đối với các sản phẩm do người
+                    Việt Nam làm ra vì lợi ích của cộng đồng và cho lối sống đơn giản và lành mạnh.
+                </p>
+            </div>
+
+            {{--            <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>--}}
         </div>
         <div class="w3-col m6">
-            <img class="w3-image w3-round-large" src="img/image09.jpg" alt="Buildings" width="700" height="394">
+            <img class="w3-image w3-round-large"
+                 src="https://static.wixstatic.com/media/1c272d_63ac18912c6740e5b486539f00a88d58~mv2.jpg/v1/fit/w_850,h_568,al_c,q_80/file.png"
+                 alt="Buildings" width="700" height="394">
         </div>
     </div>
 </div>
@@ -153,89 +161,65 @@
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:40px">
     <div class="w3-row-padding w3-padding-16 w3-center" id="food">
         <div class="w3-quarter">
-            <img src="img/tải%20xuống%20(1).jpg" alt="Sandwich" style="width:100%">
-            <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-            <h6 class="w3-opacity">From $99</h6>
-            <p>Single bed</p>
-            <p>15m<sup>2</sup></p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
-            </p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Detail Product</button>
+            <img src="{{ asset('img/home-care/ban-chai-nguoi-lon.webp') }}" alt="" style="width:100%">
+            <h5 style="height: 70px">Bàn chải tre người lớn</h5>
+            <h6 class="w3-opacity">79.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
             ơ
         </div>
         <div class="w3-quarter">
-            <img src="img/tải%20xuống%20(2).jpg" alt="Steak" style="width:100%">
-            <h3>Let Me Tell You About This Steak</h3>
-            <h6 class="w3-opacity">From $99</h6>
-            <p>Single bed</p>
-            <p>15m<sup>2</sup></p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
-            </p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Detail Product</button>
+            <img src="{{ asset('img/home-care/ly-thong-minh-xep-gon.webp') }}" alt="Steak" style="width:100%">
+            <h5 style="height: 70px">Ly thông minh xếp gọn</h5>
+            <h6 class="w3-opacity">139.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
-            <img src="https://static.wixstatic.com/media/1c272d_423f6187e3d842a0bc815e495f6f42a2~mv2_d_2000_2000_s_2.png/v1/fill/w_623,h_623,al_c,q_85,usm_0.66_1.00_0.01/1c272d_423f6187e3d842a0bc815e495f6f42a2~mv2_d_2000_2000_s_2.webp"
-                 alt="Cherries" style="width:100%">
-            <h3>Cherries, interrupted</h3>
-            <h6 class="w3-opacity">From $99</h6>
-            <p>Single bed</p>
-            <p>15m<sup>2</sup></p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
-            </p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Detail Product</button>
+            <img src="{{ asset('img/home-care/tui-vai-da-nang-2.webp') }}"
+                 alt="" style="width:100%">
+            <h5 style="height: 70px">Túi vải đa năng</h5>
+            <h6 class="w3-opacity">49.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
-            <img src="img/tải%20xuống%20(4).jpg" alt="Pasta and Wine" style="width:100%">
-            <h3>Robust Wine and Vegetable Pasta</h3>
-            <h6 class="w3-opacity">From $99</h6>
-            <p>Single bed</p>
-            <p>15m<sup>2</sup></p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
-            </p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Detail Product</button>
+            <img src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}" alt="" style="width:100%">
+            <h5 style="height: 70px">Bình nước giữ nhiệt nắp gỗ</h5>
+            <h6 class="w3-opacity">429.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
     </div>
 
     <div class="w3-row-padding w3-padding-16 w3-center">
         <div class="w3-quarter">
-            <img src="img/tải%20xuống%20(5).jpg" alt="Popsicle" style="width:100%">
-            <h3>All I Need Is a Popsicle</h3>
-            <h6 class="w3-opacity">From $99</h6>
-            <p>Single bed</p>
-            <p>15m<sup>2</sup></p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
-            </p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Detail Product</button>
+            <img src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet-cau-vong.webp') }}" alt="" style="width:100%">
+            <h5 style="height: 70px">Bình nước giữ nhiệt cầu vồng</h5>
+            <h6 class="w3-opacity">429.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
-            <img src="img/tải%20xuống%20(6).jpg" alt="Salmon" style="width:100%">
-            <h3>Salmon For Your Skin</h3>
-            <h6 class="w3-opacity">From $99</h6>
-            <p>Single bed</p>
-            <p>15m<sup>2</sup></p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
-            </p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Detail Product</button>
+            <img src="{{ asset('img/personal-care/gel-tay-te-bao-chet.webp') }}" alt="" style="width:100%">
+            <h5 style="height: 70px">Gel tẩy tế bào chết</h5>
+            <h6 class="w3-opacity">219.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
-            <img src="img/tải%20xuống%20(7).jpg" alt="Sandwich" style="width:100%">
-            <h3>The Perfect Sandwich</h3>
-            <h6 class="w3-opacity">From $99</h6>
-            <p>Single bed</p>
-            <p>15m<sup>2</sup></p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
-            </p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Detail Product</button>
+            <img src="{{ asset('img/personal-care/khau-trang-loc-bui-2.webp') }}" alt="" style="width:100%">
+            <h5 style="height: 70px">Khẩu trang lọc bụi</h5>
+            <h6 class="w3-opacity">50.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
-            <img src="img/tải%20xuống%20-%20Copy.jpg" alt="Croissant" style="width:100%">
-            <h3>Le French</h3>
-            <h6 class="w3-opacity">From $99</h6>
-            <p>Single bed</p>
-            <p>15m<sup>2</sup></p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
-            </p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Detail Product</button>
+            <img src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}" alt="" style="width:100%">
+            <h5 style="height: 70px">Ống hút thuỷ tinh</h5>
+            <h6 class="w3-opacity">49.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
     </div>
 </div>
@@ -257,36 +241,56 @@
     <p class="w3-center w3-large" style="color: black">Key features of our company</p>
     <div class="w3-half w3-margin-bottom">
         <div class="w3-display-container">
-            <img src="img/saigon01.jpg" alt="Cinque Terre" style="width:100%">
-            <span class="w3-display-bottomleft w3-padding" style="color: black">Cinque Terre</span>
+            {{--            <img src="img/saigon01.jpg" alt="Cinque Terre" style="width:100%">--}}
+            <img style="width:100%"
+                 src="https://scontent.cdninstagram.com/vp/29dd4dc145479b63b8985aa509d640d3/5DFF1BDB/t51.2885-15/sh0.08/e35/s640x640/67739269_162577554923148_6121316968252433117_n.jpg?_nc_ht=scontent.cdninstagram.com">
+            <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">
+                Đơn giản nhưng thực dụng và cực bền, đây có lẽ là tính từ miêu tả rõ nhất dành cho...
+            </span>
         </div>
     </div>
     <div class="w3-half">
         <div class="w3-row-padding" style="margin:0 -16px">
             <div class="w3-half w3-margin-bottom">
                 <div class="w3-display-container">
-                    <img src="img/saigon02.jpg" alt="New York" style="width:100%">
-                    <span class="w3-display-bottomleft w3-padding" style="color: black">New York</span>
+                    {{--                    <img src="img/saigon02.jpg" alt="New York" style="width:100%">--}}
+                    <img style="width:100%"
+                         src="https://scontent.cdninstagram.com/vp/bc3754fa0d65b257391c9e06f3f92a65/5E051436/t51.2885-15/e15/s640x640/68951904_535555540549692_8418920016606574286_n.jpg?_nc_ht=scontent.cdninstagram.com">
+                    <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">BẠN CÓ BIẾT?
+                Campuchia sẽ gửi trả lại 1,600 tấn rác nhựa tìm thấy trong các containers nhập khẩu từ Mỹ và ...
+                    </span>
                 </div>
             </div>
             <div class="w3-half w3-margin-bottom">
                 <div class="w3-display-container">
-                    <img src="img/saigon03.jpg" alt="San Francisco" style="width:100%">
-                    <span class="w3-display-bottomleft w3-padding" style="color: black">San Francisco</span>
+{{--                    <img src="img/saigon03.jpg" alt="San Francisco" style="width:100%">--}}
+                    <img style="width:100%"
+                         src="https://scontent.cdninstagram.com/vp/54e66cd8a65d932d348341ff5851fd87/5E013DD7/t51.2885-15/sh0.08/e35/s640x640/67307647_338887943659531_4099783374168449683_n.jpg?_nc_ht=scontent.cdninstagram.com">
+                    <span class="w3-display-bottomleft w3-padding " style="color: black">
+BẠN ĐANG TÌM GIẢI PHÁP CHO VIỆC SÚC MIỆNG SAO CHO "XANH" HƠN?
+SEEKING FOR A GREENER SOLUTION FOR YOUR MOUTH-WASHING?
+
+Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột quế, đá muối hồng Himalaya, bột vỏ cam khô và trà xanh.
+                    </span>
                 </div>
             </div>
         </div>
         <div class="w3-row-padding" style="margin:0 -16px">
             <div class="w3-half w3-margin-bottom">
                 <div class="w3-display-container">
-                    <img src="img/saigon04.jpg" alt="Pisa" style="width:100%">
-                    <span class="w3-display-bottomleft w3-padding" style="color: black">Pisa</span>
+{{--                    <img src="img/saigon04.jpg" alt="Pisa" style="width:100%">--}}
+                    <img style="width:100%" src="https://scontent.cdninstagram.com/vp/2bd171501f20689bc46f711229f535c0/5E158F79/t51.2885-15/e15/s640x640/69223974_148767146222835_6222199774537592212_n.jpg?_nc_ht=scontent.cdninstagram.com">
+                    <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">BẠN CÓ BIẾT?
+                        Đảo Henderson tại Thái Bình Dương, Di Sản Thế Giới do UNESCO trao tặng ...
+                    </span>
                 </div>
             </div>
             <div class="w3-half w3-margin-bottom">
                 <div class="w3-display-container">
-                    <img src="img/saigon05.jpg" alt="Paris" style="width:100%">
-                    <span class="w3-display-bottomleft w3-padding" style="color: black">Paris</span>
+{{--                    <img src="img/saigon05.jpg" alt="Paris" style="width:100%">--}}
+                    <img style="width:100%" src="https://scontent.cdninstagram.com/vp/987291428426151e3acffe90facc87f5/5E0998D3/t51.2885-15/sh0.08/e35/p640x640/69833198_421626735143058_2646100798978465469_n.jpg?_nc_ht=scontent.cdninstagram.com">
+                    <span class="w3-display-bottomleft w3-padding" style="color: black">“Cái răng cái tóc là góc con người", một mái tóc đẹp, chắc khoẻ, không đòi hỏi cầu kì trong chăm sóc và không bị phụ thuộc hoá chất có lẽ là ước muốn của nhiều người,...
+                    </span>
                 </div>
             </div>
         </div>
@@ -374,6 +378,9 @@
         mySidebar.style.display = "none";
     }
 </script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
