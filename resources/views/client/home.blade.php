@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="{{ asset('css/RalewayCSS.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../thumbnail/logo-short-cut.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/w3.css">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/homePages.css">
+
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+    <script src="../js/ajaxlibspopper.js1.14.6umdpopper.min.js"></script>
+
+    <script src="../js/bootstrap4.2.1jsbootstrap.min.js"></script>
 </head>
 <style>
     body, h1, h2, h3, h4, h5, h6 {
@@ -28,7 +45,7 @@
     .bgimg-1 {
         background-position: center;
         background-size: cover;
-        background-image: url("https://media.istockphoto.com/photos/macbook-pro-2018-partially-closed-cover-dark-background-picture-id1019816300?k=6&m=1019816300&s=170667a&w=0&h=3xaJu_PpzbZ1-sbDknAobsGVGhrok-74LMY4YjEx0Ts=");
+        background-image: url("https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/48926321_318638168991952_5734769066673963008_o.jpg?_nc_cat=105&_nc_eui2=AeEOIdhJzGi2gDWeM2CswmfZMbIR_qRusvP7xAIfs_5wFoSXnteyx9iZYA6M6zN3Qtnww8yLbh1-dGrwOD4f1-APlwmn9eh0pl9TyHL92_lmrw&_nc_oc=AQm6l_7UqdI7U9G09MuJIxYWJOGFw1N4m6f-V7anIJzVK4Da0_BcxppDkQUvQbqaNAI&_nc_ht=scontent.fhan2-4.fna&oh=8fb71a35496b2d6c5955b9538c875fe1&oe=5E0B2614");
         min-height: 100%;
     }
 
@@ -53,6 +70,13 @@
     .w3-padding-large {
         padding: 0px 24px !important;
     }
+    #footer {
+        overflow: hidden;
+        padding: 77px 0 20px;
+        color: #999999;
+        background-color: #232323;
+    }
+
 </style>
 <body>
 <!--Header-->
@@ -121,14 +145,14 @@
         </div>
         <div class="w3-col m6">
             <img class="w3-image w3-round-large"
-                 src="https://static.wixstatic.com/media/1c272d_63ac18912c6740e5b486539f00a88d58~mv2.jpg/v1/fit/w_850,h_568,al_c,q_80/file.png"
+                 src="https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/68506579_461342201388214_6595445951190532096_o.jpg?_nc_cat=102&_nc_eui2=AeHYmQYLVF7Fc4UlqFOZRwqaM_F2rbpH6QC1Ydmd5Xp_0tlANOsT1HMJCDXTzD2T3fJdadGYp4vRRQk_p3PRG28tGXlIHCbDoojiz3cI9eU9Yg&_nc_oc=AQm-Hv516S5oeN7CwPCbs-oAXQYQrtKlgI1MMeKvGk5HxdVfLGrPh3v8VP1_qgIEGXc&_nc_ht=scontent.fhan2-2.fna&oh=8a6fd904316e6b4171115637b20d8548&oe=5E12076E"
                  alt="Buildings" width="700" height="394">
         </div>
     </div>
 </div>
 
 <div class="w3-container" style="padding:70px 16px;background-color: black;color: white" id="about">
-    <h3 class="w3-center">ABOUT THE COMPANY</h3>
+    <h3 class="w3-center">About</h3>
     <p class="w3-center w3-large">Key features of our company</p>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-quarter">
@@ -157,26 +181,60 @@
         </div>
     </div>
 </div>
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:40px">
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+        <h1>Best Seller</h1>
+        <div class="w3-quarter">
+            <img src="{{ asset('img/home-care/co-rua-binh.webp') }}" alt="" style="width:100%">
+            <h5 style="height: 70px">Cọ Rửa Bình</h5>
+            <h6 class="w3-opacity">99.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+        </div>
+        <div class="w3-quarter">
+            <img src="{{ asset('img/home-care/hop-khan-giay-go.webp') }}" alt="Steak" style="width:100%">
+            <h5 style="height: 70px">Hộp Khăn Giấy Gỗ</h5>
+            <h6 class="w3-opacity">199.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+        </div>
+        <div class="w3-quarter">
+            <img src="{{ asset('img/home-care/dua-go-trac.webp') }}"
+                 alt="" style="width:100%">
+            <h5 style="height: 70px">Đũa Gỗ Trắc</h5>
+            <h6 class="w3-opacity">49.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+        </div>
+        <div class="w3-quarter">
+            <img src="{{ asset('img/home-care/xit-khu-mui.webp') }}" alt="" style="width:100%">
+            <h5 style="height: 70px">Xịt Khử Mùi</h5>
+            <h6 class="w3-opacity">429.000₫</h6>
+
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+        </div>
+    </div>
+</div>
 
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:40px">
     <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+        <h1>All Products</h1>
         <div class="w3-quarter">
             <img src="{{ asset('img/home-care/ban-chai-nguoi-lon.webp') }}" alt="" style="width:100%">
             <h5 style="height: 70px">Bàn chải tre người lớn</h5>
             <h6 class="w3-opacity">79.000₫</h6>
 
             <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
-            ơ
         </div>
         <div class="w3-quarter">
-            <img src="{{ asset('img/home-care/ly-thong-minh-xep-gon.webp') }}" alt="Steak" style="width:100%">
+            <img src="{{ asset('img/new-image/ly-thong-minh-xep-gon.jpg') }}" alt="Steak" style="width:100%">
             <h5 style="height: 70px">Ly thông minh xếp gọn</h5>
             <h6 class="w3-opacity">139.000₫</h6>
 
             <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
-            <img src="{{ asset('img/home-care/tui-vai-da-nang-2.webp') }}"
+            <img src="{{ asset('img/new-image/tui-vai-da-nang.webp.jpg') }}"
                  alt="" style="width:100%">
             <h5 style="height: 70px">Túi vải đa năng</h5>
             <h6 class="w3-opacity">49.000₫</h6>
@@ -201,14 +259,14 @@
             <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
-            <img src="{{ asset('img/personal-care/gel-tay-te-bao-chet.webp') }}" alt="" style="width:100%">
+            <img src="{{ asset('img/new-image/gel-tay-da-chet-te-bao.jpg') }}" alt="" style="width:100%">
             <h5 style="height: 70px">Gel tẩy tế bào chết</h5>
             <h6 class="w3-opacity">219.000₫</h6>
 
             <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
-            <img src="{{ asset('img/personal-care/khau-trang-loc-bui-2.webp') }}" alt="" style="width:100%">
+            <img src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}" alt="" style="width:100%">
             <h5 style="height: 70px">Khẩu trang lọc bụi</h5>
             <h6 class="w3-opacity">50.000₫</h6>
 
@@ -334,23 +392,48 @@ Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột qu
     </div>
 </div>
 
-<footer class="w3-center w3-black w3-padding-64">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-left"></i>&nbsp;To the top</a>
-    <div class="w3-xlarge w3-section">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 abt-txt">
+                <div class="footer-logo">
+                    <a href="#" style="color:#999999 "><img src="" alt="Logo" class="img-responsive"></a>
+                </div>
+                <p>Chung tay bảo vệ môi trường <br class="hidden-xs">Join hands to protect the environment</p>
+                <ul class="contact-list list-unstyled">
+                    <li><span class="icon"><i class="fa fa-map-signs" aria-hidden="true"></i></span> So 8 Ton Thuat Thuyet, My Dinh, Ha Noi.</li>
+                    <li><a href="mailto:anhntth1807026@fpt.edu.vn" style="color:#999999 "><span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span> TreeHugger@mail.com</a></li>
+                    <li><a href="tel:+84 94 585 2000" style="color:#999999 "><span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span> +84 94 585 2000 </a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <h3>POPULAR TAGS</h3>
+                    <p>
+                        <span class="w3-tag w3-black w3-margin-bottom">Bottle</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Tote</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Straws</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Mask</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Box</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Gel</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">mask</span>
+                    </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <h3>SUBSCRIBE</h3>
+                <div class="subscribe">
+                    <p>Đăng kí theo dõi để nhận những thông tin mới nhất về chúng mình<br class="hidden-xs"></p>
+                    <form class="subscribe-form" action="#">
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" placeholder="Your Gmail" aria-label="Gmail" aria-describedby="addon-wrapping">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="addon-wrapping"><i class="far fa-paper-plane"></i></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-                     class="w3-hover-text-green">w3.css</a></p>
-    <p style="text-align: center">©2018 by LAIDAY REFILL</p>
-    <p style="text-align: center">Hộ kinh doanh Lại Đây REFILL - Giấy chứng nhận Đăng ký Kinh doanh số 41B8013526 Do
-        UBND Quận 2 Tp.HCM cấp ngày 04/09/2018. Đại diện: Nguyễn Thị Dạ Quyên</p>
-    <p style="text-align: center"> Điện thoại: 028 6270 2141 - Email: daquyen@laidayrefill.com</p>
 </footer>
+
 
 <script>
     // Modal Image Gallery
