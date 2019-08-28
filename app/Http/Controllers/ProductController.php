@@ -20,7 +20,7 @@ class ProductController extends Controller
 //        if ($user ->hasRole('admin')){
         $product = Product::latest()->paginate(5);
 
-        return view('admin.index')
+        return view('admin.product.index')
             ->with('product', $product);
 //        } else {
 //            return 'You are nO dOOr...';
@@ -30,7 +30,7 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('admin.create');
+        return view('admin.product.create');
     }
 
     public function store(ProductValidation $request)
@@ -78,13 +78,13 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        return view('admin.show')->with('product', $product);
+        return view('admin.product.show')->with('product', $product);
     }
 
     public function edit($id)
     {
         $product = Product::find($id);
-        return view('admin.edit')->with('product', $product);
+        return view('admin.product.edit')->with('product', $product);
     }
 
     public function update(ProductValidation $request, $id)

@@ -22,3 +22,5 @@ Route::resource('/admin/category', 'CategoryController');
 Route::get('/home', function (){
     return view('client.home');
 });
+
+

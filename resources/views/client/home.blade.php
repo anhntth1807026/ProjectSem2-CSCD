@@ -25,6 +25,9 @@
     <script src="../js/ajaxlibspopper.js1.14.6umdpopper.min.js"></script>
 
     <script src="../js/bootstrap4.2.1jsbootstrap.min.js"></script>
+{{--    materialize css--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </head>
 <style>
     body, h1, h2, h3, h4, h5, h6 {
@@ -83,16 +86,110 @@
 
 <div class="w3-top">
     <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
-        <!-- Right-sided navbar links -->
+        <a href="#home" class="w3-bar-item w3-button w3-wide" style="color: #00acd6;size: 60px;">Tree Hugger</a>
         <div class="w3-right w3-hide-small">
-            <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-            <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-            <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-            <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-            <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="#about" class="w3-bar-item w3-button dropdown-button" data-beloworigin="true" data-hover="true" data-activates='dropdown1' style="color: #00acd6">Sản Phẩm</a>
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#">Đồ Dùng Gia Đình</a></li>
+                <li><a href="#">Đồ Dùng Cá Nhân</a></li>
+            </ul>
+            <a href="#" class="w3-bar-item w3-button" style="color: #00acd6">Chúng Tôi</a>
+            <a href="#" class="w3-bar-item w3-button" style="color: #00acd6">Bài Viết</a>
+            <a href="#" class="w3-bar-item w3-button" style="color: #00acd6">Chính Sách</a>
+            <a href="#" class="w3-bar-item w3-button" style="color: #00acd6">Giỏ Hàng</a>
+            <a href="#" class="w3-bar-item w3-button" onclick="w3_open1()" style="color: #00acd6">Đăng Nhập</a>
         </div>
+        <!-- Sidebar -->
+        <nav class="w3-sidebar w3-white w3-animate-top" style="display:none;padding-top:50px;width: 100%"
+             id="mySidebar1">
+            <a href="javascript:void(0)" onclick="w3_close1()"
+               class="w3-button w3-white w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+                <i class="fa fa-remove"></i>
+            </a>
+            <div class="w3-bar-block w3-center">
+                <h1 style="font-size: 50px">Đăng Nhập</h1>
+                <h5 style="padding-top: -50px">Luôn Là Một Thành Viên Trung Thành</h5>
+                <br>
+                <div class="w3-container" id="menu">
+                    <div class="w3-content" style="max-width:700px">
+                        <div class="w3-row w3-center w3-card w3-padding">
+                            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+                                <div class="w3-col s6 tablink" style="color: #0f0f0f;">Đăng Nhập</div>
+                            </a>
+                            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                                <div class="w3-col s6 tablink" style="color: #0f0f0f;">Đăng Ký</div>
+                            </a>
+                        </div>
 
+                        {{--                        Đăng Nhập--}}
+
+                        <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+                            <div class="w3-container w3-light-white w3-padding-32 w3-padding-large" id="contact">
+                                <div class="w3-content" style="max-width:600px">
+                                    <form action="/signin.php" target="_blank">
+                                        <div class="w3-section">
+                                            <label>Email</label>
+                                            <input class="w3-input w3-border" type="email" name="Email" required>
+                                        </div>
+                                        <div class="w3-section">
+                                            <label>Mật Khẩu</label>
+                                            <input class="w3-input w3-border" type="password" name="Password" required>
+                                        </div>
+                                        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom"
+                                                style="margin-top: 50px">Đăng Nhập
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{--                        Đăng Ký--}}
+
+                        <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+                            <div class="w3-container w3-light-white w3-padding-32 w3-padding-large" id="contact">
+                                <div class="w3-content" style="max-width:600px">
+                                    <form action="/register.php" target="_blank">
+                                        <div class="w3-section">
+                                            <label>Họ Tên</label>
+                                            <input class="w3-input w3-border" type="text" name="Name" required>
+                                        </div>
+                                        <div class="w3-section">
+                                            <label>Email</label>
+                                            <input class="w3-input w3-border" type="email" name="Email" required>
+                                        </div>
+                                        <div class="w3-section">
+                                            <label>Mật Khẩu</label>
+                                            <input class="w3-input w3-border" type="password" name="Password" required>
+                                        </div>
+                                        <div class="w3-section">
+                                            <label>Nhập Lại Mật Khẩu</label>
+                                            <input class="w3-input w3-border" type="password" name="ConfirmPassword"
+                                                   required>
+                                        </div>
+                                        <div class="w3-section">
+                                            <label>Số Điện Thoại</label>
+                                            <input class="w3-input w3-border" type="number" name="Phone" required>
+                                        </div>
+                                        <div class="w3-section">
+                                            <label>Số Tuổi</label>
+                                            <input class="w3-input w3-border" type="number" name="Age" required>
+                                        </div>
+                                        <div class="w3-section">
+                                            <label>Địa chỉ</label>
+                                            <input class="w3-input w3-border" type="text" name="Address" required>
+                                        </div>
+                                        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom"
+                                                style="margin-top: 50px">Đăng Ký
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 100px"></div>
+        </nav>
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
            onclick="w3_open()">
             <i class="fa fa-bars"></i>
@@ -100,25 +197,120 @@
     </div>
 </div>
 
-
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none"
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none"
      id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #00acd6">Sản Phẩm</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #00acd6">Chúng Tôi</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #00acd6">Bài Viết</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #00acd6">Chính Sách</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #00acd6">Giỏ Hàng</a>
+{{--    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">Đăng Nhập</a>--}}
+    <a href="#" class="w3-bar-item w3-button" onclick="w3_open1()" style="color: #00acd6">Đăng Nhập</a>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-white w3-animate-top" style="display:none;padding-top:50px;padding-bottom:50px;width: 100%"
+         id="mySidebar1">
+        <a href="javascript:void(0)" onclick="w3_close1()"
+           class="w3-button w3-white w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+            <i class="fa fa-remove"></i>
+        </a>
+        <div class="w3-bar-block w3-center">
+            <h1 style="font-size: 50px">Đăng Nhập</h1>
+            <h4 style="padding-top: -50px">Luôn Là Một Thành Viên.<a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">&nbsp;Đăng Ký</a></h4>
+            <br>
+            <div class="w3-container" id="menu">
+                <div class="w3-content" style="max-width:700px">
+                    <div class="w3-row w3-center w3-card w3-padding">
+                        <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+                            <div class="w3-col s6 tablink" style="color: #0f0f0f;">Đăng Nhập</div>
+                        </a>
+                        <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                            <div class="w3-col s6 tablink" style="color: #0f0f0f;">Đăng Ký</div>
+                        </a>
+                    </div>
+
+                    {{--                        Đăng Nhập--}}
+
+                    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+                        <div class="w3-container w3-light-white w3-padding-32 w3-padding-large" id="contact">
+                            <div class="w3-content" style="max-width:600px">
+                                <form action="/signin.php" target="_blank">
+                                    <div class="w3-section">
+                                        <label>Email</label>
+                                        <input class="w3-input w3-border" type="email" name="Email" required>
+                                    </div>
+                                    <div class="w3-section">
+                                        <label>Mật Khẩu</label>
+                                        <input class="w3-input w3-border" type="password" name="Password" required>
+                                    </div>
+                                    <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom"
+                                            style="margin-top: 50px">Đăng Nhập
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{--                        Đăng Ký--}}
+
+                    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+                        <div class="w3-container w3-light-white w3-padding-32 w3-padding-large" id="contact">
+                            <div class="w3-content" style="max-width:600px">
+                                <form action="/register.php" target="_blank">
+                                    <div class="w3-section">
+                                        <label>Họ Tên</label>
+                                        <input class="w3-input w3-border" type="text" name="Name" required>
+                                    </div>
+                                    <div class="w3-section">
+                                        <label>Email</label>
+                                        <input class="w3-input w3-border" type="email" name="Email" required>
+                                    </div>
+                                    <div class="w3-section">
+                                        <label>Mật Khẩu</label>
+                                        <input class="w3-input w3-border" type="password" name="Password" required>
+                                    </div>
+                                    <div class="w3-section">
+                                        <label>Nhập Lại Mật Khẩu</label>
+                                        <input class="w3-input w3-border" type="password" name="ConfirmPassword"
+                                               required>
+                                    </div>
+                                    <div class="w3-section">
+                                        <label>Số Điện Thoại</label>
+                                        <input class="w3-input w3-border" type="number" name="Phone" required>
+                                    </div>
+                                    <div class="w3-section">
+                                        <label>Số Tuổi</label>
+                                        <input class="w3-input w3-border" type="number" name="Age" required>
+                                    </div>
+                                    <div class="w3-section">
+                                        <label>Địa chỉ</label>
+                                        <input class="w3-input w3-border" type="text" name="Address" required>
+                                    </div>
+                                    <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom"
+                                            style="margin-top: 50px">Đăng Ký
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
 </nav>
+
+{{--End Header--}}
 
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-        <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
+        <span class="w3-jumbo w3-hide-small">Bắt Đầu Một Hành Trình Mới.</span><br>
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Bắt Đầu Một Hành Trình Mới</span><br>
+        <span class="w3-large">Ngưng Sử Dụng Đồ Dùng Làm Từ Nhựa Và Các Sản Phẩm Gây Hại Cho Môi Trường.</span>
         <p><a href="#about"
-              class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn
-                more and start today</a></p>
+              class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Tìm
+                Hiểu Nhiều Hơn Và Bắt Đầu Từ Hôm Nay</a></p>
     </div>
     <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -135,8 +327,11 @@
         <div class="w3-col m6">
             <div data-aos="zoom-out-up"><h2>Chào mừng bạn đến với LaiDayStation</h2>
                 <p>
-                    Lai Day Station là nơi dành cho những ai quan tâm đến lối sống xanh, bền vững và thân thiện với môi
-                    trường. Tại LaiDay, bạn sẽ cảm thấy hạnh phúc, tình yêu và lòng biết ơn đối với các sản phẩm do người
+                    Lai Day Station là nơi dành cho những ai quan tâm đến lối sống xanh, bền vững và
+                    thân thiện với môi
+                    trường. Tại LaiDay, bạn sẽ cảm thấy hạnh phúc, tình yêu và lòng biết ơn đối với các
+                    sản phẩm do
+                    người
                     Việt Nam làm ra vì lợi ích của cộng đồng và cho lối sống đơn giản và lành mạnh.
                 </p>
             </div>
@@ -158,25 +353,29 @@
         <div class="w3-quarter">
             <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
             <p class="w3-large">Responsive</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et
                 dolore.</p>
         </div>
         <div class="w3-quarter">
             <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
             <p class="w3-large">Passion</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et
                 dolore.</p>
         </div>
         <div class="w3-quarter">
             <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
             <p class="w3-large">Design</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et
                 dolore.</p>
         </div>
         <div class="w3-quarter">
             <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
             <p class="w3-large">Support</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et
                 dolore.</p>
         </div>
     </div>
@@ -227,9 +426,11 @@
             <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
+
             <img src="{{ asset('img/new-image/ly-thong-minh-xep-gon.jpg') }}" alt="Steak" style="width:100%">
+
             <h5 style="height: 70px">Ly thông minh xếp gọn</h5>
-            <h6 class="w3-opacity">139.000₫</h6>
+            <h6 class="w3-opacity" style="size: 50px">139.000₫</h6>
 
             <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
@@ -242,7 +443,8 @@
             <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
-            <img src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}" alt="" style="width:100%">
+            <img src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}" alt=""
+                 style="width:100%">
             <h5 style="height: 70px">Bình nước giữ nhiệt nắp gỗ</h5>
             <h6 class="w3-opacity">429.000₫</h6>
 
@@ -252,28 +454,34 @@
 
     <div class="w3-row-padding w3-padding-16 w3-center">
         <div class="w3-quarter">
-            <img src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet-cau-vong.webp') }}" alt="" style="width:100%">
+            <img src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet-cau-vong.webp') }}" alt=""
+                 style="width:100%">
             <h5 style="height: 70px">Bình nước giữ nhiệt cầu vồng</h5>
             <h6 class="w3-opacity">429.000₫</h6>
 
             <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
+
             <img src="{{ asset('img/new-image/gel-tay-da-chet-te-bao.jpg') }}" alt="" style="width:100%">
+
             <h5 style="height: 70px">Gel tẩy tế bào chết</h5>
             <h6 class="w3-opacity">219.000₫</h6>
 
             <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
+
             <img src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}" alt="" style="width:100%">
+
             <h5 style="height: 70px">Khẩu trang lọc bụi</h5>
             <h6 class="w3-opacity">50.000₫</h6>
 
             <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
-            <img src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}" alt="" style="width:100%">
+            <img src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}" alt=""
+                 style="width:100%">
             <h5 style="height: 70px">Ống hút thuỷ tinh</h5>
             <h6 class="w3-opacity">49.000₫</h6>
 
@@ -321,7 +529,7 @@
             </div>
             <div class="w3-half w3-margin-bottom">
                 <div class="w3-display-container">
-{{--                    <img src="img/saigon03.jpg" alt="San Francisco" style="width:100%">--}}
+                    {{--                    <img src="img/saigon03.jpg" alt="San Francisco" style="width:100%">--}}
                     <img style="width:100%"
                          src="https://scontent.cdninstagram.com/vp/54e66cd8a65d932d348341ff5851fd87/5E013DD7/t51.2885-15/sh0.08/e35/s640x640/67307647_338887943659531_4099783374168449683_n.jpg?_nc_ht=scontent.cdninstagram.com">
                     <span class="w3-display-bottomleft w3-padding " style="color: black">
@@ -336,8 +544,9 @@ Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột qu
         <div class="w3-row-padding" style="margin:0 -16px">
             <div class="w3-half w3-margin-bottom">
                 <div class="w3-display-container">
-{{--                    <img src="img/saigon04.jpg" alt="Pisa" style="width:100%">--}}
-                    <img style="width:100%" src="https://scontent.cdninstagram.com/vp/2bd171501f20689bc46f711229f535c0/5E158F79/t51.2885-15/e15/s640x640/69223974_148767146222835_6222199774537592212_n.jpg?_nc_ht=scontent.cdninstagram.com">
+                    {{--                    <img src="img/saigon04.jpg" alt="Pisa" style="width:100%">--}}
+                    <img style="width:100%"
+                         src="https://scontent.cdninstagram.com/vp/2bd171501f20689bc46f711229f535c0/5E158F79/t51.2885-15/e15/s640x640/69223974_148767146222835_6222199774537592212_n.jpg?_nc_ht=scontent.cdninstagram.com">
                     <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">BẠN CÓ BIẾT?
                         Đảo Henderson tại Thái Bình Dương, Di Sản Thế Giới do UNESCO trao tặng ...
                     </span>
@@ -345,8 +554,9 @@ Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột qu
             </div>
             <div class="w3-half w3-margin-bottom">
                 <div class="w3-display-container">
-{{--                    <img src="img/saigon05.jpg" alt="Paris" style="width:100%">--}}
-                    <img style="width:100%" src="https://scontent.cdninstagram.com/vp/987291428426151e3acffe90facc87f5/5E0998D3/t51.2885-15/sh0.08/e35/p640x640/69833198_421626735143058_2646100798978465469_n.jpg?_nc_ht=scontent.cdninstagram.com">
+                    {{--                    <img src="img/saigon05.jpg" alt="Paris" style="width:100%">--}}
+                    <img style="width:100%"
+                         src="https://scontent.cdninstagram.com/vp/987291428426151e3acffe90facc87f5/5E0998D3/t51.2885-15/sh0.08/e35/p640x640/69833198_421626735143058_2646100798978465469_n.jpg?_nc_ht=scontent.cdninstagram.com">
                     <span class="w3-display-bottomleft w3-padding" style="color: black">“Cái răng cái tóc là góc con người", một mái tóc đẹp, chắc khoẻ, không đòi hỏi cầu kì trong chăm sóc và không bị phụ thuộc hoá chất có lẽ là ước muốn của nhiều người,...
                     </span>
                 </div>
@@ -361,7 +571,8 @@ Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột qu
             <div class="w3-container w3-light-white w3-padding-32 w3-padding-large" id="contact">
                 <div class="w3-content" style="max-width:600px">
                     <h4 class="w3-center"><b>Contact Me</b></h4>
-                    <p>Do you want me to photograph you? Fill out the form and fill me in with the details :) I love
+                    <p>Do you want me to photograph you? Fill out the form and fill me in with the
+                        details :) I love
                         meeting new people!</p>
                     <form action="/action_page.php" target="_blank">
                         <div class="w3-section">
@@ -376,7 +587,9 @@ Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột qu
                             <label>Message</label>
                             <input class="w3-input w3-border" type="text" name="Message" required>
                         </div>
-                        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+                        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send
+                            Message
+                        </button>
                     </form>
                 </div>
             </div>
@@ -391,6 +604,7 @@ Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột qu
         </div>
     </div>
 </div>
+
 
 <footer id="footer">
     <div class="container">
@@ -435,8 +649,8 @@ Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột qu
 </footer>
 
 
+
 <script>
-    // Modal Image Gallery
     function onClick(element) {
         document.getElementById("img01").src = element.src;
         document.getElementById("modal01").style.display = "block";
@@ -460,6 +674,44 @@ Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột qu
     function w3_close() {
         mySidebar.style.display = "none";
     }
+
+    function w3_open1() {
+        document.getElementById("mySidebar1").style.width = "100%";
+        document.getElementById("mySidebar1").style.display = "block";
+    }
+
+    function w3_close1() {
+        document.getElementById("mySidebar1").style.display = "none";
+    }
+
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+    }
+
+    document.getElementById("myLink").click();
+
+    $('.dropdown-button').dropdown({
+            inDuration: 300,
+            outDuration: 225,
+            constrainWidth: false,
+            hover: false,
+            gutter: 0,
+            belowOrigin: false,
+            alignment: 'left',
+            stopPropagation: false
+        }
+    );
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
