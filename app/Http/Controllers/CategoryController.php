@@ -11,14 +11,14 @@ class CategoryController extends Controller
     {
         $category = Category::latest()->paginate(3);
 
-        return view('category.index')
+        return view('admin.category.index')
             ->with('category', $category);
 
     }
 
     public function create()
     {
-        return view('category.create');
+        return view('admin.category.create');
     }
 
     public function store(Request $request)
@@ -28,7 +28,7 @@ class CategoryController extends Controller
 
         $obj->save();
 
-        return redirect()->route('category.index')
+        return redirect()->route('admin.category.index')
             ->with('success', 'Category created successfully.');
     }
 
@@ -36,13 +36,13 @@ class CategoryController extends Controller
     public function show($id)
     {
         $category = Category::find($id);
-        return view('category.show')->with('category', $category);
+        return view('admin.category.show')->with('category', $category);
     }
 
     public function edit($id)
     {
         $category = Category::find($id);
-        return view('category.edit')->with('category', $category);
+        return view('admin.category.edit')->with('category', $category);
     }
 
     public function update(Request $request, $id)
