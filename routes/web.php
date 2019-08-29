@@ -28,9 +28,15 @@ Route::get('/home', function (){
     return view('client.home');
 });
 
+Route::get('/admin/chart', function (){
+   return view('admin.dashboard.chart');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 
 

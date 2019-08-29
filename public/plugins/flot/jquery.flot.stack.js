@@ -7,7 +7,7 @@ The plugin assumes the data is sorted on x (or y if stacking horizontally).
 For line charts, it is assumed that if a line has an undefined gap (from a
 null point), then the line above it should have the same gap - insert zeros
 instead of "null" if you want another behaviour. This also holds for the start
-and end of the chart. Note that stacking a mix of positive and negative values
+and end of the myChart. Note that stacking a mix of positive and negative values
 in most instances doesn't make sense (so it looks weird).
 
 Two or more series are stacked when their "stack" attribute is set to the same
@@ -39,21 +39,21 @@ charts or filled areas).
     var options = {
         series: { stack: null } // or number/string
     };
-    
+
     function init(plot) {
         function findMatchingSeries(s, allseries) {
             var res = null;
             for (var i = 0; i < allseries.length; ++i) {
                 if (s == allseries[i])
                     break;
-                
+
                 if (allseries[i].stack == s.stack)
                     res = allseries[i];
             }
-            
+
             return res;
         }
-        
+
         function stackData(plot, s, datapoints) {
             if (s.stack == null || s.stack === false)
                 return;
@@ -118,7 +118,7 @@ charts or filled areas).
 
                         newpoints[l + accumulateOffset] += qy;
                         bottom = qy;
-                        
+
                         i += ps;
                         j += otherps;
                     }
@@ -131,7 +131,7 @@ charts or filled areas).
                             newpoints.push(intery + qy);
                             for (m = 2; m < ps; ++m)
                                 newpoints.push(points[i + m]);
-                            bottom = qy; 
+                            bottom = qy;
                         }
 
                         j += otherps;
@@ -142,22 +142,22 @@ charts or filled areas).
                             i += ps;
                             continue;
                         }
-                            
+
                         for (m = 0; m < ps; ++m)
                             newpoints.push(points[i + m]);
-                        
+
                         // we might be able to interpolate a point below,
                         // this can give us a better y
                         if (withlines && j > 0 && otherpoints[j - otherps] != null)
                             bottom = qy + (otherpoints[j - otherps + accumulateOffset] - qy) * (px - qx) / (otherpoints[j - otherps + keyOffset] - qx);
 
                         newpoints[l + accumulateOffset] += bottom;
-                        
+
                         i += ps;
                     }
 
                     fromgap = false;
-                    
+
                     if (l != newpoints.length && withbottom)
                         newpoints[l + 2] += bottom;
                 }
@@ -175,10 +175,10 @@ charts or filled areas).
 
             datapoints.points = newpoints;
         }
-        
+
         plot.hooks.processDatapoints.push(stackData);
     }
-    
+
     $.plot.plugins.push({
         init: init,
         options: options,

@@ -73,18 +73,18 @@
 * Prefix all options supplied as tag attribute with "spark" (configurable by setting tagOptionPrefix)
 *
 * Supported options:
-*   lineColor - Color of the line used for the chart
-*   fillColor - Color used to fill in the chart - Set to '' or false for a transparent chart
-*   width - Width of the chart - Defaults to 3 times the number of values in pixels
-*   height - Height of the chart - Defaults to the height of the containing element
-*   chartRangeMin - Specify the minimum value to use for the Y range of the chart - Defaults to the minimum value supplied
-*   chartRangeMax - Specify the maximum value to use for the Y range of the chart - Defaults to the maximum value supplied
+*   lineColor - Color of the line used for the myChart
+*   fillColor - Color used to fill in the myChart - Set to '' or false for a transparent myChart
+*   width - Width of the myChart - Defaults to 3 times the number of values in pixels
+*   height - Height of the myChart - Defaults to the height of the containing element
+*   chartRangeMin - Specify the minimum value to use for the Y range of the myChart - Defaults to the minimum value supplied
+*   chartRangeMax - Specify the maximum value to use for the Y range of the myChart - Defaults to the maximum value supplied
 *   chartRangeClip - Clip out of range values to the max/min specified by chartRangeMin and chartRangeMax
-*   chartRangeMinX - Specify the minimum value to use for the X range of the chart - Defaults to the minimum value supplied
-*   chartRangeMaxX - Specify the maximum value to use for the X range of the chart - Defaults to the maximum value supplied
-*   composite - If true then don't erase any existing chart attached to the tag, but draw
-*           another chart over the top - Note that width and height are ignored if an
-*           existing chart is detected.
+*   chartRangeMinX - Specify the minimum value to use for the X range of the myChart - Defaults to the minimum value supplied
+*   chartRangeMaxX - Specify the maximum value to use for the X range of the myChart - Defaults to the maximum value supplied
+*   composite - If true then don't erase any existing myChart attached to the tag, but draw
+*           another myChart over the top - Note that width and height are ignored if an
+*           existing myChart is detected.
 *   tagValuesAttribute - Name of tag attribute to check for data values - Defaults to 'values'
 *   enableTagOptions - Whether to check tags for sparkline options
 *   tagOptionPrefix - Prefix used for options supplied as tag attributes - Defaults to 'spark'
@@ -93,9 +93,9 @@
 *   disableInteraction - If set to true then all mouseover/click interaction behaviour will be disabled,
 *       making the plugin perform much like it did in 1.x
 *   disableTooltips - If set to true then tooltips will be disabled - Defaults to false (tooltips enabled)
-*   disableHighlight - If set to true then highlighting of selected chart elements on mouseover will be disabled
+*   disableHighlight - If set to true then highlighting of selected myChart elements on mouseover will be disabled
 *       defaults to false (highlights enabled)
-*   highlightLighten - Factor to lighten/darken highlighted chart values by - Defaults to 1.4 for a 40% increase
+*   highlightLighten - Factor to lighten/darken highlighted myChart values by - Defaults to 1.4 for a 40% increase
 *   tooltipContainer - Specify which DOM element the tooltip should be rendered into - defaults to document.body
 *   tooltipClassname - Optional CSS classname to apply to tooltips - If not specified then a default style will be applied
 *   tooltipOffsetX - How many pixels away from the mouse pointer to render the tooltip on the X axis
@@ -117,7 +117,7 @@
 *
 * There are 7 types of sparkline, selected by supplying a "type" option of 'line' (default),
 * 'bar', 'tristate', 'bullet', 'discrete', 'pie' or 'box'
-*    line - Line chart.  Options:
+*    line - Line myChart.  Options:
 *       spotColor - Set to '' to not end each line in a circular spot
 *       minSpotColor - If set, color of spot at minimum value
 *       maxSpotColor - If set, color of spot at maximum value
@@ -127,13 +127,13 @@
 *       normalRangeMax - If set draws a filled horizontal bar between these two values marking the "normal"
 *                      or expected range of values
 *       normalRangeColor - Color to use for the above bar
-*       drawNormalOnTop - Draw the normal range above the chart fill color if true
-*       defaultPixelsPerValue - Defaults to 3 pixels of width for each value in the chart
+*       drawNormalOnTop - Draw the normal range above the myChart fill color if true
+*       defaultPixelsPerValue - Defaults to 3 pixels of width for each value in the myChart
 *       highlightSpotColor - The color to use for drawing a highlight spot on mouseover - Set to null to disable
 *       highlightLineColor - The color to use for drawing a highlight line on mouseover - Set to null to disable
 *       valueSpots - Specify which points to draw spots on, and in which color.  Accepts a range map
 *
-*   bar - Bar chart.  Options:
+*   bar - Bar myChart.  Options:
 *       barColor - Color of bars for postive values
 *       negBarColor - Color of bars for negative values
 *       zeroColor - Color of bars with zero values
@@ -167,11 +167,11 @@
 *       performanceColor - The color of the performance measure horizontal bar
 *       rangeColors - Colors to use for each qualitative range background color
 *
-*   pie - Pie chart. Options:
+*   pie - Pie myChart. Options:
 *       sliceColors - An array of colors to use for pie slices
 *       offset - Angle in degrees to offset the first slice - Try -90 or +90
-*       borderWidth - Width of border to draw around the pie chart, in pixels - Defaults to 0 (no border)
-*       borderColor - Color to use for the pie chart border - Defaults to #000
+*       borderWidth - Width of border to draw around the pie myChart, in pixels - Defaults to 0 (no border)
+*       borderColor - Color to use for the pie myChart border - Defaults to #000
 *
 *   box - Box plot. Options:
 *       raw - Set to true to supply pre-computed plot points as values
@@ -225,7 +225,7 @@
      */
     getDefaults = function () {
         return {
-            // Settings common to most/all chart types
+            // Settings common to most/all myChart types
             common: {
                 type: 'line',
                 lineColor: '#00f',
@@ -1136,7 +1136,7 @@
         },
 
         /**
-         * Actually render the chart to the canvas
+         * Actually render the myChart to the canvas
          */
         render: function () {
             if (this.disabled) {
