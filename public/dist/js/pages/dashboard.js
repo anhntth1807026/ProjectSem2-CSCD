@@ -123,9 +123,9 @@ $(function () {
   });
 
   /* Morris.js Charts */
-  // Sales chart
+  // Sales myChart
   var area = new Morris.Area({
-    element: 'revenue-chart',
+    element: 'revenue-myChart',
     resize: true,
     data: [
       {y: '2011 Q1', item1: 2666, item2: 2666},
@@ -146,7 +146,7 @@ $(function () {
     hideHover: 'auto'
   });
   var line = new Morris.Line({
-    element: 'line-chart',
+    element: 'line-myChart',
     resize: true,
     data: [
       {y: '2011 Q1', item1: 2666},
@@ -177,7 +177,7 @@ $(function () {
 
   //Donut Chart
   var donut = new Morris.Donut({
-    element: 'sales-chart',
+    element: 'sales-myChart',
     resize: true,
     colors: ["#3c8dbc", "#f56954", "#00a65a"],
     data: [

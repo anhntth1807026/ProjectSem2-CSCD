@@ -109,14 +109,11 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card mb-3">
-
-                    <div class="card-body">
-                        <canvas id="chLine" height="100"></canvas>
-                    </div>
-                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <canvas id="chLine" height="100"></canvas>
                 </div>
+                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
             </div>
         </div>
     </div>
