@@ -45,7 +45,7 @@ $(function () {
   var salesChartOptions = {
     //Boolean - If we should show the scale at all
     showScale: true,
-    //Boolean - Whether grid lines are shown across the chart
+    //Boolean - Whether grid lines are shown across the myChart
     scaleShowGridLines: false,
     //String - Colour of the grid lines
     scaleGridLineColor: "rgba(0,0,0,.05)",
@@ -77,11 +77,11 @@ $(function () {
     legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%=datasets[i].label%></li><%}%></ul>",
     //Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
     maintainAspectRatio: true,
-    //Boolean - whether to make the chart responsive to window resizing
+    //Boolean - whether to make the myChart responsive to window resizing
     responsive: true
   };
 
-  //Create the line chart
+  //Create the line myChart
   salesChart.Line(salesChartData, salesChartOptions);
 
   //---------------------------
@@ -139,7 +139,7 @@ $(function () {
     segmentStrokeColor: "#fff",
     //Number - The width of each segment stroke
     segmentStrokeWidth: 1,
-    //Number - The percentage of the chart that we cut out of the middle
+    //Number - The percentage of the myChart that we cut out of the middle
     percentageInnerCutout: 50, // This is 0 for Pie charts
     //Number - Amount of animation steps
     animationSteps: 100,
@@ -149,7 +149,7 @@ $(function () {
     animateRotate: true,
     //Boolean - Whether we animate scaling the Doughnut from the centre
     animateScale: false,
-    //Boolean - whether to make the chart responsive to window resizing
+    //Boolean - whether to make the myChart responsive to window resizing
     responsive: true,
     // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
     maintainAspectRatio: false,
@@ -158,7 +158,7 @@ $(function () {
     //String - A tooltip template
     tooltipTemplate: "<%=value %> <%=label%> users"
   };
-  //Create pie or douhnut chart
+  //Create pie or douhnut myChart
   // You can switch between pie and douhnut using the method below.
   pieChart.Doughnut(PieData, pieOptions);
   //-----------------

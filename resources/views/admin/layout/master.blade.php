@@ -9,12 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="stylesheet" href="{{asset('css/my-style.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <link rel="stylesheet" href="{{asset('css/sb-admin.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/custom.js')}}"></script>
+    <script src="{{asset('js/sb-admin.min.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{{asset('js/myChart.js')}}"></script>
+    <script src="{{asset('dashboard')}}"></script>
+    <script src="{{asset('js/chart.js/dist/Chart.bundle.js')}}"></script>
 
     <title>SB Admin - Dashboard</title>
 
@@ -24,7 +30,7 @@
 
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand mr-1" href="index.html">Admin</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -103,25 +109,8 @@
                 <a class="dropdown-item" href="{{route('product.index')}}">Manage Product</a>
             </div>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-fw fa-folder"></i>
-                <span>Pages</span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <h6 class="dropdown-header">Login Screens:</h6>
-                <a class="dropdown-item" href="login.html">Login</a>
-                <a class="dropdown-item" href="register.html">Register</a>
-                <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Other Pages:</h6>
-                <a class="dropdown-item" href="404.html">404 Page</a>
-                <a class="dropdown-item" href="blank.html">Blank Page</a>
-            </div>
-        </li>
         <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="/admin/chart">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Charts</span></a>
         </li>
@@ -133,8 +122,8 @@
     </ul>
 
     <div id="content-wrapper">
-
         <div class="container-fluid">
+
 
             <div class="row">
                 @section('content')
@@ -144,7 +133,6 @@
 
         </div>
         <!-- /.container-fluid -->
-
         <!-- Sticky Footer -->
         <footer class="sticky-footer">
             <div class="container my-auto">
