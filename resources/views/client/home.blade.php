@@ -25,7 +25,8 @@
     <script src="../js/ajaxlibspopper.js1.14.6umdpopper.min.js"></script>
 
     <script src="../js/bootstrap4.2.1jsbootstrap.min.js"></script>
-{{--    materialize css--}}
+
+    {{--    materialize css--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </head>
@@ -75,7 +76,7 @@
     }
     #footer {
         overflow: hidden;
-        padding: 77px 0 20px;
+        padding: 10px 12px 10px;
         color: #999999;
         background-color: #232323;
     }
@@ -205,7 +206,7 @@
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #00acd6">Bài Viết</a>
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #00acd6">Chính Sách</a>
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #00acd6">Giỏ Hàng</a>
-{{--    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">Đăng Nhập</a>--}}
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">Đăng Nhập</a>
     <a href="#" class="w3-bar-item w3-button" onclick="w3_open1()" style="color: #00acd6">Đăng Nhập</a>
 
     <!-- Sidebar -->
@@ -303,26 +304,8 @@
 
 {{--End Header--}}
 
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-    <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small">Bắt Đầu Một Hành Trình Mới.</span><br>
-        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Bắt Đầu Một Hành Trình Mới</span><br>
-        <span class="w3-large">Ngưng Sử Dụng Đồ Dùng Làm Từ Nhựa Và Các Sản Phẩm Gây Hại Cho Môi Trường.</span>
-        <p><a href="#about"
-              class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Tìm
-                Hiểu Nhiều Hơn Và Bắt Đầu Từ Hôm Nay</a></p>
-    </div>
-    <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-</header>
 
-<div class="w3-container w3-light-white" style="padding:100px 16px">
+<div class="w3-container w3-light-white" style="padding:100px 16px; background-image: url()">
     <div class="w3-row-padding">
         <div class="w3-col m6">
             <div data-aos="zoom-out-up"><h2>Chào mừng bạn đến với LaiDayStation</h2>
@@ -346,37 +329,39 @@
     </div>
 </div>
 
-<div class="w3-container" style="padding:70px 16px;background-color: black;color: white" id="about">
-    <h3 class="w3-center">About</h3>
+<div class="w3-container" style="padding:70px 16px; background-color: #f2dc9dd1; color: #0c0c0c" id="about">
+    <h3 class="w3-center">Những lý do bạn nên hạn chế rác thải</h3>
     <p class="w3-center w3-large">Key features of our company</p>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-quarter">
-            <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-            <p class="w3-large">Responsive</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et
-                dolore.</p>
+            <img src="/img/new-image/icon-1.webp" alt="">
+            <p class="w3-large">Byo</p>
+            <p>Bring your own bottles or jars.
+
+                Make sure to clean and dry them, and remove old labels if any.
+
+                In case you forget your containers, please ask us if there is any old bottles donated from local community to borrow.</p>
         </div>
         <div class="w3-quarter">
-            <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-large">Passion</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et
-                dolore.</p>
+            <img src="/img/new-image/icon-2.webp" alt="">
+            <p class="w3-large">Stick</p>
+            <p>Stick the label on your   container, mindfully.</p>
         </div>
         <div class="w3-quarter">
-            <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-large">Design</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et
-                dolore.</p>
+            <img src="/img/new-image/icon-3.webp" alt="">
+            <p class="w3-large">Tare&Write</p>
+            <p>Weigh your container.
+
+                Write the weight of your container on the label.</p>
         </div>
         <div class="w3-quarter">
-            <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-large">Support</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et
-                dolore.</p>
+            <img src="/img/new-image/icon-4.webp" alt="">
+            <p class="w3-large">REFILL</p>
+            <p>Fill your container with the product you love.
+
+                One product for one container.
+
+                Meditate in case some of the products can take time to refill.</p>
         </div>
     </div>
 </div>
@@ -388,14 +373,14 @@
             <h5 style="height: 70px">Cọ Rửa Bình</h5>
             <h6 class="w3-opacity">99.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
             <img src="{{ asset('img/home-care/hop-khan-giay-go.webp') }}" alt="Steak" style="width:100%">
             <h5 style="height: 70px">Hộp Khăn Giấy Gỗ</h5>
             <h6 class="w3-opacity">199.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
             <img src="{{ asset('img/home-care/dua-go-trac.webp') }}"
@@ -403,14 +388,14 @@
             <h5 style="height: 70px">Đũa Gỗ Trắc</h5>
             <h6 class="w3-opacity">49.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
             <img src="{{ asset('img/home-care/xit-khu-mui.webp') }}" alt="" style="width:100%">
             <h5 style="height: 70px">Xịt Khử Mùi</h5>
             <h6 class="w3-opacity">429.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
     </div>
 </div>
@@ -423,7 +408,7 @@
             <h5 style="height: 70px">Bàn chải tre người lớn</h5>
             <h6 class="w3-opacity">79.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
 
@@ -432,7 +417,7 @@
             <h5 style="height: 70px">Ly thông minh xếp gọn</h5>
             <h6 class="w3-opacity" style="size: 50px">139.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
             <img src="{{ asset('img/new-image/tui-vai-da-nang.webp.jpg') }}"
@@ -440,7 +425,7 @@
             <h5 style="height: 70px">Túi vải đa năng</h5>
             <h6 class="w3-opacity">49.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
             <img src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}" alt=""
@@ -448,7 +433,7 @@
             <h5 style="height: 70px">Bình nước giữ nhiệt nắp gỗ</h5>
             <h6 class="w3-opacity">429.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
     </div>
 
@@ -459,7 +444,7 @@
             <h5 style="height: 70px">Bình nước giữ nhiệt cầu vồng</h5>
             <h6 class="w3-opacity">429.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
 
@@ -468,7 +453,7 @@
             <h5 style="height: 70px">Gel tẩy tế bào chết</h5>
             <h6 class="w3-opacity">219.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
 
@@ -477,7 +462,7 @@
             <h5 style="height: 70px">Khẩu trang lọc bụi</h5>
             <h6 class="w3-opacity">50.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
             <img src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}" alt=""
@@ -485,7 +470,7 @@
             <h5 style="height: 70px">Ống hút thuỷ tinh</h5>
             <h6 class="w3-opacity">49.000₫</h6>
 
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Sản phẩm chi tiết</button>
+            <button class="w3-button w3-block w3-green w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
     </div>
 </div>
@@ -611,7 +596,7 @@ Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột qu
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4 abt-txt">
                 <div class="footer-logo">
-                    <a href="#" style="color:#999999 "><img src="" alt="Logo" class="img-responsive"></a>
+                    <a href="#" style="color:#999999 "><img src="" alt="Tree Hugger" class="img-responsive"></a>
                 </div>
                 <p>Chung tay bảo vệ môi trường <br class="hidden-xs">Join hands to protect the environment</p>
                 <ul class="contact-list list-unstyled">
@@ -637,9 +622,7 @@ Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột qu
                     <form class="subscribe-form" action="#">
                         <div class="input-group flex-nowrap">
                             <input type="text" class="form-control" placeholder="Your Gmail" aria-label="Gmail" aria-describedby="addon-wrapping">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="addon-wrapping"><i class="far fa-paper-plane"></i></span>
-                            </div>
+                                <span style="cursor: pointer; position: absolute; right: 2px; top: 14px; FONT-SIZE: 20px;" id="addon-wrapping"><i class="far fa-paper-plane"></i></span>
                         </div>
                     </form>
                 </div>
