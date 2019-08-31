@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProductValidation;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
 class ProductController extends Controller
@@ -14,10 +15,15 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+//    public function __construct()
+//    {
+//        $this->middleware('auth');
+//    }
+
     public function index()
     {
 //        $user = Auth::user();
-//        if ($user ->hasRole('admin')){
+//        if ($userer ->hasRole('admin')){
         $product = Product::latest()->paginate(5);
 
         return view('admin.product.index')

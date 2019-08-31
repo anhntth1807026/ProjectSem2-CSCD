@@ -24,7 +24,7 @@
 
 		this.ctx = context;
 
-		//Variables global to the chart
+		//Variables global to the myChart
 		var computeDimension = function(element,dimension)
 		{
 			if (element['offset'+dimension])
@@ -49,7 +49,7 @@
 	//Globally expose the defaults to allow for user updating/changing
 	Chart.defaults = {
 		global: {
-			// Boolean - Whether to animate the chart
+			// Boolean - Whether to animate the myChart
 			animation: true,
 
 			// Number - Number of animation steps
@@ -102,7 +102,7 @@
 			// String - Scale label font colour
 			scaleFontColor: "#666",
 
-			// Boolean - whether or not the chart should be responsive and resize when the browser does.
+			// Boolean - whether or not the myChart should be responsive and resize when the browser does.
 			responsive: false,
 
 			// Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
@@ -186,7 +186,7 @@
 		}
 	};
 
-	//Create a dictionary of chart types, to allow for extension of existing types
+	//Create a dictionary of myChart types, to allow for extension of existing types
 	Chart.types = {};
 
 	//Global Chart helpers object for utility methods and classes
@@ -302,7 +302,7 @@
 		uid = helpers.uid = (function(){
 			var id=0;
 			return function(){
-				return "chart-" + id++;
+				return "myChart-" + id++;
 			};
 		})(),
 		warn = helpers.warn = function(str){
@@ -895,18 +895,18 @@
 		};
 
 
-	//Store a reference to each instance - allowing us to globally resize chart instances on window resize.
-	//Destroy method on the chart will remove the instance of the chart from this reference.
+	//Store a reference to each instance - allowing us to globally resize myChart instances on window resize.
+	//Destroy method on the myChart will remove the instance of the myChart from this reference.
 	Chart.instances = {};
 
 	Chart.Type = function(data,options,chart){
 		this.options = options;
 		this.chart = chart;
 		this.id = uid();
-		//Add the chart instance to the global namespace
+		//Add the myChart instance to the global namespace
 		Chart.instances[this.id] = this;
 
-		// Initialize is always called when a chart type is created
+		// Initialize is always called when a myChart type is created
 		// By default it is a no op, but it should be extended
 		if (options.responsive){
 			this.resize();
@@ -914,7 +914,7 @@
 		this.initialize.call(this,data);
 	};
 
-	//Core methods that'll be a part of every chart type
+	//Core methods that'll be a part of every myChart type
 	extend(Chart.Type.prototype,{
 		initialize : function(){return this;},
 		clear : function(){
@@ -947,25 +947,25 @@
 			if (reflow){
 				this.reflow();
 			}
-			
+
 			if (this.options.animation && !reflow){
 				var animation = new Chart.Animation();
 				animation.numSteps = this.options.animationSteps;
 				animation.easing = this.options.animationEasing;
-				
+
 				// render function
 				animation.render = function(chartInstance, animationObject) {
 					var easingFunction = helpers.easingEffects[animationObject.easing];
 					var stepDecimal = animationObject.currentStep / animationObject.numSteps;
 					var easeDecimal = easingFunction(stepDecimal);
-					
+
 					chartInstance.draw(easeDecimal, stepDecimal, animationObject.currentStep);
 				};
-				
+
 				// user events
 				animation.onAnimationProgress = this.options.onAnimationProgress;
 				animation.onAnimationComplete = this.options.onAnimationComplete;
-				
+
 				Chart.animationService.addAnimation(this, animation);
 			}
 			else{
@@ -999,7 +999,7 @@
 			delete Chart.instances[this.id];
 		},
 		showTooltip : function(ChartElements, forceRedraw){
-			// Only redraw the chart if we've actually changed what we're hovering on.
+			// Only redraw the myChart if we've actually changed what we're hovering on.
 			if (typeof this.activeElements === 'undefined') this.activeElements = [];
 
 			var isChanged = (function(Elements){
@@ -1159,10 +1159,10 @@
 		if (extensions.name || parent.prototype.name){
 
 			var chartName = extensions.name || parent.prototype.name;
-			//Assign any potential default values of the new chart type
+			//Assign any potential default values of the new myChart type
 
-			//If none are defined, we'll use a clone of the chart type this is being extended from.
-			//I.e. if we extend a line chart, we'll use the defaults from the line chart if our new chart
+			//If none are defined, we'll use a clone of the myChart type this is being extended from.
+			//I.e. if we extend a line myChart, we'll use the defaults from the line myChart if our new myChart
 			//doesn't define some defaults of their own.
 
 			var baseDefaults = (Chart.defaults[parent.prototype.name]) ? clone(Chart.defaults[parent.prototype.name]) : {};
@@ -1171,13 +1171,13 @@
 
 			Chart.types[chartName] = ChartType;
 
-			//Register this new chart type in the Chart prototype
+			//Register this new myChart type in the Chart prototype
 			Chart.prototype[chartName] = function(data,options){
 				var config = merge(Chart.defaults.global, Chart.defaults[chartName], options || {});
 				return new ChartType(data,config,this);
 			};
 		} else{
-			warn("Name not provided for this chart, so it hasn't been registered");
+			warn("Name not provided for this myChart, so it hasn't been registered");
 		}
 		return parent;
 	};
@@ -1388,11 +1388,11 @@
 		numSteps: 60, // default number of steps
 		easing: "", // the easing to use for this animation
 		render: null, // render function used by the animation service
-		
-		onAnimationProgress: null, // user specified callback to fire on each step of the animation 
+
+		onAnimationProgress: null, // user specified callback to fire on each step of the animation
 		onAnimationComplete: null, // user specified callback to fire when the animation finishes
 	});
-	
+
 	Chart.Tooltip = Chart.Element.extend({
 		draw : function(){
 
@@ -1593,7 +1593,7 @@
 		fit: function(){
 			// First we need the width of the yLabels, assuming the xLabels aren't rotated
 
-			// To do that we need the base line at the top and base of the chart, assuming there is no x label rotation
+			// To do that we need the base line at the top and base of the myChart, assuming there is no x label rotation
 			this.startPoint = (this.display) ? this.fontSize : 0;
 			this.endPoint = (this.display) ? this.height - (this.fontSize * 1.5) - 5 : this.height; // -5 to pad labels
 
@@ -1888,7 +1888,7 @@
 			 * We average the left and right distances to get the maximum shape radius that can fit in the box
 			 * along with labels.
 			 *
-			 * Once we have that, we can find the centre point for the chart, by taking the x text protrusion
+			 * Once we have that, we can find the centre point for the myChart, by taking the x text protrusion
 			 * on each side, removing that from the size, halving it and adding the left x protrusion width.
 			 *
 			 * This will mean we have a shape fitted to the canvas, as large as it can be with the labels
@@ -1923,7 +1923,7 @@
 				textWidth = this.ctx.measureText(template(this.templateString, { value: this.labels[i] })).width + 5;
 				if (i === 0 || i === this.valuesCount/2){
 					// If we're at index zero, or exactly the middle, we're at exactly the top/bottom
-					// of the radar chart, so text will be aligned centrally, so we'll half it and compare
+					// of the radar myChart, so text will be aligned centrally, so we'll half it and compare
 					// w/left and right text sizes
 					halfTextWidth = textWidth/2;
 					if (pointPosition.x + halfTextWidth > furthestRight) {
@@ -1963,7 +1963,7 @@
 
 			radiusReductionLeft = xProtrusionLeft / Math.sin(furthestLeftAngle + Math.PI/2);
 
-			// Ensure we actually need to reduce the size of the chart
+			// Ensure we actually need to reduce the size of the myChart
 			radiusReductionRight = (isNumber(radiusReductionRight)) ? radiusReductionRight : 0;
 			radiusReductionLeft = (isNumber(radiusReductionLeft)) ? radiusReductionLeft : 0;
 
@@ -2137,7 +2137,7 @@
 					return;
 				}
 			}
-			
+
 			this.animations.push({
 				chartInstance: chartInstance,
 				animationObject: animationObject
@@ -2148,12 +2148,12 @@
 				helpers.requestAnimFrame.call(window, this.digestWrapper);
 			}
 		},
-		// Cancel the animation for a given chart instance
+		// Cancel the animation for a given myChart instance
 		cancelAnimation: function(chartInstance) {
 			var index = helpers.findNextWhere(this.animations, function(animationWrapper) {
 				return animationWrapper.chartInstance === chartInstance;
 			});
-			
+
 			if (index)
 			{
 				this.animations.splice(index, 1);
@@ -2183,9 +2183,9 @@
 				if(this.animations[i].animationObject.currentStep > this.animations[i].animationObject.numSteps){
 					this.animations[i].animationObject.currentStep = this.animations[i].animationObject.numSteps;
 				}
-				
+
 				this.animations[i].animationObject.render(this.animations[i].chartInstance, this.animations[i].animationObject);
-				
+
 				// Check if executed the last frame.
 				if (this.animations[i].animationObject.currentStep == this.animations[i].animationObject.numSteps){
 					// Call onAnimationComplete
@@ -2212,7 +2212,7 @@
 		}
 	};
 
-	// Attach global event to resize each chart instance when the browser resizes
+	// Attach global event to resize each myChart instance when the browser resizes
 	helpers.addEvent(window, "resize", (function(){
 		// Basic debounce of resize function so it doesn't hurt performance when resizing browser.
 		var timeout;
@@ -2220,8 +2220,8 @@
 			clearTimeout(timeout);
 			timeout = setTimeout(function(){
 				each(Chart.instances,function(instance){
-					// If the responsive flag is set in the chart instance config
-					// Cascade the resize event down to the chart.
+					// If the responsive flag is set in the myChart instance config
+					// Cascade the resize event down to the myChart.
 					if (instance.options.responsive){
 						instance.resize(instance.render, true);
 					}
@@ -2260,7 +2260,7 @@
 		//Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
 		scaleBeginAtZero : true,
 
-		//Boolean - Whether grid lines are shown across the chart
+		//Boolean - Whether grid lines are shown across the myChart
 		scaleShowGridLines : true,
 
 		//String - Colour of the grid lines
@@ -2324,7 +2324,7 @@
 
 			this.datasets = [];
 
-			//Set up tooltip events on the chart
+			//Set up tooltip events on the myChart
 			if (this.options.showTooltips){
 				helpers.bindEvents(this, this.options.tooltipEvents, function(evt){
 					var activeBars = (evt.type !== 'mouseout') ? this.getBarsAtEvent(evt) : [];
@@ -2349,7 +2349,7 @@
 				ctx : this.chart.ctx
 			});
 
-			//Iterate through each of the datasets, and build this into a property of the chart
+			//Iterate through each of the datasets, and build this into a property of the myChart
 			helpers.each(data.datasets,function(dataset,datasetIndex){
 
 				var datasetObject = {
@@ -2503,12 +2503,12 @@
 			},this);
 
 			this.scale.addXLabel(label);
-			//Then re-render the chart.
+			//Then re-render the myChart.
 			this.update();
 		},
 		removeData : function(){
 			this.scale.removeXLabel();
-			//Then re-render the chart.
+			//Then re-render the myChart.
 			helpers.each(this.datasets,function(dataset){
 				dataset.bars.shift();
 			},this);
@@ -2572,7 +2572,7 @@
 		//Number - The width of each segment stroke
 		segmentStrokeWidth : 2,
 
-		//The percentage of the chart that we cut out of the middle.
+		//The percentage of the myChart that we cut out of the middle.
 		percentageInnerCutout : 50,
 
 		//Number - Amount of animation steps
@@ -2593,11 +2593,11 @@
 	};
 
 	Chart.Type.extend({
-		//Passing in a name registers this chart in the Chart namespace
+		//Passing in a name registers this myChart in the Chart namespace
 		name: "Doughnut",
-		//Providing a defaults will also register the defaults in the chart namespace
+		//Providing a defaults will also register the defaults in the myChart namespace
 		defaults : defaultConfig,
-		//Initialize is fired when the chart is initialized - Data is passed in as a parameter
+		//Initialize is fired when the myChart is initialized - Data is passed in as a parameter
 		//Config is automatically merged by the core of Chart.js, and is available at this.options
 		initialize:  function(data){
 
@@ -2611,7 +2611,7 @@
 				y : this.chart.height/2
 			});
 
-			//Set up tooltip events on the chart
+			//Set up tooltip events on the myChart
 			if (this.options.showTooltips){
 				helpers.bindEvents(this, this.options.tooltipEvents, function(evt){
 					var activeSegments = (evt.type !== 'mouseout') ? this.getSegmentsAtEvent(evt) : [];
@@ -2650,7 +2650,7 @@
 			var index = atIndex !== undefined ? atIndex : this.segments.length;
 			if ( typeof(segment.color) === "undefined" ) {
 				segment.color = Chart.defaults.global.segmentColorDefault[index % Chart.defaults.global.segmentColorDefault.length];
-				segment.highlight = Chart.defaults.global.segmentHighlightColorDefaults[index % Chart.defaults.global.segmentHighlightColorDefaults.length];				
+				segment.highlight = Chart.defaults.global.segmentHighlightColorDefaults[index % Chart.defaults.global.segmentHighlightColorDefaults.length];
 			}
 			this.segments.splice(index, 0, new this.SegmentArc({
 				value : segment.value,
@@ -2758,7 +2758,7 @@
 
 	var defaultConfig = {
 
-		///Boolean - Whether grid lines are shown across the chart
+		///Boolean - Whether grid lines are shown across the myChart
 		scaleShowGridLines : true,
 
 		//String - Colour of the grid lines
@@ -2828,7 +2828,7 @@
 
 			this.datasets = [];
 
-			//Set up tooltip events on the chart
+			//Set up tooltip events on the myChart
 			if (this.options.showTooltips){
 				helpers.bindEvents(this, this.options.tooltipEvents, function(evt){
 					var activePoints = (evt.type !== 'mouseout') ? this.getPointsAtEvent(evt) : [];
@@ -2843,7 +2843,7 @@
 				});
 			}
 
-			//Iterate through each of the datasets, and build this into a property of the chart
+			//Iterate through each of the datasets, and build this into a property of the myChart
 			helpers.each(data.datasets,function(dataset){
 
 				var datasetObject = {
@@ -2991,12 +2991,12 @@
 			},this);
 
 			this.scale.addXLabel(label);
-			//Then re-render the chart.
+			//Then re-render the myChart.
 			this.update();
 		},
 		removeData : function(){
 			this.scale.removeXLabel();
-			//Then re-render the chart.
+			//Then re-render the myChart.
 			helpers.each(this.datasets,function(dataset){
 				dataset.points.shift();
 			},this);
@@ -3112,7 +3112,7 @@
 				}
 
 				if (this.options.datasetFill && pointsWithValues.length > 0){
-					//Round off the line by going to the base of the chart, back to the start, then fill.
+					//Round off the line by going to the base of the myChart, back to the start, then fill.
 					ctx.lineTo(pointsWithValues[pointsWithValues.length - 1].x, this.scale.endPoint);
 					ctx.lineTo(pointsWithValues[0].x, this.scale.endPoint);
 					ctx.fillStyle = dataset.fillColor;
@@ -3160,7 +3160,7 @@
 		//Boolean - Show line for each value in the scale
 		scaleShowLine : true,
 
-		//Boolean - Stroke a line around each segment in the chart
+		//Boolean - Stroke a line around each segment in the myChart
 		segmentShowStroke : true,
 
 		//String - The colour of the stroke on each segment.
@@ -3175,10 +3175,10 @@
 		//String - Animation easing effect.
 		animationEasing : "easeOutBounce",
 
-		//Boolean - Whether to animate the rotation of the chart
+		//Boolean - Whether to animate the rotation of the myChart
 		animateRotate : true,
 
-		//Boolean - Whether to animate scaling the chart from the centre
+		//Boolean - Whether to animate scaling the myChart from the centre
 		animateScale : false,
 
 		//String - A legend template
@@ -3187,15 +3187,15 @@
 
 
 	Chart.Type.extend({
-		//Passing in a name registers this chart in the Chart namespace
+		//Passing in a name registers this myChart in the Chart namespace
 		name: "PolarArea",
-		//Providing a defaults will also register the defaults in the chart namespace
+		//Providing a defaults will also register the defaults in the myChart namespace
 		defaults : defaultConfig,
-		//Initialize is fired when the chart is initialized - Data is passed in as a parameter
+		//Initialize is fired when the myChart is initialized - Data is passed in as a parameter
 		//Config is automatically merged by the core of Chart.js, and is available at this.options
 		initialize:  function(data){
 			this.segments = [];
-			//Declare segment class as a chart instance specific class, so it can share props for this instance
+			//Declare segment class as a myChart instance specific class, so it can share props for this instance
 			this.SegmentArc = Chart.Arc.extend({
 				showStroke : this.options.segmentShowStroke,
 				strokeWidth : this.options.segmentStrokeWidth,
@@ -3236,7 +3236,7 @@
 				this.addData(segment,index,true);
 			},this);
 
-			//Set up tooltip events on the chart
+			//Set up tooltip events on the myChart
 			if (this.options.showTooltips){
 				helpers.bindEvents(this, this.options.tooltipEvents, function(evt){
 					var activeSegments = (evt.type !== 'mouseout') ? this.getSegmentsAtEvent(evt) : [];
@@ -3330,7 +3330,7 @@
 			helpers.each(this.segments,function(segment){
 				segment.save();
 			});
-			
+
 			this.reflow();
 			this.render();
 		},
@@ -3468,7 +3468,7 @@
 
 			this.buildScale(data);
 
-			//Set up tooltip events on the chart
+			//Set up tooltip events on the myChart
 			if (this.options.showTooltips){
 				helpers.bindEvents(this, this.options.tooltipEvents, function(evt){
 					var activePointsCollection = (evt.type !== 'mouseout') ? this.getPointsAtEvent(evt) : [];
@@ -3485,7 +3485,7 @@
 				});
 			}
 
-			//Iterate through each of the datasets, and build this into a property of the chart
+			//Iterate through each of the datasets, and build this into a property of the myChart
 			helpers.each(data.datasets,function(dataset){
 
 				var datasetObject = {

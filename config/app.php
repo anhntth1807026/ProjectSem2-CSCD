@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
+        jeremykenedy\LaravelRoles\RolesServiceProvider::class,
         /*
          * Package Service Providers...
          */

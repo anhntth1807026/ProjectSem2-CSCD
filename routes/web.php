@@ -11,11 +11,16 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
+Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function (){
+    Route::resource('/product', 'ProductController');
+});
 
-Route::resource('/admin/product', 'ProductController');
 
 Route::resource('/admin/category', 'CategoryController');
 
@@ -29,4 +34,19 @@ Route::get('/Contact-Us', function (){
     return view('client.contact-us');
 });
 
+Route::get('/admin/chart', function (){
+   return view('admin.dashboard.chart');
+});
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+Route::prefix('admin' )->group(function (){
+    Route::get('/login', 'AdminController@getLogin')->name('admin.login');
+    Route::post('/login', 'AdminController@postLogin');
+});
