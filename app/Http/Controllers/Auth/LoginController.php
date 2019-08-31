@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class LoginController extends Controller
 {
     /*
@@ -22,23 +23,37 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-//    protected $redirectTo = '/home';
-    protected $redirectTo = '/home';
+    public function getLogin()
+    {
+        return view('auth.login');
+    }
 
+    public function postLogin(Request $request)
+    {
+        $data = $request->only('email', 'password');
+        if (Auth::attempt($data)) {
+            return redirect()->route('home');
+        }
+    }
+
+    public function getLogout()
+    {
+        Auth::logout();
+        return redirect()->route('home');
+    }
     /**
      * Create a new controller instance.
      *
      * @return \Illuminate\Http\Response
      */
 
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-    }
+//    public function __construct()
+//    {
+//        $this->middleware('guest')->except('logout');
+//    }
+//    public function getLogout(Request $request) {
+//        Auth::logout();
+//        return redirect('/');
+//    }
 
 }

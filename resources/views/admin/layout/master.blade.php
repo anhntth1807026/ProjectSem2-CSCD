@@ -11,17 +11,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" href="{{asset('css/my-style.css')}}">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('css/app.css')}}">--}}
     {{--    <link rel="stylesheet" href="{{asset('css/custom.css')}}">--}}
-    <link rel="stylesheet" href="{{asset('css/sb-admin.css')}}">
+    <link rel="stylesheet" href="{{asset('css/sb-admin.min.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
-    <script src="{{asset('js/app.js')}}"></script>
-    <script src="{{asset('js/custom.js')}}"></script>
-    <script src="{{asset('js/sb-admin.min.js')}}"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="{{asset('js/myChart.js')}}"></script>
-    <script src="{{asset('dashboard')}}"></script>
-    <script src="{{asset('js/chart.js/dist/Chart.bundle.js')}}"></script>
+
 
     <title>SB Admin - Dashboard</title>
 
@@ -109,7 +103,7 @@
                 <span>Dashboad</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <a class="dropdown-item" href="">Manage User</a>
+                <a class="dropdown-item" href="{{ route('admin.get.user') }}">Manage User</a>
                 <a class="dropdown-item" href="{{route('category.index')}}">Manage Category</a>
                 <a class="dropdown-item" href="{{route('product.index')}}">Manage Product</a>
             </div>
@@ -139,7 +133,7 @@
         </div>
         <!-- /.container-fluid -->
         <!-- Sticky Footer -->
-        <footer class="sticky-footer">
+        <footer class="sticky-footer" style="position: fixed">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
                     <span>Copyright © Your Website 2019</span>
@@ -153,10 +147,10 @@
 </div>
 <!-- /#wrapper -->
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
+{{--<!-- Scroll to Top Button-->--}}
+{{--<a class="scroll-to-top rounded" href="#page-top">--}}
+{{--    <i class="fas fa-angle-up"></i>--}}
+{{--</a>--}}
 
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -177,7 +171,14 @@
         </div>
     </div>
 </div>
-
+{{--<script src="{{asset('js/app.js')}}"></script>--}}
+<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
+<script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('js/sb-admin.min.js')}}"></script>
+{{--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--}}
+<script src="{{asset('js/myChart.js')}}"></script>
+{{--<script src="{{asset('dist/js/pages/dashboard')}}"></script>--}}
+<script src="{{asset('js/chart.js/dist/Chart.bundle.js')}}"></script>
 </body>
 
 </html>
