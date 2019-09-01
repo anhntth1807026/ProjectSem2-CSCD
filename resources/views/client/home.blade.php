@@ -1,3 +1,4 @@
+
 @extends('client.layout')
 
 @section('content')
@@ -70,7 +71,6 @@
                 <img src="{{ asset('/img/new-image/icon-3.webp') }}" alt="">
                 <p class="w3-large">Tare&Write</p>
                 <p>Weigh your container.
-
                     Write the weight of your container on the label.</p>
             </div>
             <div class="w3-quarter">
@@ -128,6 +128,7 @@
         </div>
     </div>
 
+
     <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:40px">
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">All Products</h1>
         <div class="w3-row-padding w3-padding-16 w3-center" data-aos="fade-left" data-aos-duration="1500" id="food">
@@ -171,6 +172,7 @@
                 <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết
                 </button>
             </div>
+
         </div>
 
         <div class="w3-row-padding w3-padding-16 w3-center" data-aos="fade-left" data-aos-duration="1500">
@@ -186,6 +188,7 @@
             </div>
             <div class="w3-quarter">
 
+
                 <img src="{{ asset('img/new-image/gel-tay-da-chet-te-bao.jpg') }}" alt="" style="width:100%">
 
                 <h5 style="height: 45px">Gel tẩy tế bào chết</h5>
@@ -196,7 +199,6 @@
                 </button>
             </div>
             <div class="w3-quarter">
-
                 <img src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}" alt="" style="width:100%">
 
                 <h5 style="height: 45px">Khẩu trang lọc bụi</h5>
