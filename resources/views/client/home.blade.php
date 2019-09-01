@@ -43,7 +43,7 @@
             height: 100%;
             line-height: 1.8;
         }
-
+        
         /* Full height image header */
         .bgimg-1 {
             background-position: center;
@@ -51,6 +51,7 @@
             background-image: url("https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/48926321_318638168991952_5734769066673963008_o.jpg?_nc_cat=105&_nc_eui2=AeEOIdhJzGi2gDWeM2CswmfZMbIR_qRusvP7xAIfs_5wFoSXnteyx9iZYA6M6zN3Qtnww8yLbh1-dGrwOD4f1-APlwmn9eh0pl9TyHL92_lmrw&_nc_oc=AQm6l_7UqdI7U9G09MuJIxYWJOGFw1N4m6f-V7anIJzVK4Da0_BcxppDkQUvQbqaNAI&_nc_ht=scontent.fhan2-4.fna&oh=8fb71a35496b2d6c5955b9538c875fe1&oe=5E0B2614");
             min-height: 100%;
         }
+
 
         .w3-bar .w3-button {
             padding: 16px;
@@ -410,7 +411,7 @@
     </div>
 </header>
 
-<div class="w3-container w3-light-white" style="padding:100px 16px">
+<div class="w3-container w3-light-white" style="padding:100px 16px; background-image: url()">
     <div class="w3-row-padding">
         <div class="w3-col m6">
             <div data-aos="zoom-out-up" data-aos-duration="1500"><h2>Chào mừng bạn đến với LaiDayStation</h2>
@@ -443,7 +444,6 @@
             <p>Bring your own bottles or jars.
 
                 Make sure to clean and dry them, and remove old labels if any.
-
                 In case you forget your containers, please ask us if there is any old bottles donated from local
                 community to borrow.</p>
         </div>
@@ -479,7 +479,6 @@
             <h5 style="height: 45px">Cọ Rửa Bình</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity">99.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
@@ -487,7 +486,6 @@
             <h5 style="height: 45px">Hộp Khăn Giấy Gỗ</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity">199.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
@@ -496,7 +494,6 @@
             <h5 style="height: 45px">Đũa Gỗ Trắc</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity">49.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
@@ -504,7 +501,6 @@
             <h5 style="height: 45px">Xịt Khử Mùi</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity">429.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
     </div>
@@ -518,7 +514,6 @@
             <h5 style="height: 45px">Bàn chải tre người lớn</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity">79.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
@@ -528,7 +523,6 @@
             <h5 style="height: 45px">Ly thông minh xếp gọn</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity" style="size: 50px">139.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
@@ -537,7 +531,6 @@
             <h5 style="height: 45px">Túi vải đa năng</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity">49.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
@@ -546,7 +539,6 @@
             <h5 style="height: 45px">Bình nước giữ nhiệt nắp gỗ</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity">429.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
     </div>
@@ -558,7 +550,6 @@
             <h5 style="height: 45px">Bình nước giữ nhiệt cầu vồng</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity">429.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
@@ -568,7 +559,6 @@
             <h5 style="height: 45px">Gel tẩy tế bào chết</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity">219.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
         <div class="w3-quarter">
@@ -586,7 +576,6 @@
             <h5 style="height: 45px">Ống hút thuỷ tinh</h5>
             <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
             <h6 class="w3-opacity">49.000₫</h6>
-
             <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết</button>
         </div>
     </div>
