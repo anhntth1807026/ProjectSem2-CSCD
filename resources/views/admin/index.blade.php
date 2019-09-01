@@ -81,8 +81,8 @@
 
                             <!-- Button trigger modal -->
 
-                            <a href="javascript:void(0)" id="btn-edit-{{$products->id}}"
-                               class="btn btn-primary mr-2 btn-edit" title="Edit this game">Edit</a>
+{{--                            <a href="javascript:void(0)" id="btn-edit-{{$products->id}}"--}}
+{{--                               class="btn btn-primary mr-2 btn-edit" title="Edit this game">Edit</a>--}}
 
 
                             @csrf
