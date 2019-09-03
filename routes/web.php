@@ -24,9 +24,9 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function (){
 
 Route::resource('/admin/category', 'CategoryController');
 
-Route::get('/home', function (){
-    return view('client.home');
-});
+//Route::get('client/home', function (){
+//    return view('client.home');
+//});
 
 Route::get('/admin/chart', function (){
    return view('admin.dashboard.chart');
@@ -35,7 +35,7 @@ Route::get('/admin/chart', function (){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 
 
