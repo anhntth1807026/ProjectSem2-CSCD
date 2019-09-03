@@ -25,9 +25,9 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
 Route::resource('/admin/category', 'CategoryController');
 
 
-Route::get('/home', function (){
-    return view('client.home');
-});
+//Route::get('/home', function (){
+//    return view('client.home');
+//});
 Route::get('/About-Us', function (){
     return view('client.about-us');
 });
