@@ -5,19 +5,32 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="{{ route('category.index') }}">Dashboard</a>
+                    <a href="/admin/chart">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">Category Detail</li>
+                <li class="breadcrumb-item">
+                    <a href="{{route('category.index')}}">Category</a>
+                </li>
+                <li class="breadcrumb-item active">Detail</li>
             </ol>
         </div>
 
         <div class="row">
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Name:</strong>
-                </div>
-            </div>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>Name</th>
+                    <td>{{ $category->name }}</td>
+                </tr>
+                <tr>
+                    <th>Created At</th>
+                    <td>{{ $category->created_at }}</td>
+                </tr>
+                <tr>
+                    <th>Updated At</th>
+                    <td>{{ $category->updated_at }}</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 @endsection

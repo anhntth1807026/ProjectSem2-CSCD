@@ -5,9 +5,12 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="{{ route('product.index') }}">Dashboard</a>
+                    <a href="/admin/chart">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">Edit Product</li>
+                <li class="breadcrumb-item">
+                    <a href="{{route('product.index')}}">Product</a>
+                </li>
+                <li class="breadcrumb-item active">Edit</li>
             </ol>
         </div>
         <div class="row">
@@ -22,32 +25,34 @@
                 </div>
             @endif
             <div class="col-9">
-                <form action="" enctype="multipart/form-data" method="POST">
+                <form action="{{ route('product.update', $product->id) }}" enctype="multipart/form-data" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <strong>Name:</strong>
-                        <input type="text" name="name" value="" class="form-control"
+                        <label>Name</label>
+                        <input style="width: 50%" type="text" name="name" value="{{ $product->name }}" class="form-control"
                                placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <strong>Description:</strong>
-                        <textarea class="form-control" name="description"
-                                  placeholder="Description"></textarea>
+                        <label>Description</label>
+                        <input class="form-control" name="description"
+                                  value="{{ $product->description }}"
+                                  placeholder="Description">
                     </div>
                     <div class="form-group">
-                        <label >Thumbnail</label>
-                        <input type="file" class="form-control" multiple="multiple" name="thumbnail[]"
+                        <label>Thumbnail</label>
+                        <input style="width: 40%; height: 250px" type="file" class="form-control" multiple="multiple"
+                               name="thumbnail" value="{{ $product->thumbnail }}"
                                placeholder="Thumbnail">
                     </div>
                     <div class="form-group">
-                        <strong>Quantity:</strong>
-                        <input type="number" name="quantity" value="" class="form-control"
+                        <label>Quantity</label>
+                        <input style="width: 35%" type="number" name="quantity" value="{{ $product->quantity }}" class="form-control"
                                placeholder="Quantity">
                     </div>
                     <div class="form-group">
-                        <strong>Price:</strong>
-                        <input class="form-control" name="price"
+                        <label>Price</label>
+                        <input style="width: 35%" class="form-control" name="price" value="{{ $product->price }}"
                                placeholder="Price">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
