@@ -30,7 +30,8 @@
                     @csrf
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" name="name" class="form-control" placeholder="Please enter name">
+                        <input style="width: 50%" type="text" name="name" class="form-control"
+                               placeholder="Please enter name">
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                             else.</small>
                     </div>
@@ -41,16 +42,19 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Thumbnail</label>
-                        <input type="file" class="form-control" multiple="multiple" style="height:150px" name="thumbnail[]"
+                        <input style="width: 40%; height: 250px" type="file" class="form-control"
+                               multiple="multiple" name="thumbnail[]"
                                placeholder="Thumbnail">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Quantity</label>
-                        <input type="number" name="price" class="form-control" placeholder="Please enter price">
+                        <input style="width: 35%" type="number" name="price" class="form-control"
+                               placeholder="Please enter quantity">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Price</label>
-                        <input type="number" name="price" class="form-control" placeholder="Please enter price">
+                        <input style="width: 35%" type="number" name="price" class="form-control"
+                               placeholder="Please enter price">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

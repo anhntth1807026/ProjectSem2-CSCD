@@ -14,31 +14,45 @@
             </ol>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Name:</strong>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Description:</strong>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Thumbnail:</strong>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Quantity:</strong>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Price:</strong>
-                </div>
-            </div>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>Name</th>
+                    <td>{{ $product->name }}</td>
+                </tr>
+                <tr>
+                    <th>Thumbnail</th>
+                    <td>
+                        @foreach(explode("@",$product->thumbnail) as $image)
+                            <img class="img-thumbnail rounded"
+                                 style="width: 150px;margin: 0 10px"
+                                 src="{{ $image }}"
+                                 alt="{{ $product->name }}">
+                        @endforeach
+                    </td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>{{ $product-> description }}</td>
+                </tr>
+                <tr>
+                    <th>Quantity</th>
+                    <td>{{ $product-> quantity }}</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>{{ $product-> price }}</td>
+                </tr>
+                <tr>
+                    <th>Created At</th>
+                    <td>{{ $product-> created_at }}</td>
+                </tr>
+                <tr>
+                    <th>Updated At</th>
+                    <td>{{ $product-> updated_at }}</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 @endsection

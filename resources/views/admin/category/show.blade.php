@@ -15,12 +15,22 @@
         </div>
 
         <div class="row">
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Name:</strong>
-                </div>
-            </div>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>Name</th>
+                    <td>{{ $category->name }}</td>
+                </tr>
+                <tr>
+                    <th>Created At</th>
+                    <td>{{ $category->created_at }}</td>
+                </tr>
+                <tr>
+                    <th>Updated At</th>
+                    <td>{{ $category->updated_at }}</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 @endsection

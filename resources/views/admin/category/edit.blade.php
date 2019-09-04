@@ -8,7 +8,7 @@
                     <a href="/admin/chart">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{route('category.index')}}">Category</a>
+                    <a href="{{ route('category.index') }}">Category</a>
                 </li>
                 <li class="breadcrumb-item active">Edit</li>
             </ol>
@@ -24,21 +24,17 @@
                     </ul>
                 </div>
             @endif
-            <div class="row">
-                <form action="" method="POST">
+            <div class="row col-9 mb-2 mt-2">
+                <form action="{{ route('category.update', $category->id) }}" method="POST">
                     @csrf
                     @method('PUT')
-
-                    <div class="col-9">
-                        <div class="form-group">
-                            <strong>Name:</strong>
-                            <input type="text" name="name" value="" class="form-control"
-                                   placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" value="{{ $category->name }}" class="form-control"
+                               placeholder="Name">
                     </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
             </form>
         </div>
