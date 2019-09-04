@@ -7,7 +7,7 @@
                     <a href="/admin/chart">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{route('product.index')}}">Product</a>
+                    <a href="{{ route('product.index') }}">Product</a>
                 </li>
                 <li class="breadcrumb-item active">List</li>
             </ol>
@@ -31,69 +31,41 @@
                         <th scope="col">No</th>
                         <th scope="col">Thumbnail</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Description</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Price</th>
                         <th width="240px">Action</th>
                     </tr>
                     </thead>
+                    @foreach ($product as $key => $products)
                     <tbody id="myTable">
-                    <tr id="tr_1">
-                        <td scope="row"><input type="checkbox" class="checkbox" data-id="1"></td>
-                        <td>1</td>
-                        <td>
+                    <tr id="tr_{{ $products -> id }}">
+                        <td scope="row"><input type="checkbox" class="checkbox" data-id="{{ $products -> id }}"></td>
+                        <td scope="col">{{ $products-> id }}</td>
+                        <td scope="col">
+                            @foreach(explode("@",$products->thumbnail) as $image)
                             <img class="img-thumbnail rounded"
-                                 style="width: 50px;margin: 0 10px;border: 1px solid black"
-                                 src="https://instagram.fhan2-3.fna.fbcdn.net/vp/55b3757cbc713d8151548d36d836c17d/5DF7BBFA/t51.2885-15/sh0.08/e35/s640x640/61326708_149466602858719_4296186357804016051_n.jpg?_nc_ht=instagram.fhan2-3.fna.fbcdn.net"
-                                 alt="Xà bông cục">
+                                 style="width: 150px;margin: 0 10px"
+                                 src="{{ $image }}"
+                                 alt="{{ $products->name }}">
+                            @endforeach
                         </td>
-                        <td>Xà Bông Cục</td>
-                        <td>Hương Vani, các giác quan của bạn sẽ cảm nhận được từng thành phần nhiên liệu tự nhiên được
-                            gửi gắm trong mỗi bánh xà phòng.
-                        </td>
-                        <td>10</td>
-                        <td>100000</td>
-                        <td>
-                            <form action="{{ route('product.destroy',1) }}" method="POST">
-                                <a href="{{route('product.show', 1)}}" class="mr-2" title="View game detail">Detail</a>
-                                <a href="{{route('product.edit', 1)}}" id="btn-edit-1" class="mr-2 btn-edit"
+                        <td scope="col">{{ $products->name }}</td>
+                        <td scope="col">{{ $products->quantity }}</td>
+                        <td scope="col">{{ $products->price }}</td>
+                        <td scope="col">
+                            <form action="{{ route('product.destroy', $products->id) }}" method="POST">
+                                <a href="{{ route('product.show', $products->id) }}" class="mr-2" title="View product detail">Detail</a>
+                                <a href="{{ route('product.edit', $products->id) }}" id="btn-edit-1" class="mr-2 btn-edit"
                                    title="Edit this product">Edit</a>
                                 @csrf
                                 @method('DELETE')
-                                <a href="javascript:void(0)" id="btn-delete-1" class="mr-2 btn-delete"
-                                   title="Delete this product">Delete</a>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr id="tr_2">
-                        <td scope="row"><input type="checkbox" class="checkbox" data-id="1"></td>
-                        <td>2</td>
-                        <td>
-                            <img class="img-thumbnail rounded"
-                                 style="width: 50px;margin: 0 10px;border: 1px solid black"
-                                 src="https://instagram.fhan2-3.fna.fbcdn.net/vp/245c4ee47612cb05e49022a123ee3808/5DFC4565/t51.2885-15/sh0.08/e35/p750x750/59551474_446829726067521_5913092042567309768_n.jpg?_nc_ht=instagram.fhan2-3.fna.fbcdn.net"
-                                 alt="Bông tắm xơ mướp">
-                        </td>
-                        <td>Bông Tắm Xơ Mướp</td>
-                        <td>Xơ mướp là 1 loại quả tự nhiên không qua xử lý hóa chất, nên vô cùng an toàn cho làn da. Đặc
-                            biệt, tắm bằng xơ mướp đều đặn mỗi ngày giúp máu lưu thông tốt hơn, tẩy da chết và làm làn
-                            da hồng hào hơn.
-                        </td>
-                        <td>10</td>
-                        <td>30000</td>
-                        <td>
-                            <form action="{{ route('product.destroy',2) }}" method="POST">
-                                <a href="{{route('product.show', 2)}}" class="mr-2" title="View game detail">Detail</a>
-                                <a href="{{route('product.edit', 2)}}" id="btn-edit-1" class="mr-2 btn-edit"
-                                   title="Edit this product">Edit</a>
-                                @csrf
-                                @method('DELETE')
-                                <a href="javascript:void(0)" id="btn-delete-1" class="mr-2 btn-delete"
+                                <a href="javascript:void(0)" id="btn-delete-{{ $products->id }}" class="mr-2 btn-delete"
                                    title="Delete this product">Delete</a>
                             </form>
                         </td>
                     </tr>
                     </tbody>
+                    @endforeach
                 </table>
             </div>
             <div class="row">
