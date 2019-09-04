@@ -26,7 +26,7 @@
     {{--    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('css/my-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style-client.css') }}">
     {{--    materialize css--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
