@@ -64,3 +64,7 @@ Route::group(['namespace' => 'Auth'], function () {
 
     Route::get('logout', 'LoginController@getLogout')->name('get.logout.user');
 });
+
+Route::prefix('shopping')->group(function (){
+    Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
+});
