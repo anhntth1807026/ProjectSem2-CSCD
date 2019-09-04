@@ -2,21 +2,17 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <link rel="stylesheet" href="{{asset('css/my-style.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-        <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <link rel="stylesheet" href="{{asset('css/sb-admin.min.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
-
-
     <title>SB Admin - Dashboard</title>
 
 </head>
@@ -31,7 +27,6 @@
         <i class="fas fa-bars"></i>
     </button>
 
-    <!-- Navbar Search -->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for..." aria-label="Search"
@@ -44,7 +39,6 @@
         </div>
     </form>
 
-    <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown no-arrow mx-1">
             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
@@ -97,15 +91,14 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown-btn nav-link dropdown-toggle" data-toggle="dropdown">
                 <i class="fas fa-fw fa-folder"></i>
-                <span>Dashboad</span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <a class="dropdown-item" href="{{ route('admin.get.user') }}">Manage User</a>
-                <a class="dropdown-item" href="{{route('category.index')}}">Manage Category</a>
-                <a class="dropdown-item" href="{{route('product.index')}}">Manage Product</a>
+                <span>Dashboard</span>
+            </div>
+            <div class="dropdown-container">
+                <a class="dropdown-item" href="{{ route('admin.get.user') }}"><i class="fas fa-user"></i> Manage User</a>
+                <a class="dropdown-item" href="{{route('category.index')}}"><i class="fas fa-archive"></i> Manage Category</a>
+                <a class="dropdown-item" href="{{route('product.index')}}"><i class="fab fa-product-hunt"></i> Manage Product</a>
             </div>
         </li>
         <li class="nav-item">
@@ -122,17 +115,11 @@
 
     <div id="content-wrapper">
         <div class="container-fluid">
-
-
             <div class="row">
                 @section('content')
                 @show()
             </div>
-
-
         </div>
-        <!-- /.container-fluid -->
-        <!-- Sticky Footer -->
         <footer class="sticky-footer">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
@@ -140,12 +127,8 @@
                 </div>
             </div>
         </footer>
-
     </div>
-    <!-- /.content-wrapper -->
-
 </div>
-<!-- /#wrapper -->
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
@@ -171,6 +154,23 @@
         </div>
     </div>
 </div>
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
 <script src="{{asset('js/custom.js')}}"></script>

@@ -5,7 +5,7 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="">Dashboard</a>
+                    <a href="/admin/chart">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item active">Chart</li>
             </ol>
