@@ -1,4 +1,3 @@
-
 @extends('client.layout')
 
 @section('content')
@@ -88,15 +87,34 @@
     <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:40px">
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Best Seller</h1>
         <div class="w3-row-padding w3-padding-16 w3-center" data-aos="fade-left" data-aos-duration="1500" id="food">
-            <div class="w3-quarter">
-                <img src="{{ asset('img/home-care/co-rua-binh.webp') }}" alt="" style="width:100%">
-                <h5 style="height: 45px">Cọ Rửa Bình</h5>
-                <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
-                <h6 class="w3-opacity">99.000₫</h6>
+{{--            @foreach($product as $products)--}}
+            <div class="w3-quarter ">
+{{--                    <img src="{{ asset('img/home-care/co-rua-binh.webp') }}" alt="">--}}
+                <div class="card__collection clear-fix">
+                    <div class="cards cards--two">
+                        <img src="{{ asset('img/home-care/co-rua-binh.webp') }}" class="img-responsive" alt="Cards Image" style="width: 100%">
+{{--                        <span class="cards--two__rect"></span>--}}
+{{--                        <span class="cards--two__tri"></span>--}}
 
-                <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết
-                </button>
+                        <ul class="cards__list">
+                            <li class="btn-icon">
+                                <a href="{{ route('add.shopping.cart', $products-> id) }}"><i class="fa fa-shopping-cart"></i></a>
+                            </li >
+                            <li class="btn-icon">
+                                <i class="fa fa-eye"></i>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                                            <h5 style="height: 45px">Cọ Rửa Bình</h5>
+                    {{--                        <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>--}}
+                                            <h6 class="w3-opacity">99.000₫</h6>
+
+{{--                    <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom">Sản phẩm chi tiết--}}
+{{--                    </button>--}}
             </div>
+{{--            @endforeach--}}
             <div class="w3-quarter">
                 <img src="{{ asset('img/home-care/hop-khan-giay-go.webp') }}" alt="Steak" style="width:100%">
                 <h5 style="height: 45px">Hộp Khăn Giấy Gỗ</h5>
