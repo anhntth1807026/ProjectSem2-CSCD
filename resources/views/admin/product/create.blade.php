@@ -42,13 +42,13 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Thumbnail</label>
-                        <input style="width: 40%; height: 250px" type="file" class="form-control"
+                        <input style=" height: 250px" type="file" class="form-control"
                                multiple="multiple" name="thumbnail[]"
                                placeholder="Thumbnail">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Quantity</label>
-                        <input style="width: 35%" type="number" name="price" class="form-control"
+                        <input style="width: 35%" type="number" name="quantity" class="form-control"
                                placeholder="Please enter quantity">
                     </div>
                     <div class="form-group">

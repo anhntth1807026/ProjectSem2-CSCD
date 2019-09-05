@@ -7,6 +7,7 @@ use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
+use JD\Cloudder\Facades\Cloudder;
 
 class ProductController extends Controller
 {
