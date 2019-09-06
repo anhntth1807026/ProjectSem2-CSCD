@@ -101,35 +101,6 @@
     <img class="mySlides" src="{{ asset('img/new-image/f951500763d646ae6a9dde86ae68950c.jpg') }}" style="width:100%">
 </div>
 
-<div class="w3-container" style="padding:100px 16px;color: white">
-    <div class="w3-row-padding">
-        <div class="w3-col m12" style="color:#000;">
-            <div class="w3-container w3-light-white w3-padding-32 w3-padding-large" id="contact">
-                <div class="w3-content" style="max-width:600px">
-                    <h4 class="w3-center"><b>Kết Nối Với Chúng Tôi</b></h4>
-                    <form action="/action_page.php" target="_blank">
-                        <div class="w3-section">
-                            <label>Name</label>
-                            <input class="w3-input w3-border" type="text" name="Name" required>
-                        </div>
-                        <div class="w3-section">
-                            <label>Email</label>
-                            <input class="w3-input w3-border" type="text" name="Email" required>
-                        </div>
-                        <div class="w3-section">
-                            <label>Message</label>
-                            <input class="w3-input w3-border" type="text" name="Message" required>
-                        </div>
-                        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send
-                            Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="middle">
     <a class="btn-middle" href="#">
         <i class="fa fa-facebook-f"></i>
