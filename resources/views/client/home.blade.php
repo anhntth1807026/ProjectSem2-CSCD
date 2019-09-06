@@ -112,11 +112,28 @@
         <div class="w3-row-padding w3-padding-16 w3-center" data-aos="fade-left" data-aos-duration="1500" id="food">
             {{--            @foreach($product as $products)--}}
             <div class="w3-quarter ">
-                <img src="{{ asset('img/home-care/co-rua-binh.webp') }}" alt="Steak" style="width:100%"
-                     title="Bấm để xem hình ảnh chi tiết">
-                <h5 style="height: 45px" title="Bấm để xem hình ảnh chi tiết">Gậy cọ rửa chai lọ</h5>
-                <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>
-                <h6 class="w3-opacity">99.000₫</h6>
+{{--                    <img src="{{ asset('img/home-care/co-rua-binh.webp') }}" alt="">--}}
+                <div class="card__collection clear-fix">
+                    <div class="cards cards--two">
+                        <img src="{{ asset('img/home-care/co-rua-binh.webp') }}" class="img-responsive" alt="Cards Image" style="width: 100%">
+{{--                        <span class="cards--two__rect"></span>--}}
+{{--                        <span class="cards--two__tri"></span>--}}
+
+                        <ul class="cards__list">
+                            <li class="btn-icon">
+                                <a href=""><i class="fa fa-shopping-cart"></i></a>
+                            </li >
+                            <li class="btn-icon">
+                                <i class="fa fa-eye"></i>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                                            <h5 style="height: 45px">Cọ Rửa Bình</h5>
+                    {{--                        <h6 style="height: 30px">Đồ Dùng Gia Đình</h6>--}}
+                                            <h6 class="w3-opacity">99.000₫</h6>
+
 
                 <button class="w3-button w3-block w3-grey w3-hover-blue-gray w3-margin-bottom"
                         title="Xem thông tin chi tiết của sản phẩm">Sản phẩm chi tiết
