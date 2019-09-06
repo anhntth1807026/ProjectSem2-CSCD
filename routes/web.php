@@ -35,12 +35,16 @@ Route::get('/Contact-Us', function (){
     return view('client.contact-us');
 });
 
+Route::get('/Product-Details', function (){
+    return view('client.productdetails');
+});
+
 
 Route::get('/admin/chart', function () {
     return view('admin.dashboard.chart');
 });
 
-Route::get('/admin/user', 'AdminUserController@index')->name('admin.get.user');
+Route::get('/admin/user', 'AdminUserController@index')->name( 'admin.get.user');
 Route::get('/admin/user/edit/{id}', 'AdminUserController@editUser')->name('admin.edit.user');
 Route::put('/admin/user/update/{id}', 'AdminUserController@update')->name('admin.update.user');
 Route::delete('/admin/user/delete/{id}', 'AdminUserController@delete')->name('admin.delete.user');
