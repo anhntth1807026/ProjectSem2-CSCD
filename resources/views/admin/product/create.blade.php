@@ -28,13 +28,26 @@
             <div class="col-9">
                 <form action="{{route('product.store')}}" enctype="multipart/form-data" method="post">
                     @csrf
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input style="width: 50%" type="text" name="name" class="form-control"
-                               placeholder="Please enter name">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
+                    <div class="row">
+                        <div class="col-4 form-group">
+                            <label>Name</label>
+                            <input style="" type="text" name="name" class="form-control"
+                                   placeholder="Please enter name">
+                        </div>
+
+                        <div class="col-4 form-group">
+                            <label for="">Category: </label>
+                            <select name="pro_category_id" id="" class="form-control">
+                                <option value="">--Chọn loại sản phẩm--</option>
+                                @if(isset($categories))
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id }}"> {{ $category->name }}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                        </div>
                     </div>
+
                     <div class="form-group">
                         <label for="exampleInputPassword1">Description</label>
                         <textarea class="form-control" style="height:150px" name="description"
@@ -42,20 +55,23 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Thumbnail</label>
-                        <input style=" height: 250px" type="file" class="form-control"
+                        <input style=" height: 100px" type="file" class="form-control"
                                multiple="multiple" name="thumbnail[]"
                                placeholder="Thumbnail">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Quantity</label>
-                        <input style="width: 35%" type="number" name="quantity" class="form-control"
-                               placeholder="Please enter quantity">
+                    <div class="row">
+                        <div class="col-5 form-group">
+                            <label for="exampleInputPassword1">Quantity</label>
+                            <input style="width: 70%" type="number" name="quantity" class="form-control"
+                                   placeholder="Please enter quantity">
+                        </div>
+                        <div class="col-5 form-group">
+                            <label for="exampleInputPassword1">Price</label>
+                            <input style="width: 70%" type="number" name="price" class="form-control"
+                                   placeholder="Please enter price">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Price</label>
-                        <input style="width: 35%" type="number" name="price" class="form-control"
-                               placeholder="Please enter price">
-                    </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>

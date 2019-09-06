@@ -68,3 +68,7 @@ Route::group(['namespace' => 'Auth'], function () {
 Route::prefix('shopping')->group(function (){
     Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
 });
+
+Route::group(['prefix' => 'transaction'], function (){
+    Route::get('/', 'AdminTransactionController@index')->name('admin.list.transaction');
+});
