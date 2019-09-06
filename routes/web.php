@@ -25,10 +25,6 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
 Route::resource('/admin/category', 'CategoryController');
 
 
-
-//Route::get('/home', function (){
-//    return view('client.home');
-//});
 Route::get('/About-Us', function (){
     return view('client.about-us');
 });
@@ -36,14 +32,15 @@ Route::get('/Contact-Us', function (){
     return view('client.contact-us');
 });
 
-Route::get('/List-Product', function (){
-    return view('client.list-product');
+
+Route::get('/Product-Details', function (){
+    return view('client.productdetails');
 });
+
 
 Route::get('/admin/chart', function () {
     return view('admin.dashboard.chart');
 });
-
 
 Route::get('/admin/user', 'AdminUserController@index')->name('admin.get.user');
 Route::get('/admin/user/edit/{id}', 'AdminUserController@editUser')->name('admin.edit.user');
@@ -69,4 +66,8 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::post('register', 'RegisterController@postRegister')->name('post.register');
 
     Route::get('logout', 'LoginController@getLogout')->name('get.logout.user');
+});
+
+Route::prefix('shopping')->group(function (){
+    Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
 });

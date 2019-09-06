@@ -5,9 +5,12 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="#">Dashboard</a>
+                    <a href="/admin/chart">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">List Category</li>
+                <li class="breadcrumb-item">
+                    <a href="{{ route('category.index') }}">Category</a>
+                </li>
+                <li class="breadcrumb-item active">List</li>
             </ol>
             <div class="col-auto">
                 <div class="pull-left">
@@ -31,40 +34,26 @@
                         <th width="280px">Action</th>
                     </tr>
                     </thead>
+                    @foreach ($category as $key => $categories)
                     <tbody id="myTable">
-                    <tr id="tr_1">
-                        <td scope="row"><input type="checkbox" class="checkbox" data-id="1"></td>
-                        <td scope="col">1</td>
-                        <td scope="col">Chăm sóc nhà cửa</td>
+                    <tr id="tr_{{ $categories->id }}">
+                        <td scope="row"><input type="checkbox" class="checkbox" data-id="{{ $categories->id }}"></td>
+                        <td scope="col">{{ $categories->id }}</td>
+                        <td scope="col">{{ $categories->name }}</td>
                         <td>
-                            <form action="{{ route('category.destroy',1) }}" method="POST">
-                                <a href="{{route('category.show', 1)}}" class="mr-2" title="View game detail">Detail</a>
-                                <a href="{{route('category.edit', 1)}}" id="btn-edit-1" class="mr-2 btn-edit"
-                                   title="Edit this product">Edit</a>
+                            <form action="{{ route('category.destroy', $categories->id ) }}" method="POST">
+                                <a href="{{ route('category.show', $categories->id ) }}" class="mr-2" title="View category detail">Detail</a>
+                                <a href="{{ route('category.edit', $categories->id ) }}" id="btn-edit-1" class="mr-2 btn-edit"
+                                   title="Edit this category">Edit</a>
                                 @csrf
                                 @method('DELETE')
-                                <a href="javascript:void(0)" id="btn-delete-1" class="mr-2 btn-delete"
-                                   title="Delete this product">Delete</a>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr id="tr_2">
-                        <td scope="row"><input type="checkbox" class="checkbox" data-id="2"></td>
-                        <td scope="col">2</td>
-                        <td scope="col">Sinh hoạt cá nhân</td>
-                        <td>
-                            <form action="{{ route('category.destroy',2) }}" method="POST">
-                                <a href="{{route('category.show', 2)}}" class="mr-2" title="View game detail">Detail</a>
-                                <a href="{{route('category.edit', 2)}}" id="btn-edit-1" class="mr-2 btn-edit"
-                                   title="Edit this product">Edit</a>
-                                @csrf
-                                @method('DELETE')
-                                <a href="javascript:void(0)" id="btn-delete-1" class="mr-2 btn-delete"
-                                   title="Delete this product">Delete</a>
+                                <a href="javascript:void(0)" id="btn-delete-{{ $categories->id }}" class="mr-2 btn-delete"
+                                   title="Delete this category">Delete</a>
                             </form>
                         </td>
                     </tr>
                     </tbody>
+                    @endforeach
                 </table>
                 <div class="row">
                     <div class="form-group mr-3">

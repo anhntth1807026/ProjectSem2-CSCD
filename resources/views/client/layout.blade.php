@@ -26,11 +26,11 @@
     {{--    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('css/my-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style-client.css') }}">
     {{--    materialize css--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>--}}
 </head>
 <body>
 <!--Header-->
@@ -49,7 +49,9 @@
             <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;text-decoration: none">Chúng Tôi</a>
             <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;text-decoration: none">Bài Viết</a>
             <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;text-decoration: none">Chính Sách</a>
-            <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;text-decoration: none">Giỏ Hàng</a>
+            <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;text-decoration: none; padding-right: 30px"><i class="fa fa-cart-plus" aria-hidden="true"></i>
+                <span class="cart-quantity badge-danger">{{ Cart::count() }}</span>
+            </a>
 
             <a class=" dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">

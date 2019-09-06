@@ -5,9 +5,12 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="{{route('category.index')}}">Dashboard</a>
+                    <a href="/admin/chart">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">Add Category</li>
+                <li class="breadcrumb-item">
+                    <a href="{{route('category.index')}}">Category</a>
+                </li>
+                <li class="breadcrumb-item active">Add</li>
             </ol>
         </div>
         <div class="row">
@@ -24,16 +27,16 @@
             <div class="row">
                 <form action="{{ route('category.store') }}" enctype="multipart/form-data" method="POST">
                     @csrf
-
                     <div class="col-9">
                         <div class="form-group">
-                            <strong>Name:</strong>
-                            <input type="text" name="name" class="form-control" placeholder="Name">
+                            <label>Name</label>
+                            <input style="width: 50%" type="text" name="name" class="form-control" placeholder="Name">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
+                </form>
             </div>
             </form>
         </div>
