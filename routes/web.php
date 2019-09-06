@@ -36,6 +36,9 @@ Route::get('/Contact-Us', function (){
     return view('client.contact-us');
 });
 
+Route::get('/List-Product', function (){
+    return view('client.list-product');
+});
 
 Route::get('/admin/chart', function () {
     return view('admin.dashboard.chart');
