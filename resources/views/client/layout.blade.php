@@ -103,40 +103,6 @@
 @section('content')
 @show
 
-{{--<div class="w3-content w3-section" style="max-width:500px">--}}
-{{--    <img class="mySlides" src="{{ asset('img/new-image/81be5807e3f96cbe68fca1b742263263.jpg') }}" style="width:100%">--}}
-{{--    <img class="mySlides" src="{{ asset('img/new-image/f5224c013d9d47e657878207b5b479d9.jpg') }}" style="width:100%">--}}
-{{--    <img class="mySlides" src="{{ asset('img/new-image/f951500763d646ae6a9dde86ae68950c.jpg') }}" style="width:100%">--}}
-{{--</div>--}}
-
-<div class="w3-container" style="padding:100px 16px;color: white">
-    <div class="w3-row-padding">
-        <div class="w3-col m12" style="color:#000;">
-            <div class="w3-container w3-light-white w3-padding-32 w3-padding-large" id="contact">
-                <div class="w3-content" style="max-width:600px">
-                    <h4 class="w3-center"><b>Kết Nối Với Chúng Tôi</b></h4>
-                    <form action="/action_page.php" target="_blank" class="w3-container">
-                        <div class="w3-section">
-                            <label title="Nhập tên của bạn">Name</label>
-                            <input class="w3-input w3-border" type="text" name="Name" required>
-                        </div>
-                        <div class="w3-section">
-                            <label title="Nhập địa chỉ email của bạn">Email</label>
-                            <input class="w3-input w3-border" type="text" name="Email" required>
-                        </div>
-                        <div class="w3-section">
-                            <label title="Nhập lời nhắn của bạn">Message</label>
-                            <input class="w3-input w3-border" type="text" name="Message" required>
-                        </div>
-                        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send
-                            Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="middle">
     <a class="btn-middle" href="#">
