@@ -98,7 +98,7 @@
 
                         <ul class="cards__list">
                             <li class="btn-icon">
-                                <a href="{{ route('add.shopping.cart', $products-> id) }}"><i class="fa fa-shopping-cart"></i></a>
+                                <a href="{{ route('add.shopping.cart', 1) }}"><i class="fa fa-shopping-cart"></i></a>
                             </li >
                             <li class="btn-icon">
                                 <i class="fa fa-eye"></i>

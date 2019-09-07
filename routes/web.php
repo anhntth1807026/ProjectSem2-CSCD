@@ -39,6 +39,14 @@ Route::get('/Product-Details', function (){
     return view('client.productdetails');
 });
 
+Route::get('/Policy', function (){
+    return view('client.policy');
+});
+//
+//Route::get('/Policy/', function (){
+//    return view('client.policy.');
+//});
+
 
 Route::get('/admin/chart', function () {
     return view('admin.dashboard.chart');
