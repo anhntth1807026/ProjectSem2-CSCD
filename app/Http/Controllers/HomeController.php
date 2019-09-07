@@ -26,9 +26,9 @@ class HomeController extends Controller
     public function index()
     {
         $products = Product::where([
-            'products' => Product::all(),
+//            'products' => Product::all(),
             'pro_active' => Product::STATUS_PUBLIC
-        ])->limit(5)->get();
+        ])->get();
 
         $viewData = [
             'products' => $products
