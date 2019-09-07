@@ -42,12 +42,10 @@
                         <td scope="col">{{ $categories->name }}</td>
                         <td>
                             <form action="{{ route('category.destroy', $categories->id ) }}" method="POST">
-                                <a href="{{ route('category.show', $categories->id ) }}" class="mr-2" title="View category detail">Detail</a>
-                                <a href="{{ route('category.edit', $categories->id ) }}" id="btn-edit-1" class="mr-2 btn-edit"
-                                   title="Edit this category">Edit</a>
+                                <a class="btn btn-primary" href="{{ route('category.edit', $categories->id ) }}">Edit</a>
                                 @csrf
                                 @method('DELETE')
-                                <a href="javascript:void(0)" id="btn-delete-{{ $categories->id }}" class="mr-2 btn-delete"
+                                <a href="javascript:void(0)" id="btn-delete-{{ $categories->id }}" class="mr-2 btn btn-danger btn-delete"
                                    title="Delete this category">Delete</a>
                             </form>
                         </td>

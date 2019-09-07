@@ -25,15 +25,13 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
 Route::resource('/admin/category', 'CategoryController');
 
 
-//Route::get('/home', function (){
-//    return view('client.home');
-//});
 Route::get('/About-Us', function (){
     return view('client.about-us');
 });
 Route::get('/Contact-Us', function (){
     return view('client.contact-us');
 });
+
 
 Route::get('/Product-Details', function (){
     return view('client.productdetails');
@@ -52,10 +50,11 @@ Route::get('/admin/chart', function () {
     return view('admin.dashboard.chart');
 });
 
-Route::get('/admin/user', 'AdminUserController@index')->name( 'admin.get.user');
+Route::get('/admin/user', 'AdminUserController@index')->name('admin.get.user');
 Route::get('/admin/user/edit/{id}', 'AdminUserController@editUser')->name('admin.edit.user');
 Route::put('/admin/user/update/{id}', 'AdminUserController@update')->name('admin.update.user');
 Route::delete('/admin/user/delete/{id}', 'AdminUserController@delete')->name('admin.delete.user');
+
 
 Auth::routes();
 
@@ -79,4 +78,8 @@ Route::group(['namespace' => 'Auth'], function () {
 
 Route::prefix('shopping')->group(function (){
     Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
+});
+
+Route::group(['prefix' => 'transaction'], function (){
+    Route::get('/', 'AdminTransactionController@index')->name('admin.list.transaction');
 });
