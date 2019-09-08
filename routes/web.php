@@ -40,11 +40,16 @@ Route::get('/Product-Details', function (){
 Route::get('/Policy', function (){
     return view('client.policy');
 });
-//
-//Route::get('/Policy/', function (){
-//    return view('client.policy.');
-//});
 
+Route::get('/Policy/Data-Confidentiality', function (){
+    return view('client.policy.dataconfidentiality');
+});
+Route::get('/Policy/Delivery-Transport', function (){
+    return view('client.policy.deliverytransport');
+});
+Route::get('/Policy/Payment-Security', function (){
+    return view('client.policy.paymentsecurity');
+});
 
 Route::get('/admin/chart', function () {
     return view('admin.dashboard.chart');
