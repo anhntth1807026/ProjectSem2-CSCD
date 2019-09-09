@@ -13,6 +13,7 @@ class AdminSeeder extends Seeder
     public function run()
     {
         DB::table('admins')->insert([
+
 //            'id' => 1,
 //            'name' => 'admin',
 //            'email' => 'thanh@gmail.com',
@@ -21,6 +22,7 @@ class AdminSeeder extends Seeder
 //            'address' => 'Hn',
 //            'phone' => 55656,
 //            'gender' => 'Nam'
+
         ]);
     }
 }
