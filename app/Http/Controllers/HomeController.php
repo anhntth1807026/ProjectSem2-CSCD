@@ -25,7 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $products = Product::where([
+//            'products' => Product::all(),
+            'pro_active' => Product::STATUS_PUBLIC
+        ])->get();
 
-        return view('client.home');
+        $viewData = [
+            'products' => $products
+        ];
+
+        return view('client.home', $viewData);
     }
 }

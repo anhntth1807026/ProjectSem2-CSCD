@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -31,12 +32,31 @@ Route::get('/About-Us', function (){
 Route::get('/Contact-Us', function (){
     return view('client.contact-us');
 });
+Route::get('/List-Product', function (){
+    return view('client.list-product');
+});
+Route::get('/Blog', function (){
+    return view('client.blog');
+});
 
 
 Route::get('/Product-Details', function (){
     return view('client.productdetails');
 });
 
+Route::get('/Policy', function (){
+    return view('client.policy');
+});
+
+Route::get('/Policy/Data-Confidentiality', function (){
+    return view('client.policy.dataconfidentiality');
+});
+Route::get('/Policy/Delivery-Transport', function (){
+    return view('client.policy.deliverytransport');
+});
+Route::get('/Policy/Payment-Security', function (){
+    return view('client.policy.paymentsecurity');
+});
 
 Route::get('/admin/chart', function () {
     return view('admin.dashboard.chart');
@@ -70,4 +90,8 @@ Route::group(['namespace' => 'Auth'], function () {
 
 Route::prefix('shopping')->group(function (){
     Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
+});
+
+Route::group(['prefix' => 'transaction'], function (){
+    Route::get('/', 'AdminTransactionController@index')->name('admin.list.transaction');
 });

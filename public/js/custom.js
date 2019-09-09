@@ -6,12 +6,12 @@
 
 $(document).ready(function () {
     $('.btn-delete').click(function () {
-        if (confirm('Are you sure wanna delete this game ?')) {
+        if (confirm('Are you sure wanna delete this product ?')) {
             var deleteId = $(this).attr('id').replace('btn-delete-', '');
             var currentItem = $(this);
 
             $.ajax({
-                url: '/game/' + deleteId,
+                url: '/admin/product/' + deleteId,
                 method: 'DELETE',
                 // type: 'POST',
                 data: {

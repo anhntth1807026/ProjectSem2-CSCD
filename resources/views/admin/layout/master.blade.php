@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('css/my-style.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('css/custom.css')}}">--}}
     <link rel="stylesheet" href="{{asset('css/sb-admin.min.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
     <title>SB Admin - Dashboard</title>
@@ -99,6 +99,7 @@
                 <a class="dropdown-item" href="{{ route('admin.get.user') }}"><i class="fas fa-user"></i> Manage User</a>
                 <a class="dropdown-item" href="{{route('category.index')}}"><i class="fas fa-archive"></i> Manage Category</a>
                 <a class="dropdown-item" href="{{route('product.index')}}"><i class="fab fa-product-hunt"></i> Manage Product</a>
+                <a class="dropdown-item" href="{{route('admin.list.transaction')}}"><i class="fab fa-product-hunt"></i> Manage Transaction</a>
             </div>
         </li>
         <li class="nav-item">
@@ -177,7 +178,7 @@
 <script src="{{asset('js/sb-admin.min.js')}}"></script>
 {{--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--}}
 <script src="{{asset('js/myChart.js')}}"></script>
-<script src="{{asset('dist/js/pages/dashboard')}}"></script>
+<script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
 <script src="{{asset('js/chart.js/dist/Chart.bundle.js')}}"></script>
 </body>
 
