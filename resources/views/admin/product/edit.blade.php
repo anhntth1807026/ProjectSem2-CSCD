@@ -28,33 +28,53 @@
                 <form action="{{ route('product.update', $product->id) }}" enctype="multipart/form-data" method="POST">
                     @csrf
                     @method('PUT')
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input style="width: 50%" type="text" name="name" value="{{ $product->name }}" class="form-control"
-                               placeholder="Name">
+                    <div class="row">
+                        <div class="col-4 form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" value="{{ $product->name }}" class="form-control"
+                                   placeholder="Name">
+                        </div>
+
+                        <div class="col-4 form-group">
+                            <label for="">Category: </label>
+                            <select name="pro_category_id" id="" class="form-control">
+                                <option value="">--Chọn loại sản phẩm--</option>
+                                @if(isset($categories))
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id }}"> {{ $category->name }}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                        </div>
                     </div>
+
                     <div class="form-group">
                         <label>Description</label>
-                        <input class="form-control" name="description"
+                        <textarea class="form-control" name="description"
                                   value="{{ $product->description }}"
                                   placeholder="Description">
+                            {{ $product->description }}
+                        </textarea>
                     </div>
                     <div class="form-group">
                         <label>Thumbnail</label>
-                        <input style="width: 40%; height: 250px" type="file" class="form-control" multiple="multiple"
-                               name="thumbnail" value="{{ $product->thumbnail }}"
-                               placeholder="Thumbnail">
+                        <input style=" height: 100px" type="file" class="form-control" multiple="multiple"
+                               name="thumbnail[]" value="{{ $product->thumbnail }}"
+                                  placeholder="Thumbnail">
                     </div>
-                    <div class="form-group">
-                        <label>Quantity</label>
-                        <input style="width: 35%" type="number" name="quantity" value="{{ $product->quantity }}" class="form-control"
-                               placeholder="Quantity">
+                    <div class="row">
+                        <div class=" col-5 form-group">
+                            <label>Quantity</label>
+                            <input style="width: 70%" type="number" name="quantity" value="{{ $product->quantity }}" class="form-control"
+                                   placeholder="Quantity">
+                        </div>
+                        <div class="col-5 form-group">
+                            <label>Price</label>
+                            <input style=" width: 70%" class="form-control" name="price" value="{{ $product->price }}"
+                                   placeholder="Price">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input style="width: 35%" class="form-control" name="price" value="{{ $product->price }}"
-                               placeholder="Price">
-                    </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <button type="submit" class="btn btn-primary">Close</button>
                 </form>
