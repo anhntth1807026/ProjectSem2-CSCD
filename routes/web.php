@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,12 @@ Route::get('/About-Us', function (){
 });
 Route::get('/Contact-Us', function (){
     return view('client.contact-us');
+});
+Route::get('/List-Product', function (){
+    return view('client.list-product');
+});
+Route::get('/Blog', function (){
+    return view('client.blog');
 });
 
 
