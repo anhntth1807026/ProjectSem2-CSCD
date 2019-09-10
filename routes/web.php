@@ -25,36 +25,37 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
 
 Route::resource('/admin/category', 'CategoryController');
 
+Route::get('/client/profile', 'ProfileUserController@index');
 
-Route::get('/About-Us', function (){
+Route::get('/About-Us', function () {
     return view('client.about-us');
 });
-Route::get('/Contact-Us', function (){
+Route::get('/Contact-Us', function () {
     return view('client.contact-us');
 });
-Route::get('/List-Product', function (){
+Route::get('/List-Product', function () {
     return view('client.list-product');
 });
-Route::get('/Blog', function (){
+Route::get('/Blog', function () {
     return view('client.blog');
 });
 
 
-Route::get('/Product-Details', function (){
+Route::get('/Product-Details', function () {
     return view('client.productdetails');
 });
 
-Route::get('/Policy', function (){
+Route::get('/Policy', function () {
     return view('client.policy');
 });
 
-Route::get('/Policy/Data-Confidentiality', function (){
+Route::get('/Policy/Data-Confidentiality', function () {
     return view('client.policy.dataconfidentiality');
 });
-Route::get('/Policy/Delivery-Transport', function (){
+Route::get('/Policy/Delivery-Transport', function () {
     return view('client.policy.deliverytransport');
 });
-Route::get('/Policy/Payment-Security', function (){
+Route::get('/Policy/Payment-Security', function () {
     return view('client.policy.paymentsecurity');
 });
 
@@ -88,10 +89,10 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::get('logout', 'LoginController@getLogout')->name('get.logout.user');
 });
 
-Route::prefix('shopping')->group(function (){
+Route::prefix('shopping')->group(function () {
     Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
 });
 
-Route::group(['prefix' => 'transaction'], function (){
+Route::group(['prefix' => 'transaction'], function () {
     Route::get('/', 'AdminTransactionController@index')->name('admin.list.transaction');
 });
