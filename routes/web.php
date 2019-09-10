@@ -36,9 +36,21 @@ Route::get('/Contact-Us', function () {
 Route::get('/List-Product', function () {
     return view('client.list-product');
 });
+
+
 Route::get('/Blog', function () {
     return view('client.blog');
 });
+Route::get('/Blog/Blog1', function () {
+    return view('client.blog.blog1');
+});
+Route::get('/Blog/Blog2', function () {
+    return view('client.blog.blog2');
+});
+Route::get('/Blog/Blog3', function () {
+    return view('client.blog.blog3');
+});
+
 
 
 Route::get('/Product-Details', function () {

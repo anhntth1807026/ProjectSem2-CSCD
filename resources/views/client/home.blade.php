@@ -332,7 +332,7 @@
                         </a>
                     </div>
                     <div class="product-content">
-                        <h5 class="title"><a href="#">Bình nước giữ nhiệt nắp gỗ</a></h5>
+                        <h5 class="title" style="height: 50px"><a href="#">Bình nước giữ nhiệt nắp gỗ</a></h5>
                         <h6>Đồ Dùng Cá Nhân</h6>
                         <div class="price">429.000₫</div>
                     </div>
