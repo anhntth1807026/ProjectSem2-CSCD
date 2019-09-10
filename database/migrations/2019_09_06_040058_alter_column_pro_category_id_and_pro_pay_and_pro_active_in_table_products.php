@@ -27,7 +27,7 @@ class AlterColumnProCategoryIdAndProPayAndProActiveInTableProducts extends Migra
      */
     public function down()
     {
-        Schema::table('table_products', function (Blueprint $table) {
+        Schema::table('products', function (Blueprint $table) {
             $table->dropColumn('pro_category_id');
             $table->dropColumn('pro_pay');
             $table->dropColumn('pro_active');

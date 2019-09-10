@@ -48,15 +48,26 @@
             Hugger</a>
         <div class="w3-right w3-hide-small">
             <div class="w3-dropdown-hover">
-                <a class="w3-button w3-black" style="color: #00acd6; font-family:  Cabin; font-size: 14px;text-decoration: none" title="Hãy cùng nhau bảo vệ môi trường ngay từ những việc nhỏ nhất">Sản Phẩm</a>
+                <a class="w3-button w3-black" style="color: #00acd6;=font-size: 14px;text-decoration: none" title="Hãy cùng nhau bảo vệ môi trường ngay từ những việc nhỏ nhất">Sản Phẩm</a>
                 <div class="w3-dropdown-content w3-bar-block w3-border w3-animate-opacity">
-                    <a href="#" class="w3-bar-item w3-button" style="color: #00acd6; font-family:  Cabin; font-size: 14px; text-decoration: none">Đồ Dùng Cá Nhân</a>
-                    <a href="#" class="w3-bar-item w3-button" style="color: #00acd6; font-family:  Cabin; font-size: 14px; text-decoration: none">Đồ Dùng Gia Đình</a>
+                    <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;font-size: 14px; text-decoration: none">Đồ Dùng Cá Nhân</a>
+                    <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;font-size: 14px; text-decoration: none">Đồ Dùng Gia Đình</a>
                 </div>
             </div>
-            <a href="/About-Us" class="w3-bar-item w3-button" style="color: #00acd6; font-family:  Cabin; font-size: 14px; text-decoration: none" title="Liên hệ, góp ý và ủng hộ Tree Hugger">Chúng Tôi</a>
-            <a href="/Contact-Us" class="w3-bar-item w3-button" style="color: #00acd6; font-family:  Cabin; font-size: 14px; text-decoration: none " title="Những bài báo, những thông báo và những phản hồi liên quan đến Tree Hugger">Bài Viết</a>
-            <a href="#" class="w3-bar-item w3-button" style="color: #00acd6; font-family:  Cabin; font-size: 14px; text-decoration: none" title="Tìm hiểu thêm về cách hoạt động của Tree Hugger">Chính Sách</a>
+
+            <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;font-size: 14px; text-decoration: none" title="Liên hệ, góp ý và ủng hộ Tree Hugger">Chúng Tôi</a>
+
+            <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;font-size: 14px; text-decoration: none " title="Những bài báo, những thông báo và những phản hồi liên quan đến Tree Hugger">Bài Viết</a>
+
+            <div class="w3-dropdown-hover">
+                <a class="w3-bar-item w3-button" style="color: #00acd6;font-size: 14px; text-decoration: none" title="Tìm hiểu thêm về cách hoạt động của Tree Hugger">Chính Sách</a>
+                <div class="w3-dropdown-content w3-bar-block w3-border w3-animate-opacity">
+                    <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;font-size: 14px; text-decoration: none">Chính Sách Bảo Mật Thông Tin</a>
+                    <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;font-size: 14px; text-decoration: none">Chính Sách Vận Chuyển Giao Nhận</a>
+                    <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;font-size: 14px; text-decoration: none">Chính Sách Bảo Mật Thanh Toán</a>
+                </div>
+            </div>
+
             <a href="#" class="w3-bar-item w3-button" style="color: #00acd6;text-decoration: none; padding-right: 30px"><i class="fa fa-cart-plus" aria-hidden="true"></i>
                 <span class="cart-quantity badge-danger" title="Kiểm tra giỏ hàng">{{ Cart::count() }}</span>
             </a>

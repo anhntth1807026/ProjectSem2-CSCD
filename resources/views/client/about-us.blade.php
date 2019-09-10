@@ -126,6 +126,27 @@
                 </div>
             </div>
         </div>
+        <div class="w3-container w3-light-white" style="padding:100px 16px">
+            <div class="w3-row-padding">
+                <div class="w3-col m6">
+                    <div data-aos="zoom-out-up" data-aos-duration="1500"><h2>Chào mừng bạn đến với TreeHugger</h2>
+                        <p>
+                            Tree Hugger là nơi dành cho những ai quan tâm đến lối sống xanh, bền vững và
+                            thân thiện với môi
+                            trường. Tại Tree Hugger, bạn sẽ cảm thấy hạnh phúc, tình yêu và lòng biết ơn đối với các
+                            sản phẩm do
+                            người
+                            Việt Nam làm ra vì lợi ích của cộng đồng và cho lối sống đơn giản và lành mạnh.
+                        </p>
+                    </div>
+                </div>
+                <div class="w3-col m6" data-aos="zoom-out-left" data-aos-duration="1500">
+                    <img class="w3-image w3-round-large"
+                         src="{{ asset('/img/slide-pics/slide2.jpg') }}"
+                         alt="Buildings" width="700" height="394">
+                </div>
+            </div>
+        </div>
 
 
         <div class="container" style="padding-top: 50px; ">
@@ -165,6 +186,51 @@
                 </div>
             </div>
             <hr class="featurette-divider">
+        </div>
+
+            {{--    Tiêu chí của chúng tôi--}}
+            <div class="w3-container" style="padding:70px 16px; background-color: #84b466; color: #0c0c0c" id="about">
+                <h3 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Tiêu Chí Của Chúng Tôi</h3>
+                <p class="w3-center w3-large" data-aos="fade-left" data-aos-duration="1500">Thiên Nhiên Là Chìa Khóa Của Tương
+                    Lai</p>
+                <div class="w3-row-padding w3-center" data-aos="fade-up" data-aos-duration="2000" style="margin-top:64px">
+                    <div class="w3-quarter">
+                        <img src="{{ asset('/img/new-image/icon-1.webp') }}" alt="" title="Hãy chuẩn bị thật kĩ nhé!">
+                        <p class="w3-large">Byo</p>
+                        <p>Mang theo nhiều chai, lọ nhất có thể.
+
+                            Rửa sạch và để khô, bóc sạch những nhãn dán nếu vẫn còn.
+
+                            Nếu không có hoặc quên mang hộp đựng của mình, hãy hỏi và mượn từ phía ban tổ chức địa phương.</p>
+                    </div>
+                    <div class="w3-quarter">
+                        <img src="{{ asset('/img/new-image/icon-2.webp') }}" alt=""
+                             title="Đừng quên dán nhãn để đánh dấu hộp của bạn.">
+                        <p class="w3-large">Stick</p>
+                        <p>Dán nhãn vào hộp đựng đồ của bạn, hãy cân nhắc về việc đó.</p>
+                    </div>
+                    <div class="w3-quarter">
+                        <img src="{{ asset('/img/new-image/icon-3.webp') }}" alt=""
+                             title="Cân để biết trọng lượng của những điều tuyệt vời mà bạn mang tới.">
+                        <p class="w3-large">Tare&Write</p>
+                        <p>Cân hộp của bạn tại quầy.
+
+                            Viết số cân nặng vào nhãn.
+                        </p>
+                    </div>
+                    <div class="w3-quarter">
+                        <img src="{{ asset('/img/new-image/icon-4.webp') }}" alt=""
+                             title="Đừng bỏ lỡ bước cuối cùng của chương trình nhé!">
+                        <p class="w3-large">REFILL</p>
+                        <p>Cho những sản phẩm bảo vệ môi trường bạn thích vào hộp.
+
+                            Một hộp chỉ được có một loại sản phẩm.
+
+                            Hãy tính đến việc sẽ có vài sản phẩm cần thời gian để chứa đầy thùng.
+                        </p>
+                    </div>
+                </div>
+            </div>
             <!-- Team Section -->
             <div class="w3-container" data-aos="zoom-in" style="padding:128px 16px" id="team">
                 <h3 class="w3-center">THE TEAM</h3>
@@ -173,10 +239,10 @@
                     <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
                         <div class="w3-third w3-margin-bottom" data-aos="zoom-in">
                             <div class="w3-card-4">
-                                <img src="https://scontent.fhan1-1.fna.fbcdn.net/v/t1.0-9/59393004_814110815635893_4746973704385200128_n.jpg?_nc_cat=105&_nc_oc=AQmP4fY24pwsO1soZCi8IeWXpLVkzimpnsemHDX_yYK-synJ2LFzfvpRHcZraJl3gMY&_nc_ht=scontent.fhan1-1.fna&oh=0766b372ba6c4430ab4012dfe656b9f2&oe=5DCA7B98"
+                                <img src="https://scontent.fhan1-1.fna.fbcdn.net/v/t1.0-9/39993390_2088861198045508_8766214201745080320_n.jpg?_nc_cat=111&_nc_oc=AQkP1JCzo82yTeSe9EUVQP0YJP5QvHnmaDpTbWRXAHE-w1FTTRDrHruiShR2gi-Pi-0&_nc_ht=scontent.fhan1-1.fna&oh=2492b41033f45aebeac91c33fad3dae7&oe=5E0F0E5B"
                                      alt="John" style="width:100%">
                                 <div class="w3-container">
-                                    <h4>Pham Thanh Hoa</h4>
+                                    <h4>Nguyen Tuan Anh</h4>
                                     <p class="w3-opacity">CEO & Founder</p>
                                     <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
                                         elementum.</p>
