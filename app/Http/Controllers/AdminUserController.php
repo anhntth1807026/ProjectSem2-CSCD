@@ -10,7 +10,7 @@ class AdminUserController extends Controller
 {
     public function index(){
 //        $users = User::whereRaw(1);
-        $users = User::latest()->paginate(5);;
+        $users = User::latest()->paginate(5);
 //        $users = $users->orderBy('id', 'DESC')->paginate(10);
 //        $users = $users->orderBy('id', 'DESC')->paginate(10);
         $viewData = [
