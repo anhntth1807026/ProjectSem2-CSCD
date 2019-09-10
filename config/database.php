@@ -70,7 +70,7 @@ return [
             'port' => '5432',
             'database' => 'zero-waste',
             'username' => 'postgres',
-            'password' => 'Bach@2111',
+            'password' => 'abcD1234',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
