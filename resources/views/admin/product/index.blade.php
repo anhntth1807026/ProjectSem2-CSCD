@@ -30,7 +30,6 @@
                         <th scope="col"><input type="checkbox" id="checkAll"></th>
                         <th scope="col">No</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Description</th>
                         <th scope="col">Thumbnail</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Price</th>
@@ -38,38 +37,39 @@
                     </tr>
                     </thead>
                     @foreach ($product as $key => $products)
-                    <tbody id="myTable">
-                    <tr id="tr_{{ $products -> id }}">
+                        <tbody id="myTable">
+                        <tr id="tr_{{ $products -> id }}">
 
-                        <td scope="row"><input type="checkbox" class="checkbox" data-id="{{ $products -> id }}"></td>
-                        <td scope="col">{{ $products-> id }}</td>
-                        <td scope="col">{{ $products->name }}</td>
-                        <td scope="col">{{ $products->description }}</td>
-                        <td scope="col">
-                            @foreach(explode("@",$products->thumbnail) as $image)
-                            <img class="img-thumbnail rounded"
-                                 style="width: 150px;margin: 0 10px"
-                                 src="{{ $image }}"
-                                 alt="{{ $products->name }}">
-                            @endforeach
-                        </td>
+                            <td scope="row"><input type="checkbox" class="checkbox" data-id="{{ $products -> id }}">
+                            </td>
+                            <td scope="col">{{ $products-> id }}</td>
+                            <td scope="col">{{ $products->name }}</td>
+                            <td scope="col">
+                                @foreach(explode("@",$products->thumbnail) as $image)
+                                    <img class="img-thumbnail rounded"
+                                         style="width: 150px;margin: 0 10px"
+                                         src="{{ $image }}"
+                                         alt="{{ $products->name }}">
+                                @endforeach
+                            </td>
 
-                        <td scope="col">{{ $products->quantity }}</td>
-                        <td scope="col">{{ $products->price }}</td>
-                        <td scope="col">
-                            <form action="{{ route('product.destroy', $products->id) }}" method="POST">
-{{--                                <a class="btn btn-info" href="{{ route('product.show', $products->id) }}" class="mr-2" title="View product detail">Detail</a>--}}
-{{--                                <a href="{{ route('product.edit', $products->id) }}" id="btn-edit-1" class="mr-2 btn-edit"--}}
-{{--                                   title="Edit this product">Edit</a>--}}
-                                <a class="btn btn-primary" href="{{ route('product.edit',$products->id) }}">Edit</a>
-                                @csrf
-                                @method('DELETE')
-                                <a href="javascript:void(0)" id="btn-delete-{{ $products->id }}" class=" mr-2 btn btn-danger btn-delete"
-                                   title="Delete this product">Delete</a>
-                            </form>
-                        </td>
-                    </tr>
-                    </tbody>
+                            <td scope="col">{{ $products->quantity }}</td>
+                            <td scope="col">{{ $products->price }}</td>
+                            <td scope="col">
+                                <form action="{{ route('product.destroy', $products->id) }}" method="POST">
+                                    <a class="btn btn-info" href="{{ route('product.show', $products->id) }}"
+                                       title="View product detail">Detail</a>
+                                    <a class="btn btn-primary mr-2" href="{{ route('product.edit',$products->id) }}">Edit</a>
+                                    @csrf
+                                    @method('DELETE')
+                                    <a href="javascript:void(0)" id="btn-delete-{{ $products->id }}"
+                                       class="btn btn-danger btn-delete"
+                                       style="margin-top: 5px"
+                                       title="Delete this product">Delete</a>
+                                </form>
+                            </td>
+                        </tr>
+                        </tbody>
                     @endforeach
                 </table>
             </div>

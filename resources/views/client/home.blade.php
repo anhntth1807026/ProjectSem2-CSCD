@@ -100,7 +100,6 @@
 {{--    Bán chạy nhất--}}
     <div class="container">
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Bán Chạy Nhất</h1>
-<<<<<<< HEAD
         <div class="w3-row-padding w3-padding-16 w3-center" data-aos="fade-left" data-aos-duration="1500" id="food">
             {{--            @foreach($product as $products)--}}
             <div class="w3-quarter ">
@@ -121,7 +120,6 @@
                                 <i class="fa fa-eye"></i>
                             </li>
                         </ul>
-=======
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="product-grid6">
@@ -129,7 +127,6 @@
                         <a href="#">
                             <img class="pic-1" src="{{ asset('img/home-care/co-rua-binh.webp') }}" title="Bấm để xem hình ảnh chi tiết">
                         </a>
->>>>>>> 5f75f1d1dfd6001594dd8d77ae0b1ee0b90f68d6
                     </div>
                     <div class="product-content">
                         <h5 class="title"><a href="#">Cọ Rửa Bình</a></h5>
