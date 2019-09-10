@@ -81,7 +81,7 @@
                     </div>
                     <div class="row">
                         <div class="col-6 form-inline">
-                            <input type="number" name="phone" data-min-length="10"
+                            <input type="text" name="phone" data-min-length="10"
                                    placeholder="{{ __('Phone') }}">
                             @error('phone')
                             <span class="req-input invalid">
