@@ -10,7 +10,8 @@
             <img class="mySlides" src="{{ asset('img/slide-pics/bg3.jpg') }}" style="width:100%">
         </div>
         <div class="w3-display-left w3-text-white" style="padding:2rem">
-            <span class="w3-jumbo w3-hide-small" data-aos="zoom-in" data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới.</span><br>
+            <span class="w3-jumbo w3-hide-small" data-aos="zoom-in"
+                  data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới.</span><br>
             <span class="w3-xxlarge w3-hide-large w3-hide-medium" data-aos="zoom-in" data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới</span><br>
             <span class="w3-large" data-aos="zoom-in" data-aos-duration="3000">Ngưng Sử Dụng Đồ Dùng Làm Từ Nhựa Và Các Sản Phẩm Gây Hại Cho Môi Trường.</span>
             <p><a href="#about"
@@ -94,7 +95,6 @@
             </div>
         </div>
     </div>
-
 
     {{--    Bán chạy nhất--}}
     <div class="container">
@@ -183,7 +183,6 @@
         </div>
     </div>
     <hr>
-
 
     {{--    Tất cả sản phẩm--}}
     <div class="container">
@@ -375,7 +374,6 @@
             Môi Trường</p>
         <div class="w3-half w3-margin-bottom" data-aos="fade-up" data-aos-duration="3000">
             <div class="w3-display-container">
-                {{--            <img src="img/saigon01.jpg" alt="Cinque Terre" style="width:100%">--}}
                 <img style="width:100%"
                      src="{{ asset('img/slide-pics/slidea.jpg') }}">
                 <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">
@@ -388,27 +386,19 @@
             <div class="w3-row-padding" style="margin:0 -16px">
                 <div class="w3-half w3-margin-bottom">
                     <div class="w3-display-container">
-                        {{--                    <img src="img/saigon02.jpg" alt="New York" style="width:100%">--}}
                         <img style="width:100%"
                              src="{{ asset('img/slide-pics/convi.png') }}">
                         <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">
                         Tiện Lợi
-{{--                        BẠN CÓ BIẾT?--}}
-                            {{--                Campuchia sẽ gửi trả lại 1,600 tấn rác nhựa tìm thấy trong các containers nhập khẩu từ Mỹ và ...--}}
                     </span>
                     </div>
                 </div>
                 <div class="w3-half w3-margin-bottom">
                     <div class="w3-display-container">
-                        {{--                    <img src="img/saigon03.jpg" alt="San Francisco" style="width:100%">--}}
                         <img style="width:100%"
                              src="{{ asset('img/slide-pics/prat.jpg') }}">
                         <span class="w3-display-bottomleft w3-padding " style="color: black">
                         Thiết Thực
-{{--BẠN ĐANG TÌM GIẢI PHÁP CHO VIỆC SÚC MIỆNG SAO CHO "XANH" HƠN?--}}
-                            {{--SEEKING FOR A GREENER SOLUTION FOR YOUR MOUTH-WASHING?--}}
-
-                            {{--Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột quế, đá muối hồng Himalaya, bột vỏ cam khô và trà xanh.--}}
                     </span>
                     </div>
                 </div>
@@ -420,19 +410,15 @@
                              src="{{ asset('img/slide-pics/reuse.jpg') }}">
                         <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">
                         Tái Chế
-{{--                        BẠN CÓ BIẾT?--}}
-                            {{--                        Đảo Henderson tại Thái Bình Dương, Di Sản Thế Giới do UNESCO trao tặng ...--}}
                     </span>
                     </div>
                 </div>
                 <div class="w3-half w3-margin-bottom">
                     <div class="w3-display-container">
-                        {{--                    <img src="img/saigon05.jpg" alt="Paris" style="width:100%">--}}
                         <img style="width:100%"
                              src="{{ asset('img/slide-pics/envi.jpg') }}">
                         <span class="w3-display-bottomleft w3-padding" style="color: black">
                         Thiên Nhiên
-{{--                        “Cái răng cái tóc là góc con người", một mái tóc đẹp, chắc khoẻ, không đòi hỏi cầu kì trong chăm sóc và không bị phụ thuộc hoá chất có lẽ là ước muốn của nhiều người,...--}}
                     </span>
                     </div>
                 </div>
