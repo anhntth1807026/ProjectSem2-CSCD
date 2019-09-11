@@ -3,15 +3,14 @@
 @section('content')
 
 
-    <header class=" w3-display-container w3-grayscale-min" id="home" style="margin-top:57px">
-        <div class=" w3-section" style="">
+    <div class=" w3-display-container w3-grayscale-min" id="home">
+        <div>
             <img class="mySlides" src="{{ asset('img/slide-pics/bg1.jpg') }}" style="width:100%">
             <img class="mySlides" src="{{ asset('img/slide-pics/bg2.jpg') }}" style="width:100%">
             <img class="mySlides" src="{{ asset('img/slide-pics/bg3.jpg') }}" style="width:100%">
         </div>
-        <div class="w3-display-left w3-text-white" style="padding:48px">
-            <span class="w3-jumbo w3-hide-small" data-aos="zoom-in"
-                  data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới.</span><br>
+        <div class="w3-display-left w3-text-white" style="padding:2rem">
+            <span class="w3-jumbo w3-hide-small" data-aos="zoom-in" data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới.</span><br>
             <span class="w3-xxlarge w3-hide-large w3-hide-medium" data-aos="zoom-in" data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới</span><br>
             <span class="w3-large" data-aos="zoom-in" data-aos-duration="3000">Ngưng Sử Dụng Đồ Dùng Làm Từ Nhựa Và Các Sản Phẩm Gây Hại Cho Môi Trường.</span>
             <p><a href="#about"
@@ -19,15 +18,15 @@
                   data-aos="zoom-in" data-aos-duration="3000" style="text-decoration: none;" title="Bắt đầu tìm hiểu">Tìm
                     Hiểu Nhiều Hơn Và Bắt Đầu Từ Hôm Nay</a></p>
         </div>
-        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-            <i class="fa fa-facebook-official w3-hover-opacity" title="Facebook"></i>
-            <i class="fa fa-instagram w3-hover-opacity" title="Instagram"></i>
-            <i class="fa fa-snapchat w3-hover-opacity" title="Snapchat"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity" title="Pinterest"></i>
-            <i class="fa fa-twitter w3-hover-opacity" title="Twitter"></i>
-            <i class="fa fa-linkedin w3-hover-opacity" title="Linkedin"></i>
-        </div>
-    </header>
+        {{--        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">--}}
+        {{--            <i class="fa fa-facebook-official w3-hover-opacity" title="Facebook"></i>--}}
+        {{--            <i class="fa fa-instagram w3-hover-opacity" title="Instagram"></i>--}}
+        {{--            <i class="fa fa-snapchat w3-hover-opacity" title="Snapchat"></i>--}}
+        {{--            <i class="fa fa-pinterest-p w3-hover-opacity" title="Pinterest"></i>--}}
+        {{--            <i class="fa fa-twitter w3-hover-opacity" title="Twitter"></i>--}}
+        {{--            <i class="fa fa-linkedin w3-hover-opacity" title="Linkedin"></i>--}}
+        {{--        </div>--}}
+    </div>
 
     <div class="w3-container w3-light-white" style="padding:100px 16px">
         <div class="w3-row-padding">
@@ -52,7 +51,7 @@
     </div>
 
 
-{{--    Tiêu chí của chúng tôi--}}
+    {{--    Tiêu chí của chúng tôi--}}
     <div class="w3-container" style="padding:70px 16px; background-color: #84b466; color: #0c0c0c" id="about">
         <h3 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Tiêu Chí Của Chúng Tôi</h3>
         <p class="w3-center w3-large" data-aos="fade-left" data-aos-duration="1500">Thiên Nhiên Là Chìa Khóa Của Tương
@@ -97,7 +96,7 @@
     </div>
 
 
-{{--    Bán chạy nhất--}}
+    {{--    Bán chạy nhất--}}
     <div class="container">
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Bán Chạy Nhất</h1>
         <div class="w3-row-padding w3-padding-16 w3-center" data-aos="fade-left" data-aos-duration="1500" id="food">
@@ -125,7 +124,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/co-rua-binh.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/co-rua-binh.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -144,7 +144,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/hop-khan-giay-go.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/hop-khan-giay-go.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -163,7 +164,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/dua-go-trac.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/dua-go-trac.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -182,7 +184,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/xit-khu-mui.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/xit-khu-mui.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -202,7 +205,7 @@
     <hr>
 
 
-{{--    Tất cả sản phẩm--}}
+    {{--    Tất cả sản phẩm--}}
     <div class="container">
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Tất Cả Sản Phẩm</h1>
         <div class="row">
@@ -210,7 +213,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/ban-chai-nguoi-lon.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/ban-chai-nguoi-lon.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -229,7 +233,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/new-image/ly-thong-minh-xep-gon.jpg') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/new-image/ly-thong-minh-xep-gon.jpg') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -248,7 +253,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/new-image/tui-vai-da-nang.webp.jpg') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/new-image/tui-vai-da-nang.webp.jpg') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -267,7 +273,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -291,7 +298,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/ban-chai-nguoi-lon.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/ban-chai-nguoi-lon.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -310,7 +318,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/new-image/ly-thong-minh-xep-gon.jpg') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/new-image/ly-thong-minh-xep-gon.jpg') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -329,7 +338,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/new-image/tui-vai-da-nang.webp.jpg') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/new-image/tui-vai-da-nang.webp.jpg') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -348,7 +358,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -563,7 +574,8 @@
                         <h5>Giao Hàng Vận Chuyển</h5>
                         <p class="w3-opacity">Chính Sách Giao Hàng</p>
                         <p>Lại Đây Refill Station giao hàng thanh toán tận nơi trên toàn quốc
-                            thông qua các đối tác giao nhận uy tín như Giao Hàng Nhanh, Ahamove, Giao Hàng Tiết Kiệm. </p>
+                            thông qua các đối tác giao nhận uy tín như Giao Hàng Nhanh, Ahamove, Giao Hàng Tiết
+                            Kiệm. </p>
                         <p>
                             <button class="w3-button w3-light-grey w3-block">Chi Tiết</button>
                         </p>
