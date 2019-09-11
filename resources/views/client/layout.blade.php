@@ -236,6 +236,7 @@
                 </div>
             </div>
             <!-- top details area end -->
+
         </div>
     </div>
 </header>
@@ -314,7 +315,6 @@
     @show
 </div>
 
-
 <div class="middle">
     <a class="btn-middle" href="#">
         <i class="fa fa-facebook-f" title="Facebook"></i>
@@ -380,7 +380,8 @@
                             <input type="text" class="form-control" placeholder="Your Gmail" aria-label="Gmail"
                                    aria-describedby="addon-wrapping">
                             <span style="cursor: pointer; position: absolute; right: 2px; top: 14px; FONT-SIZE: 20px;"
-                                  id="addon-wrapping"><i class="far fa-paper-plane"></i></span>
+                                  id="addon-wrapping"><i class="far fa-paper-plane"></i>
+                            </span>
                         </div>
                     </form>
                 </div>
@@ -403,7 +404,6 @@
 <script>
     AOS.init();
 </script>
-
 <script src="{{ asset('js/my-js.js') }}"></script>
 </body>
 </html>

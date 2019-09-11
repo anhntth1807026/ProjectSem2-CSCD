@@ -12,10 +12,6 @@
             Hãy điền vào mẫu dưới đây để nhận thông tin mới nhất chúng tôi luôn chào đón những góp ý của mọi người ^^</p>
         <form action="/action_page.php" target="_blank">
             <div class="w3-section">
-                <label>Name</label>
-                <input class="w3-input w3-border" type="text" name="Name" required>
-            </div>
-            <div class="w3-section">
                 <label>Email</label>
                 <input class="w3-input w3-border" type="text" name="Email" required>
             </div>

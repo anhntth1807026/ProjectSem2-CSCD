@@ -1,259 +1,328 @@
 @extends('client.layout')
 @section('content')
     <style>
-        Edit in JSFiddle
-        Result
-        JavaScript
-        HTML
-        CSS
-        p {
-            margin: 0 0 10px;
-            font-family: 'Roboto', sans-serif;
+        body, h1, h2, h3, h4, h5 {
+            font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
         }
-        p, pre {
-            margin: 0 0 1em 0;
+
+        @media only screen and (min-width: 600px) {
+            .videoblogmain {
+                margin-right: 200px;
+                margin-left: 200px;
+            }
         }
-        a, a:link, a:focus, a:active, a:visited {
-            outline: 0;
+
+        @media only screen and (min-width: 1500px) {
+            .videoblogmain {
+                margin-left: 200px;
+                margin-right: 200px;
+            }
         }
-        a, a:link, a:focus, a:active, a:visited {
-            outline: 0;
-        }
-        img {
-            border: 0;
-            -ms-interpolation-mode: bicubic;
-        }
-        .interior.container .row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .blogBox {
-            margin-bottom: 30px;
-            box-sizing: border-box;
-        }
-        .blogBox .item {
-            background: #f4f4f4;
-            -webkit-transition: all 0.15s ease-in-out;
-            transition: all 0.15s ease-in-out;
+
+        #myVideo {
+            width: 100%;
             height: 100%;
         }
-        .blogBox .item:hover {
-            background: #e8e8e8;
-            cursor: pointer;
-        }
-        .blogBox .item img {
-            width: 100%;
-        }
-        .blogBox .item p {
-            padding-bottom: 40px;
-        }
-        .blogBox .item .blogTxt {
-            padding: 25px;
-        }
-        .blogBox .item h2 {
-            margin: 15px 0;
-            font-family: 'Roboto', sans-serif;
-        }
-        .blogBox .item .blogCategory a {
-            padding: 5px 10px 2px;
-            border: 1px solid #616161;
-            color: #616161;
-            text-transform: uppercase;
-            font-size: 14px;
-            font-family: 'Roboto', sans-serif;
-            -webkit-transition: all 0.15s ease-in-out;
-            transition: all 0.15s ease-in-out;
-        }
-        .blogBox .item .blogCategory a:hover {
-            background: #616161;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        #loadMore {
-            padding-bottom: 30px;
-            padding-top: 30px;
-            text-align: center;
-            width: 100%;
-        }
-        #loadMore a {
-            background: #042a63;
-            border-radius: 3px;
-            color: white;
-            display: inline-block;
-            padding: 10px 30px;
-            transition: all 0.25s ease-out;
-            -webkit-font-smoothing: antialiased;
-        }
-        #loadMore a:hover {
-            background-color: #021737;
-        }
-
-        @media screen and (min-width: 1200px) {
-            .blogBox .featured h2 {
-                font-size: 42px;
-            }
-        }
-        @media screen and (min-width: 991px) {
-            .blogBox .featured h2 {
-                font-size: 30px;
-                font-style: italic;
-            }
-            .blogBox .featured .blogTxt {
-                max-width: 50%;
-                width: 100%;
-                padding: 50px;
-                float: left;
-                background: inherit;
-                min-height: 378px;
-            }
-            .blogBox .featured img {
-                max-width: 50%;
-                width: 100%;
-                float: left;
-                min-height: 378px;
-            }
-        }
-        @media screen and (min-width: 768px) {
-            .blogBox .item img {
-                height: 152px;
-            }
-        }
     </style>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <div class="interior container clearfix">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-12 blogBox">
-                <div class="item featured">
-                    <img src="https://www.solodev.com/assets/fancy/travel3.jpg">
-                    <div class="blogTxt">
-                        <div class="blogCategory">
-                            <a href="/">Business Intelligence</a>
+
+    <header class=" w3-display-container w3-grayscale-min" id="home" style="margin-top:57px">
+        <div class=" w3-section" style="">
+            <img class="mySlides" src="{{ asset('img/slide-pics/bg1.jpg') }}" style="width:100%">
+            <img class="mySlides" src="{{ asset('img/slide-pics/bg2.jpg') }}" style="width:100%">
+            <img class="mySlides" src="{{ asset('img/slide-pics/bg3.jpg') }}" style="width:100%">
+        </div>
+        <div class="w3-display-left w3-text-white" style="padding:48px">
+            <span class="w3-jumbo w3-hide-small" data-aos="zoom-in"
+                  data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới.</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium" data-aos="zoom-in" data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới</span><br>
+            <span class="w3-large" data-aos="zoom-in" data-aos-duration="3000">Ngưng Sử Dụng Đồ Dùng Làm Từ Nhựa Và Các Sản Phẩm Gây Hại Cho Môi Trường.</span>
+            <p><a href="#about"
+                  class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"
+                  data-aos="zoom-in" data-aos-duration="3000" style="text-decoration: none;" title="Bắt đầu tìm hiểu">Tìm
+                    Hiểu Nhiều Hơn Và Bắt Đầu Từ Hôm Nay</a></p>
+        </div>
+        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+            <i class="fa fa-facebook-official w3-hover-opacity" title="Facebook"></i>
+            <i class="fa fa-instagram w3-hover-opacity" title="Instagram"></i>
+            <i class="fa fa-snapchat w3-hover-opacity" title="Snapchat"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity" title="Pinterest"></i>
+            <i class="fa fa-twitter w3-hover-opacity" title="Twitter"></i>
+            <i class="fa fa-linkedin w3-hover-opacity" title="Linkedin"></i>
+        </div>
+    </header>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="videoblogmain">
+        <h4 style="text-align: center">CHÚNG TA CÙNG TÌM HIỂU THỰC TRẠNG CỦA TRÁI ĐẤT HIỆN NAY</h4>
+        <br>
+        <video autoplay muted loop id="myVideo">
+            <source src="{{ asset('video/Thực trạng môi trường.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+            <div class="w3-quarter">
+                <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/01-2-o1.jpg" alt="Sandwich"
+                     style="width:100%">
+            </div>
+            <div class="w3-quarter">
+                <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/02-2-o.jpg" alt="Steak"
+                     style="width:100%">
+            </div>
+            <div class="w3-quarter">
+                <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/03-2-o.jpg" alt="Cherries"
+                     style="width:100%">
+            </div>
+            <div class="w3-quarter">
+                <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/04-2-o1.jpg" alt="Pasta and Wine"
+                     style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <h1 style="text-align: center;font-size: 40px;margin-top: 50px">Every day 8,000 beavers perished</h1>
+
+        <br>
+
+        <div class="w3-row">
+            <div class="w3-quarter" style="text-align: center">
+            <span style="font-size: 64px;color: grey">
+                <i class="far fa-thumbs-up"></i>
+            </span>
+                <span>
+                <span style="margin-left: -12px;font-size: 60px">
+                  3600
+                </span>
+            </span>
+                <p style="margin-top: -30px;margin-left: 68px;color: grey">Beavers Saved</p>
+            </div>
+
+            <div class="w3-quarter" style="text-align: center">
+            <span style="font-size: 64px;color: grey">
+               <i class="fas fa-hand-holding-usd"></i>
+            </span>
+                <span>
+                <span style="margin-left: -12px;font-size: 60px">
+                  $12000
+                </span>
+            </span>
+                <p style="margin-top: -30px;margin-left: 68px;color: grey">Funds Collected</p>
+            </div>
+
+            <div class="w3-quarter" style="text-align: center">
+            <span style="font-size: 64px;color: grey">
+                <i class="fas fa-fingerprint"></i>
+            </span>
+                <span>
+                <span style="margin-left: -12px;font-size: 60px">
+                    680
+                </span>
+            </span>
+                <p style="margin-top: -30px;margin-left: 68px;color: grey">Volunteer</p>
+            </div>
+
+            <div class="w3-quarter" style="text-align: center">
+            <span style="font-size: 64px;color: grey">
+                <i class="fas fa-hand-holding-heart"></i>
+            </span>
+                <span>
+                <span style="margin-left: -12px;font-size: 60px">
+                  460
+                </span>
+            </span>
+                <p style="margin-top: -30px;margin-left: 68px;color: grey">Days of Help</p>
+            </div>
+        </div>
+        <br>
+
+        <p style="text-align:center;font-size: 23pxs">Thật không may, sinh thái, và luôn luôn được khấu trừ. <br>
+            Cũng giống như các thành viên của một chuyến đi</p>
+
+        <br>
+    </div>
+
+    <div class="w3-container">
+        <h1 style="text-align: center">BÀI VIẾT MỚI NHẤT</h1>
+        <div class="w3-row" style="margin-top: 50px">
+            <div class="w3-col l8 s12">
+
+                {{--                BLOG 1 --}}
+                <div class="w3-margin w3-white">
+                    <img src="https://www.ivyboarding.com/w3template/w3images/bridge.jpg" alt="Nature"
+                         style="width:100%">
+                    <div class="w3-container">
+                        <h3><b>VẬY LÀM SAO ĐỂ BẮT ĐẦU MỘT LỐI SỐNG XANH?</b></h3>
+                        <h5>Đây có lẽ một trong những câu hỏi mà mọi người đang đặt ra, nhưng bạn có biết chúng ta đều
+                            phải mất 21 ngày để thay đổi một thói quen mới?</h5>
+                        <span class="w3-opacity">10-9-2019 </span>
+                    </div>
+
+                    <div class="w3-container">
+                        <p>“Change the way you look at things and the things you look at change” - Wayne Dyer </p>
+                        <div class="w3-row">
+                            <div class="w3-col m8 s12">
+                                <p>
+                                    <button class="w3-button w3-padding-large w3-white w3-border"><b>XEM THÊM »</b>
+                                    </button>
+                                </p>
+                            </div>
+                            <div class="w3-col m4 w3-hide-small">
+                                <p><span class="w3-padding-large w3-right"><b>BÌNH LUẬN  </b> <span
+                                                class="w3-tag">0</span></span></p>
+                            </div>
                         </div>
-                        <h2>
-                            Eu qui dolore altera, saepe molestie accusamus
-                        </h2>
-                        <p class="post_intro hidden-xs">
-                            An erant partem albucius quo, ad graece latine atomorum sea, sit dicant laoreet at. Id has chor...
-                        </p>
+                    </div>
+                </div>
+                <hr>
+
+                {{--                BLOG 2--}}
+                <div class="w3-margin w3-white">
+                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Norway" style="width:100%">
+                    <div class="w3-container">
+                        <h3><b>BẠN CÓ BIẾT SỰ KHÁC NHAU GIỮA CÁC KHÁI NIỆM ?</b></h3>
+                        <h5>“GREEN”, “SUSTAINABLE”, “ECO-FRIENDLY”,
+                            “ETHICAL”, “FAIRTRADE”, “CLEAN”, “ORGANIC”, “NON-TOXIC”, VÀ “CONSCIOUS”.</h5>
+                        <span class="w3-opacity" style="font-size: 20px">9-9-2019</span>
+                    </div>
+
+                    <div class="w3-container">
+                        <p>Nếu dùng những từ này một cách bất cẩn, đặc biệt là bộ phận marketing, sẽ dễ gây bối rối,
+                            hiểu sai, hiểu lệch do các từ này dường như đồng nghĩa, hay gần nghĩa., </p>
+                        <div class="w3-row">
+                            <div class="w3-col m8 s12">
+                                <p>
+                                    <button class="w3-button w3-padding-large w3-white w3-border"><b>XEM THÊM »</b>
+                                    </button>
+                                </p>
+                            </div>
+                            <div class="w3-col m4 w3-hide-small">
+                                <p><span class="w3-padding-large w3-right"><b>BÌNH LUẬN  </b> <span
+                                                class="w3-badge">3</span></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+{{--                BLOG 3  --}}
+                <div class="w3-margin w3-white">
+                    <img src="https://www.ivyboarding.com/w3template/w3images/bridge.jpg" alt="Nature"
+                         style="width:100%">
+                    <div class="w3-container">
+                        <h3><b>THỰC TRẠNG Ô NHIỄM MÔI TRƯỜNG Ở VIỆT NAM.</b></h3>
+                        <h5>CÁC GIẢI PHÁP KHẮC PHỤC</h5>
+                        <span class="w3-opacity">7-9-2019 </span>
+                    </div>
+
+                    <div class="w3-container">
+                        <p>Hiện nay, vấn đề ô nhiễm môi trường đang là chủ đề nóng trên các mặt báo và nhận được rất
+                            nhiều sự quan tâm của người dân. Trong đó, đặc biệt là vấn đề ô nhiễm nguồn nước ở Việt Nam
+                            đã và đang ngày càng trở nên nghiêm trọng hơn. </p>
+                        <div class="w3-row">
+                            <div class="w3-col m8 s12">
+                                <p>
+                                    <button class="w3-button w3-padding-large w3-white w3-border"><b>XEM THÊM »</b>
+                                    </button>
+                                </p>
+                            </div>
+                            <div class="w3-col m4 w3-hide-small">
+                                <p><span class="w3-padding-large w3-right"><b>BÌNH LUẬN  </b> <span
+                                                class="w3-tag">1</span></span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox" >
-                <div class="item">
-                    <img src="https://www.solodev.com/assets/fancy/travel5.jpg">
-                    <div class="blogTxt">
-                        <div class="blogCategory">
-                            <a href="/">Virtual Reality</a>
-                        </div>
-                        <h2>
-                            Ea delicata deterru isset concluda turque
-                        </h2>
-                        <p class="post_intro hidden-xs">
-                            Mel ut enim atqui, ne eum tation populo delectus. Vim soluta insolens phaedrum et, lucilius par...
+
+            <div class="w3-col l4">
+                <div class="w3-margin w3-margin-top">
+                    <img src="https://www.ivyboarding.com/w3template/w3images/avatar_g.jpg" style="width:100%">
+                    <div class="w3-container w3-white">
+                        <h4><b>SỰ THẬT</b></h4>
+                        <p>Các vấn đề môi trường lớn hiện tại bao gồm biến đổi khí hậu, ô nhiễm môi trường, suy thoái
+                            môi trường, và cạn kiệt tài nguyên thiên nhiên. Các vận động hành lang về bảo tồn nhằm bảo
+                            vệ loài nguy cấp và bảo vệ bất kỳ môi trường tự nhiên có hệ sinh thái có giá trị, vấn đề
+                            thực phẩm biến đổi gen và ấm lên toàn cầu.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="w3-margin">
+                    <div class="w3-container w3-padding">
+                        <h4>Những Bài Viết Phổ Biến</h4>
+                    </div>
+                    <ul class="w3-ul w3-hoverable w3-white">
+                        <li class="w3-padding-16">
+                            <img src="https://i.pinimg.com/564x/ab/4d/f7/ab4df7baabff4536e7a80182c892e9a7.jpg" alt="Image" class="w3-left w3-margin-right"
+                                 style="width:50px">
+                            <span class="w3-large">Lorem</span><br>
+                            <span>Sed mattis nunc</span>
+                        </li>
+                        <li class="w3-padding-16">
+                            <img src="https://i.pinimg.com/564x/7a/27/87/7a2787fd8642f06ae98a18f1bd7c6b2a.jpg" alt="Image" class="w3-left w3-margin-right"
+                                 style="width:50px">
+                            <span class="w3-large">Ipsum</span><br>
+                            <span>Praes tinci sed</span>
+                        </li>
+                        <li class="w3-padding-16">
+                            <img src="https://i.pinimg.com/564x/64/5f/09/645f091ada7367e1d23214f14a693657.jpg" alt="Image" class="w3-left w3-margin-right"
+                                 style="width:50px">
+                            <span class="w3-large">Dorum</span><br>
+                            <span>Ultricies congue</span>
+                        </li>
+                        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+                            <img src="https://i.pinimg.com/564x/1f/bd/84/1fbd84acdf05bf0d8d7bfea26eb9b7b2.jpg" alt="Image" class="w3-left w3-margin-right"
+                                 style="width:50px">
+                            <span class="w3-large">Mingsum</span><br>
+                            <span>Lorem ipsum dipsum</span>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <div class="w3-margin">
+                    <div class="w3-container w3-padding">
+                        <h4>Thẻ Tên</h4>
+                    </div>
+                    <div class="w3-container w3-white">
+                        <p><span class="w3-tag w3-black w3-margin-bottom"><a href="#" style="text-decoration: none">Travel</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">New York</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">London</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">IKEA</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">NORWAY</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">DIY</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">Ideas</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">Baby</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">Family</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">News</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">Clothing</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">Shopping</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">Sports</a></span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
+                                                                                            style="text-decoration: none">Games</a></span>
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox" >
-                <div class="item">
-                    <img src="https://www.solodev.com/assets/fancy/travel6.jpg">
-                    <div class="blogTxt">
-                        <div class="blogCategory">
-                            <a href="/">Internet of Things (IoT)</a>
-                        </div>
-                        <h2>
-                            No vim quis quodsi, etiam quaestio euripidis
-                        </h2>
-                        <p class="post_intro hidden-xs">
-                            Sed possim nonumes no, iuvaret similique quo no. Ut sea idque option aliquando. Ei mea choro ap...
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox" >
-                <div class="item">
-                    <img src="https://www.solodev.com/assets/fancy/travel9.jpg">
-                    <div class="blogTxt">
-                        <div class="blogCategory">
-                            <a href="/">Artifical Intelligence</a>
-                        </div>
-                        <h2>
-                            Qui an alii magna consectetuer
-                        </h2>
-                        <p class="post_intro hidden-xs">
-                            Ad populo appareat vulputate vix, ex fastidii signiferumque pro. In sea doming reprehendunt. Na...
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox" style="display: none;">
-                <div class="item">
-                    <img src="https://www.solodev.com/assets/fancy/travel7.jpg">
-                    <div class="blogTxt">
-                        <div class="blogCategory">
-                            <a href="/">Big Data</a>
-                        </div>
-                        <h2>
-                            Integre voluptatum cu quo iriure docendi senserit
-                        </h2>
-                        <p class="post_intro hidden-xs">
-                            Delicata inciderint at per, eu partem principes eum, illud nobis appetere ex his. Ei vix melior...
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox" style="display: none;">
-                <div class="item">
-                    <img src="https://www.solodev.com/assets/fancy/travel8.jpg">
-                    <div class="blogTxt">
-                        <div class="blogCategory">
-                            <a href="/">Growth Hacking</a>
-                        </div>
-                        <h2>
-                            Pro brute causae aliquip ad
-                        </h2>
-                        <p class="post_intro hidden-xs">
-                            No ipsum invidunt eos, ei ius dicit platonem perpetua. Mea te feugait ocurreret aliquando, ei i...
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox" style="display: none;">
-                <div class="item">
-                    <img src="https://www.solodev.com/assets/fancy/travel2.jpg">
-                    <div class="blogTxt">
-                        <div class="blogCategory">
-                            <a href="/">Content Marketing</a>
-                        </div>
-                        <h2>
-                            Lorem ipsum dolor sit amet, consect adipiscing elit
-                        </h2>
-                        <p class="post_intro hidden-xs">
-                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ...
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="loadMore" style="">
-                <a href="#">Load More</a>
             </div>
         </div>
     </div>
-    <script>
-        $( document ).ready(function () {
-            $(".moreBox").slice(0, 3).show();
-            if ($(".blogBox:hidden").length != 0) {
-                $("#loadMore").show();
-            }
-            $("#loadMore").on('click', function (e) {
-                e.preventDefault();
-                $(".moreBox:hidden").slice(0, 6).slideDown();
-                if ($(".moreBox:hidden").length == 0) {
-                    $("#loadMore").fadeOut('slow');
-                }
-            });
-        });
-    </script>
-    @endsection
+
+@endsection

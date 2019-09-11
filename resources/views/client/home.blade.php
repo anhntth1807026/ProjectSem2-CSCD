@@ -99,6 +99,26 @@
     {{--    Bán chạy nhất--}}
     <div class="container">
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Bán Chạy Nhất</h1>
+        <div class="w3-row-padding w3-padding-16 w3-center" data-aos="fade-left" data-aos-duration="1500" id="food">
+            {{--            @foreach($product as $products)--}}
+            <div class="w3-quarter ">
+{{--                    <img src="{{ asset('img/home-care/co-rua-binh.webp') }}" alt="">--}}
+                <div class="card__collection clear-fix">
+                    <div class="cards cards--two">
+                        <img src="{{ asset('img/home-care/co-rua-binh.webp') }}" class="img-responsive" alt="Cards Image" style="width: 100%">
+{{--                        <span class="cards--two__rect"></span>--}}
+{{--                        <span class="cards--two__tri"></span>--}}
+
+                        <ul class="cards__list">
+                            <li class="btn-icon">
+
+{{--                                <a href="{{ route('add.shopping.cart', $products-> id) }}"><i class="fa fa-shopping-cart"></i></a>--}}
+
+                            </li >
+                            <li class="btn-icon">
+                                <i class="fa fa-eye"></i>
+                            </li>
+                        </ul>
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="product-grid6">
@@ -343,7 +363,7 @@
                         </a>
                     </div>
                     <div class="product-content">
-                        <h5 class="title"><a href="#">Bình nước giữ nhiệt nắp gỗ</a></h5>
+                        <h5 class="title" style="height: 50px"><a href="#">Bình nước giữ nhiệt nắp gỗ</a></h5>
                         <h6>Đồ Dùng Cá Nhân</h6>
                         <div class="price">429.000₫</div>
                     </div>

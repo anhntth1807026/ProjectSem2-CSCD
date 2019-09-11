@@ -81,8 +81,8 @@
                                        placeholder="{{ __('Phone') }}">
                                 @error('phone')
                                 <span class="req-input invalid">
-                                <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input your phone."> </span>
-                            </span>
+                                  <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input your phone."> </span>
+                                </span>
                                 @enderror
                             </div>
 

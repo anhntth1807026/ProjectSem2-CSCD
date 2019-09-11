@@ -107,7 +107,6 @@
         }
 
 
-
         .product-grid8 .product-content {
             padding: 20px 0 0
         }
@@ -167,6 +166,7 @@
             text-align: center;
             width: 100%;
         }
+
         #loadMore a {
             background: #042a63;
             border-radius: 3px;
@@ -176,6 +176,7 @@
             transition: all 0.25s ease-out;
             -webkit-font-smoothing: antialiased;
         }
+
         #loadMore a:hover {
             background-color: #021737;
         }
@@ -187,19 +188,19 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $( function() {
-            $( "#slider-range" ).slider({
+        $(function () {
+            $("#slider-range").slider({
                 range: true,
                 min: 0,
                 max: 500,
-                values: [ 75, 300 ],
-                slide: function( event, ui ) {
-                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                values: [75, 300],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
                 }
             });
-            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-                " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-        } );
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                " - $" + $("#slider-range").slider("values", 1));
+        });
     </script>
 
     <div class="container">
@@ -207,8 +208,10 @@
             <div class="col-3 " style="width: 100%; height: 90vh; top: 60px; position: sticky;">
                 <!-- Search form -->
                 <div style="position: relative;">
-                    <i class="fas fa-search" style="position: absolute;top: 50%;right: 2%;color: #939393;transform: translateY(-50%);font-size: 20px;cursor: pointer" ></i>
-                    <input class="form-control" type="text" placeholder="Tìm kiếm sản phẩm theo tên" aria-label="Search">
+                    <i id="btn-search" class="fas fa-search"
+                       style="position: absolute;top: 50%;right: 2%;color: #939393;transform: translateY(-50%);font-size: 20px;cursor: pointer"></i>
+                    <input id="searchByName" class="form-control" type="text" placeholder="Tìm kiếm sản phẩm theo tên"
+                           aria-label="Search">
                 </div>
 
                 <!-- Filter price -->
@@ -221,327 +224,105 @@
                 </div>
                 <div class="category-bar" style="padding-top: 50px;">
                     <label for="category">Thể Loại</label>
-                        <div class="home-care">
-                            <a href="#home-care">Home Care</a>
-                        </div>
-                        <div class="personal-care">
-                            <a href="#personal-care">Personal Care</a>
-                        </div>
+                    <div class="home-care">
+                        <a href="#home-care">Home Care</a>
+                    </div>
+                    <div class="personal-care">
+                        <a href="#personal-care">Personal Care</a>
+                    </div>
                 </div>
             </div>
             <div class="col-9">
-                <div class="best-seller">
-                    <h3 class="h3">Sản Phẩm Bán Chạy</h3>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="/Product-Details" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 {{--San pham Moi--}}
-                <div class="best-seller">
-                    <h3 class="h3">Sản Phẩm Mới</h3>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 {{--Home Care--}}
-                <div class="home-care" >
-                    <h3 class="h3" id="home-care">Home Care</h3>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 {{--Personal Care--}}
-                <div class="personal-care">
-                    <h3 class="h3" id="personal-care">Personal Care</h3>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 {{--All Product--}}
                 <div class="all-product">
                     <h3 class="h3">All Product</h3>
                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
+                        @foreach($product as $item)
+                            <div class="col-md-4 col-sm-6">
+                                <div class="product-grid8">
+                                    <div class="product-image8">
+                                        <a href="/Detail-Products/{{$item -> id}}">
+                                            <img class="pic-1" src="{{$item -> thumbnail }}">
+                                            <img class="pic-2"
+                                                 src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
+                                        </a>
+                                        <ul class="social">
+                                            <li><a href="/Detail-Products/{{$item -> id}}" class="far fa-eye"></a></li>
+                                            <li><a href="" class="fa fa-shopping-bag"></a></li>
+                                            <li><a href="" class="fa fa-shopping-cart"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="title"><a href="#">{{$item -> name}}</a></div>
+                                        <h4 class="price"> {{$item -> price}} VNĐ </h4>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="product-grid8">
-                                <div class="product-image8">
-                                    <a href="#">
-                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">
-                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="far fa-eye"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <div class="price">$ 8.00</div>
-                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+                        {{--                        <div class="col-md-4 col-sm-6">--}}
+                        {{--                            <div class="product-grid8">--}}
+                        {{--                                <div class="product-image8">--}}
+                        {{--                                    <a href="#">--}}
+                        {{--                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">--}}
+                        {{--                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">--}}
+                        {{--                                    </a>--}}
+                        {{--                                    <ul class="social">--}}
+                        {{--                                        <li><a href="" class="far fa-eye"></a></li>--}}
+                        {{--                                        <li><a href="" class="fa fa-shopping-bag"></a></li>--}}
+                        {{--                                        <li><a href="" class="fa fa-shopping-cart"></a></li>--}}
+                        {{--                                    </ul>--}}
+                        {{--                                </div>--}}
+                        {{--                                <div class="product-content">--}}
+                        {{--                                    <div class="price">$ 8.00</div>--}}
+                        {{--                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>--}}
+                        {{--                                </div>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
+                        {{--                        <div class="col-md-4 col-sm-6">--}}
+                        {{--                            <div class="product-grid8">--}}
+                        {{--                                <div class="product-image8">--}}
+                        {{--                                    <a href="#">--}}
+                        {{--                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">--}}
+                        {{--                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">--}}
+                        {{--                                    </a>--}}
+                        {{--                                    <ul class="social">--}}
+                        {{--                                        <li><a href="" class="far fa-eye"></a></li>--}}
+                        {{--                                        <li><a href="" class="fa fa-shopping-bag"></a></li>--}}
+                        {{--                                        <li><a href="" class="fa fa-shopping-cart"></a></li>--}}
+                        {{--                                    </ul>--}}
+                        {{--                                </div>--}}
+                        {{--                                <div class="product-content">--}}
+                        {{--                                    <div class="price">$ 8.00</div>--}}
+                        {{--                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>--}}
+                        {{--                                </div>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
+                        {{--                        <div class="col-md-4 col-sm-6">--}}
+                        {{--                            <div class="product-grid8">--}}
+                        {{--                                <div class="product-image8">--}}
+                        {{--                                    <a href="#">--}}
+                        {{--                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">--}}
+                        {{--                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">--}}
+                        {{--                                    </a>--}}
+                        {{--                                    <ul class="social">--}}
+                        {{--                                        <li><a href="" class="far fa-eye"></a></li>--}}
+                        {{--                                        <li><a href="" class="fa fa-shopping-bag"></a></li>--}}
+                        {{--                                        <li><a href="" class="fa fa-shopping-cart"></a></li>--}}
+                        {{--                                    </ul>--}}
+                        {{--                                </div>--}}
+                        {{--                                <div class="product-content">--}}
+                        {{--                                    <div class="price">$ 8.00</div>--}}
+                        {{--                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>--}}
+                        {{--                                </div>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -551,6 +332,23 @@
     </div>
     </div>
     </div>
+    <script>
+
+        $('#btn-search').click(function () {
+            var href = window.location.href;
+            var currentPage = href.split('?')[0];
+            window.location.href =  currentPage + '?name=' + $('#searchByName').val()
+        });
+
+        $('#searchByName').keypress(function (e) {
+            var href = window.location.href;
+            var currentPage = href.split('?')[0];
+            if(e.keyCode ===13){
+                window.location.href =  currentPage + '?name=' + $(this).val()
+            }
+        });
+
+    </script>
 
 
 @endsection()
