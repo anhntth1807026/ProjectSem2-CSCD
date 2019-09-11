@@ -29,15 +29,15 @@
                 <form action="{{route('product.store')}}" enctype="multipart/form-data" method="post">
                     @csrf
                     <div class="row">
-                        <div class="col-4 form-group">
+                        <div class="col-6 form-group">
                             <label>Name</label>
-                            <input style="" type="text" name="name" class="form-control"
-                                   placeholder="Please enter name">
+                            <input style="width: 70%" type="text" name="name" class="form-control"
+                                   placeholder="Please enter the name">
                         </div>
 
-                        <div class="col-4 form-group">
+                        <div class="col-6 form-group">
                             <label for="">Category: </label>
-                            <select name="pro_category_id" id="" class="form-control">
+                            <select style="width: 71%" name="pro_category_id" id="" class="form-control">
                                 <option value="">--Chọn loại sản phẩm--</option>
                                 @if(isset($categories))
                                     @foreach($categories as $category)
@@ -60,18 +60,17 @@
                                placeholder="Thumbnail">
                     </div>
                     <div class="row">
-                        <div class="col-5 form-group">
+                        <div class="col-6 form-group">
                             <label for="exampleInputPassword1">Quantity</label>
-                            <input style="width: 70%" type="number" name="quantity" class="form-control"
-                                   placeholder="Please enter quantity">
+                            <input style="width: 75%" type="number" name="quantity" class="form-control"
+                                   placeholder="Please enter the quantity">
                         </div>
-                        <div class="col-5 form-group">
+                        <div class="col-6 form-group">
                             <label for="exampleInputPassword1">Price</label>
                             <input style="width: 70%" type="number" name="price" class="form-control"
-                                   placeholder="Please enter price">
+                                   placeholder="Please enter the price">
                         </div>
                     </div>
-
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
