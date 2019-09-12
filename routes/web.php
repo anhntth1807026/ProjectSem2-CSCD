@@ -15,6 +15,7 @@ use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use JD\Cloudder\Facades\Cloudder;
 
 Route::get('/', function () {
     return view('welcome');
@@ -112,3 +113,6 @@ Route::prefix('shopping')->group(function () {
 Route::group(['prefix' => 'transaction'], function () {
     Route::get('/', 'AdminTransactionController@index')->name('admin.list.transaction');
 });
+
+
+
