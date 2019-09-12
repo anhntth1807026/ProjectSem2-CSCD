@@ -99,7 +99,7 @@
                   3600
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Beavers Saved</p>
+                <p style="margin-left: 68px;color: grey">Beavers Saved</p>
             </div>
 
             <div class="w3-quarter" style="text-align: center">
@@ -111,7 +111,7 @@
                   $12000
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Funds Collected</p>
+                <p style="margin-left: 68px;color: grey">Funds Collected</p>
             </div>
 
             <div class="w3-quarter" style="text-align: center">
@@ -123,7 +123,7 @@
                     680
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Volunteer</p>
+                <p style="margin-left: 68px;color: grey">Volunteer</p>
             </div>
 
             <div class="w3-quarter" style="text-align: center">
@@ -135,17 +135,16 @@
                   460
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Days of Help</p>
+                <p style="margin-left: 68px;color: grey">Days of Help</p>
             </div>
         </div>
         <br>
 
-        <p style="text-align:center;font-size: 23pxs">Thật không may, sinh thái, và luôn luôn được khấu trừ. <br>
+        <p style="text-align:center">Thật không may, sinh thái, và luôn luôn được khấu trừ. <br>
             Cũng giống như các thành viên của một chuyến đi</p>
 
         <br>
     </div>
-
     <div class="w3-container">
         <h1 style="text-align: center">BÀI VIẾT MỚI NHẤT</h1>
         <div class="w3-row" style="margin-top: 50px">

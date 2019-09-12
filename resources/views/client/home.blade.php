@@ -367,66 +367,6 @@
         </div>
     </div>
 
-    <div class="w3-row-padding w3-text-white w3-large w3-padding-32">
-        <h2 class="w3-center" data-aos="fade-up" data-aos-duration="3000" style="color:#000;">Bài Viết Mới</h2>
-        <p class="w3-center w3-large" data-aos="fade-up" data-aos-duration="3000" style="color: black">Tìm Hiểu Nhiều
-            Hơn Về
-            Môi Trường</p>
-        <div class="w3-half w3-margin-bottom" data-aos="fade-up" data-aos-duration="3000">
-            <div class="w3-display-container">
-                <img style="width:100%"
-                     src="{{ asset('img/slide-pics/slidea.jpg') }}">
-                <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">
-                Đơn Giản
-{{--                Đơn giản nhưng thực dụng và cực bền, đây có lẽ là tính từ miêu tả rõ nhất dành cho...--}}
-            </span>
-            </div>
-        </div>
-        <div class="w3-half" data-aos="fade-up" data-aos-duration="3000">
-            <div class="w3-row-padding" style="margin:0 -16px">
-                <div class="w3-half w3-margin-bottom">
-                    <div class="w3-display-container">
-                        <img style="width:100%"
-                             src="{{ asset('img/slide-pics/convi.png') }}">
-                        <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">
-                        Tiện Lợi
-                    </span>
-                    </div>
-                </div>
-                <div class="w3-half w3-margin-bottom">
-                    <div class="w3-display-container">
-                        <img style="width:100%"
-                             src="{{ asset('img/slide-pics/prat.jpg') }}">
-                        <span class="w3-display-bottomleft w3-padding " style="color: black">
-                        Thiết Thực
-                    </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w3-row-padding" style="margin:0 -16px">
-                <div class="w3-half w3-margin-bottom">
-                    <div class="w3-display-container">
-                        <img style="width:100%"
-                             src="{{ asset('img/slide-pics/reuse.jpg') }}">
-                        <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">
-                        Tái Chế
-                    </span>
-                    </div>
-                </div>
-                <div class="w3-half w3-margin-bottom">
-                    <div class="w3-display-container">
-                        <img style="width:100%"
-                             src="{{ asset('img/slide-pics/envi.jpg') }}">
-                        <span class="w3-display-bottomleft w3-padding" style="color: black">
-                        Thiên Nhiên
-                    </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
         <div class="w3-row-padding w3-padding-16 w3-center" id="food">
             <div class="w3-quarter">
@@ -463,7 +403,7 @@
                   3600
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Beavers Saved</p>
+                <p style="margin-left: 68px;color: grey">Beavers Saved</p>
             </div>
 
             <div class="w3-quarter" style="text-align: center">
@@ -475,7 +415,7 @@
                   $12000
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Funds Collected</p>
+                <p style="margin-left: 68px;color: grey">Funds Collected</p>
             </div>
 
             <div class="w3-quarter" style="text-align: center">
@@ -487,7 +427,7 @@
                     680
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Volunteer</p>
+                <p style="margin-left: 68px;color: grey">Volunteer</p>
             </div>
 
             <div class="w3-quarter" style="text-align: center">
@@ -499,7 +439,7 @@
                   460
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Days of Help</p>
+                <p style="margin-left: 68px;color: grey">Days of Help</p>
             </div>
         </div>
         <br>
@@ -510,7 +450,45 @@
         <br>
     </div>
 
-    <div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+    <div class="container w3-content" style="max-width:1532px;">
+        <h2 class="w3-center" data-aos="fade-up" data-aos-duration="3000" style="color:#000;">Bài Viết Mới</h2>
+        <p class="w3-center w3-large" data-aos="fade-up" data-aos-duration="3000" style="color: black;font-size: 20px">
+            Tìm Hiểu Nhiều
+            Hơn Về
+            Môi Trường</p>
+        <div class="w3-row-padding w3-padding-16">
+            <div class="w3-third w3-margin-bottom">
+                <img src="{{ asset('img/slide-pics/convi.png') }}" alt="Norway" style="width:100%">
+                <div class="w3-container w3-white" style="margin-top: 20px">
+                    <p style="text-align: center;font-size: 20px">BẠN CÓ BIẾT SỰ KHÁC NHAU GIỮA CÁC KHÁI NIỆM?
+                    </p>
+                    <h6 style="text-align: center">10-9-2019 </h6>
+                    <h6 class="w3-opacity" style="text-align: center">21 NGÀY ĐỂ THAY ĐỔI MỘT THÓI QUEN MỚI?</h6>
+                    <button class="w3-button w3-block w3-black w3-margin-bottom">CHI TIẾT >></button>
+                </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+                <img src="{{ asset('img/slide-pics/prat.jpg') }}" alt="Norway" style="width:100%">
+                <div class="w3-container w3-white" style="margin-top: 20px">
+                    <p style="text-align: center;font-size: 20px">VẬY LÀM SAO ĐỂ BẮT ĐẦU MỘT LỐI SỐNG XANH?</p>
+                    <h6 style="text-align: center">9-9-2019</h6>
+                    <h6 class="w3-opacity" style="text-align: center">“GREEN”, “SUSTAINABLE”, “ECO-FRIENDLY”,...</h6>
+                    <button class="w3-button w3-block w3-black w3-margin-bottom">CHI TIẾT >></button>
+                </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+                <img src="{{ asset('img/slide-pics/reuse.jpg') }}" alt="Norway" style="width:100%">
+                <div class="w3-container w3-white" style="margin-top: 20px">
+                    <p style="text-align: center;font-size: 20px">THỰC TRẠNG Ô NHIỄM MÔI TRƯỜNG Ở VIỆT NAM.</p>
+                    <h6 style="text-align: center">7-9-2019 </h6>
+                    <h6 class="w3-opacity" style="text-align: center">VÀ CÁC GIẢI PHÁP KHẮC PHỤC</h6>
+                    <button class="w3-button w3-block w3-black w3-margin-bottom">CHI TIẾT >></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-content" style="max-width:1100px;margin-bottom:80px">
         <div class="w3-row-padding">
             <div class="w3-center w3-padding-64">
                 <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-size: 30px">Chính Sách Của Chúng Tôi</span>
@@ -566,5 +544,6 @@
             </div>
         </div>
     </div>
+
 
 @endsection
