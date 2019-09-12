@@ -39,21 +39,21 @@
             transition: all .5s ease-out 0s
         }
 
-        .product-grid8:hover .pic-1 {
-            opacity: 0
-        }
+        /*.product-grid8:hover .pic-1 {*/
+        /*    opacity: 0*/
+        /*}*/
 
-        .product-grid8 .pic-2 {
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transition: all .5s ease-out 0s
-        }
+        /*.product-grid8 .pic-2 {*/
+        /*    opacity: 0;*/
+        /*    position: absolute;*/
+        /*    top: 0;*/
+        /*    left: 0;*/
+        /*    transition: all .5s ease-out 0s*/
+        /*}*/
 
-        .product-grid8:hover .pic-2 {
-            opacity: 1
-        }
+        /*.product-grid8:hover .pic-2 {*/
+        /*    opacity: 1*/
+        /*}*/
 
         .product-grid8 .social {
             padding: 0;
@@ -234,12 +234,6 @@
             </div>
             <div class="col-9">
 
-                {{--San pham Moi--}}
-
-                {{--Home Care--}}
-
-                {{--Personal Care--}}
-
                 {{--All Product--}}
                 <div class="all-product">
                     <h3 class="h3">All Product</h3>
@@ -249,9 +243,9 @@
                                 <div class="product-grid8">
                                     <div class="product-image8">
                                         <a href="/Detail-Products/{{$item -> id}}">
-                                            <img class="pic-1" src="{{$item -> thumbnail }}">
-                                            <img class="pic-2"
-                                                 src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">
+                                            <img class="pic-1 " style="height: 229.48px" src="https://res.cloudinary.com/dx8lbwzhw/image/upload/{{$item -> thumbnail }}">
+{{--                                            <img class="pic-2"--}}
+{{--                                                 src="https://res.cloudinary.com/dx8lbwzhw/image/upload/{{$item -> thumbnail }}">--}}
                                         </a>
                                         <ul class="social">
                                             <li><a href="/Detail-Products/{{$item -> id}}" class="far fa-eye"></a></li>
@@ -266,63 +260,9 @@
                                 </div>
                             </div>
                         @endforeach
-                        {{--                        <div class="col-md-4 col-sm-6">--}}
-                        {{--                            <div class="product-grid8">--}}
-                        {{--                                <div class="product-image8">--}}
-                        {{--                                    <a href="#">--}}
-                        {{--                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">--}}
-                        {{--                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">--}}
-                        {{--                                    </a>--}}
-                        {{--                                    <ul class="social">--}}
-                        {{--                                        <li><a href="" class="far fa-eye"></a></li>--}}
-                        {{--                                        <li><a href="" class="fa fa-shopping-bag"></a></li>--}}
-                        {{--                                        <li><a href="" class="fa fa-shopping-cart"></a></li>--}}
-                        {{--                                    </ul>--}}
-                        {{--                                </div>--}}
-                        {{--                                <div class="product-content">--}}
-                        {{--                                    <div class="price">$ 8.00</div>--}}
-                        {{--                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>--}}
-                        {{--                                </div>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
-                        {{--                        <div class="col-md-4 col-sm-6">--}}
-                        {{--                            <div class="product-grid8">--}}
-                        {{--                                <div class="product-image8">--}}
-                        {{--                                    <a href="#">--}}
-                        {{--                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">--}}
-                        {{--                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">--}}
-                        {{--                                    </a>--}}
-                        {{--                                    <ul class="social">--}}
-                        {{--                                        <li><a href="" class="far fa-eye"></a></li>--}}
-                        {{--                                        <li><a href="" class="fa fa-shopping-bag"></a></li>--}}
-                        {{--                                        <li><a href="" class="fa fa-shopping-cart"></a></li>--}}
-                        {{--                                    </ul>--}}
-                        {{--                                </div>--}}
-                        {{--                                <div class="product-content">--}}
-                        {{--                                    <div class="price">$ 8.00</div>--}}
-                        {{--                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>--}}
-                        {{--                                </div>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
-                        {{--                        <div class="col-md-4 col-sm-6">--}}
-                        {{--                            <div class="product-grid8">--}}
-                        {{--                                <div class="product-image8">--}}
-                        {{--                                    <a href="#">--}}
-                        {{--                                        <img class="pic-1" src="{{ asset('img/new-image/khau-trang-loc-bui.jpg') }}">--}}
-                        {{--                                        <img class="pic-2" src="{{ asset('img/personal-care/ong-hut-thuy-tinh.webp') }}">--}}
-                        {{--                                    </a>--}}
-                        {{--                                    <ul class="social">--}}
-                        {{--                                        <li><a href="" class="far fa-eye"></a></li>--}}
-                        {{--                                        <li><a href="" class="fa fa-shopping-bag"></a></li>--}}
-                        {{--                                        <li><a href="" class="fa fa-shopping-cart"></a></li>--}}
-                        {{--                                    </ul>--}}
-                        {{--                                </div>--}}
-                        {{--                                <div class="product-content">--}}
-                        {{--                                    <div class="price">$ 8.00</div>--}}
-                        {{--                                    <h3 class="title"><a href="#">Khẩu Trang Lọc Bụi</a></h3>--}}
-                        {{--                                </div>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
+{{--                            <nav aria-label="Page navigation example">--}}
+{{--                                {{$product->links()}}--}}
+{{--                            </nav>--}}
                     </div>
                 </div>
             </div>

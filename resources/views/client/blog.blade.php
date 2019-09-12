@@ -109,7 +109,6 @@
             </span>
                     <p style="margin-top: -30px;margin-left: 68px;color: grey">Beavers Saved</p>
                 </div>
-
                 <div class="w3-quarter" style="text-align: center">
             <span style="font-size: 64px;color: grey">
                <i class="fas fa-hand-holding-usd"></i>
@@ -121,7 +120,6 @@
             </span>
                     <p style="margin-top: -30px;margin-left: 68px;color: grey">Funds Collected</p>
                 </div>
-
                 <div class="w3-quarter" style="text-align: center">
             <span style="font-size: 64px;color: grey">
                 <i class="fas fa-fingerprint"></i>
@@ -134,6 +132,7 @@
                     <p style="margin-top: -30px;margin-left: 68px;color: grey">Volunteer</p>
                 </div>
 
+
                 <div class="w3-quarter" style="text-align: center">
             <span style="font-size: 64px;color: grey">
                 <i class="fas fa-hand-holding-heart"></i>
@@ -143,18 +142,15 @@
                   460
                 </span>
             </span>
-                    <p style="margin-top: -30px;margin-left: 68px;color: grey">Days of Help</p>
-                </div>
+            <p style="margin-top: -30px;margin-left: 68px;color: grey">Days of Help</p>
             </div>
             <br>
 
             <p style="text-align:center;font-size: 23px">Thật không may, sinh thái, và luôn luôn được khấu trừ. <br>
                 Cũng giống như các thành viên của một chuyến đi</p>
-
             <br>
         </div>
     </div>
-
     <div class="w3-container">
         <h1 style="text-align: center">BÀI VIẾT MỚI NHẤT</h1>
         <div class="w3-row" style="margin-top: 50px">
