@@ -14,9 +14,6 @@
 
     <link rel="stylesheet" href="{{ asset('css/RalewayCSS.css') }}">
 
-    {{--    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">--}}
-
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="{{ asset('/thumbnail/logo-short-cut.png') }}">
@@ -38,10 +35,6 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
 
-    {{--    materialize css--}}
-    {{--    font nav header--}}
-{{--    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cabin"/>--}}
-{{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">--}}
 
 </head>
 <body>
@@ -186,7 +179,7 @@
                                                    placeholder="Search product...">
                                             <span class="input-group-btn">
                                                 <button type="submit" class="btn btn-default"><i
-                                                        class="fa fa-search"></i></button>
+                                                            class="fa fa-search"></i></button>
                                             </span>
                                         </div>
                                     </form>
@@ -333,58 +326,140 @@
     </a>
 </div>
 
-<footer id="footer">
-    <div class="container">
+{{--Footer--}}
+
+{{--<footer id="footer">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row">--}}
+{{--            <div class="col-xs-12 col-sm-6 col-md-4 abt-txt">--}}
+{{--                <div class="footer-logo">--}}
+{{--                    <a href="#" style="color:#999999 "><img src="" alt="Tree Hugger" class="img-responsive"></a>--}}
+{{--                </div>--}}
+{{--                <p>Chung tay bảo vệ môi trường <br class="hidden-xs">Join hands to protect the environment</p>--}}
+{{--                <ul class="contact-list list-unstyled">--}}
+{{--                    <li><span class="icon"><i class="fa fa-map-signs" aria-hidden="true"--}}
+{{--                                              title="Địa chỉ trụ sở chính"></i></span> So 8 Ton Thuat--}}
+{{--                        Thuyet, My Dinh, Ha Noi.--}}
+{{--                    </li>--}}
+{{--                    <li><a href="mailto:anhntth1807026@fpt.edu.vn" style="color:#999999 " title="Địa chỉ Email"><span--}}
+{{--                                class="icon"><i--}}
+{{--                                    class="fa fa-envelope-o" aria-hidden="true"></i></span> TreeHugger@mail.com</a>--}}
+{{--                    </li>--}}
+{{--                    <li><a href="tel:+84 94 585 2000" style="color:#999999 " title="Số điện thoại"><span class="icon"><i--}}
+{{--                                    class="fa fa-phone"--}}
+{{--                                    aria-hidden="true"></i></span>--}}
+{{--                            +84 94 585 2000 </a></li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+
+{{--            <div class="col-xs-12 col-sm-6 col-md-4">--}}
+{{--                <h3>POPULAR TAGS</h3>--}}
+{{--                <p>--}}
+{{--                    <span class="w3-tag w3-black w3-margin-bottom">Bottle</span> <span--}}
+{{--                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Tote</span> <span--}}
+{{--                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Straws</span>--}}
+{{--                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Mask</span> <span--}}
+{{--                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Box</span> <span--}}
+{{--                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Gel</span>--}}
+{{--                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">mask</span>--}}
+{{--                </p>--}}
+{{--            </div>--}}
+
+{{--            <div class="col-xs-12 col-sm-6 col-md-4">--}}
+{{--                <h3>SUBSCRIBE</h3>--}}
+{{--                <div class="subscribe">--}}
+{{--                    <p title="Tham gia cùng chúng tôi.">Đăng kí theo dõi để nhận những thông tin mới nhất về chúng--}}
+{{--                        mình<br class="hidden-xs"></p>--}}
+{{--                    <form class="subscribe-form" action="#">--}}
+{{--                        <div class="input-group flex-nowrap">--}}
+{{--                            <input type="text" class="form-control" placeholder="Your Gmail" aria-label="Gmail"--}}
+{{--                                   aria-describedby="addon-wrapping">--}}
+{{--                            <span style="cursor: pointer; position: absolute; right: 2px; top: 14px; FONT-SIZE: 20px;"--}}
+{{--                                  id="addon-wrapping"><i class="far fa-paper-plane"></i>--}}
+{{--                            </span>--}}
+{{--                        </div>--}}
+{{--                    </form>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</footer>--}}
+
+<!-- Footer -->
+<footer class="pt-5 pb-4" id="contact">
+    <div class="container" style="padding-right: 0px;padding-left: 0px">
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4 abt-txt">
-                <div class="footer-logo">
-                    <a href="#" style="color:#999999 "><img src="" alt="Tree Hugger" class="img-responsive"></a>
-                </div>
-                <p>Chung tay bảo vệ môi trường <br class="hidden-xs">Join hands to protect the environment</p>
-                <ul class="contact-list list-unstyled">
-                    <li><span class="icon"><i class="fa fa-map-signs" aria-hidden="true"
-                                              title="Địa chỉ trụ sở chính"></i></span> So 8 Ton Thuat
-                        Thuyet, My Dinh, Ha Noi.
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4" style="margin-bottom: 30px">
+                <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">CHÚNG TÔI</h5>
+                <ul class="f-address">
+                    <li style="margin-bottom: 10px">
+                        <div class="row">
+                            <div class="col-1"><i class="fas fa-map-marker"></i></div>
+                            <div class="col-10">
+                                <h6 class="font-weight-bold mb-0">ĐỊA CHỈ:</h6>
+                                <p>SỐ 1 HÙNG VƯƠNG, QUÁN THÁNH, BA ĐÌNH, HÀ NỘI, VIỆT NAM</p>
+                            </div>
+                        </div>
                     </li>
-                    <li><a href="mailto:anhntth1807026@fpt.edu.vn" style="color:#999999 " title="Địa chỉ Email"><span
-                                class="icon"><i
-                                    class="fa fa-envelope-o" aria-hidden="true"></i></span> TreeHugger@mail.com</a>
+                    <li>
+                        <div class="row">
+                            <div class="col-1"><i class="far fa-envelope"></i></div>
+                            <div class="col-10">
+                                <h6 class="font-weight-bold mb-0">OUR EMAIL:</h6>
+                                <p><a href="#">anhntth1807026@fpt.edu.vn</a></p>
+                            </div>
+                        </div>
                     </li>
-                    <li><a href="tel:+84 94 585 2000" style="color:#999999 " title="Số điện thoại"><span class="icon"><i
-                                    class="fa fa-phone"
-                                    aria-hidden="true"></i></span>
-                            +84 94 585 2000 </a></li>
                 </ul>
             </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <h3>POPULAR TAGS</h3>
-                <p>
-                    <span class="w3-tag w3-black w3-margin-bottom">Bottle</span> <span
-                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Tote</span> <span
-                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Straws</span>
-                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Mask</span> <span
-                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Box</span> <span
-                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Gel</span>
-                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">mask</span>
-                </p>
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <h3>SUBSCRIBE</h3>
-                <div class="subscribe">
-                    <p title="Tham gia cùng chúng tôi.">Đăng kí theo dõi để nhận những thông tin mới nhất về chúng
-                        mình<br class="hidden-xs"></p>
-                    <form class="subscribe-form" action="#">
-                        <div class="input-group flex-nowrap">
-                            <input type="text" class="form-control" placeholder="Your Gmail" aria-label="Gmail"
-                                   aria-describedby="addon-wrapping">
-                            <span style="cursor: pointer; position: absolute; right: 2px; top: 14px; FONT-SIZE: 20px;"
-                                  id="addon-wrapping"><i class="far fa-paper-plane"></i>
-                            </span>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4" style="margin-bottom: 30px">
+                <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">FRESH TWEETS</h5>
+                <ul class="f-address">
+                    <li>
+                        <div class="row" style="margin-bottom: 25px">
+                            <div class="col-1"><i class="fab fa-twitter"></i></div>
+                            <div class="col-10">
+                                <p class="mb-0"><a href="#">@userthemesrel </a> HTML Version Out Now</p>
+                                <label>10 Mins Ago</label>
+                            </div>
                         </div>
-                    </form>
+                    </li>
+                    <li>
+                        <div class="row" style="margin-bottom: 25px">
+                            <div class="col-1"><i class="fab fa-twitter"></i></div>
+                            <div class="col-10">
+                                <p class="mb-0"><a href="#">@userthemesrel </a> HTML Version Out Now</p>
+                                <label>10 Mins Ago</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4" style="margin-bottom: 30px">
+                <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">BÀI VIẾT MỚI</h5>
+                <ul class="recent-post">
+                    <li>
+                        <label class="mr-3" style="margin-right: 5px">28 <br><p>9</p></label>
+                        <span>Làm thế nào để sống xanh?</span>
+                    </li>
+                    <li>
+                        <label class="mr-3" style="margin-right: 5px">29 <br><p>8</p></label>
+                        <span>Sống xanh là như thế nào?</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4" style="margin-bottom: 30px">
+                <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">LIÊN HỆ</h5>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Your Email Address">
+{{--                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>--}}
                 </div>
+                <ul class="social-pet mt-4">
+                    <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
