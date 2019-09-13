@@ -27,7 +27,7 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
 
 Route::resource('/admin/category', 'CategoryController');
 
-Route::get('/client/profile', 'ProfileUserController@index');
+Route::get('/client/profile', 'ProfileUserController@index')->name('ccc');
 
 Route::get('/About-Us', function () {
     return view('client.about-us');
