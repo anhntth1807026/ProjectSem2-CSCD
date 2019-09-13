@@ -3,13 +3,13 @@
 @section('content')
 
 
-    <header class=" w3-display-container w3-grayscale-min" id="home" style="margin-top:57px">
-        <div class=" w3-section" style="">
+    <div class=" w3-display-container w3-grayscale-min" id="home">
+        <div>
             <img class="mySlides" src="{{ asset('img/slide-pics/bg1.jpg') }}" style="width:100%">
             <img class="mySlides" src="{{ asset('img/slide-pics/bg2.jpg') }}" style="width:100%">
             <img class="mySlides" src="{{ asset('img/slide-pics/bg3.jpg') }}" style="width:100%">
         </div>
-        <div class="w3-display-left w3-text-white" style="padding:48px">
+        <div class="w3-display-left w3-text-white" style="padding:2rem">
             <span class="w3-jumbo w3-hide-small" data-aos="zoom-in"
                   data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới.</span><br>
             <span class="w3-xxlarge w3-hide-large w3-hide-medium" data-aos="zoom-in" data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới</span><br>
@@ -19,15 +19,15 @@
                   data-aos="zoom-in" data-aos-duration="3000" style="text-decoration: none;" title="Bắt đầu tìm hiểu">Tìm
                     Hiểu Nhiều Hơn Và Bắt Đầu Từ Hôm Nay</a></p>
         </div>
-        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-            <i class="fa fa-facebook-official w3-hover-opacity" title="Facebook"></i>
-            <i class="fa fa-instagram w3-hover-opacity" title="Instagram"></i>
-            <i class="fa fa-snapchat w3-hover-opacity" title="Snapchat"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity" title="Pinterest"></i>
-            <i class="fa fa-twitter w3-hover-opacity" title="Twitter"></i>
-            <i class="fa fa-linkedin w3-hover-opacity" title="Linkedin"></i>
-        </div>
-    </header>
+        {{--        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">--}}
+        {{--            <i class="fa fa-facebook-official w3-hover-opacity" title="Facebook"></i>--}}
+        {{--            <i class="fa fa-instagram w3-hover-opacity" title="Instagram"></i>--}}
+        {{--            <i class="fa fa-snapchat w3-hover-opacity" title="Snapchat"></i>--}}
+        {{--            <i class="fa fa-pinterest-p w3-hover-opacity" title="Pinterest"></i>--}}
+        {{--            <i class="fa fa-twitter w3-hover-opacity" title="Twitter"></i>--}}
+        {{--            <i class="fa fa-linkedin w3-hover-opacity" title="Linkedin"></i>--}}
+        {{--        </div>--}}
+    </div>
 
     <div class="w3-container w3-light-white" style="padding:100px 16px">
         <div class="w3-row-padding">
@@ -52,7 +52,7 @@
     </div>
 
 
-{{--    Tiêu chí của chúng tôi--}}
+    {{--    Tiêu chí của chúng tôi--}}
     <div class="w3-container" style="padding:70px 16px; background-color: #84b466; color: #0c0c0c" id="about">
         <h3 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Tiêu Chí Của Chúng Tôi</h3>
         <p class="w3-center w3-large" data-aos="fade-left" data-aos-duration="1500">Thiên Nhiên Là Chìa Khóa Của Tương
@@ -96,8 +96,7 @@
         </div>
     </div>
 
-
-{{--    Bán chạy nhất--}}
+    {{--    Bán chạy nhất--}}
     <div class="container">
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Bán Chạy Nhất</h1>
         <div class="row">
@@ -105,7 +104,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/co-rua-binh.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/co-rua-binh.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -124,7 +124,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/hop-khan-giay-go.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/hop-khan-giay-go.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -143,7 +144,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/dua-go-trac.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/dua-go-trac.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -162,7 +164,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/xit-khu-mui.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/xit-khu-mui.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -181,8 +184,7 @@
     </div>
     <hr>
 
-
-{{--    Tất cả sản phẩm--}}
+    {{--    Tất cả sản phẩm--}}
     <div class="container">
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Tất Cả Sản Phẩm</h1>
         <div class="row">
@@ -190,7 +192,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/ban-chai-nguoi-lon.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/ban-chai-nguoi-lon.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -209,7 +212,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/new-image/ly-thong-minh-xep-gon.jpg') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/new-image/ly-thong-minh-xep-gon.jpg') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -228,7 +232,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/new-image/tui-vai-da-nang.webp.jpg') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/new-image/tui-vai-da-nang.webp.jpg') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -247,7 +252,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -271,7 +277,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/ban-chai-nguoi-lon.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/home-care/ban-chai-nguoi-lon.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -290,7 +297,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/new-image/ly-thong-minh-xep-gon.jpg') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/new-image/ly-thong-minh-xep-gon.jpg') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -309,7 +317,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/new-image/tui-vai-da-nang.webp.jpg') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/new-image/tui-vai-da-nang.webp.jpg') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -328,7 +337,8 @@
                 <div class="product-grid6">
                     <div class="product-image6">
                         <a href="#">
-                            <img class="pic-1" src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}" title="Bấm để xem hình ảnh chi tiết">
+                            <img class="pic-1" src="{{ asset('img/personal-care/binh-nuoc-giu-nhiet.webp') }}"
+                                 title="Bấm để xem hình ảnh chi tiết">
                         </a>
                     </div>
                     <div class="product-content">
@@ -356,79 +366,6 @@
             <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray">»</a>
         </div>
     </div>
-
-    <div class="w3-row-padding w3-text-white w3-large w3-padding-32">
-        <h2 class="w3-center" data-aos="fade-up" data-aos-duration="3000" style="color:#000;">Bài Viết Mới</h2>
-        <p class="w3-center w3-large" data-aos="fade-up" data-aos-duration="3000" style="color: black">Tìm Hiểu Nhiều
-            Hơn Về
-            Môi Trường</p>
-        <div class="w3-half w3-margin-bottom" data-aos="fade-up" data-aos-duration="3000">
-            <div class="w3-display-container">
-                {{--            <img src="img/saigon01.jpg" alt="Cinque Terre" style="width:100%">--}}
-                <img style="width:100%"
-                     src="{{ asset('img/slide-pics/slidea.jpg') }}">
-                <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">
-                Đơn Giản
-{{--                Đơn giản nhưng thực dụng và cực bền, đây có lẽ là tính từ miêu tả rõ nhất dành cho...--}}
-            </span>
-            </div>
-        </div>
-        <div class="w3-half" data-aos="fade-up" data-aos-duration="3000">
-            <div class="w3-row-padding" style="margin:0 -16px">
-                <div class="w3-half w3-margin-bottom">
-                    <div class="w3-display-container">
-                        {{--                    <img src="img/saigon02.jpg" alt="New York" style="width:100%">--}}
-                        <img style="width:100%"
-                             src="{{ asset('img/slide-pics/convi.png') }}">
-                        <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">
-                        Tiện Lợi
-{{--                        BẠN CÓ BIẾT?--}}
-                            {{--                Campuchia sẽ gửi trả lại 1,600 tấn rác nhựa tìm thấy trong các containers nhập khẩu từ Mỹ và ...--}}
-                    </span>
-                    </div>
-                </div>
-                <div class="w3-half w3-margin-bottom">
-                    <div class="w3-display-container">
-                        {{--                    <img src="img/saigon03.jpg" alt="San Francisco" style="width:100%">--}}
-                        <img style="width:100%"
-                             src="{{ asset('img/slide-pics/prat.jpg') }}">
-                        <span class="w3-display-bottomleft w3-padding " style="color: black">
-                        Thiết Thực
-{{--BẠN ĐANG TÌM GIẢI PHÁP CHO VIỆC SÚC MIỆNG SAO CHO "XANH" HƠN?--}}
-                            {{--SEEKING FOR A GREENER SOLUTION FOR YOUR MOUTH-WASHING?--}}
-
-                            {{--Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột quế, đá muối hồng Himalaya, bột vỏ cam khô và trà xanh.--}}
-                    </span>
-                    </div>
-                </div>
-            </div>
-            <div class="w3-row-padding" style="margin:0 -16px">
-                <div class="w3-half w3-margin-bottom">
-                    <div class="w3-display-container">
-                        <img style="width:100%"
-                             src="{{ asset('img/slide-pics/reuse.jpg') }}">
-                        <span class="w3-display-bottomleft w3-padding w3-white" style="color: black">
-                        Tái Chế
-{{--                        BẠN CÓ BIẾT?--}}
-                            {{--                        Đảo Henderson tại Thái Bình Dương, Di Sản Thế Giới do UNESCO trao tặng ...--}}
-                    </span>
-                    </div>
-                </div>
-                <div class="w3-half w3-margin-bottom">
-                    <div class="w3-display-container">
-                        {{--                    <img src="img/saigon05.jpg" alt="Paris" style="width:100%">--}}
-                        <img style="width:100%"
-                             src="{{ asset('img/slide-pics/envi.jpg') }}">
-                        <span class="w3-display-bottomleft w3-padding" style="color: black">
-                        Thiên Nhiên
-{{--                        “Cái răng cái tóc là góc con người", một mái tóc đẹp, chắc khoẻ, không đòi hỏi cầu kì trong chăm sóc và không bị phụ thuộc hoá chất có lẽ là ước muốn của nhiều người,...--}}
-                    </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
         <div class="w3-row-padding w3-padding-16 w3-center" id="food">
@@ -466,7 +403,7 @@
                   3600
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Beavers Saved</p>
+                <p style="margin-left: 68px;color: grey">Beavers Saved</p>
             </div>
 
             <div class="w3-quarter" style="text-align: center">
@@ -478,7 +415,7 @@
                   $12000
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Funds Collected</p>
+                <p style="margin-left: 68px;color: grey">Funds Collected</p>
             </div>
 
             <div class="w3-quarter" style="text-align: center">
@@ -490,7 +427,7 @@
                     680
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Volunteer</p>
+                <p style="margin-left: 68px;color: grey">Volunteer</p>
             </div>
 
             <div class="w3-quarter" style="text-align: center">
@@ -502,7 +439,7 @@
                   460
                 </span>
             </span>
-                <p style="margin-top: -30px;margin-left: 68px;color: grey">Days of Help</p>
+                <p style="margin-left: 68px;color: grey">Days of Help</p>
             </div>
         </div>
         <br>
@@ -513,7 +450,45 @@
         <br>
     </div>
 
-    <div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+    <div class="container w3-content" style="max-width:1532px;">
+        <h2 class="w3-center" data-aos="fade-up" data-aos-duration="3000" style="color:#000;">Bài Viết Mới</h2>
+        <p class="w3-center w3-large" data-aos="fade-up" data-aos-duration="3000" style="color: black;font-size: 20px">
+            Tìm Hiểu Nhiều
+            Hơn Về
+            Môi Trường</p>
+        <div class="w3-row-padding w3-padding-16">
+            <div class="w3-third w3-margin-bottom">
+                <img src="{{ asset('img/slide-pics/convi.png') }}" alt="Norway" style="width:100%">
+                <div class="w3-container w3-white" style="margin-top: 20px">
+                    <p style="text-align: center;font-size: 20px">BẠN CÓ BIẾT SỰ KHÁC NHAU GIỮA CÁC KHÁI NIỆM?
+                    </p>
+                    <h6 style="text-align: center">10-9-2019 </h6>
+                    <h6 class="w3-opacity" style="text-align: center">21 NGÀY ĐỂ THAY ĐỔI MỘT THÓI QUEN MỚI?</h6>
+                    <button class="w3-button w3-block w3-black w3-margin-bottom">CHI TIẾT >></button>
+                </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+                <img src="{{ asset('img/slide-pics/prat.jpg') }}" alt="Norway" style="width:100%">
+                <div class="w3-container w3-white" style="margin-top: 20px">
+                    <p style="text-align: center;font-size: 20px">VẬY LÀM SAO ĐỂ BẮT ĐẦU MỘT LỐI SỐNG XANH?</p>
+                    <h6 style="text-align: center">9-9-2019</h6>
+                    <h6 class="w3-opacity" style="text-align: center">“GREEN”, “SUSTAINABLE”, “ECO-FRIENDLY”,...</h6>
+                    <button class="w3-button w3-block w3-black w3-margin-bottom">CHI TIẾT >></button>
+                </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+                <img src="{{ asset('img/slide-pics/reuse.jpg') }}" alt="Norway" style="width:100%">
+                <div class="w3-container w3-white" style="margin-top: 20px">
+                    <p style="text-align: center;font-size: 20px">THỰC TRẠNG Ô NHIỄM MÔI TRƯỜNG Ở VIỆT NAM.</p>
+                    <h6 style="text-align: center">7-9-2019 </h6>
+                    <h6 class="w3-opacity" style="text-align: center">VÀ CÁC GIẢI PHÁP KHẮC PHỤC</h6>
+                    <button class="w3-button w3-block w3-black w3-margin-bottom">CHI TIẾT >></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-content" style="max-width:1100px;margin-bottom:80px">
         <div class="w3-row-padding">
             <div class="w3-center w3-padding-64">
                 <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-size: 30px">Chính Sách Của Chúng Tôi</span>
@@ -543,7 +518,8 @@
                         <h5>Giao Hàng Vận Chuyển</h5>
                         <p class="w3-opacity">Chính Sách Giao Hàng</p>
                         <p>Lại Đây Refill Station giao hàng thanh toán tận nơi trên toàn quốc
-                            thông qua các đối tác giao nhận uy tín như Giao Hàng Nhanh, Ahamove, Giao Hàng Tiết Kiệm. </p>
+                            thông qua các đối tác giao nhận uy tín như Giao Hàng Nhanh, Ahamove, Giao Hàng Tiết
+                            Kiệm. </p>
                         <p>
                             <button class="w3-button w3-light-grey w3-block">Chi Tiết</button>
                         </p>
@@ -568,5 +544,6 @@
             </div>
         </div>
     </div>
+
 
 @endsection

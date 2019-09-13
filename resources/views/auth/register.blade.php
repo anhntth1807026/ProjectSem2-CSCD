@@ -13,30 +13,25 @@
                 </div>
                 <div class="input-container">
                     <div class="row form-inline">
-                        <div class="col-6">
-                            <input type="text" name="name" data-min-length="3"
-                                   placeholder="{{ __('Name') }}">
-                            @error('name')
-                            <span class="req-input invalid">
-                                                            <span class="input-status" data-toggle="tooltip"
-                                                                  data-placement="top"
-                                                                  title="Input your Name."> </span>
-                                                        </span>
-                            @enderror
-
+                        <div class="col-12">
+                            <div class="col-6">
+                                <input type="text" name="name" data-min-length="3"
+                                       placeholder="{{ __('Name') }}">
+                                @error('name')
+                                <span class="req-input invalid">
+                                <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input your Name."> </span>
+                            </span>
+                                @enderror
+                            </div>
+                            <div class="col-6">
+                                <input type="number" name="age" data-min-length="1" style="margin-bottom: 31px " placeholder="{{ __('Age') }}">
+                                @error('age')
+                                <span class="req-input invalid">
+                                <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input your Age."> </span>
+                            </span>
+                                @enderror
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <input type="number" name="age" data-min-length="1" style="margin-bottom: 31px"
-                                   placeholder="{{ __('Age') }}">
-                            @error('age')
-                            <span class="req-input invalid">
-                                                            <span class="input-status" data-toggle="tooltip"
-                                                                  data-placement="top"
-                                                                  title="Input your Age."> </span>
-                                                        </span>
-                            @enderror
-                        </div>
-
                     </div>
 
                     <div class="row">
@@ -80,24 +75,25 @@
                         @enderror
                     </div>
                     <div class="row">
-                        <div class="col-6 form-inline">
-                            <input type="number" name="phone" data-min-length="10"
-                                   placeholder="{{ __('Phone') }}">
-                            @error('phone')
-                            <span class="req-input invalid">
-                                <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input your phone."> </span>
-                            </span>
-                            @enderror
-                        </div>
+                        <div class="col-12">
+                            <div class="col-6 form-inline">
+                                <input type="number" name="phone" data-min-length="10"
+                                       placeholder="{{ __('Phone') }}">
+                                @error('phone')
+                                <span class="req-input invalid">
+                                  <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input your phone."> </span>
+                                </span>
+                                @enderror
+                            </div>
 
-                        <div class="col-6">
-                            <select name="gender" class="form-control">
-                                <option selected value="male">Nam</option>
-                                <option value="female">Nữ</option>
-                                <option value="other">Khác</option>
-                            </select>
+                            <div class="col-6">
+                                <select name="gender" class="form-control">
+                                    <option selected value="male">Nam</option>
+                                    <option value="female">Nữ</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
                         </div>
-
                     </div>
 
                     <div class="row submit-row">
