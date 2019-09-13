@@ -2,7 +2,13 @@
 @section('content')
     <style>
         body, h1, h2, h3, h4, h5 {
-            font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+            font-family: "Segoe UI", Arial, sans-serif;
+            /*    Verdana, Geneva, 'DejaVu Sans', sans-serif*/
+        }
+
+        body {
+            font-size: 20px;
+
         }
 
         @media only screen and (min-width: 600px) {
@@ -63,87 +69,87 @@
         </video>
     </div>
 
-    <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-            <div class="w3-quarter">
-                <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/01-2-o1.jpg" alt="Sandwich"
-                     style="width:100%">
+    <div class="container">
+        <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+            <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+                <div class="w3-quarter">
+                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/01-2-o1.jpg" alt="Sandwich"
+                         style="width:100%">
+                </div>
+                <div class="w3-quarter">
+                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/02-2-o.jpg" alt="Steak"
+                         style="width:100%">
+                </div>
+                <div class="w3-quarter">
+                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/03-2-o.jpg" alt="Cherries"
+                         style="width:100%">
+                </div>
+                <div class="w3-quarter">
+                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/04-2-o1.jpg"
+                         alt="Pasta and Wine"
+                         style="width:100%">
+                </div>
             </div>
-            <div class="w3-quarter">
-                <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/02-2-o.jpg" alt="Steak"
-                     style="width:100%">
-            </div>
-            <div class="w3-quarter">
-                <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/03-2-o.jpg" alt="Cherries"
-                     style="width:100%">
-            </div>
-            <div class="w3-quarter">
-                <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/04-2-o1.jpg" alt="Pasta and Wine"
-                     style="width:100%">
-            </div>
-        </div>
 
-        <br>
+            <br>
 
-        <h1 style="text-align: center;font-size: 40px;margin-top: 50px">Every day 8,000 beavers perished</h1>
+            <h1 style="text-align: center;font-size: 40px;margin-top: 50px">Every day 8,000 beavers perished</h1>
 
-        <br>
+            <br>
 
-        <div class="w3-row">
-            <div class="w3-quarter" style="text-align: center">
+            <div class="w3-row">
+                <div class="w3-quarter" style="text-align: center">
             <span style="font-size: 64px;color: grey">
                 <i class="far fa-thumbs-up"></i>
             </span>
-                <span>
+                    <span>
                 <span style="margin-left: -12px;font-size: 60px">
                   3600
                 </span>
             </span>
-                <p style="margin-left: 68px;color: grey">Beavers Saved</p>
-            </div>
-
-            <div class="w3-quarter" style="text-align: center">
+                    <p style="margin-top: -30px;margin-left: 68px;color: grey">Beavers Saved</p>
+                </div>
+                <div class="w3-quarter" style="text-align: center">
             <span style="font-size: 64px;color: grey">
                <i class="fas fa-hand-holding-usd"></i>
             </span>
-                <span>
+                    <span>
                 <span style="margin-left: -12px;font-size: 60px">
                   $12000
                 </span>
             </span>
-                <p style="margin-left: 68px;color: grey">Funds Collected</p>
-            </div>
-
-            <div class="w3-quarter" style="text-align: center">
+                    <p style="margin-top: -30px;margin-left: 68px;color: grey">Funds Collected</p>
+                </div>
+                <div class="w3-quarter" style="text-align: center">
             <span style="font-size: 64px;color: grey">
                 <i class="fas fa-fingerprint"></i>
             </span>
-                <span>
+                    <span>
                 <span style="margin-left: -12px;font-size: 60px">
                     680
                 </span>
             </span>
-                <p style="margin-left: 68px;color: grey">Volunteer</p>
-            </div>
+                    <p style="margin-top: -30px;margin-left: 68px;color: grey">Volunteer</p>
+                </div>
 
-            <div class="w3-quarter" style="text-align: center">
+
+                <div class="w3-quarter" style="text-align: center">
             <span style="font-size: 64px;color: grey">
                 <i class="fas fa-hand-holding-heart"></i>
             </span>
-                <span>
+                    <span>
                 <span style="margin-left: -12px;font-size: 60px">
                   460
                 </span>
             </span>
-                <p style="margin-left: 68px;color: grey">Days of Help</p>
+            <p style="margin-top: -30px;margin-left: 68px;color: grey">Days of Help</p>
             </div>
+            <br>
+
+            <p style="text-align:center;font-size: 23px">Thật không may, sinh thái, và luôn luôn được khấu trừ. <br>
+                Cũng giống như các thành viên của một chuyến đi</p>
+            <br>
         </div>
-        <br>
-
-        <p style="text-align:center">Thật không may, sinh thái, và luôn luôn được khấu trừ. <br>
-            Cũng giống như các thành viên của một chuyến đi</p>
-
-        <br>
     </div>
     <div class="w3-container">
         <h1 style="text-align: center">BÀI VIẾT MỚI NHẤT</h1>
@@ -152,8 +158,10 @@
 
                 {{--                BLOG 1 --}}
                 <div class="w3-margin w3-white">
-                    <img src="https://www.ivyboarding.com/w3template/w3images/bridge.jpg" alt="Nature"
-                         style="width:100%">
+                    <img
+                        src="https://www.lv.com/-/life/media/business-homepage/business-homepage-hero-banner.jpg?h=550&w=1440&hash=3CAC9354A378179F86006B6C85DCFEA7DF6B73A8"
+                        alt="Nature"
+                        style="width:100%">
                     <div class="w3-container">
                         <h3><b>VẬY LÀM SAO ĐỂ BẮT ĐẦU MỘT LỐI SỐNG XANH?</b></h3>
                         <h5>Đây có lẽ một trong những câu hỏi mà mọi người đang đặt ra, nhưng bạn có biết chúng ta đều
@@ -172,7 +180,7 @@
                             </div>
                             <div class="w3-col m4 w3-hide-small">
                                 <p><span class="w3-padding-large w3-right"><b>BÌNH LUẬN  </b> <span
-                                                class="w3-tag">0</span></span></p>
+                                            class="w3-tag">0</span></span></p>
                             </div>
                         </div>
                     </div>
@@ -201,7 +209,7 @@
                             </div>
                             <div class="w3-col m4 w3-hide-small">
                                 <p><span class="w3-padding-large w3-right"><b>BÌNH LUẬN  </b> <span
-                                                class="w3-badge">3</span></span>
+                                            class="w3-badge">3</span></span>
                                 </p>
                             </div>
                         </div>
@@ -209,10 +217,12 @@
                 </div>
                 <hr>
 
-{{--                BLOG 3  --}}
+                {{--                BLOG 3  --}}
                 <div class="w3-margin w3-white">
-                    <img src="https://www.ivyboarding.com/w3template/w3images/bridge.jpg" alt="Nature"
-                         style="width:100%">
+                    <img
+                        src="https://www.citypassguide.com/media/slideshow/noise-pollution-banner.jpg.1758x854_q85_crop.jpg"
+                        alt="Nature"
+                        style="width:100%">
                     <div class="w3-container">
                         <h3><b>THỰC TRẠNG Ô NHIỄM MÔI TRƯỜNG Ở VIỆT NAM.</b></h3>
                         <h5>CÁC GIẢI PHÁP KHẮC PHỤC</h5>
@@ -232,7 +242,7 @@
                             </div>
                             <div class="w3-col m4 w3-hide-small">
                                 <p><span class="w3-padding-large w3-right"><b>BÌNH LUẬN  </b> <span
-                                                class="w3-tag">1</span></span></p>
+                                            class="w3-tag">1</span></span></p>
                             </div>
                         </div>
                     </div>
@@ -241,7 +251,7 @@
 
             <div class="w3-col l4">
                 <div class="w3-margin w3-margin-top">
-                    <img src="https://www.ivyboarding.com/w3template/w3images/avatar_g.jpg" style="width:100%">
+                    <img src="http://www2.pictures.livingly.com/mp/_00932onPJdx.jpg" style="width:100%">
                     <div class="w3-container w3-white">
                         <h4><b>SỰ THẬT</b></h4>
                         <p>Các vấn đề môi trường lớn hiện tại bao gồm biến đổi khí hậu, ô nhiễm môi trường, suy thoái
@@ -258,25 +268,29 @@
                     </div>
                     <ul class="w3-ul w3-hoverable w3-white">
                         <li class="w3-padding-16">
-                            <img src="https://i.pinimg.com/564x/ab/4d/f7/ab4df7baabff4536e7a80182c892e9a7.jpg" alt="Image" class="w3-left w3-margin-right"
+                            <img src="https://i.pinimg.com/564x/ab/4d/f7/ab4df7baabff4536e7a80182c892e9a7.jpg"
+                                 alt="Image" class="w3-left w3-margin-right"
                                  style="width:50px">
                             <span class="w3-large">Lorem</span><br>
                             <span>Sed mattis nunc</span>
                         </li>
                         <li class="w3-padding-16">
-                            <img src="https://i.pinimg.com/564x/7a/27/87/7a2787fd8642f06ae98a18f1bd7c6b2a.jpg" alt="Image" class="w3-left w3-margin-right"
+                            <img src="https://i.pinimg.com/564x/7a/27/87/7a2787fd8642f06ae98a18f1bd7c6b2a.jpg"
+                                 alt="Image" class="w3-left w3-margin-right"
                                  style="width:50px">
                             <span class="w3-large">Ipsum</span><br>
                             <span>Praes tinci sed</span>
                         </li>
                         <li class="w3-padding-16">
-                            <img src="https://i.pinimg.com/564x/64/5f/09/645f091ada7367e1d23214f14a693657.jpg" alt="Image" class="w3-left w3-margin-right"
+                            <img src="https://i.pinimg.com/564x/64/5f/09/645f091ada7367e1d23214f14a693657.jpg"
+                                 alt="Image" class="w3-left w3-margin-right"
                                  style="width:50px">
                             <span class="w3-large">Dorum</span><br>
                             <span>Ultricies congue</span>
                         </li>
                         <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-                            <img src="https://i.pinimg.com/564x/1f/bd/84/1fbd84acdf05bf0d8d7bfea26eb9b7b2.jpg" alt="Image" class="w3-left w3-margin-right"
+                            <img src="https://i.pinimg.com/564x/1f/bd/84/1fbd84acdf05bf0d8d7bfea26eb9b7b2.jpg"
+                                 alt="Image" class="w3-left w3-margin-right"
                                  style="width:50px">
                             <span class="w3-large">Mingsum</span><br>
                             <span>Lorem ipsum dipsum</span>
