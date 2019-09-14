@@ -31,7 +31,7 @@
         }
     </style>
 
-    <header class=" w3-display-container w3-grayscale-min" id="home" style="margin-top:57px">
+    <header class=" w3-display-container w3-grayscale-min" id="home">
         <div class=" w3-section" style="">
             <img class="mySlides" src="{{ asset('img/slide-pics/bg1.jpg') }}" style="width:100%">
             <img class="mySlides" src="{{ asset('img/slide-pics/bg2.jpg') }}" style="width:100%">
