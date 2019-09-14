@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +30,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/style-client.css') }}">
 
+    <script src="{{asset('js/app.js')}}" ></script>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/meanmenu.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
@@ -130,41 +132,41 @@
                         <div class="circle-shopping expand">
                             <div class="shopping-carts text-right">
                                 <div class="cart-toggler">
-                                    <a href="#"><i class="fa fa-shopping-bag" style="font-size:15px;"></i></a>
-                                    <a href="#"><span class="cart-quantity">2</span></a>
+                                    <a href="{{ route('list.shopping.cart') }}"><i class="fa fa-shopping-bag" style="font-size:15px;"></i></a>
+                                    <a href="{{ route('list.shopping.cart') }}"><span id="count-cart" class="cart-quantity">{{ \Cart::count() }}</span></a>
                                 </div>
-                                <div class="restrain small-cart-content">
-                                    <ul class="cart-list">
-                                        <li>
-                                            <a class="sm-cart-product" href="product-details.html">
-                                                <img src="" alt="">
-                                            </a>
-                                            <div class="small-cart-detail">
-                                                <a class="remove" href="#"><i class="fa fa-times-circle"></i></a>
-                                                <a href="#" class="edit-btn"><img src="" alt="Edit Button"/></a>
-                                                <a class="small-cart-name" href="product-details.html">Voluptas
-                                                    nulla</a>
-                                                <span class="quantitys"><strong>1</strong>x<span>$75.00</span></span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a class="sm-cart-product" href="product-details.html">
-                                                <img src="" alt="">
-                                            </a>
-                                            <div class="small-cart-detail">
-                                                <a class="remove" href="#"><i class="fa fa-times-circle"></i></a>
-                                                <a href="#" class="edit-btn"><img src="" alt="Edit Button"/></a>
-                                                <a class="small-cart-name" href="product-details.html">Donec ac
-                                                    tempus</a>
-                                                <span class="quantitys"><strong>1</strong>x<span>$75.00</span></span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <p class="total">Subtotal: <span class="amount">$155.00</span></p>
-                                    <p class="buttons">
-                                        <a href="checkout.html" class="button">Checkout</a>
-                                    </p>
-                                </div>
+{{--                                <div class="restrain small-cart-content">--}}
+{{--                                    <ul class="cart-list">--}}
+{{--                                        <li>--}}
+{{--                                            <a class="sm-cart-product" href="product-details.html">--}}
+{{--                                                <img src="" alt="">--}}
+{{--                                            </a>--}}
+{{--                                            <div class="small-cart-detail">--}}
+{{--                                                <a class="remove" href="#"><i class="fa fa-times-circle"></i></a>--}}
+{{--                                                <a href="#" class="edit-btn"><img src="" alt="Edit Button"/></a>--}}
+{{--                                                <a class="small-cart-name" href="product-details.html">Voluptas--}}
+{{--                                                    nulla</a>--}}
+{{--                                                <span class="quantitys"><strong>1</strong>x<span>$75.00</span></span>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <a class="sm-cart-product" href="product-details.html">--}}
+{{--                                                <img src="" alt="">--}}
+{{--                                            </a>--}}
+{{--                                            <div class="small-cart-detail">--}}
+{{--                                                <a class="remove" href="#"><i class="fa fa-times-circle"></i></a>--}}
+{{--                                                <a href="#" class="edit-btn"><img src="" alt="Edit Button"/></a>--}}
+{{--                                                <a class="small-cart-name" href="product-details.html">Donec ac--}}
+{{--                                                    tempus</a>--}}
+{{--                                                <span class="quantitys"><strong>1</strong>x<span>$75.00</span></span>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                    </ul>--}}
+{{--                                    <p class="total">Subtotal: <span class="amount">$155.00</span></p>--}}
+{{--                                    <p class="buttons">--}}
+{{--                                        <a href="checkout.html" class="button">Checkout</a>--}}
+{{--                                    </p>--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -472,7 +474,7 @@
 {{--<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>--}}
 {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
 {{--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>--}}
-<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
+{{--<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>--}}
 <script src="{{ asset('plugins/jQueryUI/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
@@ -484,5 +486,6 @@
     AOS.init();
 </script>
 <script src="{{ asset('js/my-js.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
 </body>
 </html>

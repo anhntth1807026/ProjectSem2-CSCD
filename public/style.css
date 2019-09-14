@@ -2614,7 +2614,7 @@ h4.cart-title {
     font-weight: 400
 }
 .cart-table img.img-responsive {
-    width: 133px;
+    /*width: 133px;*/
 }
 .cart-table tbody tr td input {
     background-color: #f0f0f0;
@@ -2782,7 +2782,7 @@ a.proceedbtn {
 	font-weight: 400;
 }
 .cart-area-start .cart-table tbody tr td a{
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: 400;
 	text-transform: uppercase;
 	color: #3f3f3f;

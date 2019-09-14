@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
                 'password' => 'nguyenvanan',
                 'age' => '20',
                 'address' => 'Bac Ninh',
-                'phone' => '0365478912',
+                'phone' => '0165478912',
                 'gender' => 'nam',
             ],
             [
@@ -37,7 +37,7 @@ class UsersTableSeeder extends Seeder
                 'password' => 'duongthianh',
                 'age' => '23',
                 'address' => 'Ha Tinh',
-                'phone' => '03684215789',
+                'phone' => '0168421578',
                 'gender' => 'nữ',
             ],
             [
@@ -47,7 +47,7 @@ class UsersTableSeeder extends Seeder
                 'password' => 'trananhnam',
                 'age' => '29',
                 'address' => 'Bac Ninh',
-                'phone' => '0384655972',
+                'phone' => '0184655972',
                 'gender' => 'nam',
             ],
         ]);
