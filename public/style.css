@@ -83,7 +83,7 @@ margin: 0;
 padding: 0
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 400;
 	color: #7f7f7f;
 }
@@ -140,10 +140,10 @@ body {
     text-decoration: none;
 	display: block;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 32px;
     color: #4a4a4a;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 700;
     position: relative;
 }
@@ -165,11 +165,11 @@ body {
 }
 .mainmenu ul li ul.sub-menu li a {
     color: #fff;
-    font-size: 13px;
-    font-weight: normal;
+    font-size: 12px;
+    font-weight: bold;
     padding: 2px 20px;
-    text-transform: none;
-	font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+	font-family: "Segoe UI",Arial,sans-serif;
 }
 .mainmenu ul li .mega-menu span {
     float: left;
@@ -178,7 +178,7 @@ body {
 	text-align: left;
 }
 .mainmenu ul li .mega-menu span a.mega-menu-title {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     margin-bottom: 8px;
     padding: 0 0 10px 0;
@@ -186,7 +186,7 @@ body {
     color: #fff;
 	line-height: 10px;
 	border-bottom: 1px solid #575757;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Segoe UI",Arial,sans-serif;
 }
 .mainmenu ul li .mega-menu span a {
     font-size: 13px;
@@ -196,7 +196,7 @@ body {
     color: #fff;
 	padding: 5px 0;
 	line-height: 20px;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Segoe UI",Arial,sans-serif;
 }
 .mainmenu ul li .mega-menu span.block-last{
 	margin-right: 0;
@@ -303,7 +303,7 @@ a.meanmenu-reveal{
     text-transform: uppercase;
     font-size: 12px;
     color: #4a4a4a;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 700;
     position: relative;
 	line-height: 0;
@@ -323,7 +323,8 @@ ul.restrain.language {
 	top: 100%;
 }
 .top-detail {
-	font-family: Montserrat;
+	font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: bold;
 	text-transform: uppercase;
 	font-size: 12px;
 }
@@ -394,11 +395,11 @@ ul.cart-list li {
 }
 .small-cart-detail .small-cart-name {
     color: #fff;
-    font-family: Montserrat;
+    font-family: Segoe UI,Arial,sans-serif;
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
     display: block;
     margin: 5px 20px 10px 0;
     padding-top: 5px;
@@ -438,8 +439,8 @@ span.amount {
     display: block;
     padding: 8px 25px;
     font-weight: 400;
-    font-family: Montserrat;
-    font-size: 13px;
+    font-family: Segoe UI,Arial,sans-serif;
+    font-size: 12px;
     text-align: center;
     white-space: nowrap;
     background: #eee;
@@ -494,12 +495,12 @@ span.amount {
 .header-search .btn:focus{outline:0}
 .header-search .btn:active{box-shadow:none}
 .header-search button.btn.btn-default i {
-    width: 120px;
-    line-height: 80px;
+    width: 60px;
+    line-height: 40px;
     border-radius: 0;
     color: #fff;
-    font-size: 36px;
-	transition: .3s;
+    font-size: 15px;
+    transition: .3s;
 }
 .header-search button.btn.btn-default i:hover{
     background: #c2a476;
