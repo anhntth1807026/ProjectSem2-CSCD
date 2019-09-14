@@ -112,11 +112,10 @@
             }
 
             .profile-work a {
-
+                padding: 10px;
                 text-decoration: none;
                 color: #495057;
                 font-weight: 600;
-                font-size: 20px;
                 float: left;
             }
 
@@ -177,39 +176,79 @@
                 <div class="col-md-7">
                     <form action="" method="POST">
                         @csrf
-                            <div class="form-group">
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <p>Họ tên</p>
+                            </div>
+                            <div class="col-md-6">
                                 <input type="text" name="name" value="" class="form-control"
                                        placeholder="Name">
                             </div>
-                        <div class="form-group">
-                            <input class="form-control" name="email"
-                                   placeholder="Email">
                         </div>
-                        <div class="form-group">
-                            <input type="password" name="password" class="form-control"
-                                   placeholder="Password">
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <p>Email</p>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control" name="email"
+                                       placeholder="Email">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="number" name="age" class="form-control"
-                                   placeholder="Age">
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <p>Mật khẩu</p>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="password" name="password" class="form-control"
+                                       placeholder="Password">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="address"
-                                   placeholder="Address">
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <p>Tuổi</p>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="number" name="age" class="form-control"
+                                       placeholder="Age">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="number" name="phone" class="form-control"
-                                   placeholder="Phone">
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <p>Địa chỉ</p>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="address"
+                                       placeholder="Address">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <select name="gender" class="form-control">
-                                <option selected value="male">Nam</option>
-                                <option value="female">Nữ</option>
-                                <option value="other">Khác</option>
-                            </select>
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <p>Số điện thoại</p>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="number" name="phone" class="form-control"
+                                       placeholder="Phone">
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button type="submit" class="btn btn-primary">Close</button>
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <p>Giới tính</p>
+                            </div>
+                            <div class="col-md-6">
+                                <select name="gender" class="form-control">
+                                    <option selected value="male">Nam</option>
+                                    <option value="female">Nữ</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-6" style="margin-top: 25px">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Close</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="col-md-1"></div>

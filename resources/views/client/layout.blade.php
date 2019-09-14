@@ -310,7 +310,7 @@
     @show
 </div>
 
-<div class="middle">
+<div class="middle" style="background: white">
     <a class="btn-middle" href="#">
         <i class="fa fa-facebook-f" title="Facebook"></i>
     </a>
@@ -327,65 +327,6 @@
         <i class="fa fa-youtube" title="Youtube"></i>
     </a>
 </div>
-
-{{--Footer--}}
-
-{{--<footer id="footer">--}}
-{{--    <div class="container">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-xs-12 col-sm-6 col-md-4 abt-txt">--}}
-{{--                <div class="footer-logo">--}}
-{{--                    <a href="#" style="color:#999999 "><img src="" alt="Tree Hugger" class="img-responsive"></a>--}}
-{{--                </div>--}}
-{{--                <p>Chung tay bảo vệ môi trường <br class="hidden-xs">Join hands to protect the environment</p>--}}
-{{--                <ul class="contact-list list-unstyled">--}}
-{{--                    <li><span class="icon"><i class="fa fa-map-signs" aria-hidden="true"--}}
-{{--                                              title="Địa chỉ trụ sở chính"></i></span> So 8 Ton Thuat--}}
-{{--                        Thuyet, My Dinh, Ha Noi.--}}
-{{--                    </li>--}}
-{{--                    <li><a href="mailto:anhntth1807026@fpt.edu.vn" style="color:#999999 " title="Địa chỉ Email"><span--}}
-{{--                                class="icon"><i--}}
-{{--                                    class="fa fa-envelope-o" aria-hidden="true"></i></span> TreeHugger@mail.com</a>--}}
-{{--                    </li>--}}
-{{--                    <li><a href="tel:+84 94 585 2000" style="color:#999999 " title="Số điện thoại"><span class="icon"><i--}}
-{{--                                    class="fa fa-phone"--}}
-{{--                                    aria-hidden="true"></i></span>--}}
-{{--                            +84 94 585 2000 </a></li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-
-{{--            <div class="col-xs-12 col-sm-6 col-md-4">--}}
-{{--                <h3>POPULAR TAGS</h3>--}}
-{{--                <p>--}}
-{{--                    <span class="w3-tag w3-black w3-margin-bottom">Bottle</span> <span--}}
-{{--                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Tote</span> <span--}}
-{{--                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Straws</span>--}}
-{{--                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Mask</span> <span--}}
-{{--                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Box</span> <span--}}
-{{--                        class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Gel</span>--}}
-{{--                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">mask</span>--}}
-{{--                </p>--}}
-{{--            </div>--}}
-
-{{--            <div class="col-xs-12 col-sm-6 col-md-4">--}}
-{{--                <h3>SUBSCRIBE</h3>--}}
-{{--                <div class="subscribe">--}}
-{{--                    <p title="Tham gia cùng chúng tôi.">Đăng kí theo dõi để nhận những thông tin mới nhất về chúng--}}
-{{--                        mình<br class="hidden-xs"></p>--}}
-{{--                    <form class="subscribe-form" action="#">--}}
-{{--                        <div class="input-group flex-nowrap">--}}
-{{--                            <input type="text" class="form-control" placeholder="Your Gmail" aria-label="Gmail"--}}
-{{--                                   aria-describedby="addon-wrapping">--}}
-{{--                            <span style="cursor: pointer; position: absolute; right: 2px; top: 14px; FONT-SIZE: 20px;"--}}
-{{--                                  id="addon-wrapping"><i class="far fa-paper-plane"></i>--}}
-{{--                            </span>--}}
-{{--                        </div>--}}
-{{--                    </form>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</footer>--}}
 
 <!-- Footer -->
 <footer class="pt-5 pb-4" id="contact">
@@ -459,10 +400,10 @@
                     {{--                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>--}}
                 </div>
                 <ul class="social-pet mt-4">
-                    <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" title="facebook"><i class="fab fa-facebook-f iconfooter"></i></a></li>
+                    <li><a href="#" title="twitter"><i class="fab fa-twitter iconfooter"></i></a></li>
+                    <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g iconfooter"></i></a></li>
+                    <li><a href="#" title="instagram"><i class="fab fa-instagram iconfooter"></i></a></li>
                 </ul>
             </div>
         </div>
