@@ -35,7 +35,9 @@
     <link rel="stylesheet" href="{{ asset('css/meanmenu.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
+    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">
+    @stack('styles')
+    {{--    <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">--}}
 
 
 </head>
@@ -44,7 +46,7 @@
 
 <header class="short-stor">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" style="background: white">
             <!-- logo start -->
             <div class="col-md-3 col-sm-12 text-center nopadding-right">
                 <div class="top-logo">
@@ -181,7 +183,7 @@
                                                    placeholder="Search product...">
                                             <span class="input-group-btn">
                                                 <button type="submit" class="btn btn-default"><i
-                                                            class="fa fa-search"></i></button>
+                                                        class="fa fa-search"></i></button>
                                             </span>
                                         </div>
                                     </form>
@@ -441,11 +443,13 @@
                 <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">BÀI VIẾT MỚI</h5>
                 <ul class="recent-post">
                     <li>
-                        <label class="mr-3" style="margin-right: 5px">28 <br><p>9</p></label>
+                        <label class="mr-3" style="margin-right: 5px">28 <br>
+                            <p>9</p></label>
                         <span>Làm thế nào để sống xanh?</span>
                     </li>
                     <li>
-                        <label class="mr-3" style="margin-right: 5px">29 <br><p>8</p></label>
+                        <label class="mr-3" style="margin-right: 5px">29 <br>
+                            <p>8</p></label>
                         <span>Sống xanh là như thế nào?</span>
                     </li>
                 </ul>
@@ -454,7 +458,7 @@
                 <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">LIÊN HỆ</h5>
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Your Email Address">
-{{--                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>--}}
+                    {{--                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>--}}
                 </div>
                 <ul class="social-pet mt-4">
                     <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>

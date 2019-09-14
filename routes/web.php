@@ -27,7 +27,7 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
 
 Route::resource('/admin/category', 'CategoryController');
 
-Route::get('/client/profile', 'ProfileUserController@index');
+Route::get('/client/profile', 'ProfileUserController@index')->name('ccc');
 
 Route::get('/About-Us', function () {
     return view('client.about-us');
@@ -54,6 +54,12 @@ Route::get('/Blog/Blog2', function () {
 });
 Route::get('/Blog/Blog3', function () {
     return view('client.blog.blog3');
+});
+Route::get('/Blog/Blog4', function () {
+    return view('client.blog.blog4');
+});
+Route::get('/Blog/Blog5', function () {
+    return view('client.blog.blog5');
 });
 
 
