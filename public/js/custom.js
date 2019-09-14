@@ -88,7 +88,7 @@ $(document).ready(function () {
         });
 
         if (idArr.length <= 0) {
-            alert(" Please check at least one game to delete")
+            alert(" Please check at least one product to delete")
         } else {
             if (confirm("Are you sure wanna to process action ?")) {
                 // var strIds = idArr.join(",");
@@ -99,7 +99,7 @@ $(document).ready(function () {
                 //         break;
                 // }
                 $.ajax({
-                    url: '/game/delete-multiple',
+                    url: '/product/delete-multiple',
                     type: 'POST',
                     data: {
                         '_token': $('meta[name= csrf-token]').attr('content'),
@@ -123,7 +123,7 @@ $(document).ready(function () {
     $('.btn-edit').click(function () {
         var editId = $(this).attr('id').replace('btn-edit-', '');
         $.ajax({
-            url: '/game/get-by-id/' + editId,
+            url: '/product/get-by-id/' + editId,
             method: 'GET',
             success: function (response) {
                 $('input[name="name"]').val(response.data.name);
@@ -138,32 +138,68 @@ $(document).ready(function () {
         });
     });
 
-    $('.btn-update').click(function () {
-        var editId = $(this).attr('id').replace('btn-edit-', '');
-        var name = $('name').val();
-        var category = $('category').val();
-        var thumbnail = $('thumbnail').val();
-        var price = $('price').val();
-
-        if (name !== '' && category !== '' && thumbnail !== '' && price !== '') {
-            $.ajax({
-                url: '/game/' + editId,
-                type: 'PUT',
-                data: {
-                    _token: $('meta[name="csrf-token"]').attr('content'),
-                    name: name,
-                    category: category,
-                    thumbnail: thumbnail,
-                    price: price
-                },
-                success: function (data) {
-                    alert(data);
-                }
-            });
-        } else {
-            alert('Fill all fields');
-        }
-    })
+    // $('.add-cart').click(function () {
+    //     var shoppingCart = {};
+    //     if (localStorage.getItem('shopping-cart') !== null){
+    //         shoppingCart = JSON.parse(localStorage.getItem('shopping-cart'));
+    //     }
+    //     var id = $(this).attr('data-id');
+    //     var name = $(this).attr('data-name');
+    //     var thumbnail = $(this).attr('data-thumbnail');
+    //     var price = $(this).attr('data-price');
+    //
+    //     var cartItem = {
+    //         'id' : id,
+    //         'name': name,
+    //         'price': price,
+    //         'thumbnail': thumbnail,
+    //         'quantity' : 1
+    //     };
+    //     if (shoppingCart[id] != null){
+    //         var existCartItem = shoppingCart[id];
+    //         cartItem = existCartItem;
+    //         cartItem.quantity++;
+    //     }
+    //     console.log();
+    //
+    //     var countCart = Object.values(shoppingCart).reduce((a,b) => {
+    //         return a + b.quantity
+    //     }, 0);
+    //
+    //     $('#count-cart').html(countCart);
+    //
+    //     shoppingCart[id] = cartItem;
+    //     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+    //     alert('Add cart item success!');
+    //
+    //
+    // });
+    // $('.btn-update').click(function () {
+    //     var editId = $(this).attr('id').replace('btn-edit-', '');
+    //     var name = $('name').val();
+    //     var category = $('category').val();
+    //     var thumbnail = $('thumbnail').val();
+    //     var price = $('price').val();
+    //
+    //     if (name !== '' && category !== '' && thumbnail !== '' && price !== '') {
+    //         $.ajax({
+    //             url: '/game/' + editId,
+    //             type: 'PUT',
+    //             data: {
+    //                 _token: $('meta[name="csrf-token"]').attr('content'),
+    //                 name: name,
+    //                 category: category,
+    //                 thumbnail: thumbnail,
+    //                 price: price
+    //             },
+    //             success: function (data) {
+    //                 alert(data);
+    //             }
+    //         });
+    //     } else {
+    //         alert('Fill all fields');
+    //     }
+    // })
 });
 
 function changeStatus(arrayId, status) {
@@ -188,3 +224,19 @@ function changeStatus(arrayId, status) {
 // function deleteAll(idArr) {
 //
 // }
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+        myIndex = 1
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}

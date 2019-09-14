@@ -22,9 +22,9 @@ class ProductController extends Controller
 //        $this->middleware('auth');
 //    }
 
-    public function index()
+    public function index(Request $request)
     {
-        $product = Product::latest()->paginate(5);
+        $product = Product::latest()->paginate(6);
 
         return view('admin.product.index')
             ->with('product', $product);

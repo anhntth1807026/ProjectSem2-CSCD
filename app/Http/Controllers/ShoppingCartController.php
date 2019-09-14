@@ -9,18 +9,23 @@ class ShoppingCartController extends Controller
 {
     public function addProduct(Request $request, $id)
     {
-        $product = Product::select('name', 'id', 'price', 'thumbnail' )->find($id);
+        $product = Product::select('id', 'name',  'price', 'thumbnail' )->find($id);
 
         if (!$product) return redirect('/');
 
-        Cart::add([
+        \Cart::add([
             'id' => $id,
             'name' => $product->name,
             'qty' => 1,
             'price' => $product->price,
-            'options' => ['thumbnail' => $product->thumbnail]
+            'options' => ['thumbnail' => "https://res.cloudinary.com/dx8lbwzhw/image/upload/$product->thumbnail"]
         ]);
 
         return redirect()->back();
+    }
+
+    public function listShoppingCart(){
+        $products = \Cart::content();
+        return view('shopping.cart', compact('products'));
     }
 }

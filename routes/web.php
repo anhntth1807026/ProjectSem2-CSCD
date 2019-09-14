@@ -89,6 +89,7 @@ Route::delete('/admin/user/delete/{id}', 'AdminUserController@delete')->name('ad
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/cart', 'HomeController@cart')->name('cart');
 
 
 Route::prefix('admin')->group(function () {
@@ -108,6 +109,7 @@ Route::group(['namespace' => 'Auth'], function () {
 
 Route::prefix('shopping')->group(function () {
     Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
+    Route::get('/list-cart', 'ShoppingCartController@listShoppingCart')->name('list.shopping.cart');
 });
 
 Route::group(['prefix' => 'transaction'], function () {
