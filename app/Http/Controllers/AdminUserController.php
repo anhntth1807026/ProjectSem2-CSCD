@@ -20,7 +20,7 @@ class AdminUserController extends Controller
         return view('admin.user.index', $viewData);
     }
 
-    public function editUser($id)
+    public function edit($id)
     {
         $users = User::find($id);
         return view('admin.user.edit')->with('users', $users);
@@ -29,19 +29,16 @@ class AdminUserController extends Controller
     public function update(UserValidation $request, $id)
     {
         $users = User::find($id);
-        $request->validated(
-
-        );
-
+        $request->validated();
         $users->update($request->all());
-        return response()->json(['status' => true, 'message' => "User updated successfully"]);
+        $users->save();
+        return response('/client/profile')->json(['status' => true, 'message' => "User updated successfully"]);
     }
 
     public function destroy($id)
     {
         $users = User::find($id);
         $users->delete();
-
         return response()->json(['status' => true, 'message' => "User deleted successfully"]);
     }
 }

@@ -22,7 +22,7 @@ class ProductController extends Controller
 //        $this->middleware('auth');
 //    }
 
-    public function index(Request $request)
+    public function index()
     {
         $product = Product::latest()->paginate(6);
 

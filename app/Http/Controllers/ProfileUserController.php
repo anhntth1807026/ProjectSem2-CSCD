@@ -8,10 +8,14 @@ use Illuminate\Http\Request;
 class ProfileUserController extends Controller
 {
     public function index(){
-        $users = User::all();
+        $user = User::all();
         $viewData = [
-            'users' => $users
+            'users' => $user
         ];
         return view('client.profile-user', $viewData);
+    }
+
+    public function edit(){
+
     }
 }

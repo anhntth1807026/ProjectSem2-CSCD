@@ -208,7 +208,7 @@
                                         <a href="{{ route('get.logout.user') }}">
                                             {{ __('Logout') }}
                                         </a>
-                                    <li><a href="">My Account</a></li>
+                                    <li><a href="/client/profile">My Account</a></li>
                                     <li><a href="">My Cart</a></li>
                                     <li><a href="">Checkout</a></li>
                                     </li>
@@ -312,23 +312,23 @@
     @show
 </div>
 
-<div class="middle" style="background: white">
-    <a class="btn-middle" href="#">
-        <i class="fa fa-facebook-f" title="Facebook"></i>
-    </a>
-    <a class="btn-middle" href="#">
-        <i class="fa fa-twitter" title="Twitter"></i>
-    </a>
-    <a class="btn-middle" href="#">
-        <i class="fa fa-google" title="Google"></i>
-    </a>
-    <a class="btn-middle" href="#">
-        <i class="fa fa-instagram" title="Instagram"></i>
-    </a>
-    <a class="btn-middle" href="#">
-        <i class="fa fa-youtube" title="Youtube"></i>
-    </a>
-</div>
+{{--<div class="middle" style="background: white">--}}
+{{--    <a class="btn-middle" href="#">--}}
+{{--        <i class="fa fa-facebook-f" title="Facebook"></i>--}}
+{{--    </a>--}}
+{{--    <a class="btn-middle" href="#">--}}
+{{--        <i class="fa fa-twitter" title="Twitter"></i>--}}
+{{--    </a>--}}
+{{--    <a class="btn-middle" href="#">--}}
+{{--        <i class="fa fa-google" title="Google"></i>--}}
+{{--    </a>--}}
+{{--    <a class="btn-middle" href="#">--}}
+{{--        <i class="fa fa-instagram" title="Instagram"></i>--}}
+{{--    </a>--}}
+{{--    <a class="btn-middle" href="#">--}}
+{{--        <i class="fa fa-youtube" title="Youtube"></i>--}}
+{{--    </a>--}}
+{{--</div>--}}
 
 <!-- Footer -->
 <footer class="pt-5 pb-4" id="contact">
