@@ -74,6 +74,14 @@
                 </table>
             </div>
             <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4">
+                    <nav aria-label="Page navigation example">
+                        {{$product->links()}}
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
                 <div class="form-group mr-3">
                     <select class="form-control mr-2" id="select-action">
                         <option value="0">--Chọn thao tác--</option>

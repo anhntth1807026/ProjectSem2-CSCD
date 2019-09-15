@@ -60,12 +60,13 @@
                         <label>Thumbnail</label>
                         <input style=" height: 100px" type="file" class="form-control" multiple="multiple"
                                name="thumbnail[]" value="{{ $product->thumbnail }}"
-                                  placeholder="Thumbnail">
+                               placeholder="Thumbnail">
                     </div>
                     <div class="row">
                         <div class=" col-5 form-group">
                             <label>Quantity</label>
-                            <input style="width: 70%" type="number" name="quantity" value="{{ $product->quantity }}" class="form-control"
+                            <input style="width: 70%" type="number" name="quantity" value="{{ $product->quantity }}"
+                                   class="form-control"
                                    placeholder="Quantity">
                         </div>
                         <div class="col-5 form-group">

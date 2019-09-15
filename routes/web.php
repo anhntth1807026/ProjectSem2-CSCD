@@ -35,9 +35,9 @@ Route::get('/About-Us', function () {
 Route::get('/Contact-Us', function () {
     return view('client.contact-us');
 });
-Route::get('/List-Product', function (Request $request){
+Route::get('/List-Product', function (Request $request) {
     $name = $request->get('name');
-    $product = Product::where('name','like','%'.$name.'%')->get();
+    $product = Product::where('name', 'like', '%' . $name . '%')->get();
 
     return view('client.list-product')->with('product', $product);
 });
@@ -61,7 +61,6 @@ Route::get('/Blog/Blog4', function () {
 Route::get('/Blog/Blog5', function () {
     return view('client.blog.blog5');
 });
-
 
 
 Route::get('/Product-Details', function () {
