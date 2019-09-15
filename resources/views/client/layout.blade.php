@@ -83,7 +83,7 @@
                                 </ul>
                             </li>
                             <li class="expand"><a href="/About-Us">Chúng Tôi</a></li>
-                            <li class="expand"><a href="/Contact-Us">Liên Hệ</a></li>
+                            <li class="expand"><a href="{{ route('get.contact') }}">Liên Hệ</a></li>
                         </ul>
                     </nav>
                 </div>
