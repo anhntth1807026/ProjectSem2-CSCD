@@ -48,7 +48,7 @@
                                 @foreach(explode("@",$products->thumbnail) as $image)
                                     <img class="img-thumbnail rounded"
                                          style="width: 150px;margin: 0 10px"
-                                         src="{{ $image }}"
+                                         src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_400/{{ $image }}"
                                          alt="{{ $products->name }}">
                                 @endforeach
                             </td>

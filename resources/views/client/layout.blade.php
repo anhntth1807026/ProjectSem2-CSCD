@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="{{ asset('css/w3CSS.css') }}">
 
     {{--    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">--}}
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/style-client.css') }}">
 
@@ -39,6 +38,7 @@
     @stack('styles')
     {{--    <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">--}}
 
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
 </head>
 <body>
@@ -83,7 +83,7 @@
                                 </ul>
                             </li>
                             <li class="expand"><a href="/About-Us">Chúng Tôi</a></li>
-                            <li class="expand"><a href="/Contact-Us">Liên Hệ</a></li>
+                            <li class="expand"><a href="{{ route('get.contact') }}">Liên Hệ</a></li>
                         </ul>
                     </nav>
                 </div>
