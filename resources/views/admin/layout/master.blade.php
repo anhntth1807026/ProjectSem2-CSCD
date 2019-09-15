@@ -90,28 +90,30 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/admin/chart">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Dashboard</span></a>
+        </li>
         <li class="nav-item dropdown">
             <div class="dropdown-btn nav-link dropdown-toggle" data-toggle="dropdown">
-                <i class="fas fa-fw fa-folder"></i>
-                <span>Dashboard</span>
+                <i class="fas fa-fw fa-table"></i>
+                <span>Tables</span>
             </div>
             <div class="dropdown-container">
                 <a class="dropdown-item" href="{{ route('admin.get.user') }}"><i class="fas fa-user"></i> Manage User</a>
                 <a class="dropdown-item" href="{{route('category.index')}}"><i class="fas fa-archive"></i> Manage Category</a>
                 <a class="dropdown-item" href="{{route('product.index')}}"><i class="fab fa-product-hunt"></i> Manage Product</a>
                 <a class="dropdown-item" href="{{route('admin.list.transaction')}}"><i class="fab fa-product-hunt"></i> Manage Transaction</a>
+                <a class="dropdown-item" href="{{route('admin.contact')}}"><i class="fab fa-product-hunt"></i> Manage Contact</a>
             </div>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin/chart">
-                <i class="fas fa-fw fa-chart-area"></i>
-                <span>Charts</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span></a>
-        </li>
+
+{{--        <li class="nav-item">--}}
+{{--            <a class="nav-link" href="">--}}
+{{--                <i class="fas fa-fw fa-table"></i>--}}
+{{--                <span>Tables</span></a>--}}
+{{--        </li>--}}
     </ul>
 
     <div id="content-wrapper">

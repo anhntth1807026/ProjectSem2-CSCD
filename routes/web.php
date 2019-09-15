@@ -24,7 +24,6 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
     Route::resource('/product', 'ProductController');
 });
 
-
 Route::resource('/admin/category', 'CategoryController');
 
 Route::get('/client/profile', 'ProfileUserController@index')->name('ccc');
@@ -32,9 +31,14 @@ Route::get('/client/profile', 'ProfileUserController@index')->name('ccc');
 Route::get('/About-Us', function () {
     return view('client.about-us');
 });
-Route::get('/Contact-Us', function () {
-    return view('client.contact-us');
-});
+
+//Route::get('/Contact-Us', function () {
+//    return view('client.contact-us');
+//});
+
+Route::get('contact', 'ContactController@getContact')->name('get.contact');
+Route::post('contact', 'ContactController@saveContact');
+
 Route::get('/List-Product', function (Request $request){
     $name = $request->get('name');
     $product = Product::where('name','like','%'.$name.'%')->get();
@@ -118,9 +122,10 @@ Route::prefix('shopping')->group(function () {
     Route::get('/list-cart', 'ShoppingCartController@listShoppingCart')->name('list.shopping.cart');
 });
 
-Route::group(['prefix' => 'transaction'], function () {
+Route::group(['prefix' => 'admin/transaction'], function () {
     Route::get('/', 'AdminTransactionController@index')->name('admin.list.transaction');
 });
-
-
+Route::group(['prefix' => 'admin/contact'], function () {
+    Route::get('/', 'AdminContactController@index')->name('admin.contact');
+});
 
