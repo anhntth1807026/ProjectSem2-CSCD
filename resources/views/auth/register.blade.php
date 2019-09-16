@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form method="POST" action="{{ route('get.register') }}">
+        <form method="POST" action="{{ route('get.register') }}" enctype="multipart/form-data">
             @csrf
             <div id="register" class="form-container" data-form-container
                  style="color: rgb(198, 40, 40); background: rgb(255, 205, 210);">
@@ -42,23 +42,25 @@
                                placeholder="{{ __('E-Mail Address') }}">
                         @error('email')
                         <span class="req-input invalid">
-                                                        <span class="input-status" data-toggle="tooltip"
-                                                              data-placement="top"
-                                                              title="Input your email."> </span>
-                                                    </span>
+                            <span class="input-status" data-toggle="tooltip"
+                                  data-placement="top"
+                                  title="Input your email.">
+                            </span>
+                        </span>
                         @enderror
                     </div>
+
                     <div class="row">
                         <input type="password" name="password" data-min-length="8"
                                placeholder="{{ __('Password') }}">
                         @error('password')
                         <span class="req-input input-password invalid">
-                                                            <span class="input-status" data-toggle="tooltip"
-                                                                  data-placement="top"
-                                                                  title="Password must be at least 8 characters long."> </span>
-                                                        </span>
+                            <span class="input-status" data-toggle="tooltip"
+                                  data-placement="top"
+                                  title="Password must be at least 8 characters long.">
+                            </span>
+                        </span>
                         @enderror
-
                     </div>
 
                     <div class="row" style="display:none">
@@ -75,10 +77,12 @@
                         @error('address')
                         <span class="req-input invalid">
                             <span class="input-status" data-toggle="tooltip" data-placement="top"
-                                  title="Input your Address."> </span>
+                                  title="Input your Address.">
+                            </span>
                         </span>
                         @enderror
                     </div>
+
                     <div class="row">
                         <div class="col-12">
                             <div class="col-6 form-inline">
@@ -102,6 +106,12 @@
                         </div>
                     </div>
 
+                    <div class="row">
+                        <input type="file" class="form-control" multiple="multiple"
+                        name="thumbnail[]"
+                        placeholder="Thumbnail">
+                    </div>
+
                     <div class="row submit-row">
                         <button type="submit" class="btn btn-block submit-form invalid">
                             {{ __('Register') }}
@@ -113,8 +123,6 @@
                         <span><i class="fa fa-linkedin"></i> </span>
                         <span><i class="fa fa-twitter"></i> </span>
                     </div>
-
-
                 </div>
             </div>
 

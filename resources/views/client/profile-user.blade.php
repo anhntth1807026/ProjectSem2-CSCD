@@ -162,7 +162,7 @@
                 <form method="post" enctype="multipart/form-data">
                     <div class="profile-img">
                         <img
-                            src=""
+                            src="https://avatars.servers.getgo.com/2205256774854474505_medium.jpg"
                             alt=""/>
                         <div class="file btn btn-lg btn-primary">
                             Change Photo
