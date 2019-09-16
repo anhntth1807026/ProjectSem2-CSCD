@@ -149,17 +149,17 @@
                 crossorigin="anonymous"></script>
     @endpush
     <div class="container emp-profile" style="margin-top: 70px; background: #f4f4f4">
-        <form method="post" enctype="multipart/form-data">
-            <div class="row form-profile">
-                <div class="col-md-4">
-                    Trang chủ
-                </div>
-                <div class="col-md-8">
-                    Thông tin tài khoản
-                </div>
+        <div class="row form-profile">
+            <div class="col-md-4">
+                Trang chủ
             </div>
-            <div class="row">
-                <div class="col-md-4">
+            <div class="col-md-8">
+                Thông tin tài khoản
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post" enctype="multipart/form-data">
                     <div class="profile-img">
                         <img
                             src=""
@@ -170,103 +170,103 @@
                                    name="thumbnail[]"
                                    placeholder="Thumbnail">
                         </div>
-                        <div class="profile-work">
-                            <a href=""><i class="fas fa-users"></i>&nbsp; Thông tin tài khoản</a><br/>
-                            <a href=""><i class="fas fa-bell"></i>&nbsp;&nbsp; Thông báo</a><br/>
-                            <a href=""><i class="fas fa-clipboard-list"></i>&nbsp;&nbsp; Quản lí đơn hàng</a>
+                    </div>
+                </form>
+                <div class="profile-work">
+                        <a href=""><i class="fas fa-users"></i>&nbsp; Thông tin tài khoản</a><br/>
+                        <a href=""><i class="fas fa-bell"></i>&nbsp;&nbsp; Thông báo</a><br/>
+                        <a href=""><i class="fas fa-clipboard-list"></i>&nbsp;&nbsp; Quản lí đơn hàng</a>
+                    </div>
+            </div>
+            <div class="col-md-7 form-profile-user">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form action="{{ route('admin.update.user', Auth::user()->id)}}" method="POST">
+                    @method("PUT")
+                    @csrf
+                    <div class="row form-group">
+                        <div class="col-md-3">
+                            <p>Họ tên</p>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="name" value="{{ Auth::user()->name }}" class="form-control"
+                                   placeholder="Name">
                         </div>
                     </div>
-                </div>
-                <div class="col-md-7 form-profile-user">
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
+                    <div class="row form-group">
+                        <div class="col-md-3">
+                            <p>Email</p>
                         </div>
-                    @endif
-                    <form action="{{ route('admin.update.user', Auth::user()->id) }}" method="POST">
-                        @csrf
-                        @method("PUT")
-                        <div class="row form-group">
-                            <div class="col-md-3">
-                                <p>Họ tên</p>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="name" value="{{ Auth::user()->name }}" class="form-control"
-                                       placeholder="Name">
-                            </div>
+                        <div class="col-md-6">
+                            <input class="form-control" name="email" value="{{ Auth::user()->email }}"
+                                   type="email" placeholder="Email">
                         </div>
-                        <div class="row form-group">
-                            <div class="col-md-3">
-                                <p>Email</p>
-                            </div>
-                            <div class="col-md-6">
-                                <input class="form-control" name="email" value="{{ Auth::user()->email }}"
-                                       type="email" placeholder="Email">
-                            </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-3">
+                            <p>Mật khẩu</p>
                         </div>
-                        <div class="row form-group">
-                            <div class="col-md-3">
-                                <p>Mật khẩu</p>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="password" name="password" value="{{ Auth::user()->password }}"
-                                       class="form-control" placeholder="Password">
-                            </div>
+                        <div class="col-md-6">
+                            <input type="password" name="password" value="{{ Auth::user()->password  }}"
+                                   class="form-control" placeholder="Password">
                         </div>
-                        <div class="row form-group">
-                            <div class="col-md-3">
-                                <p>Tuổi</p>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="number" name="age" value="{{ Auth::user()->age }}"
-                                       class="form-control" placeholder="Age">
-                            </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-3">
+                            <p>Tuổi</p>
                         </div>
-                        <div class="row form-group">
-                            <div class="col-md-3">
-                                <p>Địa chỉ</p>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="address" value="{{ Auth::user()->address }}"
-                                       class="form-control" placeholder="Address">
-                            </div>
+                        <div class="col-md-6">
+                            <input type="number" name="age" value="{{ Auth::user()->age }}"
+                                   class="form-control" placeholder="Age">
                         </div>
-                        <div class="row form-group">
-                            <div class="col-md-3">
-                                <p>Số điện thoại</p>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="number" name="phone" value="{{ Auth::user()->phone }}"
-                                       class="form-control" placeholder="Phone">
-                            </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-3">
+                            <p>Địa chỉ</p>
                         </div>
-                        <div class="row form-group">
-                            <div class="col-md-3">
-                                <p>Giới tính</p>
-                            </div>
-                            <div class="col-md-6">
-                                <select name="gender" class="form-control" >
-                                    <option value="">{{ Auth::user()->age }}</option>
-                                    <option value="male">Nam</option>
-                                    <option value="female">Nữ</option>
-                                    <option value="other">Khác</option>
-                                </select>
-                            </div>
+                        <div class="col-md-6">
+                            <input type="text" name="address" value="{{ Auth::user()->address }}"
+                                   class="form-control" placeholder="Address">
                         </div>
-                        <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6" style="margin-top: 25px">
-                                <button type="submit" class="btn btn-primary">Cập nhật</button>
-                            </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-3">
+                            <p>Số điện thoại</p>
                         </div>
-                    </form>
-                </div>
+                        <div class="col-md-6">
+                            <input type="number" name="phone" value="{{ Auth::user()->phone }}"
+                                   class="form-control" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-3">
+                            <p>Giới tính</p>
+                        </div>
+                        <div class="col-md-6">
+                            <select name="gender" class="form-control">
+                                <option value="">{{ Auth::user()->gender }}</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                                <option value="Khác">Khác</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6" style="margin-top: 25px">
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 @endsection

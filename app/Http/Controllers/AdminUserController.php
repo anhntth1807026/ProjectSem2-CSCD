@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 
 class AdminUserController extends Controller
 {
-    public function index(){
+    public function index()
+    {
 //        $users = User::whereRaw(1);
         $users = User::latest()->paginate(5);
 //        $users = $users->orderBy('id', 'DESC')->paginate(10);
@@ -32,7 +33,7 @@ class AdminUserController extends Controller
         $request->validated();
         $users->update($request->all());
         $users->save();
-        return response('/client/profile')->json(['status' => true, 'message' => "User updated successfully"]);
+        return redirect()->route('client.profile');
     }
 
     public function destroy($id)
