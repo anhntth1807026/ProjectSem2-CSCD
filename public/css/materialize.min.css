@@ -5872,7 +5872,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     outline: none;
     height: 3rem;
     width: 100%;
-    font-size: 1rem;
+    /*font-size: 1rem;*/
     margin: 0 0 20px 0;
     padding: 0;
     -webkit-box-shadow: none;
