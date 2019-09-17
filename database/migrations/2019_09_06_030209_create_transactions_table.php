@@ -19,7 +19,7 @@ class CreateTransactionsTable extends Migration
             $table->double('tr_total')->default(0);
             $table->text('tr_note')->nullable();
             $table->string('tr_address')->nullable();
-            $table->string('tr_phone');
+            $table->string('tr_phone')->nullable();
             $table->tinyInteger('tr_status')->default(0)->index();
             $table->timestamps();
         });
