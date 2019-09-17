@@ -18,39 +18,39 @@ class UsersTableSeeder extends Seeder
          * Add Users
          *
          */
-        DB::table('users')->truncate();
-        DB::table('users')->insert([
-            [
-                'id' => '1',
-                'name' => 'Nguyen Van An',
-                'email' => 'nguyenvanan@gmail.com',
-                'password' => 'nguyenvanan',
-                'age' => '20',
-                'address' => 'Bac Ninh',
-                'phone' => '0165478912',
-                'gender' => 'nam',
-            ],
-            [
-                'id' => '2',
-                'name' => 'Duong Thi Anh',
-                'email' => 'duongthianh@gmail.com',
-                'password' => 'duongthianh',
-                'age' => '23',
-                'address' => 'Ha Tinh',
-                'phone' => '0168421578',
-                'gender' => 'nữ',
-            ],
-            [
-                'id' => '3',
-                'name' => 'Tran Anh Nam',
-                'email' => 'trananhnam@gmail.com',
-                'password' => 'trananhnam',
-                'age' => '29',
-                'address' => 'Bac Ninh',
-                'phone' => '0184655972',
-                'gender' => 'nam',
-            ],
-        ]);
+//        DB::table('users')->truncate();
+//        DB::table('users')->insert([
+//            [
+//                'id' => '1',
+//                'name' => 'Nguyen Van An',
+//                'email' => 'nguyenvanan@gmail.com',
+//                'password' => 'nguyenvanan',
+//                'age' => '20',
+//                'address' => 'Bac Ninh',
+//                'phone' => '0165478912',
+//                'gender' => 'nam',
+//            ],
+//            [
+//                'id' => '2',
+//                'name' => 'Duong Thi Anh',
+//                'email' => 'duongthianh@gmail.com',
+//                'password' => 'duongthianh',
+//                'age' => '23',
+//                'address' => 'Ha Tinh',
+//                'phone' => '0168421578',
+//                'gender' => 'nữ',
+//            ],
+//            [
+//                'id' => '3',
+//                'name' => 'Tran Anh Nam',
+//                'email' => 'trananhnam@gmail.com',
+//                'password' => 'trananhnam',
+//                'age' => '29',
+//                'address' => 'Bac Ninh',
+//                'phone' => '0184655972',
+//                'gender' => 'nam',
+//            ],
+//        ]);
 //        if (config('roles.models.defaultUser')::where('email', '=', 'admin@admin.com')->first() === null) {
 //            $newUser = config('roles.models.defaultUser')::create([
 //                'name'     => 'Admin',

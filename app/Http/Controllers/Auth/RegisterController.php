@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Validation\ValidationException;
+use JD\Cloudder\Facades\Cloudder;
 
 class RegisterController extends Controller
 {
@@ -55,6 +57,26 @@ class RegisterController extends Controller
         $user->address = $request->address;
         $user->phone = $request->phone;
         $user->gender = $request->gender;
+        $image_urls = '';
+
+        try {
+            if ($request->hasFile('thumbnail')) {
+                foreach ($request->file('thumbnail') as $image) {
+                    $thumbnail = $image->getRealPath();
+
+                    Cloudder::upload($thumbnail, null);
+                    list($width, $height) = getimagesize($thumbnail);
+                    $image_url = Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height" => $height]);
+                    $image_urls .= '@' . $image_url;
+                }
+            } else {
+                $user->thumbnail = "https://avatars.servers.getgo.com/2205256774854474505_medium.jpg";
+            }
+
+        } catch (ValidationException $e) {
+            return response()->json(['loi' => `Loi ${$e}`]);
+        }
+        $user->thumbnail = substr($image_urls, 1);
         $user->save();
 
         if ($user->id) {

@@ -73,18 +73,25 @@
                     @endforeach
                 </table>
             </div>
-
-        </div>
-        <div class="row">
-            <div class="form-group mr-3">
-                <select class="form-control mr-2" id="select-action">
-                    <option value="0">--Chọn thao tác--</option>
-                    <option value="-1">Xoá</option>
-                    <option value="1">Phát hành</option>
-                </select>
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4">
+                    <nav aria-label="Page navigation example">
+                        {{$product->links()}}
+                    </nav>
+                </div>
             </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-outline-primary mb-2" id="btn-apply-all">Apply to all</button>
+            <div class="row">
+                <div class="form-group mr-3">
+                    <select class="form-control mr-2" id="select-action">
+                        <option value="0">--Chọn thao tác--</option>
+                        <option value="-1">Xoá</option>
+                        <option value="1">Phát hành</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-outline-primary mb-2" id="btn-apply-all">Apply to all</button>
+                </div>
             </div>
         </div>
     </div>

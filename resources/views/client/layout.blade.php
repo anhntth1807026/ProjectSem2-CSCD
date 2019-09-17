@@ -29,16 +29,15 @@
 
     <link rel="stylesheet" href="{{ asset('css/style-client.css') }}">
 
-    <script src="{{asset('js/app.js')}}" ></script>
+    <script src="{{asset('js/app.js')}}"></script>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/meanmenu.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">
-    @stack('styles')
-    {{--    <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">--}}
-
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
+    {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
+    @stack('styles')
 
 </head>
 <body>
@@ -132,41 +131,43 @@
                         <div class="circle-shopping expand">
                             <div class="shopping-carts text-right">
                                 <div class="cart-toggler">
-                                    <a href="{{ route('list.shopping.cart') }}"><i class="fa fa-shopping-bag" style="font-size:15px;"></i></a>
-                                    <a href="{{ route('list.shopping.cart') }}"><span id="count-cart" class="cart-quantity">{{ \Cart::count() }}</span></a>
+                                    <a href="{{ route('list.shopping.cart') }}"><i class="fa fa-shopping-bag"
+                                                                                   style="font-size:15px;"></i></a>
+                                    <a href="{{ route('list.shopping.cart') }}"><span id="count-cart"
+                                                                                      class="cart-quantity">{{ \Cart::count() }}</span></a>
                                 </div>
-{{--                                <div class="restrain small-cart-content">--}}
-{{--                                    <ul class="cart-list">--}}
-{{--                                        <li>--}}
-{{--                                            <a class="sm-cart-product" href="product-details.html">--}}
-{{--                                                <img src="" alt="">--}}
-{{--                                            </a>--}}
-{{--                                            <div class="small-cart-detail">--}}
-{{--                                                <a class="remove" href="#"><i class="fa fa-times-circle"></i></a>--}}
-{{--                                                <a href="#" class="edit-btn"><img src="" alt="Edit Button"/></a>--}}
-{{--                                                <a class="small-cart-name" href="product-details.html">Voluptas--}}
-{{--                                                    nulla</a>--}}
-{{--                                                <span class="quantitys"><strong>1</strong>x<span>$75.00</span></span>--}}
-{{--                                            </div>--}}
-{{--                                        </li>--}}
-{{--                                        <li>--}}
-{{--                                            <a class="sm-cart-product" href="product-details.html">--}}
-{{--                                                <img src="" alt="">--}}
-{{--                                            </a>--}}
-{{--                                            <div class="small-cart-detail">--}}
-{{--                                                <a class="remove" href="#"><i class="fa fa-times-circle"></i></a>--}}
-{{--                                                <a href="#" class="edit-btn"><img src="" alt="Edit Button"/></a>--}}
-{{--                                                <a class="small-cart-name" href="product-details.html">Donec ac--}}
-{{--                                                    tempus</a>--}}
-{{--                                                <span class="quantitys"><strong>1</strong>x<span>$75.00</span></span>--}}
-{{--                                            </div>--}}
-{{--                                        </li>--}}
-{{--                                    </ul>--}}
-{{--                                    <p class="total">Subtotal: <span class="amount">$155.00</span></p>--}}
-{{--                                    <p class="buttons">--}}
-{{--                                        <a href="checkout.html" class="button">Checkout</a>--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
+                                {{--                                <div class="restrain small-cart-content">--}}
+                                {{--                                    <ul class="cart-list">--}}
+                                {{--                                        <li>--}}
+                                {{--                                            <a class="sm-cart-product" href="product-details.html">--}}
+                                {{--                                                <img src="" alt="">--}}
+                                {{--                                            </a>--}}
+                                {{--                                            <div class="small-cart-detail">--}}
+                                {{--                                                <a class="remove" href="#"><i class="fa fa-times-circle"></i></a>--}}
+                                {{--                                                <a href="#" class="edit-btn"><img src="" alt="Edit Button"/></a>--}}
+                                {{--                                                <a class="small-cart-name" href="product-details.html">Voluptas--}}
+                                {{--                                                    nulla</a>--}}
+                                {{--                                                <span class="quantitys"><strong>1</strong>x<span>$75.00</span></span>--}}
+                                {{--                                            </div>--}}
+                                {{--                                        </li>--}}
+                                {{--                                        <li>--}}
+                                {{--                                            <a class="sm-cart-product" href="product-details.html">--}}
+                                {{--                                                <img src="" alt="">--}}
+                                {{--                                            </a>--}}
+                                {{--                                            <div class="small-cart-detail">--}}
+                                {{--                                                <a class="remove" href="#"><i class="fa fa-times-circle"></i></a>--}}
+                                {{--                                                <a href="#" class="edit-btn"><img src="" alt="Edit Button"/></a>--}}
+                                {{--                                                <a class="small-cart-name" href="product-details.html">Donec ac--}}
+                                {{--                                                    tempus</a>--}}
+                                {{--                                                <span class="quantitys"><strong>1</strong>x<span>$75.00</span></span>--}}
+                                {{--                                            </div>--}}
+                                {{--                                        </li>--}}
+                                {{--                                    </ul>--}}
+                                {{--                                    <p class="total">Subtotal: <span class="amount">$155.00</span></p>--}}
+                                {{--                                    <p class="buttons">--}}
+                                {{--                                        <a href="checkout.html" class="button">Checkout</a>--}}
+                                {{--                                    </p>--}}
+                                {{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -205,12 +206,14 @@
                                         <a>
                                             Hi, {{ Auth::user()->name }}
                                         </a>
+                                    </li>
+                                    <li><a href="/client/profile">My Account</a></li>
+                                    <li><a href="">My Cart</a></li>
+                                    <li><a href="">Checkout</a></li>
+                                    <li>
                                         <a href="{{ route('get.logout.user') }}">
                                             {{ __('Logout') }}
                                         </a>
-                                    <li><a href="">My Account</a></li>
-                                    <li><a href="">My Cart</a></li>
-                                    <li><a href="">Checkout</a></li>
                                     </li>
                                 @else
                                     <li>
@@ -312,23 +315,23 @@
     @show
 </div>
 
-<div class="middle" style="background: white">
-    <a class="btn-middle" href="#">
-        <i class="fa fa-facebook-f" title="Facebook"></i>
-    </a>
-    <a class="btn-middle" href="#">
-        <i class="fa fa-twitter" title="Twitter"></i>
-    </a>
-    <a class="btn-middle" href="#">
-        <i class="fa fa-google" title="Google"></i>
-    </a>
-    <a class="btn-middle" href="#">
-        <i class="fa fa-instagram" title="Instagram"></i>
-    </a>
-    <a class="btn-middle" href="#">
-        <i class="fa fa-youtube" title="Youtube"></i>
-    </a>
-</div>
+{{--<div class="middle" style="background: white">--}}
+{{--    <a class="btn-middle" href="#">--}}
+{{--        <i class="fa fa-facebook-f" title="Facebook"></i>--}}
+{{--    </a>--}}
+{{--    <a class="btn-middle" href="#">--}}
+{{--        <i class="fa fa-twitter" title="Twitter"></i>--}}
+{{--    </a>--}}
+{{--    <a class="btn-middle" href="#">--}}
+{{--        <i class="fa fa-google" title="Google"></i>--}}
+{{--    </a>--}}
+{{--    <a class="btn-middle" href="#">--}}
+{{--        <i class="fa fa-instagram" title="Instagram"></i>--}}
+{{--    </a>--}}
+{{--    <a class="btn-middle" href="#">--}}
+{{--        <i class="fa fa-youtube" title="Youtube"></i>--}}
+{{--    </a>--}}
+{{--</div>--}}
 
 <!-- Footer -->
 <footer class="pt-5 pb-4" id="contact">
