@@ -40,20 +40,20 @@
     background-image: url(https://markbrandboutique.com/wp-content/uploads/2018/07/contact-form-background.jpg);
     background-size: cover;
     background-position: center;">
-            <div class="contact-form container">
+            <div class="contact-form ">
                 <div style="text-align: center;margin-top: 20px;font-weight: bold;font-size: 25px">Mời điền thông tin liên hệ</div>
                 <form action="" method="post">
                     @csrf
                     <div class="form-top">
-                        <div class="form-group col-sm-6" style="margin-top: 40px">
+                        <div class="form-group col-sm-6  " style="margin-top: 35px">
                             <label>Họ tên <sup>*</sup></label>
                             <input type="text" name="c_name" class="form-control" required>
                         </div>
-                        <div class="form-group col-sm-6" style="margin-top: 40px">
+                        <div class="form-group col-sm-6 " style="margin-top: 35px">
                             <label>Email <sup>*</sup></label>
                             <input type="email" name="c_email" class="form-control" required>
                         </div>
-                        <div class="form-group col-sm-12 col-md-12 " style="margin-top: 35px">
+                        <div class="form-group col-sm-12 col-md-12 " style="margin-top: 21px">
                             <label>Nội dung <sup>*</sup></label>
                             <textarea class="yourmessage" name="c_content" required></textarea>
                         </div>

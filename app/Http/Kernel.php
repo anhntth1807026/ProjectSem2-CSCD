@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\CheckLoginAdmin;
+use App\Http\Middleware\CheckLoginUser;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -65,6 +66,7 @@ class Kernel extends HttpKernel
         'permission'    => \jeremykenedy\LaravelRoles\Middleware\VerifyPermission::class,
         'level'         => \jeremykenedy\LaravelRoles\Middleware\VerifyLevel::class,
         'CheckLoginAdmin' => CheckLoginAdmin::class,
+        'CheckLoginUser' => CheckLoginUser::class
     ];
 
     /**

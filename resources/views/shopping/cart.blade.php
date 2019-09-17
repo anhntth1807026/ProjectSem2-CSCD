@@ -56,14 +56,14 @@
                                         <td>
                                                 <a href=""><i class="fa fa-pencil"></i>  Edit</a>
                                             <hr>
-                                                <a href=""><i class="fa fa-trash-o"></i> Delete</a>
+                                                <a href=" {{ route('delete.shopping.cart', $key) }}"><i class="fa fa-trash-o"></i> Delete</a>
                                         </td>
                                     </tr>
                                     <?php $i ++?>
                                 @endforeach
                             </tbody>
                         </table>
-                        <h6 class="pull-right">Tổng tiền cần thanh toán {{ Cart::subtotal() }}  <a href="" class="btn btn-success">Thanh Toán</a></h6>
+                        <h6 class="pull-right">Tổng tiền cần thanh toán {{ Cart::subtotal() }}  <a href="{{ route('form.pay') }}" class="btn btn-success">Thanh Toán</a></h6>
 
                     </div>
                 </div>
