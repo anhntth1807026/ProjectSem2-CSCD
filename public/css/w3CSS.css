@@ -1127,7 +1127,7 @@ a {
 }
 
 .w3-animate-input {
-    transition: width 0.4s ease-in-out
+    transition: width 2s ease-in-out
 }
 
 .w3-animate-input:focus {
@@ -1333,8 +1333,8 @@ a {
 }
 
 .w3-button:hover {
-    color: #000 !important;
-    background-color: #ccc !important
+    background-color: #d56b2d!important;
+    color: white !important
 }
 
 .w3-transparent, .w3-hover-none:hover {
@@ -1719,3 +1719,10 @@ a {
 .w3-border-pale-blue, .w3-hover-border-pale-blue:hover {
     border-color: #e7ffff !important
 }
+
+@media (min-width: 993px){
+    .w3-modal-content {
+        width: 550px;
+    }
+}
+
