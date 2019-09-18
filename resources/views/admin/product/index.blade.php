@@ -28,12 +28,12 @@
                     <thead>
                     <tr>
                         <th scope="col"><input type="checkbox" id="checkAll"></th>
-                        <th scope="col">No</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Thumbnail</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Price</th>
-                        <th width="240px">Action</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Tên</th>
+                        <th scope="col">Ảnh</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Giá</th>
+                        <th width="240px">Thao tác</th>
                     </tr>
                     </thead>
                     @foreach ($product as $key => $products)
@@ -48,7 +48,7 @@
                                 @foreach(explode("@",$products->thumbnail) as $image)
                                     <img class="img-thumbnail rounded"
                                          style="width: 150px;margin: 0 10px"
-                                         src="{{ $image }}"
+                                         src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_400/{{ $image }}"
                                          alt="{{ $products->name }}">
                                 @endforeach
                             </td>
@@ -72,6 +72,14 @@
                         </tbody>
                     @endforeach
                 </table>
+            </div>
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4">
+                    <nav aria-label="Page navigation example">
+                        {{$product->links()}}
+                    </nav>
+                </div>
             </div>
             <div class="row">
                 <div class="form-group mr-3">

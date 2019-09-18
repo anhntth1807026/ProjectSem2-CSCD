@@ -10,10 +10,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('css/my-style.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-{{--    <link rel="stylesheet" href="{{asset('css/custom.css')}}">--}}
+    {{--    <link rel="stylesheet" href="{{asset('css/custom.css')}}">--}}
     <link rel="stylesheet" href="{{asset('css/sb-admin.min.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">--}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
-    <title>SB Admin - Dashboard</title>
+    <title>Admin - Dashboard</title>
 
 </head>
 
@@ -76,8 +77,25 @@
                 <i class="fas fa-user-circle fa-fw"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="{{ route('admin.login') }}" data-toggle="modal"
-                   data-target="#logoutModal">Logout</a>
+                {{--                <a class="dropdown-item" href="{{ route('admin.login') }}" data-toggle="modal"--}}
+                {{--                   data-target="#logoutModal">Logout</a>--}}
+                <ul class="restrain language">
+
+                    @if(Auth::check())
+
+                        <a href="{{ route('admin.login') }}">
+                            {{ __('Login') }}
+                        </a>
+
+                    @else
+
+                        <a href="{{ route('admin.logout') }}">
+                            {{ __('Logout') }}
+                        </a>
+
+                    @endif
+
+                </ul>
 
             </div>
 
@@ -90,28 +108,30 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-        <li class="nav-item dropdown">
-            <div class="dropdown-btn nav-link dropdown-toggle" data-toggle="dropdown">
-                <i class="fas fa-fw fa-folder"></i>
-                <span>Dashboard</span>
-            </div>
-            <div class="dropdown-container">
-                <a class="dropdown-item" href="{{ route('admin.get.user') }}"><i class="fas fa-user"></i> Manage User</a>
-                <a class="dropdown-item" href="{{route('category.index')}}"><i class="fas fa-archive"></i> Manage Category</a>
-                <a class="dropdown-item" href="{{route('product.index')}}"><i class="fab fa-product-hunt"></i> Manage Product</a>
-                <a class="dropdown-item" href="{{route('admin.list.transaction')}}"><i class="fab fa-product-hunt"></i> Manage Transaction</a>
-            </div>
-        </li>
         <li class="nav-item">
             <a class="nav-link" href="/admin/chart">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Charts</span></a>
+                <span>Dashboard</span></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">
+        <li class="nav-item dropdown">
+            <div class="dropdown-btn nav-link dropdown-toggle" data-toggle="dropdown">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span></a>
+                <span>Tables</span>
+            </div>
+            <div class="dropdown-container">
+                <a class="dropdown-item" href="{{ route('admin.get.user') }}"><i class="fas fa-user"></i> Manage
+                    User</a>
+                <a class="dropdown-item" href="{{route('category.index')}}"><i class="fas fa-archive"></i> Manage
+                    Category</a>
+                <a class="dropdown-item" href="{{route('product.index')}}"><i class="fab fa-product-hunt"></i> Manage
+                    Product</a>
+                <a class="dropdown-item" href="{{route('admin.list.transaction')}}"><i class="fab fa-product-hunt"></i>
+                    Manage Transaction</a>
+                <a class="dropdown-item" href="{{route('admin.contact')}}"><i class="fab fa-product-hunt"></i> Manage
+                    Contact</a>
+            </div>
         </li>
+
     </ul>
 
     <div id="content-wrapper">
@@ -137,24 +157,24 @@
 </a>
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="{{ route('admin.login') }}">Logout</a>
-            </div>
-        </div>
-    </div>
-</div>
+{{--<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"--}}
+{{--     aria-hidden="true">--}}
+{{--    <div class="modal-dialog" role="document">--}}
+{{--        <div class="modal-content">--}}
+{{--            <div class="modal-header">--}}
+{{--                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>--}}
+{{--                <button class="close" type="button" data-dismiss="modal" aria-label="Close">--}}
+{{--                    <span aria-hidden="true">×</span>--}}
+{{--                </button>--}}
+{{--            </div>--}}
+{{--            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>--}}
+{{--            <div class="modal-footer">--}}
+{{--                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>--}}
+{{--                <a class="btn btn-primary" href="{{ route('admin.login') }}">Logout</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 <script>
     /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
     var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -173,12 +193,12 @@
     }
 </script>
 <script src="{{asset('js/app.js')}}"></script>
-<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
+{{--<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>--}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="{{asset('js/custom.js')}}"></script>
 <script src="{{asset('js/sb-admin.min.js')}}"></script>
 {{--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--}}
 <script src="{{asset('js/myChart.js')}}"></script>
-<script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
 <script src="{{asset('js/chart.js/dist/Chart.bundle.js')}}"></script>
 </body>
 

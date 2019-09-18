@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form method="POST" action="{{ route('get.register') }}">
+        <form method="POST" action="{{ route('get.register') }}" enctype="multipart/form-data">
             @csrf
             <div id="register" class="form-container" data-form-container
                  style="color: rgb(198, 40, 40); background: rgb(255, 205, 210);">
@@ -19,15 +19,18 @@
                                        placeholder="{{ __('Name') }}">
                                 @error('name')
                                 <span class="req-input invalid">
-                                <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input your Name."> </span>
+                                <span class="input-status" data-toggle="tooltip" data-placement="top"
+                                      title="Input your Name."> </span>
                             </span>
                                 @enderror
                             </div>
                             <div class="col-6">
-                                <input type="number" name="age" data-min-length="1" style="margin-bottom: 31px " placeholder="{{ __('Age') }}">
+                                <input type="number" name="age" data-min-length="1" style="margin-bottom: 31px "
+                                       placeholder="{{ __('Age') }}">
                                 @error('age')
                                 <span class="req-input invalid">
-                                <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input your Age."> </span>
+                                <span class="input-status" data-toggle="tooltip" data-placement="top"
+                                      title="Input your Age."> </span>
                             </span>
                                 @enderror
                             </div>
@@ -39,28 +42,31 @@
                                placeholder="{{ __('E-Mail Address') }}">
                         @error('email')
                         <span class="req-input invalid">
-                                                        <span class="input-status" data-toggle="tooltip"
-                                                              data-placement="top"
-                                                              title="Input your email."> </span>
-                                                    </span>
+                            <span class="input-status" data-toggle="tooltip"
+                                  data-placement="top"
+                                  title="Input your email.">
+                            </span>
+                        </span>
                         @enderror
                     </div>
+
                     <div class="row">
                         <input type="password" name="password" data-min-length="8"
                                placeholder="{{ __('Password') }}">
                         @error('password')
                         <span class="req-input input-password invalid">
-                                                            <span class="input-status" data-toggle="tooltip"
-                                                                  data-placement="top"
-                                                                  title="Password must be at least 8 characters long."> </span>
-                                                        </span>
+                            <span class="input-status" data-toggle="tooltip"
+                                  data-placement="top"
+                                  title="Password must be at least 8 characters long.">
+                            </span>
+                        </span>
                         @enderror
-
                     </div>
 
                     <div class="row" style="display:none">
                         <span class="req-input confirm-password">
-                            <span class="input-status" data-toggle="tooltip" data-placement="top" title="Password Must Match Initial Password Field."> </span>
+                            <span class="input-status" data-toggle="tooltip" data-placement="top"
+                                  title="Password Must Match Initial Password Field."> </span>
                             <input type="password" data-min-length="8" placeholder="Confirm Password">
                         </span>
                     </div>
@@ -70,10 +76,13 @@
                                placeholder="{{ __('Address') }}">
                         @error('address')
                         <span class="req-input invalid">
-                            <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input your Address."> </span>
+                            <span class="input-status" data-toggle="tooltip" data-placement="top"
+                                  title="Input your Address.">
+                            </span>
                         </span>
                         @enderror
                     </div>
+
                     <div class="row">
                         <div class="col-12">
                             <div class="col-6 form-inline">
@@ -81,19 +90,26 @@
                                        placeholder="{{ __('Phone') }}">
                                 @error('phone')
                                 <span class="req-input invalid">
-                                  <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input your phone."> </span>
+                                  <span class="input-status" data-toggle="tooltip" data-placement="top"
+                                        title="Input your phone."> </span>
                                 </span>
                                 @enderror
                             </div>
 
                             <div class="col-6">
                                 <select name="gender" class="form-control">
-                                    <option selected value="male">Nam</option>
-                                    <option value="female">Nữ</option>
-                                    <option value="other">Khác</option>
+                                    <option selected value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                    <option value="Khác">Khác</option>
                                 </select>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="row">
+                        <input type="file" class="form-control" multiple="multiple"
+                        name="thumbnail[]"
+                        placeholder="Thumbnail">
                     </div>
 
                     <div class="row submit-row">
@@ -107,8 +123,6 @@
                         <span><i class="fa fa-linkedin"></i> </span>
                         <span><i class="fa fa-twitter"></i> </span>
                     </div>
-
-
                 </div>
             </div>
 

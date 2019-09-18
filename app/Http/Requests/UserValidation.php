@@ -31,6 +31,7 @@ class UserValidation extends FormRequest
             'address' => 'required',
             'phone' => 'required',
             'gender' => 'required',
+            'thumbnail' => 'thumbnail'
         ];
     }
 

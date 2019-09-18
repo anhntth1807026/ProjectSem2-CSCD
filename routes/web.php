@@ -20,24 +20,24 @@ use JD\Cloudder\Facades\Cloudder;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
-    Route::resource('/product', 'ProductController');
-});
 
 
-Route::resource('/admin/category', 'CategoryController');
-
-Route::get('/client/profile', 'ProfileUserController@index')->name('ccc');
+Route::get('/client/profile', 'ProfileUserController@index')->name('client.profile');
 
 Route::get('/About-Us', function () {
     return view('client.about-us');
 });
-Route::get('/Contact-Us', function () {
-    return view('client.contact-us');
-});
+
+//Route::get('/Contact-Us', function () {
+//    return view('client.contact-us');
+//});
+
+Route::get('contact', 'ContactController@getContact')->name('get.contact');
+Route::post('contact', 'ContactController@saveContact');
+
 Route::get('/List-Product', function (Request $request){
     $name = $request->get('name');
-    $product = Product::where('name','like','%'.$name.'%')->get();
+    $product = Product::where('name', 'like', '%' . $name . '%')->get();
 
     return view('client.list-product')->with('product', $product);
 });
@@ -63,7 +63,6 @@ Route::get('/Blog/Blog5', function () {
 });
 
 
-
 Route::get('/Product-Details', function () {
     return view('client.productdetails');
 });
@@ -82,9 +81,7 @@ Route::get('/Policy/Payment-Security', function () {
     return view('client.policy.paymentsecurity');
 });
 
-Route::get('/admin/chart', function () {
-    return view('admin.dashboard.chart');
-});
+
 
 Route::get('/admin/user', 'AdminUserController@index')->name('admin.get.user');
 Route::get('/admin/user/edit/{id}', 'AdminUserController@editUser')->name('admin.edit.user');
@@ -97,10 +94,19 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/cart', 'HomeController@cart')->name('cart');
 
+Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
+    Route::resource('/product', 'ProductController');
+    Route::resource('/category', 'CategoryController');
+});
+
+Route::get('/admin/chart', function () {
+    return view('admin.dashboard.chart');
+});
 
 Route::prefix('admin')->group(function () {
     Route::get('/login', 'AdminController@getLogin')->name('admin.login');
     Route::post('/login', 'AdminController@postLogin');
+    Route::get('/logout', 'AdminController@logout')->name('admin.logout');
 });
 
 Route::group(['namespace' => 'Auth'], function () {
@@ -116,11 +122,18 @@ Route::group(['namespace' => 'Auth'], function () {
 Route::prefix('shopping')->group(function () {
     Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
     Route::get('/list-cart', 'ShoppingCartController@listShoppingCart')->name('list.shopping.cart');
+    Route::get('/delete/{id}', 'ShoppingCartController@deleteCartItem')->name('delete.shopping.cart');
 });
 
-Route::group(['prefix' => 'transaction'], function () {
+Route::group(['prefix' => 'admin/transaction'], function () {
     Route::get('/', 'AdminTransactionController@index')->name('admin.list.transaction');
+    Route::get('/view/{id}', 'AdminTransactionController@viewOrder')->name('admin.view.order');
+});
+Route::group(['prefix' => 'admin/contact'], function () {
+    Route::get('/', 'AdminContactController@index')->name('admin.contact');
 });
 
-
-
+Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], function (){
+    Route::get('/pay', 'ShoppingCartController@formPay')->name('form.pay');
+    Route::post('/pay', 'ShoppingCartController@saveInforShoppingCart');
+});

@@ -2,18 +2,24 @@
 
 
 namespace App\Http\Middleware;
-
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class CheckLoginAdmin
+class CheckLoginUser
 {
+    public function handle($request , Closure $next){
+        if (!get_data_user('web')){
+            return redirect()->route('get.login');
+        }
+
+        return $next($request);
+    }
 //    public function handle($request, Closure $next, $guard =null)
 //    {
 //        switch($guard){
-//            case 'admin':
-//                if (Auth::guard($guard)->check()) {
-//                    return redirect()->route('admin.login');
+//            case 'user':
+//                if (Auth::guard('web')->check()) {
+//                    return redirect()->route('get.login');
 //                }
 //                break;
 //
@@ -25,12 +31,4 @@ class CheckLoginAdmin
 //        }
 //        return $next($request);
 //    }
-
-    public function handle($request , Closure $next){
-        if (!get_data_user('admins')){
-            return redirect()->route('admin.login');
-        }
-
-        return $next($request);
-    }
 }

@@ -34,7 +34,9 @@
     <link rel="stylesheet" href="{{ asset('css/meanmenu.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
+    {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
     @stack('styles')
 </head>
 <body>
@@ -79,7 +81,7 @@
                                 </ul>
                             </li>
                             <li class="expand"><a href="/About-Us">Chúng Tôi</a></li>
-                            <li class="expand"><a href="/Contact-Us">Liên Hệ</a></li>
+                            <li class="expand"><a href="{{ route('get.contact') }}">Liên Hệ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -203,12 +205,14 @@
                                         <a>
                                             Hi, {{ Auth::user()->name }}
                                         </a>
+                                    </li>
+                                    <li><a href="/client/profile">My Account</a></li>
+                                    <li><a href="">My Cart</a></li>
+                                    <li><a href="">Checkout</a></li>
+                                    <li>
                                         <a href="{{ route('get.logout.user') }}">
                                             {{ __('Logout') }}
                                         </a>
-                                    <li><a href="">My Account</a></li>
-                                    <li><a href="">My Cart</a></li>
-                                    <li><a href="">Checkout</a></li>
                                     </li>
                                 @else
                                     <li>
@@ -240,84 +244,6 @@
     @section('content')
     @show
 </div>
-
-{{--<div class="container w3-padding-32 w3-center">--}}
-{{--    <h3>CHÚNG TÔI, NHỮNG NGƯỜI TRUYỀN CẢM HỨNG</h3><br>--}}
-{{--    <p style="font-size: 24px">Lan Toả Lối Sống Xanh Đến Mọi Người</p>--}}
-{{--    <br>--}}
-{{--    <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/66643085_439790913543343_5518956645201215488_o.jpg?_nc_cat=109&_nc_oc=AQkZp2V9QN76JoQvi1XSn-8jgKIW0TAzSySRMP5QG5wXgtC0UYsGjU_69cbc1qdr8r8&_nc_ht=scontent.fhan2-3.fna&oh=b3b901f4f85642006d2055d3116bd4ca&oe=5DEF7820"--}}
-{{--         alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">--}}
-{{--    <div class="w3-padding-32">--}}
-{{--        <h4><b>Những Thành Viên Của Nhóm</b></h4>--}}
-{{--        <br>--}}
-{{--        <div class="row">--}}
-{{--            <div class="sm-col-5">--}}
-{{--                <img src="https://i.pinimg.com/originals/c1/fc/52/c1fc52c371168a04ae846ce39a8cd22a.jpg"--}}
-{{--                     class="image-5"/>--}}
-{{--                <br>--}}
-{{--                <button class="accordion w3-white" style="color: #d56b2d;text-align: center;font-size: 22px;"><p--}}
-{{--                            style="color: #d56b2d;">Nguyễn Tuấn Anh</p>--}}
-{{--                </button>--}}
-{{--                <div class="panel">--}}
-{{--                    <p style="font-size: 17px"><b>Tuổi: 20</b></p>--}}
-{{--                    <p style="font-size: 17px"><b>SốĐT: 0945952000</b></p>--}}
-{{--                    <p style="font-size: 17px"><b>Email: anhntth1807026@fpt.edu.vn</b></p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="sm-col-5">--}}
-{{--                <img src="https://i.pinimg.com/originals/c1/fc/52/c1fc52c371168a04ae846ce39a8cd22a.jpg"--}}
-{{--                     class="image-5"/>--}}
-{{--                <br>--}}
-{{--                <button class="accordion w3-white" style="color: #d56b2d;text-align: center;font-size: 22px;"><p--}}
-{{--                            style="color: #d56b2d;">Hoàng Tất Thành</p>--}}
-{{--                </button>--}}
-{{--                <div class="panel">--}}
-{{--                    <p style="font-size: 17px"><b>Tuổi: 20</b></p>--}}
-{{--                    <p style="font-size: 17px"><b>SốĐT: 0945952000</b></p>--}}
-{{--                    <p style="font-size: 17px"><b>Email: anhntth1807026@fpt.edu.vn</b></p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="sm-col-5">--}}
-{{--                <img src="https://i.pinimg.com/originals/c1/fc/52/c1fc52c371168a04ae846ce39a8cd22a.jpg"--}}
-{{--                     class="image-5"/>--}}
-{{--                <br>--}}
-{{--                <button class="accordion w3-white" style="color: #d56b2d;text-align: center;font-size: 22px;"><p--}}
-{{--                            style="color: #d56b2d;">Phạm Thanh Hoa</p>--}}
-{{--                </button>--}}
-{{--                <div class="panel">--}}
-{{--                    <p style="font-size: 17px"><b>Tuổi: 20</b></p>--}}
-{{--                    <p style="font-size: 17px"><b>SốĐT: 0945952000</b></p>--}}
-{{--                    <p style="font-size: 17px"><b>Email: anhntth1807026@fpt.edu.vn</b></p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="sm-col-5">--}}
-{{--                <img src="https://i.pinimg.com/originals/c1/fc/52/c1fc52c371168a04ae846ce39a8cd22a.jpg"--}}
-{{--                     class="image-5"/>--}}
-{{--                <br>--}}
-{{--                <button class="accordion w3-white" style="color: #d56b2d;text-align: center;font-size: 22px;"><p--}}
-{{--                            style="color: #d56b2d;">Đặng Tiểu Bình</p>--}}
-{{--                </button>--}}
-{{--                <div class="panel">--}}
-{{--                    <p style="font-size: 17px"><b>Tuổi: 20</b></p>--}}
-{{--                    <p style="font-size: 17px"><b>SốĐT: 0945952000</b></p>--}}
-{{--                    <p style="font-size: 17px"><b>Email: anhntth1807026@fpt.edu.vn</b></p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="sm-col-5">--}}
-{{--                <img src="https://i.pinimg.com/originals/c1/fc/52/c1fc52c371168a04ae846ce39a8cd22a.jpg"--}}
-{{--                     class="image-5"/>--}}
-{{--                <button class="accordion w3-white" style="color: #d56b2d;text-align: center;font-size: 22px;"><p--}}
-{{--                            style="color: #d56b2d;">Lương Xuân Bách</p>--}}
-{{--                </button>--}}
-{{--                <div class="panel">--}}
-{{--                    <p style="font-size: 17px"><b>Tuổi: 20</b></p>--}}
-{{--                    <p style="font-size: 17px"><b>SốĐT: 0945952000</b></p>--}}
-{{--                    <p style="font-size: 17px"><b>Email: anhntth1807026@fpt.edu.vn</b></p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
 
 <footer class="pt-5 pb-4" id="contact">
     <div class="container" style="padding-right: 0px;padding-left: 0px">
@@ -366,7 +292,7 @@
                     <input type="text" class="form-control" placeholder="Địa Chỉ Email:">
                     {{--                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>--}}
                 </div>
-                <ul class="social-pet mt-4" style="margin-left: 10px;">
+                    <ul class="social-pet mt-4" style="margin-left: 10px;">
                     <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
