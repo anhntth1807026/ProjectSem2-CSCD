@@ -100,86 +100,100 @@
     <div class="container">
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Bán Chạy Nhất</h1>
         <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="product-grid6">
-                    <div class="product-image6">
-                        <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/co-rua-binh.webp') }}"
-                                 title="Bấm để xem hình ảnh chi tiết">
-                        </a>
+            @foreach($productHot as $productHots)
+                <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid6 mb-2">
+                            <div class="product-image6">
+                                <a href="#">
+                                    <img class="pic-1"
+                                         src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_350/{{$productHots->thumbnail}}"
+                                         title="Bấm để xem hình ảnh chi tiết">
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h5 class="title"><a href="#">{{$productHots->name}}</a></h5>
+                                <div class="price">{{number_format($productHots->price, 0, ',' , '.')}}đ</div>
+                            </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="{{ route('add.shopping.cart', $productHots->id) }}"
+                                       class="card-link add-cart"
+                                       data-id="{{$productHots->id}}"
+                                       data-name="{{$productHots->name}}"
+                                       data-thumbnail="{{$productHots->thumbnail}}"
+                                       data-price="{{$productHots->price}}"
+                                       data-tip="Add to Cart"
+                                    >
+                                        <i class="fa fa-shopping-bag"></i>
+                                    </a>
+                                </li>
+                                <li><a href="" data-tip="View Detail"><i class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="product-content">
-                        <h5 class="title"><a href="#">Cọ Rửa Bình</a></h5>
-                        <h6>Đồ Dùng Gia Đình</h6>
-                        <div class="price">99.000₫</div>
-                    </div>
-                    <ul class="social">
-                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="product-grid6">
-                    <div class="product-image6">
-                        <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/hop-khan-giay-go.webp') }}"
-                                 title="Bấm để xem hình ảnh chi tiết">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h5 class="title"><a href="#">Hộp Khăn Giấy Gỗ</a></h5>
-                        <h6>Đồ Dùng Gia Đình</h6>
-                        <div class="price">199.000₫</div>
-                    </div>
-                    <ul class="social">
-                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="product-grid6">
-                    <div class="product-image6">
-                        <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/dua-go-trac.webp') }}"
-                                 title="Bấm để xem hình ảnh chi tiết">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h5 class="title"><a href="#">Đũa Gỗ Trắc</a></h5>
-                        <h6>Đồ Dùng Gia Đình</h6>
-                        <div class="price">49.000₫</div>
-                    </div>
-                    <ul class="social">
-                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="product-grid6">
-                    <div class="product-image6">
-                        <a href="#">
-                            <img class="pic-1" src="{{ asset('img/home-care/xit-khu-mui.webp') }}"
-                                 title="Bấm để xem hình ảnh chi tiết">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h5 class="title"><a href="#">Xịt Khử Mùi</a></h5>
-                        <h6>Đồ Dùng Gia Đình</h6>
-                        <div class="price">429.000₫</div>
-                    </div>
-                    <ul class="social">
-                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+            @endforeach
+            {{--            <div class="col-md-3 col-sm-6">--}}
+            {{--                <div class="product-grid6">--}}
+            {{--                    <div class="product-image6">--}}
+            {{--                        <a href="#">--}}
+            {{--                            <img class="pic-1" src="{{ asset('img/home-care/hop-khan-giay-go.webp') }}"--}}
+            {{--                                 title="Bấm để xem hình ảnh chi tiết">--}}
+            {{--                        </a>--}}
+            {{--                    </div>--}}
+            {{--                    <div class="product-content">--}}
+            {{--                        <h5 class="title"><a href="#">Hộp Khăn Giấy Gỗ</a></h5>--}}
+            {{--                        <h6>Đồ Dùng Gia Đình</h6>--}}
+            {{--                        <div class="price">199.000₫</div>--}}
+            {{--                    </div>--}}
+            {{--                    <ul class="social">--}}
+            {{--                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>--}}
+            {{--                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>--}}
+            {{--                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>--}}
+            {{--                    </ul>--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
+            {{--            <div class="col-md-3 col-sm-6">--}}
+            {{--                <div class="product-grid6">--}}
+            {{--                    <div class="product-image6">--}}
+            {{--                        <a href="#">--}}
+            {{--                            <img class="pic-1" src="{{ asset('img/home-care/dua-go-trac.webp') }}"--}}
+            {{--                                 title="Bấm để xem hình ảnh chi tiết">--}}
+            {{--                        </a>--}}
+            {{--                    </div>--}}
+            {{--                    <div class="product-content">--}}
+            {{--                        <h5 class="title"><a href="#">Đũa Gỗ Trắc</a></h5>--}}
+            {{--                        <h6>Đồ Dùng Gia Đình</h6>--}}
+            {{--                        <div class="price">49.000₫</div>--}}
+            {{--                    </div>--}}
+            {{--                    <ul class="social">--}}
+            {{--                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>--}}
+            {{--                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>--}}
+            {{--                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>--}}
+            {{--                    </ul>--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
+            {{--            <div class="col-md-3 col-sm-6">--}}
+            {{--                <div class="product-grid6">--}}
+            {{--                    <div class="product-image6">--}}
+            {{--                        <a href="#">--}}
+            {{--                            <img class="pic-1" src="{{ asset('img/home-care/xit-khu-mui.webp') }}"--}}
+            {{--                                 title="Bấm để xem hình ảnh chi tiết">--}}
+            {{--                        </a>--}}
+            {{--                    </div>--}}
+            {{--                    <div class="product-content">--}}
+            {{--                        <h5 class="title"><a href="#">Xịt Khử Mùi</a></h5>--}}
+            {{--                        <h6>Đồ Dùng Gia Đình</h6>--}}
+            {{--                        <div class="price">429.000₫</div>--}}
+            {{--                    </div>--}}
+            {{--                    <ul class="social">--}}
+            {{--                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>--}}
+            {{--                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>--}}
+            {{--                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>--}}
+            {{--                    </ul>--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
         </div>
     </div>
     <hr>
@@ -203,16 +217,15 @@
                             <div class="price">{{number_format($item->price, 0, ',' , '.')}}đ</div>
                         </div>
                         <ul class="social">
-{{--                            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>--}}
                             <li>
-{{--                                <a href="javascript:void(0)" class="card-link add-cart"--}}
-{{--                                   data-id="{{$item->id}}"--}}
-{{--                                   data-name="{{$item->name}}"--}}
-{{--                                   data-thumbnail="{{$item->thumbnail}}"--}}
-{{--                                   data-price="{{$item->price}}"--}}
-{{--                                   data-tip="Add to Cart"--}}
-{{--                                >--}}
-                                    <a href="{{ route('add.shopping.cart', $item->id) }}" class="card-link add-cart"
+                                {{--                                <a href="javascript:void(0)" class="card-link add-cart"--}}
+                                {{--                                   data-id="{{$item->id}}"--}}
+                                {{--                                   data-name="{{$item->name}}"--}}
+                                {{--                                   data-thumbnail="{{$item->thumbnail}}"--}}
+                                {{--                                   data-price="{{$item->price}}"--}}
+                                {{--                                   data-tip="Add to Cart"--}}
+                                {{--                                >--}}
+                                <a href="{{ route('add.shopping.cart', $item->id) }}" class="card-link add-cart"
                                    data-id="{{$item->id}}"
                                    data-name="{{$item->name}}"
                                    data-thumbnail="{{$item->thumbnail}}"

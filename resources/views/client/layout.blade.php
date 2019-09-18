@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
+    <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
     {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
     @stack('styles')
 
@@ -402,7 +403,7 @@
                 <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">LIÊN HỆ</h5>
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Your Email Address">
-                    {{--                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>--}}
+                     {{--                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>--}}
                 </div>
                 <ul class="social-pet mt-4">
                     <li><a href="#" title="facebook"><i class="fab fa-facebook-f iconfooter"></i></a></li>
@@ -415,10 +416,8 @@
     </div>
 </footer>
 
-{{--<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>--}}
-{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
-{{--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>--}}
-{{--<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>--}}
+
+<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ asset('plugins/jQueryUI/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
