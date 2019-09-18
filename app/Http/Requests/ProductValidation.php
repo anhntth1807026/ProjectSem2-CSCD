@@ -28,7 +28,7 @@ class ProductValidation extends FormRequest
             'description' => 'required',
             'thumbnail' => 'required',
             'quantity' => 'required',
-            'price' => 'required'
+            'price' => 'required',
         ];
     }
 
@@ -41,7 +41,7 @@ class ProductValidation extends FormRequest
             'description.required' => 'Vui lòng nhập miêu tả sản phẩm.',
             'thumbnail.required' => 'Vui lòng nhập ảnh cho sản phẩm.',
             'quantity.required' => 'Vui lòng nhập số lượng sản phẩm.',
-            'price.required' => 'Vui lòng nhập giá cho sản phẩm.'
+            'price.required' => 'Vui lòng nhập giá cho sản phẩm.',
         ];
     }
 

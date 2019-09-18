@@ -29,10 +29,12 @@
                     <tr>
                         <th scope="col"><input type="checkbox" id="checkAll"></th>
                         <th scope="col">Id</th>
-                        <th scope="col">Tên</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Loại sản phẩm</th>
                         <th scope="col">Ảnh</th>
                         <th scope="col">Số lượng</th>
                         <th scope="col">Giá</th>
+                        <th scope="col">Nổi bật</th>
                         <th width="240px">Thao tác</th>
                     </tr>
                     </thead>
@@ -44,17 +46,20 @@
                             </td>
                             <td scope="col">{{ $products-> id }}</td>
                             <td scope="col">{{ $products->name }}</td>
+                            <td scope="col">{{ isset($products->category->name) ? $products->category->name : '[N/A]' }}</td>
                             <td scope="col">
                                 @foreach(explode("@",$products->thumbnail) as $image)
                                     <img class="img-thumbnail rounded"
                                          style="width: 150px;margin: 0 10px"
-                                         src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_400/{{ $image }}"
+                                         src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_250/{{ $image }}"
                                          alt="{{ $products->name }}">
                                 @endforeach
                             </td>
 
                             <td scope="col">{{ $products->quantity }}</td>
                             <td scope="col">{{ $products->price }}</td>
+                            <td scope="col">{{ $products->pro_hot }}</td>
+
                             <td scope="col">
                                 <form action="{{ route('product.destroy', $products->id) }}" method="POST">
                                     <a class="btn btn-info" href="{{ route('product.show', $products->id) }}"

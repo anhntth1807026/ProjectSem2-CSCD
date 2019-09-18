@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
+    <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
     {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
     @stack('styles')
 </head>
@@ -286,6 +287,7 @@
                     </li>
                 </ul>
             </div>
+
             <div class="col-lg-4 col-md-6 col-sm-6 mt-2 mb-4" style="margin-bottom: 30px;text-align: center">
                 <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px;margin-right: 12px">LIÊN HỆ</h5>
                 <div class="input-group" style="text-align: center">
@@ -302,6 +304,7 @@
         </div>
     </div>
 </footer>
+
 
 <a id="BackToTop" title="Chuyển Lên Đầu Trang"></a>
 
@@ -341,6 +344,7 @@
         });
     }
 </script>
+
 <script src="{{ asset('plugins/jQueryUI/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>

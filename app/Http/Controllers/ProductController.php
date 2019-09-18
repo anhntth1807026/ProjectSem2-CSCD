@@ -24,7 +24,7 @@ class ProductController extends Controller
 
     public function index()
     {
-        $product = Product::latest()->paginate(6);
+        $product = Product::with('category:id,name')->paginate(6);
 
         return view('admin.product.index')
             ->with('product', $product);
@@ -70,6 +70,7 @@ class ProductController extends Controller
         $obj->thumbnail = substr($image_urls, 1);
         $obj->quantity = $request->get('quantity');
         $obj->price = $request->get('price');
+        $obj->pro_hot = $request->get('pro_hot');
 
         $obj->save();
 
@@ -124,6 +125,7 @@ class ProductController extends Controller
         $product->thumbnail = substr($image_urls, 1);
         $product->quantity = $request->get('quantity');
         $product->price = $request->get('price');
+        $product->pro_hot = $request->get('pro_hot');
 
         $product->save();
         return redirect()->route('product.index')
