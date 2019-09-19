@@ -3719,7 +3719,7 @@ blockquote {
 
 .team-img img {
     border: 7px solid transparent;
-    border-radius: 100%;
+    /*border-radius: 100%;*/
     height: 100%;
     width: 100%;
 }

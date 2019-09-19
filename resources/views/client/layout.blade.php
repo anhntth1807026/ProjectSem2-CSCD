@@ -310,7 +310,6 @@
 {{--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>--}}
 {{--<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>--}}
 
-@stack('scripts')
 
 <a id="BackToTop" title="Chuyển Lên Đầu Trang"></a>
 
@@ -363,5 +362,6 @@
 </script>
 <script src="{{ asset('js/my-js.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
+@stack('scripts')
 </body>
 </html>
