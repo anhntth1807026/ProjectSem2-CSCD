@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Transaction extends Model
+class Article extends Model
 {
-    protected $table = 'transactions';
+    protected $table = 'articles';
     protected $guarded = ['*'];
 
     public function users(){
-        return $this->belongsTo(User::class, 'tr_user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

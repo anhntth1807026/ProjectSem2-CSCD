@@ -29,8 +29,10 @@ class HomeController extends Controller
 //            'pro_active' => Product::STATUS_PUBLIC
 //        ])->get();
         $product = Product::latest()->paginate(8);
+        $productHot = Product::orderBy('id', 'desc')->Where('pro_hot', [1])->paginate(8);
         $viewData = [
-            'product' => $product
+            'product' => $product,
+            'productHot' => $productHot
         ];
 
         return view('client.home', $viewData);

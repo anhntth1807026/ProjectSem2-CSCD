@@ -10,4 +10,6 @@ use jeremykenedy\LaravelRoles\Traits\HasRoleAndPermission;
 class Admin extends Authenticatable
 {
     use Notifiable;
+
+    protected $table = 'admins';
 }

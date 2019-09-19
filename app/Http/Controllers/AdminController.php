@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 
 
 class AdminController extends Controller
@@ -27,7 +28,9 @@ class AdminController extends Controller
     }
 
     public function logout(Request $request) {
-        Auth::logout();
+//        Auth::logout();
+//        Session::flush();
+        Auth::guard("admins")->logout();
         return redirect('admin/login');
     }
 
