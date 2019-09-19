@@ -2,60 +2,73 @@
 @section('content')
 
     @push('styles')
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <style>
-            .accordion {
-                background-color: #eee;
-                color: #444;
-                cursor: pointer;
-                padding: 18px;
-                width: 96%;
-                text-align: left;
-                border: none;
-                outline: none;
-                transition: 0.4s;
+            * {
+                box-sizing: border-box;
             }
 
             .team-member {
                 margin-bottom: 100px;
             }
 
-            .team-member .member-infor {
-                position: relative;
-                width: 30.8%;
-                float: left;
-                padding-left: 5px;
-                margin-left: 29px;
+            .team-member .the-members1 .member {
+                border: 1px solid white;
+                border-radius: 4px;
             }
 
-            .team-member .member-infor button {
-                color: #d56b2d;
-                text-align: center;
+            .team-member .the-members1 .member .team-img {
+                position: relative;
+            }
+
+            .team-member .the-members1 .member .team-img img {
+                width: 345px;
+                height: 430px;
+                display: block;
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+
+            .team-member .the-members2 .member {
+                border: 1px solid white;
+                border-radius: 4px;
+                margin-top: 20px;
+            }
+
+            .team-member .the-members2 .member .team-img1 {
+                position: relative;
+                margin-left: 175px;
+            }
+
+            .team-member .the-members2 .member .team-img2 {
+                position: relative;
+                margin-right: 175px;
+            }
+
+            .team-member .the-members2 .member .team-img1 img {
+                width: 345px;
+                height: 430px;
+            }
+
+            .team-member .the-members2 .member .team-img2 img {
+                width: 345px;
+                height: 430px;
+            }
+
+            .member:hover .image {
+                opacity: 0.3;
+            }
+
+            .member:hover .middle {
+                opacity: 1;
+            }
+
+            .text {
+                color: black;
                 font-size: 20px;
             }
 
-            .team-member .member-infor button p {
-                color: #d56b2d;
-            }
-
-            .team-member .member-infor .image-member {
-                border: 1px solid white;
-                border-radius: 4px;
-                padding: 5px;
-                width: 235px;
-                height: 305px;
-            }
-
-            .team-member .member-infor .image-member .image-5 {
-                opacity: 1;
-                display: block;
-                width: 100%;
-                transition: .5s ease;
-                backface-visibility: hidden;
-                height: 100%;
-                padding: 5px;
-            }
-
-            .team-member .member-infor .overlay {
+            .middle {
                 transition: .5s ease;
                 opacity: 0;
                 position: absolute;
@@ -66,20 +79,6 @@
                 text-align: center;
             }
 
-            .team-member .member-infor:hover .image-5 {
-                opacity: 0.3;
-            }
-
-            .team-member .member-infor:hover .overlay {
-                opacity: 1;
-            }
-
-            .team-member .member-infor .overlay.text p {
-                color: black;
-                font-size: 17px;
-                padding: 16px 32px;
-                text-align: center;
-            }
         </style>
     @endpush
     <div class="headline cmsms_color_scheme_first">
@@ -108,7 +107,7 @@
                 </div>
                 <div class="w3-col m6" data-aos="zoom-out-left" data-aos-duration="1500">
                     <img class="w3-image w3-round-large"
-                         src="{{ asset('/img/slide-pics/slide2.jpg') }}"
+                         src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/66643085_439790913543343_5518956645201215488_o.jpg?_nc_cat=109&_nc_oc=AQkZp2V9QN76JoQvi1XSn-8jgKIW0TAzSySRMP5QG5wXgtC0UYsGjU_69cbc1qdr8r8&_nc_ht=scontent.fhan2-3.fna&oh=b3b901f4f85642006d2055d3116bd4ca&oe=5DEF7820"
                          alt="Buildings" width="700" height="394">
                 </div>
             </div>
@@ -206,103 +205,59 @@
             <h3>CHÚNG TÔI, NHỮNG NGƯỜI TRUYỀN CẢM HỨNG</h3><br>
             <p style="font-size: 24px">Lan Toả Lối Sống Xanh Đến Mọi Người</p>
             <br>
-            <img
-                src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/66643085_439790913543343_5518956645201215488_o.jpg?_nc_cat=109&_nc_oc=AQkZp2V9QN76JoQvi1XSn-8jgKIW0TAzSySRMP5QG5wXgtC0UYsGjU_69cbc1qdr8r8&_nc_ht=scontent.fhan2-3.fna&oh=b3b901f4f85642006d2055d3116bd4ca&oe=5DEF7820"
-                alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
         </div>
-        <div class="container team-member" style="margin-bottom: 100px">
-            <h3>Những Thành Viên Của Nhóm</h3>
-            <br>
-            <div class="row">
-                <div class="col-4 member-infor">
-                    <div class="image-member">
-                        <img
+
+        <div class="container team-member">
+            <div class="row the-members1">
+                <div class=" col-4 member">
+                    <div class="team-img">
+                        <img class="image"
                             src="https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/39993390_2088861198045508_8766214201745080320_n.jpg?_nc_cat=111&_nc_eui2=AeFHpV5d-VC0Q2QNy6jq25sWATRhKIsUwDpusbwIwMu1MpZPFGOJThz2G3tO4qfX9PjbE_BOlPHHlo3drJxLBvaP8AVhb7tEGjzawiFFrCB5ZQ&_nc_oc=AQmj5SA9zDXaofciBa0EeyA51N7bsNUiMBDw-8E1lCYqWHuzDRPEXm1FxFW3Y9uSjBs&_nc_ht=scontent.fhan2-2.fna&oh=ad320a2c33ab70651c1b2f54b3973663&oe=5E369B5B"
-                            class="image-5"/>
-                        <br>
-                        <button class="accordion w3-white">
-                            <p>Nguyễn Tuấn Anh</p>
-                        </button>
-                    </div>
-                    <div class="overlay">
-                        <div class="text">
-                            <p><b>Tuổi: 20</b></p>
-                            <p><b>SĐT: 0945952000</b></p>
-                            <p><b>Email: anhntth1807026@fpt.edu.vn</b></p>
+                            alt="">
+                        <div class="middle">
+                            <div class="text"><b>Nguyễn Tuấn Anh</b></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-4 member-infor">
-                    <div class="image-member">
-                        <img
+                <div class="col-4 member">
+                    <div class="team-img">
+                        <img class="image"
                             src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/69736141_896844337362540_4040873182477942784_n.jpg?_nc_cat=102&_nc_eui2=AeGGnV9tU8GRFd9V5TXwFDd5S9ixHrisVVSm46-2vN6kd-yxrOD4JsV1DsiyWZocWEmJutamxGOqDU6ieiXM-cVREOO3P-PBdELeKWTsazXgYw&_nc_oc=AQlid0qXfvLYCUeAaVT3WRE6dRnxjfVEr0VSdZ0Af5VKippeiRLK6kVXSje3LyQ37A8&_nc_ht=scontent.fhan2-1.fna&oh=5d54a8ff8644c43ac10853d5f2faa5df&oe=5DFC6620"
-                            class="image-5"/>
-                        <br>
-                        <button class="accordion w3-white">
-                            <p>Phạm Thanh Hoa</p>
-                        </button>
-                    </div>
-                    <div class="overlay">
-                        <div class="text">
-                            <p><b>Tuổi: 20</b></p>
-                            <p><b>SĐT: 0394075235</b></p>
-                            <p><b>Email: hoaptth1807047@fpt.edu.vn</b></p>
+                            alt="">
+                        <div class="middle">
+                            <div class="text"><b>Phạm Thanh Hoa</b></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-4 member-infor">
-                    <div class="image-member">
-                        <img
-                            src="https://avatar.skype.com/v1/avatars/live:d6f050b5fb624391/public?returnDefaultImage=false&size=l"
-                            class="image-5"/>
-                        <br>
-                        <button class="accordion w3-white">
-                            <p>Hoàng Tất Thành</p>
-                        </button>
-                    </div>
-                    <div class="overlay">
-                        <div class="text">
-                            <p><b>Tuổi: 20</b></p>
-                            <p><b>SĐT: 0945952000</b></p>
-                            <p><b>Email: anhntth1807026@fpt.edu.vn</b></p>
+                <div class="col-4 member">
+                    <div class="team-img">
+                        <img class="image"
+                             src="https://avatar.skype.com/v1/avatars/live:d6f050b5fb624391/public?returnDefaultImage=false&size=l"
+                             alt="">
+                        <div class="middle">
+                            <div class="text"><b>Hoàng Tất Thành</b></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row col-12" style="margin-top: 100px">
-                <div class="col-6 member-infor">
-                    <div class="image-member">
-                        <img
+            <div class="row the-members2">
+                <div class="col-6 member">
+                    <div class="team-img1">
+                        <img class="image"
                             src="https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-1/p320x320/62186823_2291058607774737_1983036222183833600_n.jpg?_nc_cat=104&_nc_eui2=AeFD7lsZkq4D6HtpbtQfwZ7XC30EcRJM_DuE6unR1B_EsnNpYrFU4m6tDtjGR2ttUSlalQWffsXRc-H4mRNLcuvGZN-vQ5uSXPa4oJb1z2FcBA&_nc_oc=AQlr57-zMABIrZzFDnqPlH-IceKI95TGmnOF0sMXBGlEEHHBR5Y6lG4eZ3Ed4PXK0KQ&_nc_ht=scontent.fhan2-4.fna&oh=4b067344207490260c7098102932b0d0&oe=5E072892"
-                            class="image-5"/>
-                        <br>
-                        <button class="accordion w3-white">
-                            <p>Lương Xuân Bách</p>
-                        </button>
-                    </div>
-                    <div class="overlay">
-                        <div class="text">
-                            <p><b>Tuổi: 20</b></p>
-                            <p><b>SĐT: 0945952000</b></p>
-                            <p><b>Email: anhntth1807026@fpt.edu.vn</b></p>
+                            alt="">
+                        <div class="middle">
+                            <div class="text"><b>Lương Xuân Bách</b></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 member-infor">
-                    <div class="image-member">
-                        <img
+                <div class="col-6 member">
+                    <div class="team-img2">
+                        <img class="image"
                             src="https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/67877360_1229685677214840_6769455765208956928_n.jpg?_nc_cat=100&_nc_eui2=AeH_doe8QJGm3KQafeqHz_KMIe74195_ZhpIrImJO0QvlkH-F10vMysd1E6GzbKo8uOJ_Wons17MSX_8A8sJ_-pRZloZrQbqt04TapF1l-ovQA&_nc_oc=AQnEk16UYqv9kEdWQmS4vT3lqUVFU5jaYotZ_IQj21N8SPOOQL3w4Se1gk_cpm5L9Gg&_nc_ht=scontent.fhan2-4.fna&oh=2b8e02535c58221dbda4010e189b0e3e&oe=5DF9C1BD"
-                            class="image-5"/>
-                        <br>
-                        <button class="accordion w3-white">
-                            <p>Đặng Tiểu Bình</p>
-                        </button>
-                    </div>
-                    <div class="overlay">
-                        <div class="text">
-                            <p><b>Tuổi: 20</b></p>
-                            <p><b>SĐT: 0945952000</b></p>
-                            <p><b>Email: anhntth1807026@fpt.edu.vn</b></p>
+                            alt="">
+                        <div class="middle">
+                            <div class="text"><b>Đặng Tiểu Bình</b></div>
                         </div>
                     </div>
                 </div>
@@ -311,26 +266,8 @@
     </div>
 
     @push('scripts')
-        {{--        <script>--}}
-        {{--            // accordion--}}
-        {{--            var acc = document.getElementsByClassName("accordion");--}}
-        {{--            var i;--}}
-
-        {{--            for (i = 0; i < acc.length; i++) {--}}
-        {{--                acc[i].addEventListener("click", function () {--}}
-        {{--                    /* Toggle between adding and removing the "active" class,--}}
-        {{--                    to highlight the button that controls the panel */--}}
-        {{--                    this.classList.toggle("active");--}}
-
-        {{--                    / Toggle between hiding and showing the active panel /--}}
-        {{--                    var panel = this.nextElementSibling;--}}
-        {{--                    if (panel.style.display === "block") {--}}
-        {{--                        panel.style.display = "none";--}}
-        {{--                    } else {--}}
-        {{--                        panel.style.display = "block";--}}
-        {{--                    }--}}
-        {{--                });--}}
-        {{--            }--}}
-        {{--        </script>--}}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     @endpush
 @endsection
