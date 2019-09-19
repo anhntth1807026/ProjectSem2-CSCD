@@ -419,6 +419,8 @@
 {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
 {{--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>--}}
 {{--<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>--}}
+
+@stack('scrips')
 <script src="{{ asset('plugins/jQueryUI/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
