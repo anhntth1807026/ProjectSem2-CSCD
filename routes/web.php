@@ -35,12 +35,7 @@ Route::get('/About-Us', function () {
 Route::get('contact', 'ContactController@getContact')->name('get.contact');
 Route::post('contact', 'ContactController@saveContact');
 
-Route::get('/List-Product', function (Request $request){
-    $name = $request->get('name');
-    $product = Product::where('name', 'like', '%' . $name . '%')->get();
-
-    return view('client.list-product')->with('product', $product);
-});
+Route::get('/List-Product', 'ListProductController@index');
 
 
 Route::get('/Blog', function () {
@@ -141,5 +136,6 @@ Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], fu
     Route::get('/pay-online', 'ShoppingCartController@showFormPay')->name('form.pay_online');
     Route::post('/pay-online', 'ShoppingCartController@savePayOnine');
 });
+
 
 

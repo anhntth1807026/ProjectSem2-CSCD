@@ -3,7 +3,7 @@
 //         $('input:checkbox').prop('checked', this.checked);
 //     });
 // });
-
+var BASE_URL = 'http://127.0.0.1:8000';
 $(document).ready(function () {
     $('.btn-delete').click(function () {
         if (confirm('Are you sure wanna delete this product ?')) {
@@ -27,7 +27,6 @@ $(document).ready(function () {
             });
         }
     });
-
 });
 
 $(document).ready(function () {
@@ -138,6 +137,30 @@ $(document).ready(function () {
         });
     });
 
+    $('#btn-search').click(function () {
+        onSearch()
+    });
+
+    $('input[name="keyword"]').keypress(function (e) {
+        if(e.keyCode === 13){
+            onSearch()
+        }
+    });
+
+
+    $('#select-category').on('change', function() {
+         onSearch()
+    });
+
+
+
+    function onSearch() {
+        var page = $('input[name="currentPage"]').val();
+        var categoryId = $('select[name="categoryId"]').val();
+        var keyword = $('input[name="keyword"]').val();
+        location.href = `${BASE_URL}/List-Product?page=${page}&pro_category_id=${categoryId}&keyword=${keyword}`;
+    }
+
     // $('.add-cart').click(function () {
     //     var shoppingCart = {};
     //     if (localStorage.getItem('shopping-cart') !== null){
@@ -224,19 +247,21 @@ function changeStatus(arrayId, status) {
 // function deleteAll(idArr) {
 //
 // }
-var myIndex = 0;
-carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {
-        myIndex = 1
-    }
-    x[myIndex - 1].style.display = "block";
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
+
+// var myIndex = 0;
+// carousel();
+//
+// function carousel() {
+//     var i;
+//     var x = document.getElementsByClassName("mySlides");
+//     for (i = 0; i < x.length; i++) {
+//         x[i].style.display = "none";
+//     }
+//     myIndex++;
+//     if (myIndex > x.length) {
+//         myIndex = 1
+//     }
+//     x[myIndex - 1].style.display = "block";
+//     setTimeout(carousel, 2000); // Change image every 2 seconds
+// }
