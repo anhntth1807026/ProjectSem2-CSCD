@@ -60,17 +60,44 @@
                                placeholder="Thumbnail">
                     </div>
                     <div class="row">
-                        <div class="col-6 form-group">
+                        <div class="col form-group">
                             <label for="exampleInputPassword1">Quantity</label>
                             <input style="width: 75%" type="number" name="quantity" class="form-control"
-                                   placeholder="Please enter the quantity">
+                                   placeholder="Please enter quantity">
                         </div>
-                        <div class="col-6 form-group">
+                        <div class="col form-group">
                             <label for="exampleInputPassword1">Price</label>
                             <input style="width: 70%" type="number" name="price" class="form-control"
-                                   placeholder="Please enter the price">
+                                   placeholder="Please enter price">
+                        </div>
+                        <div class="col form-group">
+                            <label for="">Sản phẩm nổi bật</label>
+                            <div class="radio">
+                                <label for="">
+                                    <input type="radio" name="pro_hot"
+                                           <?php if (['pro_hot'] == 1){
+                                               echo 'checked';
+                                           }
+                                           ?>
+                                           value=" 1">Nổi bật
+                                </label>
+                            </div>
+
+                            <div class="radio" style="">
+                                <label for="">
+                                    <input type="radio" name="pro_hot"
+                                           <?php if (['pro_hot'] == 0){
+                                               echo 'checked';
+                                           }
+                                           ?>
+                                           value="0" checked>không
+                                </label>
+                            </div>
                         </div>
                     </div>
+
+
+
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>

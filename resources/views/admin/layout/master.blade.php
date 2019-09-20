@@ -125,6 +125,8 @@
                     Category</a>
                 <a class="dropdown-item" href="{{route('product.index')}}"><i class="fab fa-product-hunt"></i> Manage
                     Product</a>
+                <a class="dropdown-item" href="{{route('article.index')}}"><i class="fab fa-product-hunt"></i> Manage
+                    Article</a>
                 <a class="dropdown-item" href="{{route('admin.list.transaction')}}"><i class="fab fa-product-hunt"></i>
                     Manage Transaction</a>
                 <a class="dropdown-item" href="{{route('admin.contact')}}"><i class="fab fa-product-hunt"></i> Manage

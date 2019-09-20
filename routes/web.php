@@ -77,13 +77,6 @@ Route::get('/Policy/Payment-Security', function () {
 });
 
 
-
-Route::get('/admin/user', 'AdminUserController@index')->name('admin.get.user');
-Route::get('/admin/user/edit/{id}', 'AdminUserController@editUser')->name('admin.edit.user');
-Route::put('/admin/user/update/{id}', 'AdminUserController@update')->name('admin.update.user');
-Route::delete('/admin/user/delete/{id}', 'AdminUserController@delete')->name('admin.delete.user');
-
-
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
@@ -92,6 +85,11 @@ Route::get('/cart', 'HomeController@cart')->name('cart');
 Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
     Route::resource('/product', 'ProductController');
     Route::resource('/category', 'CategoryController');
+    Route::resource('/article', 'ArticleController');
+    Route::get('/admin/user', 'AdminUserController@index')->name('admin.get.user');
+    Route::get('/admin/user/edit/{id}', 'AdminUserController@editUser')->name('admin.edit.user');
+    Route::put('/admin/user/update/{id}', 'AdminUserController@update')->name('admin.update.user');
+    Route::delete('/admin/user/delete/{id}', 'AdminUserController@delete')->name('admin.delete.user');
 });
 
 Route::get('/admin/chart', function () {
@@ -112,12 +110,16 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::post('register', 'RegisterController@postRegister')->name('post.register');
 
     Route::get('logout', 'LoginController@getLogout')->name('get.logout.user');
+
+    Route::get('login/google', 'LoginController@redirectToProvider')->name('login.google');
+    Route::get('login/google/callback', 'LoginController@handleProviderCallback');
 });
 
 Route::prefix('shopping')->group(function () {
     Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
     Route::get('/list-cart', 'ShoppingCartController@listShoppingCart')->name('list.shopping.cart');
     Route::get('/delete/{id}', 'ShoppingCartController@deleteCartItem')->name('delete.shopping.cart');
+    Route::get('/update', 'ShoppingCartController@updateShoppingCart')->name('update.shopping.cart');
 });
 
 Route::group(['prefix' => 'admin/transaction'], function () {
@@ -131,4 +133,8 @@ Route::group(['prefix' => 'admin/contact'], function () {
 Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], function (){
     Route::get('/pay', 'ShoppingCartController@formPay')->name('form.pay');
     Route::post('/pay', 'ShoppingCartController@saveInforShoppingCart');
+    Route::get('/pay-online', 'ShoppingCartController@showFormPay')->name('form.pay_online');
+    Route::post('/pay-online', 'ShoppingCartController@savePayOnine');
 });
+
+

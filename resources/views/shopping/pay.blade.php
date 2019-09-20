@@ -27,7 +27,7 @@
     <div class="main-contact-area ">
         <div class="container wrapper">
             <div class="row cart-body">
-                <form class="form-horizontal" method="post" action="">
+                <form class="form-horizontal" method="post" action="" id="create_form">
                     @csrf
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-push-6 col-sm-push-6">
                         <!--REVIEW ORDER-->
@@ -55,10 +55,6 @@
                                     <div class="col-xs-12">
                                         <strong>Tổng tiền</strong>
                                         <div class="pull-right"><span>{{ Cart::subtotal() }}</span><span>VNĐ</span></div>
-                                    </div>
-                                    <div class="col-xs-12">
-                                        <small>Shipping</small>
-                                        <div class="pull-right"><span>-</span></div>
                                     </div>
                                 </div>
                                 <div class="form-group"><hr /></div>
@@ -92,8 +88,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-12">
-                                        <button type="submit" class="btn btn-success">Xác nhận thông tin</button>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="submit" class="btn btn-success" >Xác nhận thông tin</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-success " onclick="Redirect();">Thanh toán qua PAY</button>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -110,4 +112,9 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        function Redirect() {
+            window.location = "{{ route('form.pay_online') }}";
+        }
+    </script>
 @endsection
