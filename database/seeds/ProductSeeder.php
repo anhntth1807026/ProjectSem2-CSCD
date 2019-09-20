@@ -14,42 +14,25 @@ class ProductSeeder extends Seeder
                 array (
                     'id' => 1,
                     'name' => 'Bàn Chải Người Lớn',
-                    'description' => 'Bàn Chải Tre Kiểu Nón LAIDAY có gì đặc biệt?
 
-Bàn chải tre LAIDAY được sản xuất và thiết kế một cách thông minh và kỹ lưỡng, với mục đích giảm thải rác một cách đáng kể ngay cả trong khâu đóng gói. 
-
+                    'description' => 'Bàn Chải Tre Kiểu Nón có gì đặc biệt?
+Bàn chải tre được sản xuất và thiết kế một cách thông minh và kỹ lưỡng, với mục đích giảm thải rác một cách đáng kể ngay cả trong khâu đóng gói. 
 Những ưu điểm sau đây của Bàn Chải Tre Hình Nón sẽ khiến bạn cực kì an tâm khi mua sắm và sử dụng sản phẩm: 
-
 Thân cầm Phân Hủy Sinh Học
-
 Chất liệu bằng Tre
-
 Đóng gói không có nhựa
-
 Đế Trụ tự đứng vững
-
 Tính Kháng Khuẩn tự nhiên
-
 Không chứa BPA
-
 Sơn phân huỷ
-
 Lông chải Nylon Than Hoạt Tính Phân Huỷ Sinh Học
-
 Về phần lông chải, Bàn Chải Tre Hình Nón có lông bàn chải Nylon Than Tre Hoạt Tính làm từ PBT (Polybutylene terephthalate) hỗ trợ việc vệ sinh răng miệng ở mức tối đa. Ngoài tính chất mỏng nhẹ và chứa cacbon hoá ion, các sợi lông chải PBT còn sở hữu khả năng chống chịu tốt axít và các tác nhân môi trường. Khả năng chống thấm của lông PBT cực kì thích hợp cho những sản phẩm tiếp xúc nhiều với nước.
-
 Sản phẩm Bàn Chải Tre Hình Nón ở Lại Đây có các màu sắc và kích thước dùng cho gia đình:
-
 - Chiều cao :
-
 Bàn chải người lớn: 19 cm
-
 Bàn chải trẻ em: 15,6 cm
-
 - Màu sắc :
-
 Bàn chải người lớn: Hồng, Xanh Dương
-
 Bàn chải trẻ em: Vàng, Xanh Lá.',
                     'thumbnail' => 'jda4v7guyn5p2syj4npi.webp',
                     'quantity' => 1,
@@ -57,7 +40,7 @@ Bàn chải trẻ em: Vàng, Xanh Lá.',
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
-                    ''
+                    'pro_hot' => 1
                 ),
                 array (
                     'id' => 2,
@@ -69,6 +52,8 @@ Bàn chải trẻ em: Vàng, Xanh Lá.',
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 1
+
                 ),
                 array (
                     'id' => 3,
@@ -80,6 +65,7 @@ Bàn chải trẻ em: Vàng, Xanh Lá.',
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 1
                 ),
                 array (
                     'id' => 4,
@@ -91,6 +77,7 @@ Bàn chải trẻ em: Vàng, Xanh Lá.',
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 1
                 ),
                 array (
                     'id' => 5,
@@ -102,6 +89,7 @@ Bàn chải trẻ em: Vàng, Xanh Lá.',
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 1
                 ),
                 array (
                     'id' => 6,
@@ -113,6 +101,7 @@ Bàn chải trẻ em: Vàng, Xanh Lá.',
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 7,
@@ -130,6 +119,7 @@ Thích hợp để chà rửa bình và các loại chai lọ có đáy sâu.',
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 8,
@@ -138,8 +128,7 @@ Thích hợp để chà rửa bình và các loại chai lọ có đáy sâu.',
 Với những nhiệm vụ chùi rửa quá nặng nhọc mà Xơ Mướp không thể xử lý được, thì các em Cọ Rửa Thiên Nhiên đều có thể ‘cân\' một cách dễ dàng. Mỗi loại cọ rửa có cấu trúc từ những nguyên liệu chắc chắn và có sức bền cao như thân gỗ sồi và lông cọ từ các loại xơ dừa tự nhiên có khả năng ngậm nước và cứng cáp cho chà rửa. Vì vậy, các em cọ trong bộ sưu tập mới này có thể dễ dàng xử lý các vết dính, cháy cặn hay bụi bẩn khó nhằn trong gian bếp hoặc bất cứ khu vực cần chà rửa nào trong căn nhà của bạn.
 Với mỗi sản phẩm Cọ Rửa Thiên Nhiên trong bộ sưu tập, Lại Đây sẽ hướng dẫn cho bạn đầy đủ về thông tin sản phẩm, cũng như cách sử dụng và bảo quản.
 Cọ Rửa Chảo Nồi EcoCleaner
-Thông tin:
-Thân gỗ sồi, cọ sợi Tampico.
+@@ -127,36 +143,35 @@ public function run()
 HDSD:
 Ngâm nước 24 tiếng trước khi sử dụng cho lông cọ nở ra và dính chắc hơn vào thân cọ.
 Thích hợp để chà rửa chén, dĩa và khuôn nướng.',
@@ -149,6 +138,7 @@ Thích hợp để chà rửa chén, dĩa và khuôn nướng.',
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 9,
@@ -167,6 +157,7 @@ Lưu ý : Sau khi vệ sinh đũa bằng nước thì bạn nên để ráo ho�
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 10,
@@ -175,15 +166,7 @@ Lưu ý : Sau khi vệ sinh đũa bằng nước thì bạn nên để ráo ho�
 Hộp Bento Inox Inox Hình Chữ Nhật - 1 tầng - có ngăn chia - 800ml
 Trong rất nhiều loại vật liệu bền vững mà chúng ta đang sử dụng để thay thế cho nhựa hay các vật liệu dùng-một-lần, Thép không gỉ chính là một vật liệu bền vững có thể được tái chế 100%.
 Theo đó, Lại Đây muốn mang đến cho bạn một giải pháp bảo quản thực phẩm an toàn, lâu dài và hạn chế ảnh hưởng đến môi trường ở mức tối đa. Đó chính là một sản phẩm mang thương hiệu của chúng mình, LAIDAY Bento Kim Loại!
-LAIDAY Bento Kim Loại được chế tạo từ thép không gỉ 304, với chỉ tiêu chất lượng cao 188 cho sử dụng với thực phẩm. Sản phẩm của Lại Đây được đóng gói trong các chất liệu tái chế và có thể được tiếp tục sử dụng. Có thể nói, sản phẩm LAIDAY Bento Kim Loại được thiết kế cực kì bền và chắc chắn, nếu được bảo quản đúng cách, bạn có thể sử dụng sản phẩm hoài hoài.
-Bên trong Bento Kim Loại có chứa một thanh ngăn siêu chắc chắn, dùng để phân loại và ngăn chia thực phẩm. Nhờ những đặc điểm trên, LAIDAY Bento Kim Loại có thể được dùng để đựng đồ ăn mang đi, dự trữ thực phẩm, và có thể được đem đi đến bất cứ đâu do tính chất mỏng, nhẹ, bền.
-Thông Tin Sản Phẩm
-Kích cỡ: 17 x 12 x 6 cm
-Chất liệu: Thép không gỉ 304 (KHÔNG chứa PVC, Phthalate, Leaching)
-Sản phẩm gồm: Hộp bento, nắp có miếng ngăn silicone, thanh chắn.
-Khối lượng: 270g
-Nguồn gốc: Trung Quốc.
-Đạt chất lượng chứng chỉ: FDA, SGS, LFGB.
+@@ -172,547 +187,495 @@ public function run()
 Cách Bảo Quản
 Có thể sử dụng với máy rửa bát.
 Nắp có lớp Silicone: nên được rửa với nước lạnh. Miếng silicone có thể rớt ra nếu dùng máy rửa bát do nước nóng, khi dùng chờ 2 phút cho silicone nguội và quay về hình dạng ban đầu và lắp lại vào nắp hộp.',
@@ -193,6 +176,7 @@ Nắp có lớp Silicone: nên được rửa với nước lạnh. Miếng sili
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 11,
@@ -204,6 +188,7 @@ Nắp có lớp Silicone: nên được rửa với nước lạnh. Miếng sili
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 12,
@@ -218,6 +203,7 @@ Chất liệu là vải cotton canvas thô 100% đã qua xử lí. Hình dáng s
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 13,
@@ -232,6 +218,7 @@ Chất liệu là vải cotton canvas thô 100% đã qua xử lí. Hình dáng s
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 14,
@@ -243,20 +230,18 @@ Chất liệu là vải cotton canvas thô 100% đã qua xử lí. Hình dáng s
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 15,
                     'name' => 'Ly Xếp Gọn  Thông Minh',
                     'description' => 'Lại Đây xin giới thiệu giải pháp Ly Silicone Gấp Thông Minh, một trợ thủ đắc lực cho nếp sống bận rộn và tiết kiệm năng lượng.
-
 Thiết kế sản phẩm có nếp gấp ở thân cho phép thu gọn Ly xuống còn một phần ba kích thước. Vì vậy, trong những ngày rối rắm công việc, và bạn phải mang rất nhiều vật dụng quan trọng theo mình, thì bạn vẫn có thể nhét vừa Ly Silicone Gấp Thông Minh vào bất cứ ngăn nhỏ nào trong túi.
-
 Với chất liệu silicon và thiết kế thông minh, Ly Silicon Gấp Thông Minh có nhiều chức năng siêu tiện lợi như: 
 - Chất liệu Silicon an toàn với thực phẩm, không chứa BPA (chất gây ung thư có trong nhựa) như đa số các loại ly cốc dùng nhiều lần. 
 - Ly Silicon Gấp Thông Minh có dung tích là 350ml, rất tiện dụng để chứa tất cả các loại thức uống nóng lạnh, súp hoặc thức ăn vặt. Sản phẩm có thể sử dụng trong máy rửa chén. 
 - Sản phẩm được thiết kế thông minh với vỏ ly PP chống trơn và cách nhiệt, miệng ly được thiết kế dày dặn chống bỏng miệng từ thức uống nóng, và đế ly rất chắc chắn giúp đứng vững và chống trầy. 
 Giá: 139,000 VNĐ/cái
-
 Thông tin sản phẩm 
 Dung tích: 350ml (12oz) 
 Nhiệt độ: -40C ~ 230C
@@ -265,7 +250,6 @@ Khối lượng: 140grams
 Vật liệu: Silicon an toàn cho thực phẩm + PP. Không chứa BPA. 
 Tiêu chuẩn theo chứng nhận: CE / EU, FDA, LFGB, SGS 
 Màu sản phẩm: Xám, Xanh Đen
-
 Sử dụng & bảo quản
 Sử dụng để đựng nước, thức ăn, thực phẩm lỏng.
 Không cọ sát/ chứa vật sắc nhọn.
@@ -276,12 +260,12 @@ Có thể rửa trong máy rửa bát.',
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 16,
                     'name' => 'Miếng Rửa Chén Vải',
                     'description' => 'Có thể bạn đã biết, nhà bếp là khu vực "màu mỡ" cho các loại vi khuẩn xâm nhập, trong đó khu vực bồn rửa và đặt biệt là miếng rửa chén là "điểm đến hấp dẫn nhất". Do đó, việc lựa chọn miếng rửa chén cũng cần được kỹ lưỡng và tiết kiệm. Bên cạnh sản phẩm rửa chén bằng xơ mướp mà ông bà ta ngày xưa hay dùng, chúng mình có thể sử dụng miếng rửa chén bằng vải. Với kích thước to gần bằng bàn tay và có quai để cầm chắc chắn, miếng rửa chén giảm độ tiếp xúc của da tay với nước rửa chén cho những bạn không quen đeo bao tay khi rửa. Bạn cũng có thể dùng nước rửa chén hữu cơ tại nhà Lại Đây, cho đôi bàn tay không phải tiếp xúc với hóa chất nữa!
-
 Nhà bếp là nơi lưu trữ, chế biến thực phẩm, vì vậy chúng mình không thể quên việc vệ sinh bồn rửa thường xuyên và sử dụng miếng rửa chén thích hợp, thay thế cho những miếng mút xốp bằng nhựa.',
                     'thumbnail' => 'qapenqpsjzco3basymu2.webp',
                     'quantity' => 1,
@@ -289,12 +273,12 @@ Nhà bếp là nơi lưu trữ, chế biến thực phẩm, vì vậy chúng mì
                     'created_at' => '2019-09-12 03:47:42',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 17,
                     'name' => 'Nến Thơm Sáp Đậu Nành',
                     'description' => 'Nến thơm được chiết xuất tự nhiên từ sáp đậu nành, sáp ong, tinh dầu thiên nhiên, bấc gỗ. Đặc biệt vỏ nến được làm từ gốm hoàn toàn thân thiện với môi trường. Các tầng mùi hương mỏng nhẹ sẽ giúp bạn thoải mái, thư giản và giải toả được các căng thẳng trên cơ thể.
-
 Lưu ý : Nến thơm toả hương tốt nhất trong diện tích 30m2.
 Chỉ nên đốt tối đa 3 tiếng liên tục.
 ',
@@ -304,6 +288,7 @@ Chỉ nên đốt tối đa 3 tiếng liên tục.
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 18,
@@ -315,30 +300,21 @@ Chỉ nên đốt tối đa 3 tiếng liên tục.
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 19,
                     'name' => 'Nước Giặt Hữu Cơ',
                     'description' => 'Nơi sản xuất: Việt Nam
-
-Thành phần chính: Hoa cúc, rau muống, rau lang, rau mồng tơi, rau cải, vỏ khoai tây, khoai lang, vỏ ổi, vỏ dưa hấu, rau bồ ngót, rau mương,…
-
+                    Thành phần chính: Hoa cúc, rau muống, rau lang, rau mồng tơi, rau cải, vỏ khoai tây, khoai lang, vỏ ổi, vỏ dưa hấu, rau bồ ngót, rau mương,…
 Công dụng:
-
 - Giặt sạch mọi vết bẩn. Tiết kiệm hơn khi xả sạch với 1 lần nước.
-
 - Không hoá chất, không gây kích ứng da, dùng được cho da em bé.
-
 - Mang hương thơm của nắng dù phơi dưới trời râm.Khử mùi tốt, ngâm đồ qua đêm không bị hôi.
-
 - Quần áo mềm mại hơn không cần dùng nước xả.
-
 - Nước thải ra môi trường sẽ làm sạch môi trường nước và làm giảm lượng muỗi đáng kể.
-
 - Ít bọt và nhờn, nhưng giặt rửa rất sạch, cảm giác nhẹ nhàng và cực kì tiết kiệm nước.Hương thơm nhẹ dịu, thường mang các hương hoa, trái cây,… và thường không bám hương nhiều sau khi giặt rửa xong.Không chất bảo quản, bảo quản bằng enzim sống nên hạn sử dụng ngắn hơn các sản phẩm hóa chất khác.
 Đặc điểm: Sản phẩm được dùng để giặt sạch quần áo, không gây kích ứng cho da, làm mềm vải và xả sạch chỉ với 1 lần nước, an toàn với da trẻ em, tiết kiệm nước. Nước thải ra giúp thông hệ thống thoát nước và diệt 80% lăng quăng
-
- 
 
 *Màu sản phẩm không giống trên hình.',
                     'thumbnail' => 'vrwq8u8yg5phvdnfk1ir.webp',
@@ -347,6 +323,7 @@ Công dụng:
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 20,
@@ -358,6 +335,7 @@ Công dụng:
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 21,
@@ -389,17 +367,15 @@ Hướng dẫn sử dụng và công dụng:
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 22,
                     'name' => 'Nước Xịt Chống Côn Trùng',
                     'description' => 'Lại Đây xin giới thiệu cho bạn một sản phẩm dịu nhẹ từ 100% thiên nhiên, nhưng có tác dụng rất triệt để với các loài côn trùng nhiệt đới khó chịu: Nước Xịt Chống Côn Trùng Tự Nhiên từ hợp chất tinh dầu.
-
-Xịt chống côn trùng là sản phẩm cần có để các bạn bảo vệ bản thân và gia đình khỏi những vết muỗi đốt và sự tấn công của các loài côn trùng khác. Tuy vậy, các chất chống côn trùng thông thường thường khiến cho da chúng ta trở nên nhớt dính khó chịu và chứa nhiều loại hoá chất khác nhau.
-
-Trong khi đó, Nước Xịt Chống Côn Trùng Tự Nhiên hoạt động sử dụng các loại tinh dầu thơm dịu nhẹ rất an toàn cho sức khoẻ, kể cả với phụ nữ mang thai và trẻ em. Tổ hợp tinh chất này chỉ gây độc với các loại côn trùng, động vật không có xương sống và động vật máu lạnh.
-
-Thành Phần
+                    Xịt chống côn trùng là sản phẩm cần có để các bạn bảo vệ bản thân và gia đình khỏi những vết muỗi đốt và sự tấn công của các loài côn trùng khác. Tuy vậy, các chất chống côn trùng thông thường thường khiến cho da chúng ta trở nên nhớt dính khó chịu và chứa nhiều loại hoá chất khác nhau.
+                    Trong khi đó, Nước Xịt Chống Côn Trùng Tự Nhiên hoạt động sử dụng các loại tinh dầu thơm dịu nhẹ rất an toàn cho sức khoẻ, kể cả với phụ nữ mang thai và trẻ em. Tổ hợp tinh chất này chỉ gây độc với các loại côn trùng, động vật không có xương sống và động vật máu lạnh.
+                    Thành Phần
 Tinh dầu sả chanh, tinh dầu bạc hà, tinh dầu tràm trà, tinh dầu ngọc am, tinh dầu đàn hương, tinh dầu oải hương, nước cất, cồn y tế.
 
 Cách sử dụng
@@ -407,7 +383,8 @@ Bước 1: Lắc đều chai.
 Bước 2: Xịt cách xa tầm 20cm lên vùng cần chống côn trùng(cơ thể, quần áo, không gian phòng, chăn gối)
 - Đổ khoảng 2-3ml tinh dầu vào máy giặt nước cuối (chế độ tiết kiệm nước), phơi tránh ánh nắng mặt trời. Quần áo, vải sẽ tránh được công trùng trong 2 tháng hoặc sau 2 lần giặt.
 
- Lưu ý
+Lưu ý
+
 - KHÔNG sử dụng cho da mặt hay da có vấn đề bệnh lý.
 - Khi hoạt động mạnh, xịt lại sau 2-3 tiếng do mồ hôi sẽ làm trôi dung dịch.
 - Bảo quản ở nơi thoáng mát tránh ánh mặt trời.',
@@ -417,7 +394,8 @@ Bước 2: Xịt cách xa tầm 20cm lên vùng cần chống côn trùng(cơ th
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
-                ),
+                    'pro_hot' => 0
+            ),
                 array (
                     'id' => 23,
                     'name' => 'Thớt Gỗ Cá Voi',
@@ -432,14 +410,13 @@ Thành phần, vật liệu: Gỗ tần bì (Ash)',
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 24,
                     'name' => 'Túi Đựng Rác Bằng Vải',
                     'description' => 'Bạn có để ý rằng chiếc túi đựng rác hàng ngày của chúng mình cũng chỉ là một vật trung gian để thu thập những vật dư thừa, chỉ đựng rác trong vòng 1-2 ngày trong khi những chiếc túi ấy mất đến hàng trăm năm mới có thể phân rã thành những mảnh nhỏ ở các bãi chôn lấp.
-
 Vì vậy chúng mình hãy chuyển sang sử dụng một chiếc túi vải nhỏ xinh để chứa những món đồ không cần nữa để rồi khi vứt chúng đi mình vẫn giữ lại được chiếc túi đó để nó được “lại đầy” rác mới nhé.
-
 Kích thước: 35cm x 48cm.',
                     'thumbnail' => 'netwqruxn2hq9dmvyohp.webp',
                     'quantity' => 1,
@@ -447,13 +424,14 @@ Kích thước: 35cm x 48cm.',
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 25,
                     'name' => 'Túi Lọc Trà',
                     'description' => 'Bạn có biết trong túi lọc trà cũng có hạt vi nhựa ? Chính vì vậy nếu là một người yêu trà, bạn hãy chuyển sang mua trà khô và sở hữu cho mình một chiếc túi lọc trà bằng vải để có thể tái sử dụng nhiều lần, vừa bảo vệ môi trường và cũng bảo vệ sức khỏe chính mình nhé.
+                    Kích thước : 6x4.5 (cm)
 
-Kích thước : 6x4.5 (cm)
 Xuất xứ: Việt Nam.',
                     'thumbnail' => 'on8jqbzi5smfrqsehcov.webp',
                     'quantity' => 1,
@@ -461,6 +439,7 @@ Xuất xứ: Việt Nam.',
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 26,
@@ -472,19 +451,15 @@ Xuất xứ: Việt Nam.',
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
-
                 array (
                     'id' => 27,
                     'name' => 'Túi Vải Đa Năng',
                     'description' => 'Origin: Vietnam 
-
 Materials: 100% Cotton Canvas 
-
 Size: 34 x 16 x 20 cm (S), 49 x 23 x 30 cm (M), 62 x 31 x 43 cm (L)
-
 Price: 95,000 Đ (S), 135,000 Đ (M), 195,000 Đ (L) 
-
 Hãy đưa nghệ thuật sắp lên một tầm cao mới với những chiếc túi đựng đa năng sành điệu được làm thủ công tại Việt Nam từ loại vải canvas tự nhiên chắc chắn, rất phù hợp cho phong cách tối giản cho không gian ở nhà hay nơi làm việc.
 Những chiếc túi đa năng tối giản này không những đơn giản mà còn cực kỳ linh hoạt cho mọi mục đích sử dụng. Bạn hoàn toàn có thể dùng chúng để đựng các vật dụng, đồ giặt, giấu đồ chơi của tụi nhỏ hay vừa khít để đựng một cái cây trong đó. Để chúng mình gợi ý thêm những cách mà bạn có thể sử dụng chiếc túi này:
 Những chiếc túi phân chia quần áo trong tủ đồ
@@ -503,6 +478,7 @@ Túi đựng đồ linh tinh
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 28,
@@ -517,31 +493,27 @@ Cloth Food Cover được bán theo một bộ gồm 03 chiếc với 3 kích c�
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 29,
                     'name' => 'Vòi Ấn',
                     'description' => 'Xuất xứ: Việt Nam
+                    Vòi ấn có nhiều kích cỡ khác nhau có thể mua kèm để sử dụng với nhiều loại chai lọ không có vòi, từ đó giúp  tái sử dụng các chai nhựa, lọ thuỷ tinh cũ. Đồng thời các vòi ấn / xịt sẽ giúp bạn sử dụng tiết kiệm hơn vì có thể kiểm soát được lượng sản phẩm vừa đủ.',
 
-Kích cỡ: có nhiều kích cỡ khác nhau
-
-Đặc điểm: dạng vòi xịt, dùng thay thế cho các chai lọ không có vòi xịt
-
-Vòi ấn có nhiều kích cỡ khác nhau có thể mua kèm để sử dụng với nhiều loại chai lọ không có vòi, từ đó giúp  tái sử dụng các chai nhựa, lọ thuỷ tinh cũ. Đồng thời các vòi ấn / xịt sẽ giúp bạn sử dụng tiết kiệm hơn vì có thể kiểm soát được lượng sản phẩm vừa đủ.',
                     'thumbnail' => 'qcmjixjefpnhn7wwyw2q.webp',
                     'quantity' => 1,
                     'price' => 69000,
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array (
                     'id' => 30,
                     'name' => 'Vòng Gốm Đựng Bàn Chải ',
                     'description' => 'Kích thước:
-
-Trọng lượng:
-
+                    Trọng lượng:
 Đặc điểm: 
 
 Được cấu tạo từ gốm thành hình vòng dùng để cố định bàn chải, sau khi sử dụng bàn chải vòng gốm sẽ giải quyết được tình trạng tồn đọng nước gây nên mùi khó chịu. Ngoài ra sử dụng vòng gốm giúp cho nhà vệ sinh của bạn trở nên ngăn nắp và gọn gàng hơn. Không chỉ dùng để cố định bàn chải mà  còn có thể dùng cho các vật dụng khác như bút, ống hút, muỗng nĩa...
@@ -553,18 +525,15 @@ Lưu ý : Mặc dù em ấy có thể loại bỏ đi phần nước dư trên b
                     'created_at' => '2019-09-12 03:51:10',
                     'updated_at' => '2019-09-12 03:51:10',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array(
                     'id' => 31,
                     'name' => 'Xịt Khử Mùi',
                     'description' => 'Xịt khử mùi không khí với chiết xuất từ thiên nhiên và tinh dầu thảo mộc nguyên chất.
-
 Có tác dụng : 
-
 - Khử các mùi khó chịu như ẩm, mốc,... trong không gian của bạn
-
 - Xịt khử mùi quần áo
-
 - Vì được chiết xuất hoàn toàn từ thiên nhiên nên có thể xịt trực tiếp vào tóc để khử mùi mà không gây hư tóc
 
 Mùi hương dịu nhẹ từ bạc hà không gây cảm giác khó chịu đặc biệt là với những người mẫn cảm với mùi hương. Chai xịt nhỏ gọn có thể tiện lợi mang đi nhiều nơi.',
@@ -574,6 +543,7 @@ Mùi hương dịu nhẹ từ bạc hà không gây cảm giác khó chịu đ�
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array(
                     'id' => 32,
@@ -587,6 +557,7 @@ Kích thước: xơ mướp tự nhiên trung bình 20cm.',
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
                 array(
                     'id' => 33,
@@ -603,12 +574,13 @@ Trọng lượng:
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
+
                 ),
                 array(
                     'id' => 34,
                     'name' => 'Khay Tròn ',
                     'description' => 'Nơi sản xuất: Việt Nam
-
 Kích thước: 31x22x2cm
 Trọng lượng:
 Đặc điểm: màu gỗ tự nhiên, dùng để đựng các vật dụng cá nhân tùy thích.',
@@ -618,8 +590,8 @@ Trọng lượng:
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 1,
+                    'pro_hot' => 0
                 ),
-
                 array(
                     'id' => 35,
                     'name' => 'Bàn Chải Tre',
@@ -632,6 +604,7 @@ Bạn có thể tái chế thân bài chải khi không dùng được nữa, nh
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 1
                 ),
                 array(
                     'id' => 36,
@@ -643,6 +616,7 @@ Bạn có thể tái chế thân bài chải khi không dùng được nữa, nh
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 1
                 ),
                 array(
                     'id' => 37,
@@ -671,35 +645,21 @@ Bảo Quản:
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 1
                 ),
                 array(
                     'id' => 38,
                     'name' => 'Bình Nước Giữ Nhiệt Cầu Vồng',
                     'description' => 'Rainbow Double Walled Thermos Tumbler - Classic Bottle Shape - 500ml
+Bình nước giữ nhiệt thép không gỉ - kiểu chai nước - Bảy sắc cầu vồng - 500ml.',
 
-Bình nước giữ nhiệt thép không gỉ - kiểu chai nước - Bảy sắc cầu vồng - 500ml
-
-
-
-Vật liệu: phần lõi bên trong bình: inox 304 & phần vỏ ngoài bình là inox 201 stainless steel
-
-structure
-
-Đặc điểm: 2 thành, y như bình giữ nhiệt kim loại hay bình classico
-
-Dung tích:500ml
-
-Khả năng giữ nhiệt (nónglạnh):12-24 hours
-
-Màu sắc: 2 lựa chọn - dinh kem
-
-Shape: cổ điển "cái chai" .',
                     'thumbnail' => 'gm4gujh7bxl63ms0pbg7.webp',
                     'quantity' => 1,
                     'price' => 429000,
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 1
                 ),
                 array(
                     'id' => 39,
@@ -711,6 +671,7 @@ Shape: cổ điển "cái chai" .',
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 1
                 ),
                 array(
                     'id' => 40,
@@ -718,9 +679,7 @@ Shape: cổ điển "cái chai" .',
                     'description' => '
 Home  Home Care  Bông Ngoáy Tai Thân Giấy Lớn  Cotton Bud with Paper Stem Big
 Nhịp sống hối hả ngày nay luôn hướng chúng ta đến việc sử dụng ngày càng nhiều các sản phẩm tiện lợi, bông ngoáy tai là một trong những vật dụng thải ra nhựa dùng một lần được dùng nhiều nhất mà chúng ta ít để ý tới. Bạn có biết mỗi năm số lược thân nhựa của bông ngoáy tai được tìm thấy ở biển cũng nhiều không kém gì ống hút nhựa không?
-
 Ở Lại Đây, thân của bông ngoáy tai được thay thế hoàn toàn bằng giấy tái chế, vì thế, nó có thể được phân hủy 100% ở ngoài môi trường. Thử hình dung số lượng bông ngoáy tai mà bạn thải ra mỗi tuần, bằng việc sử dụng bông ngoáy tai thân giấy thôi bạn đã góp phần giảm áp lực lên môi trường rất nhiều rồi đấy.
-
 Kích thước đầu bông ngoáy tai có hai cỡ lớn và nhỏ, phù hợp cho cả người lớn và trẻ em.',
                     'thumbnail' => 'ezrrp4ughsxbcnjby9gb.webp',
                     'quantity' => 1,
@@ -728,6 +687,7 @@ Kích thước đầu bông ngoáy tai có hai cỡ lớn và nhỏ, phù hợp 
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 0
                 ),
                 array(
                     'id' => 41,
@@ -741,74 +701,14 @@ Vệ sinh bông tẩy trang cũng rất đơn giản, mỗi khi dùng xong bạn
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 0
                 ),
                 array(
                     'id' => 42,
                     'name' => 'Bột Biển Rửa Mặt Than Tre Hoạt Tính',
                     'description' => 'Origin: China
-
 Price: 79,000 đ
-
-
-
-Được áp dụng như một dụng cụ làm đẹp cao cấp trong các sản phẩm làm đẹp lấy cảm hứng từ Nhật Bản và sản xuất tại Trung Quốc, Bọt Konjac Than Tre có các tác dụng:
-
-Tẩy tế bào chết, làm sạch sâu làn da.
-
-Tác động dịu nhẹ, KHÔNG làm trầy hoặc tổn thương da nhờ các sợi bọt giữ những hạt nước ở bề mặt tiếp xúc với da.
-
-Hút bỏ dầu thừa, mụn đầu đen trên mặt mà không cần sữa rửa mặt nhờ chất kiềm nhẹ trong sợi Konjac.
-
-Đồng thời cấp nước và cân bằng độ pH trên da.
-
-Kích thích tuần hoàn máu trên khuôn mặt.
-
-Bọt Konjac Than Tre phù hợp sử dụng cho mọi đối tượng, kể cả em bé.
-
-
-
-Vậy Bọt Konjac Than Hoạt Tính làm từ gì?
-
-Konjac là một loại thảo mộc lâu năm thuộc họ Ráy, được sử dụng như thực phẩm cho sức khỏe. Trong khi đó, Bọt Konjac ở Lại Đây được làm 100% từ sợi thảo mộc Konjac và tinh chất Konjac cao cấp.Sợi Konjac chứa các chất chống oxy hóa, vitamins (A, B1, B2, B6, B12, C, D, và E), đạm, chất béo và các khoáng chất tự nhiên như đồng, kẽm, sắt, và magie. Nhờ vậy, khi sử dụng để làm sạch da mặt, các vitamin và khoáng chất trên sẽ nuôi dưỡng giúp da trở nên mềm mịn tự nhiên.
-
-
-
-Mặt khác, thành phần chiết xuất Than Tre hoạt tính chứa nhiều loại khoáng chất có lợi như Kali, Can-xi, Sắt, và Natri. Khi được kết hợp với Konjac, các phân tử Cacbon phát huy khả năng hút chất bẩn sâu và sạch.
-
-
-
-Do vậy, sản phẩm Bọt Konjac Than Tre được làm hoàn toàn từ thực vật, KHÔNG thử nghiệm trên động vật và KHÔNG có GMO.
-
-
-
-Cách sử dụng:
-
-Bước 1: Ngâm từ 3-5 phút trong nước ấm để Bọt Konjac ngậm nước. (Lần đầu tiên sử dụng cần ngâm khoảng 15’ để Bọt nở hết, kích thước bọt có thể to gấp nửa)
-
-
-
-Bước 2: Kẹp Bọt Konjac giữa hai bàn tay và ấn để ép bớt lượng nước dư thừa (không bóp hay vặn méo hình dáng Bọt)
-
-
-
-Bước 3: Làm ướt mặt bằng nước ấm để nở lỗ chân lông, giúp Bọt Konjac hoạt động tốt hơn.
-
-
-
-Bước 4: Mát xa Bọt Konjac trên da theo chiều xoay vòng (kể cả khi kết hợp sữa rửa mặt hay không)
-
-
-
-Bước 5:  Sau khi sử dụng, nhẹ nhàng rửa Bọt dưới vòi nước ấm và ép nước ra bằng cách ấn giữa hai lòng bàn tay.
-
-
-
-Chú ý:
-
-Sản phẩm có thể dùng hằng ngày.
-
 Treo giữ Bọt ở nơi khô thoáng.
-
 Thay thế Bọt Konjac Than Tre sau 3-4 tuần sử dụng. ',
                     'thumbnail' => 'ax4kcgawwjprz5kavvsn.webp',
                     'quantity' => 1,
@@ -816,37 +716,13 @@ Thay thế Bọt Konjac Than Tre sau 3-4 tuần sử dụng. ',
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 0
                 ),
                 array(
                     'id' => 43,
                     'name' => 'Bột súc miệng thảo mộc',
                     'description' => 'BỘT SÚC MIỆNG THẢO MỘC REFILL
-
-
-
-Giá: 1.000đ gram.
-
-
-
-Bột súc miệng thảo mộc 100% organic từ tinh dầu bạc hà, bột quế, đá muối hồng Himalaya, bột vỏ cam khô và trà xanh. Sản phẩm dạng bột mịn, màu xanh nâu của thảo mộc, có hương quế và mùi bạc hà đặc trưng. Trong thành phần không chứa alcohol, phù hợp các bạn có răng nướu nhạy cảm và vì là dạng bột nên thuận tiện để xách đi du lịch, mang lên máy bay.
-
-
-
-Cách sử dụng rất đơn giản, bạn chỉ cần hòa tan 2 gram bột với 70ml nước ấm, súc miệng ngày 2-3 lần hoặc sau mỗi bữa ăn để đảm bảo khoang miệng được sạch sẽ, chống hôi miệng, viêm niêm mạc, sát khuẩn cổ họng, giúp răng nướu chắc khỏe và chống mảng bám rất tốt.
-
-Lại Đây không đóng sẵn bột trong hũ hay gói mà để bạn có thể tự do mang theo bất kì chai lọ hay túi giấy có sẵn mà bạn yêu thích và mua theo khối lượng mình cần và có thể quay lại để refill khi hết.
-
-
-
-LƯU Ý
-
-Không sử dụng khi có tiền lệ kích ứng với thành phần của sản phẩm
-
-Hiệu quả khác nhau phụ thuộc vào cơ địa của mỗi người.
-
-Nên sử dụng trên một vùng da nhỏ ở cổ tay hoặc gò má để kiểm tra độ phù hợp với sản phẩm.
-
-Không sử dụng nếu dị ứng với các thành phần của sản phẩm.
+                    Không sử dụng nếu dị ứng với các thành phần của sản phẩm.
 
 Dừng sử dụng ngay khi có dấu hiệu dị ứng như mẩn đỏ, ngứa.',
                     'thumbnail' => 'hw2phxmiemv8kjldwjeu.webp',
@@ -855,6 +731,8 @@ Dừng sử dụng ngay khi có dấu hiệu dị ứng như mẩn đỏ, ngứa
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 0
+
                 ),
                 array(
                     'id' => 44,
@@ -867,6 +745,7 @@ Kích thước : Lọ cao 5cm với 60m chỉ nha khoa.',
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 0
                 ),
                 array(
                     'id' => 45,
@@ -874,70 +753,17 @@ Kích thước : Lọ cao 5cm với 60m chỉ nha khoa.',
                     'description' => 'Nơi sản xuất: Sản xuất và nhập khẩu tại Hoa Kỳ
 
 Kích thước:
-
-Trọng lượng: 300gbộ sản phẩm
-
-Đặc điểm: OVACUP là sản phẩm thay thế băng vệ sinh trong kỳ nguyệt san, giảm nguy cơ mắc các bệnh phụ khoa và giảm thiểu rác thải ra môi trường. OVACUP mang lại sự thoải mái và khô thoáng giúp cho phụ nữ Việt có một kỳ kinh nguyệt nhẹ nhàng và hạnh phúc hơn.
-
-Ưu điểm của cốc nguyệt san:
-
-- Tạo cảm giác khô thoáng, dễ chịu, hạn chế tối đa khả năng rò rỉ trong kỳ kinh nguyệt.
-
-- Chất liệu an toàn, không chứa hóa chất độc hại.
-
-- Không gây kích ứng và loại bỏ hoàn toàn nguy cơ sốc nhiễm độc (TSS).
-
-- Thời gian sử dụng tối đa cho một lần dùng cốc lên tới 12h.
-
 - Thoải mái vận động: luyện tập, đi bơi, đi du lịch ngay cả trong những ngày đèn đỏ.
-
 - Thân thiện với môi trường, tái sử dụng trong vòng 5 - 10 năm.',
                     'thumbnail' => 'arbixqcuzerg0tvm3oal.webp',
+
                     'quantity' => 1,
                     'price' => 499000,
                     'created_at' => '2019-09-12 03:56:15',
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
+                    'pro_hot' => 0
                 ),
-                array (
-                    'id' => 46,
-                    'name' => 'Nước Giặt Lau Sàn Hữu Cơ Bio',
-                    'description' => 'Hương Vani, các giác quan của bạn sẽ cảm nhận được từng thành phần nhiên liệu tự nhiên được
-                            gửi gắm trong mỗi căn phòng.',
-                    'thumbnail' => 'npfmzttvk7wtmtqdt3ym.webp',
-                    'quantity' => 1,
-                    'price' => 299000,
-                    'created_at' => '2019-09-12 03:51:10',
-                    'updated_at' => '2019-09-12 03:51:10',
-                    'pro_category_id' => 1,
-                ),
-//                array (
-//                    'id' => 47,
-//                    'name' => 'Dao Cạo Kim Loại',
-//                    'description' => '',
-//                    'thumbnail' => 'npfmzttvk7wtmtqdt3ym.webp',
-//                    'quantity' => 1,
-//                    'price' => 69000,
-//                    'created_at' => '2019-09-12 03:51:10',
-//                    'updated_at' => '2019-09-12 03:51:10',
-//                    'pro_category_id' => 1,
-//                ),
-//                array (
-//                    'id' => 48,
-//                    'name' => 'Dao Cạo Lông Mày',
-//                    'description' => 'Xuất xứ: Việt Nam
-//Chất liệu: inox, cán gỗ
-//Đặc điểm: cạo lông mày, mặt với ưu điểm gọn nhẹ, đi sát bề mặt da mà không gây tổn thương cho da,
-//thay thế cho dạo cạo bằng nhựa. Khi mua tại Lại Đây, bạn sẽ được tặng kèm 1 lưỡi dao để sử dụng.
-//
-//Khuyến cáo: nên thay mới lưỡi dao 1-2 tháng/1 lần tùy theo điều kiện sử dụng.',
-//                    'thumbnail' => 'npfmzttvk7wtmtqdt3ym.webp',
-//                    'quantity' => 1,
-//                    'price' => 49000,
-//                    'created_at' => '2019-09-12 03:51:10',
-//                    'updated_at' => '2019-09-12 03:51:10',
-//                    'pro_category_id' => 1,
-//                ),
             )
         );
     }

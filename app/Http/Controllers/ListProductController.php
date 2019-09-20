@@ -34,7 +34,6 @@ class ListProductController extends Controller
         ];
         return view('client.list-product', $data);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -44,7 +43,6 @@ class ListProductController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -55,7 +53,6 @@ class ListProductController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *
@@ -66,7 +63,6 @@ class ListProductController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -77,7 +73,6 @@ class ListProductController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -89,7 +84,6 @@ class ListProductController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *
