@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form method="POST" action="{{ route('get.register') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('get.register') }}">
             @csrf
             <div id="register" class="form-container" data-form-container
                  style="color: rgb(198, 40, 40); background: rgb(255, 205, 210);">
@@ -104,12 +104,6 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <input type="file" class="form-control" multiple="multiple"
-                        name="thumbnail[]"
-                        placeholder="Thumbnail">
                     </div>
 
                     <div class="row submit-row">
