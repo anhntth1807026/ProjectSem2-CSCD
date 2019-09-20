@@ -115,6 +115,9 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::post('register', 'RegisterController@postRegister')->name('post.register');
 
     Route::get('logout', 'LoginController@getLogout')->name('get.logout.user');
+
+    Route::get('login/google', 'LoginController@redirectToProvider')->name('login.google');
+    Route::get('login/google/callback', 'LoginController@handleProviderCallback');
 });
 
 Route::prefix('shopping')->group(function () {
@@ -138,4 +141,5 @@ Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], fu
     Route::get('/pay-online', 'ShoppingCartController@showFormPay')->name('form.pay_online');
     Route::post('/pay-online', 'ShoppingCartController@savePayOnine');
 });
+
 
