@@ -12,7 +12,7 @@
                                 <span><i class="fa fa-angle-right"></i></span>
                             </li>
                             <li class="home">
-                                <a href="{{ route('home') }}">Giỏ hàng</a>
+                                <a href="{{ route('list.shopping.cart') }}">Giỏ hàng</a>
                                 <span><i class="fa fa-angle-right"></i></span>
                             </li>
                             <li class="category3"><span>Thanh toán</span></li>

@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
     <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
-    {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
+{{--        <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
     @stack('styles')
 </head>
 <body>

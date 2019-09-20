@@ -3,12 +3,12 @@
 	/*-------------------------------------------
 	scrollUp
 	-------------------------------------------- */
-	jQuery.scrollUp({
-        scrollText: '<i class="fa fa-angle-up"></i>',
-        easingType: 'linear',
-        scrollSpeed: 900,
-        animation: 'fade'
-    });
+	// jQuery.scrollUp({
+    //     scrollText: '<i class="fa fa-angle-up"></i>',
+    //     easingType: 'linear',
+    //     scrollSpeed: 900,
+    //     animation: 'fade'
+    // });
 	/*-------------------------------------------
 	mobile menu
 	-------------------------------------------- */
