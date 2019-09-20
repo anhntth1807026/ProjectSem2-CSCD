@@ -4,6 +4,7 @@
 //     });
 // });
 
+var BASE_URL = 'http://127.0.0.1:8000';
 $(document).ready(function () {
     $('.btn-delete').click(function () {
         if (confirm('Are you sure wanna delete this product ?')) {
@@ -138,6 +139,14 @@ $(document).ready(function () {
         });
     });
 
+    $('#btn-search').click(function () {
+        var page = $('input[name="currentPage"]').val();
+        var categoryId = $('select[name="categoryId"]').val();
+        var keyword = $('input[name="keyword"]').val();
+        location.href = `${BASE_URL}/List-Product?page=${page}&pro_category_id=${categoryId}&keyword=${keyword}`;
+    });
+
+
     // $('.add-cart').click(function () {
     //     var shoppingCart = {};
     //     if (localStorage.getItem('shopping-cart') !== null){
@@ -219,7 +228,6 @@ function changeStatus(arrayId, status) {
             alert("Thao tác thất bại, vui lòng thử lại sau");
         }
     });
-
 };
 // function deleteAll(idArr) {
 //
@@ -240,3 +248,4 @@ function carousel() {
     x[myIndex - 1].style.display = "block";
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
+
