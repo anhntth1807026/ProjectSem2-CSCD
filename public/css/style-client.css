@@ -519,7 +519,7 @@ body, html {
 
 .product-grid6 .product-image6 img {
     width: 100%;
-    height: auto;
+    height: 250px;
     transition: all .5s ease 0s
 }
 
@@ -859,4 +859,8 @@ footer .input-group-addon {
     background-color: #111;
     padding: 12px 0;
     font-size: 14px;
+}
+#slider-container{
+    width:350px;
+    margin-left:30px;
 }

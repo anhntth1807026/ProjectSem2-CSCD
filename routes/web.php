@@ -16,10 +16,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use JD\Cloudder\Facades\Cloudder;
-
-Route::get('/', function () {
-    return view('welcome');
-});
+//
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 
 Route::get('/client/profile', 'ProfileUserController@index')->name('client.profile');
@@ -35,12 +35,7 @@ Route::get('/About-Us', function () {
 Route::get('contact', 'ContactController@getContact')->name('get.contact');
 Route::post('contact', 'ContactController@saveContact');
 
-Route::get('/List-Product', function (Request $request){
-    $name = $request->get('name');
-    $product = Product::where('name', 'like', '%' . $name . '%')->get();
-
-    return view('client.list-product')->with('product', $product);
-});
+Route::get('/List-Product', 'ListProductController@index');
 
 
 Route::get('/Blog', function () {
