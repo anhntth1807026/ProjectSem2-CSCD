@@ -138,6 +138,7 @@ $(document).ready(function () {
     });
 
     $('#btn-search').click(function () {
+
         onSearch()
     });
 
@@ -159,7 +160,10 @@ $(document).ready(function () {
         var categoryId = $('select[name="categoryId"]').val();
         var keyword = $('input[name="keyword"]').val();
         location.href = `${BASE_URL}/List-Product?page=${page}&pro_category_id=${categoryId}&keyword=${keyword}`;
+
     }
+
+
 
     // $('.add-cart').click(function () {
     //     var shoppingCart = {};
@@ -242,7 +246,6 @@ function changeStatus(arrayId, status) {
             alert("Thao tác thất bại, vui lòng thử lại sau");
         }
     });
-
 };
 // function deleteAll(idArr) {
 //
@@ -265,3 +268,4 @@ function changeStatus(arrayId, status) {
 //     x[myIndex - 1].style.display = "block";
 //     setTimeout(carousel, 2000); // Change image every 2 seconds
 // }
+

@@ -14,6 +14,7 @@ class ProductSeeder extends Seeder
                 array (
                     'id' => 1,
                     'name' => 'Bàn Chải Người Lớn',
+
                     'description' => 'Bàn Chải Tre Kiểu Nón có gì đặc biệt?
 Bàn chải tre được sản xuất và thiết kế một cách thông minh và kỹ lưỡng, với mục đích giảm thải rác một cách đáng kể ngay cả trong khâu đóng gói. 
 Những ưu điểm sau đây của Bàn Chải Tre Hình Nón sẽ khiến bạn cực kì an tâm khi mua sắm và sử dụng sản phẩm: 
@@ -52,6 +53,7 @@ Bàn chải trẻ em: Vàng, Xanh Lá.',
                     'updated_at' => '2019-09-12 03:47:42',
                     'pro_category_id' => 1,
                     'pro_hot' => 1
+
                 ),
                 array (
                     'id' => 3,
@@ -313,6 +315,7 @@ Công dụng:
 - Nước thải ra môi trường sẽ làm sạch môi trường nước và làm giảm lượng muỗi đáng kể.
 - Ít bọt và nhờn, nhưng giặt rửa rất sạch, cảm giác nhẹ nhàng và cực kì tiết kiệm nước.Hương thơm nhẹ dịu, thường mang các hương hoa, trái cây,… và thường không bám hương nhiều sau khi giặt rửa xong.Không chất bảo quản, bảo quản bằng enzim sống nên hạn sử dụng ngắn hơn các sản phẩm hóa chất khác.
 Đặc điểm: Sản phẩm được dùng để giặt sạch quần áo, không gây kích ứng cho da, làm mềm vải và xả sạch chỉ với 1 lần nước, an toàn với da trẻ em, tiết kiệm nước. Nước thải ra giúp thông hệ thống thoát nước và diệt 80% lăng quăng
+
 *Màu sản phẩm không giống trên hình.',
                     'thumbnail' => 'vrwq8u8yg5phvdnfk1ir.webp',
                     'quantity' => 1,
@@ -339,19 +342,24 @@ Công dụng:
                     'name' => 'Nước Lau Sàn Hữu Cơ',
                     'description' => 'Nơi sản xuất: Việt Nam
 Thành phần: Vỏ củ dền, rau dền, bắp cải tím, vỏ củ cải tím, hoa Osaka, vỏ quế,…
+
 Hướng dẫn sử dụng và công dụng:
+
 - Pha loãng với nước để lau sàn.
 - Làm sạch các vết ố bẩn trên bề mặt.
 - Thay thế sản phẩm hóa chất tốt hơn trong việc chùi rửa toilet, thời gian bám bẩn sẽ lâu hơn.
 - Lau kính.
 - Rửa xe.
 - Khử mùi nước tiểu của động vật.
+
 - Có tác dụng diệt lăng quăng, bọ gậy và làm thông hệ thống thoát nước.
   + 100% thành phần từ rác thải hữu cơ thực vật (rau củ quả, hoa).
   + Chất bảo quản: enzyme sinh học (eco enzyme) từ 100% rác hữu cơ đã xử lý vi sinh.
   + Độ sánh được tạo ra từ tinh bột.Hoàn toàn an toàn cho trẻ em và người lớn có cơ địa dị ứng nhạy cảm.
   + Hương Quế ấm áp: hiệu quả đuổi côn trùng tốt, và khử mùi nước tiểu thú cưng tốt.
+
 Đặc điểm: Sản phẩm này được dùng để lau sàn nhà, mặt kính, bàn ăn, giúp đuổi sạch côn trùng, lau rửa xe giúp xe sạch sáng hơn, khử mùi nước tiểu chó mèo. Nước sau khi sử dụng có thể dùng để tưới cây tạo công dụng như phân hữu cơ, tạo độ mùn cho đất, hạn chế sâu rầy cho cây. Tẩy rửa vệ sinh, khử trùng toilet, bồn cầu.
+
 *Màu sản phẩm không giống trên hình.',
                     'thumbnail' => 'vm0dznqrabztjy6zisjh.webp',
                     'quantity' => 1,
@@ -369,11 +377,14 @@ Hướng dẫn sử dụng và công dụng:
                     Trong khi đó, Nước Xịt Chống Côn Trùng Tự Nhiên hoạt động sử dụng các loại tinh dầu thơm dịu nhẹ rất an toàn cho sức khoẻ, kể cả với phụ nữ mang thai và trẻ em. Tổ hợp tinh chất này chỉ gây độc với các loại côn trùng, động vật không có xương sống và động vật máu lạnh.
                     Thành Phần
 Tinh dầu sả chanh, tinh dầu bạc hà, tinh dầu tràm trà, tinh dầu ngọc am, tinh dầu đàn hương, tinh dầu oải hương, nước cất, cồn y tế.
+
 Cách sử dụng
 Bước 1: Lắc đều chai.
 Bước 2: Xịt cách xa tầm 20cm lên vùng cần chống côn trùng(cơ thể, quần áo, không gian phòng, chăn gối)
 - Đổ khoảng 2-3ml tinh dầu vào máy giặt nước cuối (chế độ tiết kiệm nước), phơi tránh ánh nắng mặt trời. Quần áo, vải sẽ tránh được công trùng trong 2 tháng hoặc sau 2 lần giặt.
+
 Lưu ý
+
 - KHÔNG sử dụng cho da mặt hay da có vấn đề bệnh lý.
 - Khi hoạt động mạnh, xịt lại sau 2-3 tiếng do mồ hôi sẽ làm trôi dung dịch.
 - Bảo quản ở nơi thoáng mát tránh ánh mặt trời.',
@@ -420,6 +431,7 @@ Kích thước: 35cm x 48cm.',
                     'name' => 'Túi Lọc Trà',
                     'description' => 'Bạn có biết trong túi lọc trà cũng có hạt vi nhựa ? Chính vì vậy nếu là một người yêu trà, bạn hãy chuyển sang mua trà khô và sở hữu cho mình một chiếc túi lọc trà bằng vải để có thể tái sử dụng nhiều lần, vừa bảo vệ môi trường và cũng bảo vệ sức khỏe chính mình nhé.
                     Kích thước : 6x4.5 (cm)
+
 Xuất xứ: Việt Nam.',
                     'thumbnail' => 'on8jqbzi5smfrqsehcov.webp',
                     'quantity' => 1,
@@ -488,6 +500,7 @@ Cloth Food Cover được bán theo một bộ gồm 03 chiếc với 3 kích c�
                     'name' => 'Vòi Ấn',
                     'description' => 'Xuất xứ: Việt Nam
                     Vòi ấn có nhiều kích cỡ khác nhau có thể mua kèm để sử dụng với nhiều loại chai lọ không có vòi, từ đó giúp  tái sử dụng các chai nhựa, lọ thuỷ tinh cũ. Đồng thời các vòi ấn / xịt sẽ giúp bạn sử dụng tiết kiệm hơn vì có thể kiểm soát được lượng sản phẩm vừa đủ.',
+
                     'thumbnail' => 'qcmjixjefpnhn7wwyw2q.webp',
                     'quantity' => 1,
                     'price' => 69000,
@@ -502,6 +515,7 @@ Cloth Food Cover được bán theo một bộ gồm 03 chiếc với 3 kích c�
                     'description' => 'Kích thước:
                     Trọng lượng:
 Đặc điểm: 
+
 Được cấu tạo từ gốm thành hình vòng dùng để cố định bàn chải, sau khi sử dụng bàn chải vòng gốm sẽ giải quyết được tình trạng tồn đọng nước gây nên mùi khó chịu. Ngoài ra sử dụng vòng gốm giúp cho nhà vệ sinh của bạn trở nên ngăn nắp và gọn gàng hơn. Không chỉ dùng để cố định bàn chải mà  còn có thể dùng cho các vật dụng khác như bút, ống hút, muỗng nĩa...
 Với 6 gam màu nhẹ nhàng giúp bạn tuỳ sức phối màu để trở nên hợp tone hơn với căn nhà của bạn.
 Lưu ý : Mặc dù em ấy có thể loại bỏ đi phần nước dư trên bàn chải nhưng bạn vẫn nên vệ sinh sạch sẽ vòng gốm sau khoảng 2 tuần/lần nhé.',
@@ -521,6 +535,7 @@ Có tác dụng :
 - Khử các mùi khó chịu như ẩm, mốc,... trong không gian của bạn
 - Xịt khử mùi quần áo
 - Vì được chiết xuất hoàn toàn từ thiên nhiên nên có thể xịt trực tiếp vào tóc để khử mùi mà không gây hư tóc
+
 Mùi hương dịu nhẹ từ bạc hà không gây cảm giác khó chịu đặc biệt là với những người mẫn cảm với mùi hương. Chai xịt nhỏ gọn có thể tiện lợi mang đi nhiều nơi.',
                     'thumbnail' => 'irrqeezd9ytifrb2q29t.webp',
                     'quantity' => 1,
@@ -549,7 +564,9 @@ Kích thước: xơ mướp tự nhiên trung bình 20cm.',
                     'name' => 'Thớt Gỗ Hình Chữ Nhật',
                     'description' => 'Nơi sản xuất: Việt Nam
 Kích thước:38x17x2cm
+
 Trọng lượng:
+
 Đặc điểm: màu gỗ tự nhiên',
                     'thumbnail' => 'jrpgzjg7wkqyvfgngr4q.webp',
                     'quantity' => 1,
@@ -558,6 +575,7 @@ Trọng lượng:
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 1,
                     'pro_hot' => 0
+
                 ),
                 array(
                     'id' => 34,
@@ -634,6 +652,7 @@ Bảo Quản:
                     'name' => 'Bình Nước Giữ Nhiệt Cầu Vồng',
                     'description' => 'Rainbow Double Walled Thermos Tumbler - Classic Bottle Shape - 500ml
 Bình nước giữ nhiệt thép không gỉ - kiểu chai nước - Bảy sắc cầu vồng - 500ml.',
+
                     'thumbnail' => 'gm4gujh7bxl63ms0pbg7.webp',
                     'quantity' => 1,
                     'price' => 429000,
@@ -674,6 +693,7 @@ Kích thước đầu bông ngoáy tai có hai cỡ lớn và nhỏ, phù hợp 
                     'id' => 41,
                     'name' => 'Bông Tẩy Trang Vải',
                     'description' => 'Một trong những vật dụng tối cần thiết của phe con gái chúng mình. Da của chúng mình rất cần được thở sau một ngày dài mang trên mình lớp trang điểm hoặc đơn giản nó cần được rửa sạch bụi bẩn chúng mình gặp phải khi đi ra ngoài, vì thế bước tẩy trang là rất rất cần thiết. Làm đẹp cho bản thân mình là điều tốt, nhưng mà sau khi làm cho bản thân đẹp mà gây ra điều xấu cho môi trường thì cũng không vui tí nào đúng không nè? Vì thế, bông tẩy trang vải đã được ra đời để cho các bạn yên tâm làm đẹp. Bông tẩy trang được làm bằng vải sợi tre, giúp tẩy sạch mọi vết bẩn trên một cách nhẹ nhàng, và còn có thể giặt đi giặt lại sử dụng nhiều lần. Nếu dùng luân phiên 3-4 bông tẩy trang một lần, tuổi thọ của các em ấy có thể lên tới 9 đến 12 tháng nếu bạn bảo quản đúng cách.
+
 Vệ sinh bông tẩy trang cũng rất đơn giản, mỗi khi dùng xong bạn có thể giặt tay ngay với nước hoặc cho thêm một ít xà bông nếu bạn dùng những sản phẩm trang điểm long-lasting. Hoặc bạn có thể cho vào một túi lưới riêng nếu giặt bằng máy giặt.',
                     'thumbnail' => 'ytcwgs44pkealhue3w5k.webp',
                     'quantity' => 1,
@@ -703,6 +723,7 @@ Thay thế Bọt Konjac Than Tre sau 3-4 tuần sử dụng. ',
                     'name' => 'Bột súc miệng thảo mộc',
                     'description' => 'BỘT SÚC MIỆNG THẢO MỘC REFILL
                     Không sử dụng nếu dị ứng với các thành phần của sản phẩm.
+
 Dừng sử dụng ngay khi có dấu hiệu dị ứng như mẩn đỏ, ngứa.',
                     'thumbnail' => 'hw2phxmiemv8kjldwjeu.webp',
                     'quantity' => 1,
@@ -711,6 +732,7 @@ Dừng sử dụng ngay khi có dấu hiệu dị ứng như mẩn đỏ, ngứa
                     'updated_at' => '2019-09-12 03:56:15',
                     'pro_category_id' => 2,
                     'pro_hot' => 0
+
                 ),
                 array(
                     'id' => 44,
@@ -729,10 +751,12 @@ Kích thước : Lọ cao 5cm với 60m chỉ nha khoa.',
                     'id' => 45,
                     'name' => 'Cốc Nguyệt San',
                     'description' => 'Nơi sản xuất: Sản xuất và nhập khẩu tại Hoa Kỳ
+
 Kích thước:
 - Thoải mái vận động: luyện tập, đi bơi, đi du lịch ngay cả trong những ngày đèn đỏ.
 - Thân thiện với môi trường, tái sử dụng trong vòng 5 - 10 năm.',
                     'thumbnail' => 'arbixqcuzerg0tvm3oal.webp',
+
                     'quantity' => 1,
                     'price' => 499000,
                     'created_at' => '2019-09-12 03:56:15',

@@ -16,10 +16,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use JD\Cloudder\Facades\Cloudder;
-
-Route::get('/', function () {
-    return view('welcome');
-});
+//
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 
 Route::get('/client/profile', 'ProfileUserController@index')->name('client.profile');
