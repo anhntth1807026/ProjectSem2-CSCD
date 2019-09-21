@@ -64,10 +64,10 @@ class UsersTableSeeder extends Seeder
 //            }
 //        }
 
-//        if (config('roles.models.defaultUser')::where('email', '=', 'user@user.com')->first() === null) {
+//        if (config('roles.models.defaultUser')::where('email', '=', 'email@email.com')->first() === null) {
 //            $newUser = config('roles.models.defaultUser')::create([
 //                'name'     => 'User',
-//                'email'    => 'user@user.com',
+//                'email'    => 'email@email.com',
 //                'password' => bcrypt('password'),
 //            ]);
 //

@@ -40,10 +40,20 @@
                         <td>{{ $transaction->tr_address }}</td>
                         <td>{{ $transaction->tr_phone }}</td>
                         <td>
-                            @if($transaction->tr_status == 1)
-                                <a href="" class="label-success label"> Đã xử lý</a>
+                            @if($transaction->tr_status == 0)
+                                <a href="/admin/order/update-status/{{$transaction->id}}?status=1" onclick="return confirm('Are sure to confirm this order?')"
+                                   class="btn btn-simple btn-info btn-icon edit" title="Click to have this order confirmed"><i class="fas fa-hourglass"></i></a>
+                                <a href="/admin/order/update-status/{{$transaction->id}}?status=-1" onclick="return confirm('Are sure to confirm this order?')"
+                                   class="btn btn-simple btn-danger btn-icon edit" title="Click to cancel this order"><i class="fas fa-times"></i></a>
+                            @elseif($transaction->tr_status==1)
+                                <i class="fas fa-check 4x text-danger"></i>
+                            @elseif($transaction->tr_status==-1)
+                                <i class="fas fa-times 4x text-danger"></i>
                             @endif
-                            <a href="" class="label label-default">Chờ xử lý</a>
+{{--                            @if($transaction->tr_status == 1)--}}
+{{--                                <a href="" class="label-success label"> Đã xử lý</a>--}}
+{{--                            @endif--}}
+{{--                            <a href="" class="label label-default">Chờ xử lý</a>--}}
                         </td>
                         <td>
                             <a href="" class="btn "><i class="fas fa-trash-alt"></i> Xoá</a>
@@ -58,41 +68,8 @@
         </div>
     </div>
 
-    <div class="modal fade" id="myModalOrder" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Some text in the modal.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
 
 @endsection
-@section('script')
-    <script>
-        $(function () {
-            $(".js_order_item").click(function (event) {
 
-                // event.preventDefault();
-                let $this = $(this);
-                let url = $this.attr('href');
-
-                $("#myModalOrder").modal('show');
-                // console.log(url);
-            });
-        })
-    </script>
-@endsection
 
 
