@@ -7,6 +7,7 @@ use App\Product;
 use App\Transaction;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ShoppingCartController extends Controller
 {
@@ -21,8 +22,10 @@ class ShoppingCartController extends Controller
         $product = Product::select('id', 'name', 'price', 'thumbnail')->find($id);
 
         if (!$product) return redirect('/');
-
+        error_log($product->thumbnail);
+        error_log("https://res.cloudinary.com/dx8lbwzhw/image/upload/$product->thumbnail");
         \Cart::add([
+
             'id' => $id,
             'name' => $product->name,
             'qty' => 1,
@@ -49,6 +52,8 @@ class ShoppingCartController extends Controller
     public function listShoppingCart()
     {
         $products = \Cart::content();
+
+//        dd($products);
         return view('shopping.cart', compact('products'));
     }
 
@@ -147,6 +152,8 @@ class ShoppingCartController extends Controller
 
         error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 
+        Log::info($request);
+
         $inputData = array(
             "vnp_Version" => "2.0.0",
             "vnp_TmnCode" => $this->vnp_TmnCode,
@@ -192,7 +199,7 @@ class ShoppingCartController extends Controller
             'data' => $vnp_Url
         );
 
-        return redirect()->to($returnData['data']);
+        return $returnData;
     }
 }
 

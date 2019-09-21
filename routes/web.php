@@ -113,6 +113,12 @@ Route::group(['namespace' => 'Auth'], function () {
 
     Route::get('login/google', 'LoginController@redirectToProvider')->name('login.google');
     Route::get('login/google/callback', 'LoginController@handleProviderCallback');
+
+    Route::get('/reset-password', 'ForgotPasswordController@getFormResetPassword')->name('form.reset.password');
+    Route::post('/reset-password', 'ForgotPasswordController@sendCodeResetPassword');
+
+    Route::get('/password/reset', 'ForgotPasswordController@resetPassword')->name('send.link.reset.password');
+    Route::post('/password/reset', 'ForgotPasswordController@saveResetPassword');
 });
 
 Route::prefix('shopping')->group(function () {
@@ -137,4 +143,4 @@ Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], fu
     Route::post('/pay-online', 'ShoppingCartController@savePayOnine');
 });
 
-
+Route::get('register/verify/{code}', 'Auth\RegisterController@verifyUser')->name('verify.user');

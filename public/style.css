@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    color: #3f3f3f
+    /*color: #3f3f3f*/
 }
 
 a:hover {
