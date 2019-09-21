@@ -17,7 +17,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="{{ asset('/thumbnail/logo-short-cut.png') }}">
+    <link rel="shortcut icon" href="{{ asset('/thumbnail/logo.png') }}">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
@@ -37,7 +37,10 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
     <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
-    {{--        <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
+
+    {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
+
+
     @stack('styles')
 </head>
 <body>
@@ -47,14 +50,16 @@
     <div class="container-fluid">
         <div class="row" style="background: white">
             <!-- logo start -->
-            <div class="col-md-3 col-sm-12 text-center nopadding-right">
+            <div class="col-md-4 col-sm-12 text-center">
                 <div class="top-logo">
-                    <a href=""><img src="" alt=""/></a>
+                    <a><img src="{{ asset('img/logob.jpg') }}" style="width: 170px; height: 70px"></a>
+                    {{--                    <a><img src="img/logo.jpg" style="width: 170px; height: 70px"></a>--}}
+                    {{--                    href="{{ asset('img/logo.jpg')  }}" style="width: 170px; height: 70px"--}}
                 </div>
             </div>
             <!-- logo end -->
             <!-- mainmenu area start -->
-            <div class="col-md-6 text-center">
+            <div class="col-md-5 text-center">
                 <div class="mainmenu">
                     <nav>
                         <ul>
@@ -62,18 +67,14 @@
                             </li>
 
                             <li class="expand"><a href="/List-Product">Shop</a>
-                                <div class="restrain mega-menu megamenu4">
-											<span>
-												<a class="mega-menu-title" href="">Đồ dùng cá nhân</a>
-
-											</span>
-                                    <span class="block-last">
-												<a class="mega-menu-title" href="">Đồ dùng gia đình</a>
-
-											</span>
-                                </div>
+                                <ul class="restrain sub-menu">
+                                    <li><a href="">Đồ dùng cá nhân</a></li>
+                                    <li><a href="">Đồ dùng gia đình</a></li>
+                                </ul>
                             </li>
+
                             <li class="expand"><a href="/Blog">Bài Viết</a></li>
+
                             <li class="expand"><a href="/Policy">Chính Sách</a>
                                 <ul class="restrain sub-menu">
                                     <li><a href="/Policy/Data-Confidentiality">Bảo mật thông tin</a></li>
@@ -124,15 +125,15 @@
             <!-- mainmenu area end -->
             <!-- top details area start -->
             <div class="col-md-3 col-sm-12 nopadding-left">
-                <div class="top-detail">
+                <div class="top-detail" style="margin-top: 5px">
 
                     <!-- addcart top start -->
                     <div class="disflow">
                         <div class="circle-shopping expand">
                             <div class="shopping-carts text-right">
                                 <div class="cart-toggler">
-                                    <a href="{{ route('list.shopping.cart') }}"><i class="fa fa-shopping-bag"
-                                                                                   style="font-size:15px;"></i></a>
+                                    <a href="{{ route('list.shopping.cart') }}"><i class="fa fa-shopping-cart"
+                                                                                   style="font-size:18px;"></i></a>
                                     <a href="{{ route('list.shopping.cart') }}"><span id="count-cart"
                                                                                       class="cart-quantity">{{ \Cart::count() }}</span></a>
                                 </div>
@@ -197,7 +198,7 @@
                         <div class="expand dropps-menu">
                             <a href="#">
                                 {{--                                <i class="fa fa-align-right"></i>--}}
-                                <i class="fas fa-user-circle fa-fw" style="font-size:15px;"></i>
+                                <i class="fas fa-user-circle fa-fw" style="font-size:18px;"></i>
                             </a>
                             <ul class="restrain language">
 
@@ -328,7 +329,6 @@
 
 <script>
     var btn = $('#BackToTop');
-
     $(window).scroll(function () {
         if ($(window).scrollTop() > 300) {
             btn.addClass('show');
@@ -336,22 +336,18 @@
             btn.removeClass('show');
         }
     });
-
     btn.on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, '300');
     });
-
     // accordion
     var acc = document.getElementsByClassName("accordion");
     var i;
-
     for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
             /* Toggle between adding and removing the "active" class,
             to highlight the button that controls the panel */
             this.classList.toggle("active");
-
             /* Toggle between hiding and showing the active panel */
             var panel = this.nextElementSibling;
             if (panel.style.display === "block") {
@@ -367,7 +363,6 @@
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/jquery.meanmenu.js') }}"></script>
-{{--<script src="{{ asset('js/jquery.scrollUp.min.js') }}"></script>--}}
 <script src="{{ asset('js/main.js') }}"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
