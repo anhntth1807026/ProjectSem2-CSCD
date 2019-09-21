@@ -144,3 +144,4 @@ Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], fu
 });
 
 Route::get('register/verify/{code}', 'Auth\RegisterController@verifyUser')->name('verify.user');
+
