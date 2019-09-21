@@ -1,14 +1,17 @@
 (function ($) {
-    "use strict";
-    /*-------------------------------------------
-    scrollUp
-    -------------------------------------------- */
-    // jQuery.scrollUp({
+
+  "use strict";
+  /*-------------------------------------------
+  scrollUp
+  ------------------------------------------- */
+  // jQuery.scrollUp({
+
     //     scrollText: '<i class="fa fa-angle-up"></i>',
     //     easingType: 'linear',
     //     scrollSpeed: 900,
     //     animation: 'fade'
     // });
+
     /*-------------------------------------------
     mobile menu
     -------------------------------------------- */
@@ -29,6 +32,7 @@
         rewindNav : false,
         lazyLoad : true
     });
+
 
     $(".featuresthree-curosel").owlCarousel({
         autoPlay: false,

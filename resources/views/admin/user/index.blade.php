@@ -45,7 +45,7 @@
                             <td> {{ $user->phone }}</td>
                             <td> {{ $user->gender }}</td>
                             <td>
-                                <form action="{{ route('admin.delete.user',$user->id) }}" method="POST">
+                                <form action="{{ route('email',$user->id) }}" method="POST">
 
                                     <a class="btn btn-primary" href="{{ route('admin.edit.user',$user->id) }}">Edit</a>
 

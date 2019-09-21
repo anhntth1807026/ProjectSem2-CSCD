@@ -37,7 +37,9 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
     <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
+
     {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
+
 
     @stack('styles')
 </head>
@@ -241,6 +243,19 @@
 </header>
 
 <div class="row">
+    @if(Session::has('success'))
+        <div class="alert alert-success alert-dismissable " style="position: fixed; right: 20px">
+            <a href="#" class="close" data-dismiss="alert " aria-label="close">&times;</a>
+            <strong>Thành công! </strong> {{ Session::get('success') }}
+        </div>
+    @endif
+
+    @if(Session::has('error'))
+        <div class="alert alert-danger alert-dismissable" style="position: fixed; right: 20px">
+            <a href="#" class="close" data-dismiss="alert " aria-label="close">&times;</a>
+            <strong>Thất bại! </strong> {{ Session::get('error') }}
+        </div>
+    @endif
     @section('content')
     @show
 </div>
@@ -255,7 +270,7 @@
                         <div class="row">
                             {{--                            <div class="col-1"><i class="fas fa-map-marker"></i></div>--}}
                             <div class="col-12">
-                                <h6 class="font-weight-bold mb-0"> <i class="fas fa-map-marker"></i> ĐỊA CHỈ:</h6>
+                                <h6 class="font-weight-bold mb-0"><i class="fas fa-map-marker"></i> ĐỊA CHỈ:</h6>
                                 <p>SỐ 1 HÙNG VƯƠNG, QUÁN THÁNH <br> BA ĐÌNH, HÀ NỘI, VIỆT NAM</p>
                             </div>
                         </div>
@@ -264,7 +279,7 @@
                     <li>
                         <div class="row">
                             <div class="col-12">
-                                <h6 class="font-weight-bold mb-0"> <i class="far fa-envelope"></i>&nbsp;EMAIL:</h6>
+                                <h6 class="font-weight-bold mb-0"><i class="far fa-envelope"></i>&nbsp;EMAIL:</h6>
                                 <p><a href="#">anhntth1807026@fpt.edu.vn</a></p>
                             </div>
                         </div>
