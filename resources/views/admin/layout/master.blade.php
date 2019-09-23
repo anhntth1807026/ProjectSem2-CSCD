@@ -117,21 +117,23 @@
         <li class="nav-item dropdown">
             <div class="dropdown-btn nav-link dropdown-toggle" data-toggle="dropdown">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span>
+                <span>Quản lý</span>
             </div>
             <div class="dropdown-container">
-                <a class="dropdown-item" href="{{ route('admin.get.user') }}"><i class="fas fa-user"></i> Manage
-                    User</a>
-                <a class="dropdown-item" href="{{route('category.index')}}"><i class="fas fa-archive"></i> Manage
-                    Category</a>
-                <a class="dropdown-item" href="{{route('product.index')}}"><i class="fab fa-product-hunt"></i> Manage
-                    Product</a>
-                <a class="dropdown-item" href="{{route('article.index')}}"><i class="fab fa-product-hunt"></i> Manage
-                    Article</a>
+                <a class="dropdown-item" href="{{ route('admin.get.user') }}"><i class="fas fa-user"></i>
+                    Thành viên</a>
+                <a class="dropdown-item" href="{{route('category.index')}}"><i class="fas fa-archive"></i>
+                    Danh mục</a>
+                <a class="dropdown-item" href="{{route('product.index')}}"><i class="fab fa-product-hunt"></i>
+                    Sản phẩm</a>
+                <a class="dropdown-item" href="{{route('admin.list.rating')}}"><i class="fab fa-product-hunt"></i>
+                    Đánh giá</a>
+                <a class="dropdown-item" href="{{route('article.index')}}"><i class="fab fa-product-hunt"></i>
+                    Bài viết</a>
                 <a class="dropdown-item" href="{{route('admin.list.transaction')}}"><i class="fab fa-product-hunt"></i>
-                    Manage Transaction</a>
-                <a class="dropdown-item" href="{{route('admin.contact')}}"><i class="fab fa-product-hunt"></i> Manage
-                    Contact</a>
+                    Đơn Hàng</a>
+                <a class="dropdown-item" href="{{route('admin.contact')}}"><i class="fab fa-product-hunt"></i>
+                    Liên hệ</a>
             </div>
         </li>
 

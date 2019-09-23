@@ -9,12 +9,14 @@ class Transaction extends Model
     protected $table = 'transactions';
     protected $guarded = ['*'];
 
-    public function users(){
+    public function users()
+    {
         return $this->belongsTo(User::class, 'tr_user_id');
     }
 
-    public function getStatusAttribute(){
-        switch ($this->tr_status){
+    public function getStatusAttribute()
+    {
+        switch ($this->tr_status) {
             case -1:
                 return 'Huỷ';
                 break;
@@ -30,7 +32,8 @@ class Transaction extends Model
         }
     }
 
-    function fetch_revenue(){
+    function fetch_revenue()
+    {
         $this->db->select('tr_total');
         $this->db->from('transactions');
         $this->db->groupBy('created_at');
@@ -39,7 +42,8 @@ class Transaction extends Model
         return $this->db->get();
     }
 
-    function fetch_transactions($tr_total){
+    function fetch_transactions($tr_total)
+    {
         $this->db->where('tr_total', $tr_total);
         $this->db->orderBy('id', 'ASC');
         return $this->db->get('transactions');
