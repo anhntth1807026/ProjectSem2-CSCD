@@ -13,7 +13,7 @@ class ProductSeeder extends Seeder
             array (
                     array (
                         'id' => 1,
-                        'name' => 'Bàn Chải Người Lớn',
+                            'name' => 'Bàn Chải Người Lớn',
                         'description' => 'Hương Vani, các giác quan của bạn sẽ cảm nhận được từng thành phần nhiên liệu tự nhiên được
                             gửi gắm trong mỗi bánh xà phòng.',
                         'thumbnail' => 'jda4v7guyn5p2syj4npi.webp',

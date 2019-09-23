@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->double('price');
             $table->integer('pro_hot')->default(0);
             $table->timestamps();
+            $table->integer('status')->default(1);
         });
     }
 
