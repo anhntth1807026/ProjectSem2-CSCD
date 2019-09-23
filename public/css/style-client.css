@@ -1013,6 +1013,7 @@ footer .input-group-addon {
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
+    color: greenyellow;
 }
 
 #BackToTop::after {
@@ -1024,14 +1025,15 @@ footer .input-group-addon {
     font-style: normal;
     font-size: 35px;
     line-height: 60px;
-    color: greenyellow;
 }
 #BackToTop:hover {
     cursor: pointer;
-    background-color: #d56b2d;
+    background-color: greenyellow;
+    color: #d56b2d;
 }
 #BackToTop:active {
-    background-color: #d56b2d;
+    background-color: greenyellow;
+    color: #d56b2d;
 }
 #BackToTop.show {
     opacity: 1;

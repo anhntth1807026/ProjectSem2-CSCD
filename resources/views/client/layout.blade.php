@@ -40,7 +40,8 @@
 
     {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
 
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     @stack('styles')
 </head>
 <body>
@@ -290,14 +291,17 @@
                 <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">BÀI VIẾT MỚI</h5>
                 <ul class="recent-post">
                     <li>
-                        <label class="mr-3" style="margin-right: 5px">28 <br>
-                            <p>9</p></label>
-                        <span>Làm thế nào để sống xanh?</span>
+                        <a href="#" class="w3-button w3-round" style="text-decoration: none; color: white">
+                            <label class="mr-3" style="margin-right: 5px">28 <br>
+                                <p>9</p></label>
+                            <span>Làm thế nào để sống xanh?</span>
+                        </a>
                     </li>
-                    <li>
-                        <label class="mr-3" style="margin-right: 5px">29 <br>
-                            <p>8</p></label>
-                        <span>Sống xanh là như thế nào?</span>
+                    <li><a href="#" class="w3-button w3-round" style="text-decoration: none; color: white">
+                            <label class="mr-3" style="margin-right: 5px">29 <br>
+                                <p>8</p></label>
+                            <span>Sống xanh là như thế nào?</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -340,23 +344,6 @@
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, '300');
     });
-    // accordion
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
-            /* Toggle between hiding and showing the active panel */
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
 </script>
 
 <script src="{{ asset('plugins/jQueryUI/jquery-ui.min.js') }}"></script>
