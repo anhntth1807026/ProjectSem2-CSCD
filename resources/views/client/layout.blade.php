@@ -68,10 +68,18 @@
                             </li>
 
                             <li class="expand"><a href="/List-Product">Shop</a>
-                                <ul class="restrain sub-menu">
-                                    <li><a href="">Đồ dùng cá nhân</a></li>
-                                    <li><a href="">Đồ dùng gia đình</a></li>
-                                </ul>
+
+                                <div class="restrain mega-menu megamenu4">
+											<span>
+												<a class="mega-menu-title" href="/List-Product?page=&pro_category_id=2&keyword=">Đồ dùng cá nhân</a>
+
+											</span>
+                                    <span class="block-last">
+												<a class="mega-menu-title" href="/List-Product?page=&pro_category_id=1&keyword=">Đồ dùng gia đình</a>
+
+											</span>
+                                </div>
+
                             </li>
 
                             <li class="expand"><a href="/Blog">Bài Viết</a></li>

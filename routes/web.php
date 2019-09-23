@@ -35,7 +35,9 @@ Route::get('/About-Us', function () {
 Route::get('contact', 'ContactController@getContact')->name('get.contact');
 Route::post('contact', 'ContactController@saveContact');
 
+
 Route::get('/List-Product', 'ListProductController@index')->name('list.product');
+
 
 
 Route::get('/Blog', function () {
