@@ -22,10 +22,9 @@ class ShoppingCartController extends Controller
         $product = Product::select('id', 'name', 'price', 'thumbnail')->find($id);
 
         if (!$product) return redirect('/');
-        error_log($product->thumbnail);
-        error_log("https://res.cloudinary.com/dx8lbwzhw/image/upload/$product->thumbnail");
+//        error_log($product->thumbnail);
+//        error_log("https://res.cloudinary.com/dx8lbwzhw/image/upload/$product->thumbnail");
         \Cart::add([
-
             'id' => $id,
             'name' => $product->name,
             'qty' => 1,

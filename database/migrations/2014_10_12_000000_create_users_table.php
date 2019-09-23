@@ -24,8 +24,8 @@ class CreateUsersTable extends Migration
             $table->string('phone')->nullable();
             $table->string('gender')->nullable();
             $table->string('provider_id')->nullable();
-            $table->string('activation_code')->index();
-            $table->boolean('active')->default(0);
+            $table->string('activation_code')->index()->nullable();
+            $table->boolean('active')->default(0)->nullable();
             $table->string('code')->nullable()->index();
             $table->timestamp('time_code')->nullable();
             $table->rememberToken();
