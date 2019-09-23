@@ -64,11 +64,11 @@
                             <li class="expand"><a href="/List-Product">Shop</a>
                                 <div class="restrain mega-menu megamenu4">
 											<span>
-												<a class="mega-menu-title" href="">Đồ dùng cá nhân</a>
+												<a class="mega-menu-title" href="/List-Product?page=&pro_category_id=2&keyword=">Đồ dùng cá nhân</a>
 
 											</span>
                                     <span class="block-last">
-												<a class="mega-menu-title" href="">Đồ dùng gia đình</a>
+												<a class="mega-menu-title" href="/List-Product?page=&pro_category_id=1&keyword=">Đồ dùng gia đình</a>
 
 											</span>
                                 </div>

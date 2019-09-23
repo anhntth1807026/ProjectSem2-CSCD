@@ -36,6 +36,8 @@ Route::get('contact', 'ContactController@getContact')->name('get.contact');
 Route::post('contact', 'ContactController@saveContact');
 
 Route::get('/List-Product', 'ListProductController@index');
+//Route::get('/Home-Product', 'ListProductController@homecare');
+//Route::get('/Personal-Product', 'ListProductController@personalcare');
 
 
 Route::get('/Blog', function () {

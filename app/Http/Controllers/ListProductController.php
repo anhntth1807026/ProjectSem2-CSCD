@@ -34,6 +34,37 @@ class ListProductController extends Controller
         ];
         return view('client.list-product', $data);
     }
+    public function homecare(Request $request){
+        $product = Product::orderBy('created_at', 'desc');
+        if (Input::get('keyword')) {
+            $product = $product->where('name', 'like', '%' . $request->get('keyword') . '%');
+        }
+        $product = $product->Where('pro_category_id', 1)->paginate(6);
+        $data = [
+            'list' => $product ->appends(Input::except('page')),
+            'currentPage' => $request->get('page'),
+            'currentKeyword' => $request->get('keyword'),
+            'categories' => Category::all()
+        ];
+        return view('client.homecare', $data);
+    }
+    public function personalcare(Request $request){
+        $product = Product::orderBy('created_at', 'desc')->Where('pro_category_id', 2)->paginate(6);
+        if (Input::get('keyword')) {
+            $product = $product->where('name', 'like', '%' . $request->get('keyword') . '%');
+        }
+        if (Input::get('pro_category_id')) {
+            $product = $product->where('pro_category_id', $request->get('pro_category_id'));
+        }
+//        $product = $product->Where('pro_category_id', 2)->paginate(6);
+        $data = [
+            'list' => $product ->appends(Input::except('page')),
+            'currentPage' => $request->get('page'),
+            'currentKeyword' => $request->get('keyword'),
+            'categories' => Category::all()
+        ];
+        return view('client.personalcare', $data);
+    }
     /**
      * Show the form for creating a new resource.
      *
