@@ -3,6 +3,7 @@
 //         $('input:checkbox').prop('checked', this.checked);
 //     });
 // });
+var BASE_URL = 'http://127.0.0.1:8000';
 
 $(document).ready(function () {
     $('.btn-delete').click(function () {
@@ -27,7 +28,6 @@ $(document).ready(function () {
             });
         }
     });
-
 });
 
 $(document).ready(function () {
@@ -138,6 +138,39 @@ $(document).ready(function () {
         });
     });
 
+
+    $('#btn-search').click(function () {
+        var page = $('input[name="currentPage"]').val();
+        var categoryId = $('select[name="categoryId"]').val();
+        var keyword = $('input[name="keyword"]').val();
+        location.href = `${BASE_URL}/admin/product?page=${page}&pro_category_id=${categoryId}&keyword=${keyword}`;
+    });
+    $('#btn-search-list-product').click(function () {
+
+        onSearch()
+    });
+
+    $('input[name="keyword"]').keypress(function (e) {
+        if(e.keyCode === 13){
+            onSearch()
+        }
+    });
+
+
+    $('#select-category').on('change', function() {
+         onSearch()
+    });
+
+
+
+    function onSearch() {
+        var page = $('input[name="currentPage"]').val();
+        var categoryId = $('select[name="categoryId"]').val();
+        var keyword = $('input[name="keyword"]').val();
+        location.href = `${BASE_URL}/List-Product?page=${page}&pro_category_id=${categoryId}&keyword=${keyword}`;
+
+    }
+
     // $('.add-cart').click(function () {
     //     var shoppingCart = {};
     //     if (localStorage.getItem('shopping-cart') !== null){
@@ -219,11 +252,12 @@ function changeStatus(arrayId, status) {
             alert("Thao tác thất bại, vui lòng thử lại sau");
         }
     });
-
 };
 // function deleteAll(idArr) {
 //
 // }
+
+
 var myIndex = 0;
 carousel();
 
@@ -240,3 +274,4 @@ function carousel() {
     x[myIndex - 1].style.display = "block";
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
+

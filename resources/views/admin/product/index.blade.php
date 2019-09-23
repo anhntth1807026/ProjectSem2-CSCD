@@ -17,6 +17,26 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="form-group float-left mr-2">
+                <select name="categoryId" class="form-control">
+                    <option value="0" {{($currentCategoryId == 0) ? 'selected':''}}>Tất cả</option>
+                    @foreach($categories as $category)
+                        <option value="{{$category->id}}" {{($currentCategoryId == $category->id) ? 'selected':''}}>
+                            {{$category->name}}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group float-left mr-2">
+                <input type="text" class="form-control mb-2 mr-sm-2" name="keyword"
+                       placeholder="Enter keyword to search" value="{{$currentKeyword}}">
+                <input type="hidden" name="currentPage" value="{{$currentPage}}">
+            </div>
+            <div class="form-group float-left">
+                <button type="submit" id="btn-search" class="btn btn-outline-primary mb-2">Search</button>
+            </div>
+        </div>
         <div class="row container-fluid">
             @if ($message = Session::get('success'))
                 <div class="alert alert-success ">
@@ -29,14 +49,16 @@
                     <tr>
                         <th scope="col"><input type="checkbox" id="checkAll"></th>
                         <th scope="col">Id</th>
-                        <th scope="col">Tên</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Loại sản phẩm</th>
                         <th scope="col">Ảnh</th>
                         <th scope="col">Số lượng</th>
                         <th scope="col">Giá</th>
+                        <th scope="col">Nổi bật</th>
                         <th width="240px">Thao tác</th>
                     </tr>
                     </thead>
-                    @foreach ($product as $key => $products)
+                    @foreach ($list as $key => $products)
                         <tbody id="myTable">
                         <tr id="tr_{{ $products -> id }}">
 
@@ -44,17 +66,20 @@
                             </td>
                             <td scope="col">{{ $products-> id }}</td>
                             <td scope="col">{{ $products->name }}</td>
+                            <td scope="col">{{ isset($products->category->name) ? $products->category->name : '[N/A]' }}</td>
                             <td scope="col">
                                 @foreach(explode("@",$products->thumbnail) as $image)
                                     <img class="img-thumbnail rounded"
                                          style="width: 150px;margin: 0 10px"
-                                         src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_400/{{ $image }}"
+                                         src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_250/{{ $image }}"
                                          alt="{{ $products->name }}">
                                 @endforeach
                             </td>
 
                             <td scope="col">{{ $products->quantity }}</td>
                             <td scope="col">{{ $products->price }}</td>
+                            <td scope="col">{{ $products->pro_hot }}</td>
+
                             <td scope="col">
                                 <form action="{{ route('product.destroy', $products->id) }}" method="POST">
                                     <a class="btn btn-info" href="{{ route('product.show', $products->id) }}"

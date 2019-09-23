@@ -32,7 +32,7 @@
                             <th>Giá</th>
                             <th>Số lượng</th>
                             <th>Thành Tiền</th>
-                            <th>Thao tác</th>
+{{--                            <th>Thao tác</th>--}}
                         </tr>
                         </thead>
                         <tbody id="cart-body">
@@ -42,14 +42,14 @@
                                 <td>{{ $i }}</td>
                                 <td>{{ isset($order->product->name) ? $order->product->name : ''}}</td>
                                 <td>
-                                    <img style="width: 70px; height: 60px;" src="{{ isset($order->product->thumbnail) ? $order->product->thumbnail : '' }}" alt="">
+                                    <img style="width: 70px; height: 60px;" src="https://res.cloudinary.com/dx8lbwzhw/image/upload/{{ isset($order->product->thumbnail) ? $order->product->thumbnail : '' }}" alt="">
                                 </td>
                                 <td>{{ number_format($order->or_price, 0, ',', '.') }}đ</td>
                                 <td>{{ $order->or_quantity }}</td>
                                 <td>{{ number_format($order->or_quantity * $order->or_price, 0, ',', '.') }}đ</td>
-                                <td>
-                                    <a href=""><i class="fa fa-trash-o"></i> Delete</a>
-                                </td>
+{{--                                <td>--}}
+{{--                                    <a href=""><i class="fa fa-trash-o"></i> Delete</a>--}}
+{{--                                </td>--}}
                             </tr>
                             <?php $i ++?>
                         @endforeach
