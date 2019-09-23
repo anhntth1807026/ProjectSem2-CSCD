@@ -7,6 +7,7 @@ use App\Http\Requests\ProductValidation;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\ValidationException;
 use JD\Cloudder\Facades\Cloudder;
 
@@ -22,12 +23,26 @@ class ProductController extends Controller
 //        $this->middleware('auth');
 //    }
 
-    public function index()
+    public function index(Request $request)
     {
-        $product = Product::with('category:id,name')->paginate(6);
+        $products = Product::orderBy('created_at', 'desc')->whereNotIn('status', [-1]);
+        if (Input::get('keyword')) {
+            $products = $products->where('name', 'like', '%' . $request->get('keyword') . '%');
+        }
+        if (Input::get('pro_category_id')) {
+            $products = $products->where('pro_category_id', $request->get('pro_category_id'));
+        }
+        $products = $products->paginate(6);
+        $data = [
+            'list' => $products->appends(Input::except('page')),
+            'currentPage' => $request->get('page'),
+            'currentCategoryId' => $request->get('pro_category_id'),
+            'currentKeyword' => $request->get('keyword'),
+            'categories' => Category::all()
+        ];
 
-        return view('admin.product.index')
-            ->with('product', $product);
+        return view('admin.product.index', $data)
+            ->with('product', $products);
     }
 
     public function create()

@@ -17,6 +17,26 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="form-group float-left mr-2">
+                <select name="categoryId" class="form-control">
+                    <option value="0" {{($currentCategoryId == 0) ? 'selected':''}}>Tất cả</option>
+                    @foreach($categories as $category)
+                        <option value="{{$category->id}}" {{($currentCategoryId == $category->id) ? 'selected':''}}>
+                            {{$category->name}}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group float-left mr-2">
+                <input type="text" class="form-control mb-2 mr-sm-2" name="keyword"
+                       placeholder="Enter keyword to search" value="{{$currentKeyword}}">
+                <input type="hidden" name="currentPage" value="{{$currentPage}}">
+            </div>
+            <div class="form-group float-left">
+                <button type="submit" id="btn-search" class="btn btn-outline-primary mb-2">Search</button>
+            </div>
+        </div>
         <div class="row container-fluid">
             @if ($message = Session::get('success'))
                 <div class="alert alert-success ">
@@ -38,7 +58,7 @@
                         <th width="240px">Thao tác</th>
                     </tr>
                     </thead>
-                    @foreach ($product as $key => $products)
+                    @foreach ($list as $key => $products)
                         <tbody id="myTable">
                         <tr id="tr_{{ $products -> id }}">
 
