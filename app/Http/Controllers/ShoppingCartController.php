@@ -150,7 +150,6 @@ class ShoppingCartController extends Controller
         }
 
         error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
-
         Log::info($request);
 
         $inputData = array(
@@ -163,7 +162,7 @@ class ShoppingCartController extends Controller
             "vnp_IpAddr" => $_SERVER['REMOTE_ADDR'], //IP
             "vnp_Locale" => $request->vnp_Locale,
             "vnp_OrderInfo" => $request->note,
-            "vnp_OrderType" => $request->order_type,
+            "vnp_OrderType" => "billpayment",
             "vnp_ReturnUrl" => $this->vnp_Returnurl,
             "vnp_TxnRef" => $transactionId, //ma don hang
         );
