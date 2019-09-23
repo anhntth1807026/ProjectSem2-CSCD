@@ -19,14 +19,6 @@
                   data-aos="zoom-in" data-aos-duration="3000" style="text-decoration: none;" title="Bắt đầu tìm hiểu">Tìm
                     Hiểu Nhiều Hơn Và Bắt Đầu Từ Hôm Nay</a></p>
         </div>
-        {{--        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">--}}
-        {{--            <i class="fa fa-facebook-official w3-hover-opacity" title="Facebook"></i>--}}
-        {{--            <i class="fa fa-instagram w3-hover-opacity" title="Instagram"></i>--}}
-        {{--            <i class="fa fa-snapchat w3-hover-opacity" title="Snapchat"></i>--}}
-        {{--            <i class="fa fa-pinterest-p w3-hover-opacity" title="Pinterest"></i>--}}
-        {{--            <i class="fa fa-twitter w3-hover-opacity" title="Twitter"></i>--}}
-        {{--            <i class="fa fa-linkedin w3-hover-opacity" title="Linkedin"></i>--}}
-        {{--        </div>--}}
     </div>
 
     <div class="w3-container w3-light-white" style="padding:100px 16px">
@@ -124,99 +116,72 @@
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Bán Chạy Nhất</h1>
         <div class="row">
             @foreach($productHot as $productHots)
-                <div class="col-md-3 col-sm-6">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-grid6 mb-2">
-                            <div class="product-image6">
-                                <a href="#">
-                                    <img class="pic-1"
-                                         src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_350/{{$productHots->thumbnail}}"
-                                         title="Bấm để xem hình ảnh chi tiết">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                <h5 class="title"><a href="#">{{$productHots->name}}</a></h5>
-                                <div class="price">{{number_format($productHots->price, 0, ',' , '.')}}đ</div>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="{{ route('add.shopping.cart', $productHots->id) }}"
-                                       class="card-link add-cart"
-                                       data-id="{{$productHots->id}}"
-                                       data-name="{{$productHots->name}}"
-                                       data-thumbnail="{{$productHots->thumbnail}}"
-                                       data-price="{{$productHots->price}}"
-                                       data-tip="Add to Cart"
-                                    >
-                                        <i class="fa fa-shopping-bag"></i>
-                                    </a>
-                                </li>
-                                <li><a href="" data-tip="View Detail"><i class="fa fa-eye"></i></a></li>
-                            </ul>
+{{--                <div class="col-md-3 col-sm-6">--}}
+{{--                    <div class="col-md-3 col-sm-6">--}}
+{{--                        <div class="product-grid6 mb-2">--}}
+{{--                            <div class="product-image6">--}}
+{{--                                <a href="#">--}}
+{{--                                    <img class="pic-1"--}}
+{{--                                         src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_350/{{$productHots->thumbnail}}"--}}
+{{--                                         title="Bấm để xem hình ảnh chi tiết">--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                            <div class="product-content">--}}
+{{--                                <h5 class="title"><a href="#">{{$productHots->name}}</a></h5>--}}
+{{--                                <div class="price">{{number_format($productHots->price, 0, ',' , '.')}}đ</div>--}}
+{{--                            </div>--}}
+{{--                            <ul class="social">--}}
+{{--                                <li>--}}
+{{--                                    <a href="{{ route('add.shopping.cart', $productHots->id) }}"--}}
+{{--                                       class="card-link add-cart"--}}
+{{--                                       data-id="{{$productHots->id}}"--}}
+{{--                                       data-name="{{$productHots->name}}"--}}
+{{--                                       data-thumbnail="{{$productHots->thumbnail}}"--}}
+{{--                                       data-price="{{$productHots->price}}"--}}
+{{--                                       data-tip="Add to Cart"--}}
+{{--                                    >--}}
+{{--                                        <i class="fa fa-shopping-bag"></i>--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li><a href="" data-tip="View Detail"><i class="fa fa-eye"></i></a></li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+
+                <div class="col-md-3 col-sm-6" data-aos="zoom-out-down" data-aos-duration="1200">
+                    <div class="product-grid6 mb-2">
+                        <div class="product-image6">
+                            <a href="#">
+                                <img class="pic-1"
+                                     src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_350/{{$productHots->thumbnail}}"
+                                     title="Bấm để xem hình ảnh chi tiết">
+                            </a>
                         </div>
+                        <div class="product-content">
+                            <h5 class="title"><a href="#">{{$productHots->name}}</a></h5>
+
+                            <div class="price">{{number_format($productHots->price, 0, ',' , '.')}}đ</div>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="{{ route('add.shopping.cart', $productHots->id) }}"
+                                   class="card-link add-cart"
+                                   data-id="{{$productHots->id}}"
+                                   data-name="{{$productHots->name}}"
+                                   data-thumbnail="{{$productHots->thumbnail}}"
+                                   data-price="{{$productHots->price}}"
+                                   data-tip="Add to Cart"
+                                >
+                                    <i class="fa fa-shopping-bag"></i>
+                                </a>
+                            </li>
+                            <li><a href="" data-tip="View Detail"><i class="fa fa-eye"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             @endforeach
-            {{--            <div class="col-md-3 col-sm-6">--}}
-            {{--                <div class="product-grid6">--}}
-            {{--                    <div class="product-image6">--}}
-            {{--                        <a href="#">--}}
-            {{--                            <img class="pic-1" src="{{ asset('img/home-care/hop-khan-giay-go.webp') }}"--}}
-            {{--                                 title="Bấm để xem hình ảnh chi tiết">--}}
-            {{--                        </a>--}}
-            {{--                    </div>--}}
-            {{--                    <div class="product-content">--}}
-            {{--                        <h5 class="title"><a href="#">Hộp Khăn Giấy Gỗ</a></h5>--}}
-            {{--                        <h6>Đồ Dùng Gia Đình</h6>--}}
-            {{--                        <div class="price">199.000₫</div>--}}
-            {{--                    </div>--}}
-            {{--                    <ul class="social">--}}
-            {{--                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>--}}
-            {{--                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>--}}
-            {{--                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>--}}
-            {{--                    </ul>--}}
-            {{--                </div>--}}
-            {{--            </div>--}}
-            {{--            <div class="col-md-3 col-sm-6">--}}
-            {{--                <div class="product-grid6">--}}
-            {{--                    <div class="product-image6">--}}
-            {{--                        <a href="#">--}}
-            {{--                            <img class="pic-1" src="{{ asset('img/home-care/dua-go-trac.webp') }}"--}}
-            {{--                                 title="Bấm để xem hình ảnh chi tiết">--}}
-            {{--                        </a>--}}
-            {{--                    </div>--}}
-            {{--                    <div class="product-content">--}}
-            {{--                        <h5 class="title"><a href="#">Đũa Gỗ Trắc</a></h5>--}}
-            {{--                        <h6>Đồ Dùng Gia Đình</h6>--}}
-            {{--                        <div class="price">49.000₫</div>--}}
-            {{--                    </div>--}}
-            {{--                    <ul class="social">--}}
-            {{--                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>--}}
-            {{--                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>--}}
-            {{--                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>--}}
-            {{--                    </ul>--}}
-            {{--                </div>--}}
-            {{--            </div>--}}
-            {{--            <div class="col-md-3 col-sm-6">--}}
-            {{--                <div class="product-grid6">--}}
-            {{--                    <div class="product-image6">--}}
-            {{--                        <a href="#">--}}
-            {{--                            <img class="pic-1" src="{{ asset('img/home-care/xit-khu-mui.webp') }}"--}}
-            {{--                                 title="Bấm để xem hình ảnh chi tiết">--}}
-            {{--                        </a>--}}
-            {{--                    </div>--}}
-            {{--                    <div class="product-content">--}}
-            {{--                        <h5 class="title"><a href="#">Xịt Khử Mùi</a></h5>--}}
-            {{--                        <h6>Đồ Dùng Gia Đình</h6>--}}
-            {{--                        <div class="price">429.000₫</div>--}}
-            {{--                    </div>--}}
-            {{--                    <ul class="social">--}}
-            {{--                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>--}}
-            {{--                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>--}}
-            {{--                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>--}}
-            {{--                    </ul>--}}
-            {{--                </div>--}}
-            {{--            </div>--}}
+
         </div>
         <hr>
     </div>
@@ -237,7 +202,7 @@
                         </div>
                         <div class="product-content">
                             <h5 class="title"><a href="#">{{$item->name}}</a></h5>
-                            <h6>Đồ Dùng Gia Đình</h6>
+
                             <div class="price">{{number_format($item->price, 0, ',' , '.')}}đ</div>
                         </div>
                         <ul class="social">
@@ -267,7 +232,8 @@
         </div>
         <br>
 
-        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round">Xem
+
+        <p style=" text-align: center;font-size: 24px;color: #d56b2d"><a href="{{ route('list.product') }}" class="w3-button w3-round" style="text-decoration: none">Xem
                 Thêm</a></p>
         <br>
 
@@ -297,7 +263,7 @@
         </div>
         <br>
 
-        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round">Xem
+        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round" style="text-decoration: none">Xem
                 Thêm</a></p>
         <br>
         <hr>
@@ -382,7 +348,7 @@
 
         <br>
 
-        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round">Xem
+        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round" style="text-decoration: none">Xem
                 Thêm</a></p>
         <br>
     </div>

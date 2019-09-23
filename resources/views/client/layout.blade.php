@@ -17,7 +17,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="{{ asset('/thumbnail/logo-short-cut.png') }}">
+    <link rel="shortcut icon" href="{{ asset('/thumbnail/logo.png') }}">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
@@ -37,7 +37,11 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
     <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
+
     {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     @stack('styles')
 </head>
 <body>
@@ -47,14 +51,16 @@
     <div class="container-fluid">
         <div class="row" style="background: white">
             <!-- logo start -->
-            <div class="col-md-3 col-sm-12 text-center nopadding-right">
+            <div class="col-md-4 col-sm-12 text-center">
                 <div class="top-logo">
-                    <a href=""><img src="" alt=""/></a>
+                    <a><img src="{{ asset('img/logob.jpg') }}" style="width: 170px; height: 70px"></a>
+                    {{--                    <a><img src="img/logo.jpg" style="width: 170px; height: 70px"></a>--}}
+                    {{--                    href="{{ asset('img/logo.jpg')  }}" style="width: 170px; height: 70px"--}}
                 </div>
             </div>
             <!-- logo end -->
             <!-- mainmenu area start -->
-            <div class="col-md-6 text-center">
+            <div class="col-md-5 text-center">
                 <div class="mainmenu">
                     <nav>
                         <ul>
@@ -62,6 +68,7 @@
                             </li>
 
                             <li class="expand"><a href="/List-Product">Shop</a>
+
                                 <div class="restrain mega-menu megamenu4">
 											<span>
 												<a class="mega-menu-title" href="/List-Product?page=&pro_category_id=2&keyword=">Đồ dùng cá nhân</a>
@@ -72,8 +79,11 @@
 
 											</span>
                                 </div>
+
                             </li>
+
                             <li class="expand"><a href="/Blog">Bài Viết</a></li>
+
                             <li class="expand"><a href="/Policy">Chính Sách</a>
                                 <ul class="restrain sub-menu">
                                     <li><a href="/Policy/Data-Confidentiality">Bảo mật thông tin</a></li>
@@ -124,15 +134,15 @@
             <!-- mainmenu area end -->
             <!-- top details area start -->
             <div class="col-md-3 col-sm-12 nopadding-left">
-                <div class="top-detail">
+                <div class="top-detail" style="margin-top: 5px">
 
                     <!-- addcart top start -->
                     <div class="disflow">
                         <div class="circle-shopping expand">
                             <div class="shopping-carts text-right">
                                 <div class="cart-toggler">
-                                    <a href="{{ route('list.shopping.cart') }}"><i class="fa fa-shopping-bag"
-                                                                                   style="font-size:15px;"></i></a>
+                                    <a href="{{ route('list.shopping.cart') }}"><i class="fa fa-shopping-cart"
+                                                                                   style="font-size:18px;"></i></a>
                                     <a href="{{ route('list.shopping.cart') }}"><span id="count-cart"
                                                                                       class="cart-quantity">{{ \Cart::count() }}</span></a>
                                 </div>
@@ -184,7 +194,7 @@
                                                    placeholder="Search product...">
                                             <span class="input-group-btn">
                                                 <button type="submit" class="btn btn-default"><i
-                                                            class="fa fa-search"></i></button>
+                                                        class="fa fa-search"></i></button>
                                             </span>
                                         </div>
                                     </form>
@@ -197,7 +207,7 @@
                         <div class="expand dropps-menu">
                             <a href="#">
                                 {{--                                <i class="fa fa-align-right"></i>--}}
-                                <i class="fas fa-user-circle fa-fw" style="font-size:15px;"></i>
+                                <i class="fas fa-user-circle fa-fw" style="font-size:18px;"></i>
                             </a>
                             <ul class="restrain language">
 
@@ -242,6 +252,19 @@
 </header>
 
 <div class="row">
+    @if(Session::has('success'))
+        <div class="alert alert-success alert-dismissable " style="position: fixed; right: 20px">
+            <a href="#" class="close" data-dismiss="alert " aria-label="close">&times;</a>
+            <strong>Thành công! </strong> {{ Session::get('success') }}
+        </div>
+    @endif
+
+    @if(Session::has('error'))
+        <div class="alert alert-danger alert-dismissable" style="position: fixed; right: 20px">
+            <a href="#" class="close" data-dismiss="alert " aria-label="close">&times;</a>
+            <strong>Thất bại! </strong> {{ Session::get('error') }}
+        </div>
+    @endif
     @section('content')
     @show
 </div>
@@ -254,9 +277,9 @@
                 <ul class="f-address">
                     <li style="margin-bottom: 10px">
                         <div class="row">
-{{--                            <div class="col-1"><i class="fas fa-map-marker"></i></div>--}}
+                            {{--                            <div class="col-1"><i class="fas fa-map-marker"></i></div>--}}
                             <div class="col-12">
-                                <h6 class="font-weight-bold mb-0"> <i class="fas fa-map-marker"></i> ĐỊA CHỈ:</h6>
+                                <h6 class="font-weight-bold mb-0"><i class="fas fa-map-marker"></i> ĐỊA CHỈ:</h6>
                                 <p>SỐ 1 HÙNG VƯƠNG, QUÁN THÁNH <br> BA ĐÌNH, HÀ NỘI, VIỆT NAM</p>
                             </div>
                         </div>
@@ -265,7 +288,7 @@
                     <li>
                         <div class="row">
                             <div class="col-12">
-                                <h6 class="font-weight-bold mb-0"> <i class="far fa-envelope"></i>&nbsp;EMAIL:</h6>
+                                <h6 class="font-weight-bold mb-0"><i class="far fa-envelope"></i>&nbsp;EMAIL:</h6>
                                 <p><a href="#">anhntth1807026@fpt.edu.vn</a></p>
                             </div>
                         </div>
@@ -276,14 +299,17 @@
                 <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">BÀI VIẾT MỚI</h5>
                 <ul class="recent-post">
                     <li>
-                        <label class="mr-3" style="margin-right: 5px">28 <br>
-                            <p>9</p></label>
-                        <span>Làm thế nào để sống xanh?</span>
+                        <a href="#" class="w3-button w3-round" style="text-decoration: none; color: white">
+                            <label class="mr-3" style="margin-right: 5px">28 <br>
+                                <p>9</p></label>
+                            <span>Làm thế nào để sống xanh?</span>
+                        </a>
                     </li>
-                    <li>
-                        <label class="mr-3" style="margin-right: 5px">29 <br>
-                            <p>8</p></label>
-                        <span>Sống xanh là như thế nào?</span>
+                    <li><a href="#" class="w3-button w3-round" style="text-decoration: none; color: white">
+                            <label class="mr-3" style="margin-right: 5px">29 <br>
+                                <p>8</p></label>
+                            <span>Sống xanh là như thế nào?</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -294,7 +320,7 @@
                     <input type="text" class="form-control" placeholder="Địa Chỉ Email:">
                     {{--                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>--}}
                 </div>
-                    <ul class="social-pet mt-4" style="margin-left: 10px;">
+                <ul class="social-pet mt-4" style="margin-left: 10px;">
                     <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
@@ -315,7 +341,6 @@
 
 <script>
     var btn = $('#BackToTop');
-
     $(window).scroll(function () {
         if ($(window).scrollTop() > 300) {
             btn.addClass('show');
@@ -323,38 +348,16 @@
             btn.removeClass('show');
         }
     });
-
     btn.on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, '300');
     });
-
-    // accordion
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
-
-            /* Toggle between hiding and showing the active panel */
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
 </script>
 
 <script src="{{ asset('plugins/jQueryUI/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/jquery.meanmenu.js') }}"></script>
-{{--<script src="{{ asset('js/jquery.scrollUp.min.js') }}"></script>--}}
 <script src="{{ asset('js/main.js') }}"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

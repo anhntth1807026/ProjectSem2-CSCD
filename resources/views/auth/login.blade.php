@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="row">
-                        <a href="{{ route('get.register') }}" class="create-account " style="padding-left: 182px">
+                        <a href="{{ route('get.register') }}" class="create-account " >
                             Create an
                             Account </a>
                     </div>
@@ -58,16 +58,14 @@
                             {{ __('Login') }}
                         </button>
 
-                        @if (Route::has('password.request'))
-                            <a class=" btn-link" style="padding-left: 171px"
-                               href="{{ route('password.request') }}">
-                                {{ __('Forgot Your Password?') }}
-                            </a>
-                        @endif
+                        <a class=" btn-link" href="{{ route('form.reset.password') }}" target="_blank">
+                            Quên mật khẩu ?
+                        </a>
+
                     </div>
                     <div class="oauth-buttons">
                         <span><i class="fa fa-facebook"></i></span>
-                        <span><a href="{{ route('login.google') }}" ><i class="fa fa-google-plus"></i> </a> </span>
+                        <span><a href="{{ route('login.google') }}"><i class="fa fa-google-plus"></i> </a> </span>
                         <span><i class="fa fa-linkedin"></i> </span>
                         <span><i class="fa fa-twitter"></i> </span>
                     </div>
@@ -79,16 +77,5 @@
 
     </div>
 
-{{--    <script src="{{ asset('js/login_google.js') }}"></script>--}}
-{{--    <script>--}}
-
-{{--        $("#js-login-google").login_google({--}}
-{{--            appID : '144826600211-d62rjo5lei9htrm024kkj7fuhpr4trfk.apps.googleusercontent.com',--}}
-{{--        }).fail(function name(response) {--}}
-{{--            console.log(response);--}}
-{{--        }).done(function(response){--}}
-{{--            console.log(response);--}}
-{{--        });--}}
-{{--    </script>--}}
 @endsection
 
