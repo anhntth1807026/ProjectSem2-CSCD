@@ -176,7 +176,7 @@
                                     <i class="fa fa-shopping-bag"></i>
                                 </a>
                             </li>
-                            <li><a href="" data-tip="View Detail"><i class="fa fa-eye"></i></a></li>
+                            <li><a href="/Product-Details" data-tip="View Detail"><i class="fa fa-eye"></i></a></li>
                         </ul>
                     </div>
                 </div>
