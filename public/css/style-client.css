@@ -1013,6 +1013,7 @@ footer .input-group-addon {
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
+    color: greenyellow;
 }
 
 #BackToTop::after {
@@ -1024,14 +1025,15 @@ footer .input-group-addon {
     font-style: normal;
     font-size: 35px;
     line-height: 60px;
-    color: greenyellow;
 }
 #BackToTop:hover {
     cursor: pointer;
-    background-color: #d56b2d;
+    background-color: greenyellow;
+    color: #d56b2d;
 }
 #BackToTop:active {
-    background-color: #d56b2d;
+    background-color: greenyellow;
+    color: #d56b2d;
 }
 #BackToTop.show {
     opacity: 1;
@@ -1053,29 +1055,4 @@ footer .input-group-addon {
     height: 100%;
     width: 100%;
     padding: 5px;
-}
-
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 96%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-}
-
-.active, .accordion:hover {
-    background-color: #ccc;
-    transition: width 2s;
-}
-
-.panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-    transition: width 2s;
 }

@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
     {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     @stack('styles')
 </head>
 <body>
@@ -253,9 +256,9 @@
                 <ul class="f-address">
                     <li style="margin-bottom: 10px">
                         <div class="row">
-{{--                            <div class="col-1"><i class="fas fa-map-marker"></i></div>--}}
+                            {{--                            <div class="col-1"><i class="fas fa-map-marker"></i></div>--}}
                             <div class="col-12">
-                                <h6 class="font-weight-bold mb-0"> <i class="fas fa-map-marker"></i> ĐỊA CHỈ:</h6>
+                                <h6 class="font-weight-bold mb-0"><i class="fas fa-map-marker"></i> ĐỊA CHỈ:</h6>
                                 <p>SỐ 1 HÙNG VƯƠNG, QUÁN THÁNH <br> BA ĐÌNH, HÀ NỘI, VIỆT NAM</p>
                             </div>
                         </div>
@@ -264,7 +267,7 @@
                     <li>
                         <div class="row">
                             <div class="col-12">
-                                <h6 class="font-weight-bold mb-0"> <i class="far fa-envelope"></i>&nbsp;EMAIL:</h6>
+                                <h6 class="font-weight-bold mb-0"><i class="far fa-envelope"></i>&nbsp;EMAIL:</h6>
                                 <p><a href="#">anhntth1807026@fpt.edu.vn</a></p>
                             </div>
                         </div>
@@ -275,14 +278,17 @@
                 <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">BÀI VIẾT MỚI</h5>
                 <ul class="recent-post">
                     <li>
-                        <label class="mr-3" style="margin-right: 5px">28 <br>
-                            <p>9</p></label>
-                        <span>Làm thế nào để sống xanh?</span>
+                        <a href="#" class="w3-button w3-round" style="text-decoration: none; color: white">
+                            <label class="mr-3" style="margin-right: 5px">28 <br>
+                                <p>9</p></label>
+                            <span>Làm thế nào để sống xanh?</span>
+                        </a>
                     </li>
-                    <li>
-                        <label class="mr-3" style="margin-right: 5px">29 <br>
-                            <p>8</p></label>
-                        <span>Sống xanh là như thế nào?</span>
+                    <li><a href="#" class="w3-button w3-round" style="text-decoration: none; color: white">
+                            <label class="mr-3" style="margin-right: 5px">29 <br>
+                                <p>8</p></label>
+                            <span>Sống xanh là như thế nào?</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -292,7 +298,7 @@
                     <input type="text" class="form-control" placeholder="Địa Chỉ Email:">
                     {{--                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>--}}
                 </div>
-                    <ul class="social-pet mt-4" style="margin-left: 10px;">
+                <ul class="social-pet mt-4" style="margin-left: 10px;">
                     <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
@@ -320,26 +326,6 @@
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, '300');
     });
-
-    // accordion
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
-
-            /* Toggle between hiding and showing the active panel */
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
 </script>
 <script src="{{ asset('plugins/jQueryUI/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
