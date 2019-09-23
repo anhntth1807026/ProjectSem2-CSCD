@@ -12,109 +12,65 @@
         </div>
         <div class="row">
             <!-- Icon Cards-->
-            <div class="row">
-                <div class="col-xl-3 col-sm-6 mb-3">
-                    <div class="card text-white bg-primary o-hidden h-100">
-                        <div class="card-body">
-                            <div class="card-body-icon">
-                                <i class="fas fa-fw fa-comments"></i>
-                            </div>
-                            <div class="mr-5">26 New Messages!</div>
-                        </div>
-                        <a class="card-footer text-white clearfix small z-1" href="#">
-                            <span class="float-left">View Details</span>
-                            <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-3">
-                    <div class="card text-white bg-warning o-hidden h-100">
-                        <div class="card-body">
-                            <div class="card-body-icon">
-                                <i class="fas fa-fw fa-list"></i>
-                            </div>
-                            <div class="mr-5">11 New Tasks!</div>
-                        </div>
-                        <a class="card-footer text-white clearfix small z-1" href="#">
-                            <span class="float-left">View Details</span>
-                            <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-3">
-                    <div class="card text-white bg-success o-hidden h-100">
-                        <div class="card-body">
-                            <div class="card-body-icon">
-                                <i class="fas fa-fw fa-shopping-cart"></i>
-                            </div>
-                            <div class="mr-5">123 New Orders!</div>
-                        </div>
-                        <a class="card-footer text-white clearfix small z-1" href="#">
-                            <span class="float-left">View Details</span>
-                            <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-3">
-                    <div class="card text-white bg-danger o-hidden h-100">
-                        <div class="card-body">
-                            <div class="card-body-icon">
-                                <i class="fas fa-fw fa-life-ring"></i>
-                            </div>
-                            <div class="mr-5">13 New Tickets!</div>
-                        </div>
-                        <a class="card-footer text-white clearfix small z-1" href="#">
-                            <span class="float-left">View Details</span>
-                            <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <div class="col-md-9"></div>
+            <div class="col-md-3">
+                <select name="revenue" id="revenue" class="form-control">
 
-            <!-- Area Chart Example-->
-            <div class="row">
-                <div class="card-header" style="width: 100%">
-                    <i class="fas fa-chart-area"></i>
-                    Area Chart
-                </div>
-                <div class="row py-2">
-                    <div class="col-md-4 py-1">
-                        <div class="card">
-                            <div class="card-body">
-                                <canvas id="chDonut1"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 py-1">
-                        <div class="card">
-                            <div class="card-body">
-                                <canvas id="chDonut2"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 py-1">
-                        <div class="card">
-                            <div class="card-body">
-                                <canvas id="chDonut3"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </select>
             </div>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <canvas id="chLine" height="100"></canvas>
-                </div>
-                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            <div class="row">
+                {{--                <div class="float-right mt-3">--}}
+                {{--                    <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; width: 100%">--}}
+                {{--                        <i class="fa fa-calendar"></i>&nbsp;--}}
+                {{--                        <span></span> <i class="fa fa-caret-down"></i>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
+
+                <div id="chart_div" style="width: 900px; height: 500px;"></div>
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    {{--    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>--}}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(function () {
+                var start = moment().subtract(1, 'days');
+                var end = moment();
+                $.ajax({
+                    url: '/api-get-chart-data?startDate=' + start.format('YYYY-MM-DD') + '&endDate=' + end.format('YYYY-MM-DD'),
+                    method: 'GET',
+                    success: function (resp) {
+                        drawChart(resp);
+                        var totalRevenue = 0;
+                        var lastRevenue = parseInt(resp[0].revenue);
+                        var firstRevenue = parseInt(resp[resp.length - 1].revenue);
+                        for (var i = 0; i < resp.length; i++) {
+                            totalRevenue += parseInt(resp[i].revenue);
+                        }
+                        $('.total-revenue').text(totalRevenue);
+                        $('.total-revenue').formatNumber();
+                    }
+                })
+            }
+        );
+
+        function drawChart(tr_total, title) {
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'Revenue');
+            for (var i = 0; i < chart_data.length; i++) {
+                data.addRow([new Date(chart_data[i].day), Number(chart_data[i].revenue)]);
+            }
+            var options = {
+                legend: 'none'
+            };
+            var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
+
+    </script>
 @endsection

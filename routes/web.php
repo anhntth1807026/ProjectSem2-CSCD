@@ -35,7 +35,7 @@ Route::get('/About-Us', function () {
 Route::get('contact', 'ContactController@getContact')->name('get.contact');
 Route::post('contact', 'ContactController@saveContact');
 
-Route::get('/List-Product', 'ListProductController@index');
+Route::get('/List-Product', 'ListProductController@index')->name('list.product');
 
 
 Route::get('/Blog', function () {
@@ -86,10 +86,10 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
     Route::resource('/product', 'ProductController');
     Route::resource('/category', 'CategoryController');
     Route::resource('/article', 'ArticleController');
-    Route::get('/admin/user', 'AdminUserController@index')->name('admin.get.user');
-    Route::get('/admin/user/edit/{id}', 'AdminUserController@editUser')->name('admin.edit.user');
-    Route::put('/admin/user/update/{id}', 'AdminUserController@update')->name('admin.update.user');
-    Route::delete('/admin/user/delete/{id}', 'AdminUserController@delete')->name('admin.delete.user');
+    Route::get('/user', 'AdminUserController@index')->name('admin.get.user');
+    Route::get('/user/edit/{id}', 'AdminUserController@editUser')->name('admin.edit.user');
+    Route::put('/user/update/{id}', 'AdminUserController@update')->name('admin.update.user');
+    Route::delete('/user/delete/{id}', 'AdminUserController@delete')->name('admin.delete.user');
 });
 
 Route::get('/admin/chart', function () {
@@ -132,6 +132,8 @@ Route::group(['prefix' => 'admin/transaction'], function () {
     Route::get('/', 'AdminTransactionController@index')->name('admin.list.transaction');
     Route::get('/view/{id}', 'AdminTransactionController@viewOrder')->name('admin.view.order');
 });
+Route::get('/admin/transaction/update-status/{id}', 'AdminTransactionController@updateStatus');
+
 Route::group(['prefix' => 'admin/contact'], function () {
     Route::get('/', 'AdminContactController@index')->name('admin.contact');
 });
@@ -145,3 +147,4 @@ Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], fu
 
 Route::get('register/verify/{code}', 'Auth\RegisterController@verifyUser')->name('verify.user');
 
+Route::get('/api-get-chart-data', 'AdminTransactionController@getChartDataApi');

@@ -41,9 +41,9 @@
                         <td>{{ $transaction->tr_phone }}</td>
                         <td>
                             @if($transaction->tr_status == 0)
-                                <a href="/admin/order/update-status/{{$transaction->id}}?status=1" onclick="return confirm('Are sure to confirm this order?')"
-                                   class="btn btn-simple btn-info btn-icon edit" title="Click to have this order confirmed"><i class="fas fa-hourglass"></i></a>
-                                <a href="/admin/order/update-status/{{$transaction->id}}?status=-1" onclick="return confirm('Are sure to confirm this order?')"
+                                <a href="/admin/transaction/update-status/{{$transaction->id}}?tr_status=1" onclick="return confirm('Bạn có chắc muốn xác nhận thành công đơn hàng?')"
+                                   class="btn btn-simple btn-info btn-icon edit" title="Click to have this order finished"><i class="fas fa-check"></i></a>
+                                <a href="/admin/transaction/update-status/{{$transaction->id}}?tr_status=-1" onclick="return confirm('Bạn có chắc muốn huỷ đơn hàng?')"
                                    class="btn btn-simple btn-danger btn-icon edit" title="Click to cancel this order"><i class="fas fa-times"></i></a>
                             @elseif($transaction->tr_status==1)
                                 <i class="fas fa-check 4x text-danger"></i>
@@ -56,7 +56,7 @@
 {{--                            <a href="" class="label label-default">Chờ xử lý</a>--}}
                         </td>
                         <td>
-                            <a href="" class="btn "><i class="fas fa-trash-alt"></i> Xoá</a>
+{{--                            <a href="" class="btn "><i class="fas fa-trash-alt"></i> Xoá</a>--}}
                             <a class="btn btn-default js_order_item" href="{{ route('admin.view.order',  $transaction->id) }}"><i
                                     class="fas fa-eye"></i></a>
                         </td>

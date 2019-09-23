@@ -17,12 +17,12 @@ class AdminTransactionController extends Controller
      */
     public function index(){
 //        $users = User::whereRaw(1);
-        $choosedStatus = Input::get('status');
-        if ((!Input::has('status') || $choosedStatus == 3)){
+        $choosedStatus = Input::get('tr_status');
+        if ((!Input::has('tr_status') || $choosedStatus == 3)){
             $choosedStatus = 3;
             $transactions = Transaction::with('users:id,name')->orderByRaw('created_at DESC')->paginate(10);
         } else {
-            $transactions = Transaction::where(['status' => $choosedStatus])->with('users:id,name')->orderByRaw('created_at DESC')->paginate(10);
+            $transactions = Transaction::where(['tr_status' => $choosedStatus])->with('users:id,name')->orderByRaw('created_at DESC')->paginate(10);
         }
 
 //        $transactions = Transaction::with('users:id,name')->paginate(5);
@@ -48,7 +48,7 @@ class AdminTransactionController extends Controller
         if ($obj == null){
             return response()->json(['message' => 'Not Found'], 404);
         }
-        $obj->status = Input::get('status');
+        $obj->tr_status = Input::get('tr_status');
         $obj->save();
         return redirect()->back();
     }
@@ -66,9 +66,18 @@ class AdminTransactionController extends Controller
         }
         return response()->json(['list_obj' => $transactions], 200);
     }
-    public function updateStatusMany(Request $request)
+
+    public function getChartDataApi()
     {
-        DB::table('transactions')->whereIn('id', Input::get('ids'))->update(['status' => $request->get('status')]);
-        return redirect()->back();
+        $start_date = Input::get('startDate');
+        $end_date = Input::get('endDate');
+        $chart_data = Transaction::select(DB::raw('sum(tr_total) as revenue'), DB::raw('date(created_at) as day'))
+            ->whereRaw('created_at >= "' . $start_date . ' 00:00:00" AND created_at <= "' . $end_date . ' 23:59:59" AND status = 1')
+            ->groupBy('day')
+            ->orderBy('day', 'desc')
+            ->get();
+
+        return $chart_data;
     }
+
 }

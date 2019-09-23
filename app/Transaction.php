@@ -29,5 +29,21 @@ class Transaction extends Model
                 break;
         }
     }
+
+    function fetch_revenue(){
+        $this->db->select('tr_total');
+        $this->db->from('transactions');
+        $this->db->groupBy('created_at');
+        $this->db->orderBy('created_at', 'DESC');
+
+        return $this->db->get();
+    }
+
+    function fetch_transactions($tr_total){
+        $this->db->where('tr_total', $tr_total);
+        $this->db->orderBy('id', 'ASC');
+        return $this->db->get('transactions');
+
+    }
 }
 
