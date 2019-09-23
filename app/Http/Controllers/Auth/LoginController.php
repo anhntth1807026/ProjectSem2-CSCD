@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Classes\ActivationService;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -33,9 +34,19 @@ class LoginController extends Controller
 
     public function postLogin(Request $request)
     {
-        $data = $request->only('email', 'password');
+//        $data = $request->only('email', 'password');
+        $data = [
+            'email' => $request-> email,
+            'password' => $request->password,
+            'active' => 1
+        ];
         if (Auth::attempt($data)) {
             return redirect()->route('home');
+        } else if (!Auth::attempt($data)){
+            return redirect()->back()
+                ->withErrors([
+                    'email'  =>  'Bạn không thể đăng nhập'
+                ]);
         }
     }
 

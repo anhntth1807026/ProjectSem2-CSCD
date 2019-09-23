@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Requests\RegisterValidate;
+use App\Classes\ActivationService;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Validation\ValidationException;
@@ -32,7 +34,6 @@ class RegisterController extends Controller
      * @var string
      */
 //    protected $redirectTo = '/home';
-
     /**
      * Create a new controller instance.
      *
@@ -43,6 +44,7 @@ class RegisterController extends Controller
 //        $this->middleware('guest');
 //    }
 
+
     public function getRegister()
     {
         return view('auth.register');
@@ -51,7 +53,7 @@ class RegisterController extends Controller
     public function postRegister(RegisterValidate $request)
     {
         $request->validated();
-
+        $activation_code = time() . uniqid(true);
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
@@ -60,13 +62,42 @@ class RegisterController extends Controller
         $user->address = $request->address;
         $user->phone = $request->phone;
         $user->gender = $request->gender;
+        $user->activation_code = $activation_code;
+        $user->active = 0;
         $user->save();
 
         if ($user->id) {
-            return redirect()->route('get.login');
+            $activation_code = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'activation_code' => $activation_code,
+            ];
+            Mail::send('email.verify', $activation_code, function ($message) use ($request) {
+                $message->to($request->email, $request->name)->subject('Verify your email address');
+                $message->from('thanhhtth1807034@fpt.edu.vn','Admin');
+            });
+//            return redirect(route('login'))->with('status', 'Vui lòng xác nhận tài khoản email');
+            return redirect()->route('get.login')->with('status', 'Vui lòng xác nhận tài khoản email.');
         }
 
+
         return redirect()->back();
+    }
+
+    public function verifyUser($code)
+    {
+        $user = User::where('activation_code', $code);
+
+        if ($user->count() > 0) {
+            $user->update([
+                'active' => 1,
+            ]);
+            $notification_status = 'Bạn đã xác nhận thành công';
+        } else {
+            $notification_status = 'Mã xác nhận không chính xác';
+        }
+
+        return redirect(route('get.login'))->with('status', $notification_status);
     }
     /**
      * Get a validator for an incoming registration request.
