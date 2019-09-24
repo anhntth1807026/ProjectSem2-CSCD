@@ -152,14 +152,14 @@
                 <div class="col-md-3 col-sm-6" data-aos="zoom-out-down" data-aos-duration="1200">
                     <div class="product-grid6 mb-2">
                         <div class="product-image6">
-                            <a href="#">
+                            <a href="{{ route('get.detail.product', $productHots->id) }}">
                                 <img class="pic-1"
                                      src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_350/{{$productHots->thumbnail}}"
                                      title="Bấm để xem hình ảnh chi tiết">
                             </a>
                         </div>
                         <div class="product-content">
-                            <h5 class="title"><a href="#">{{$productHots->name}}</a></h5>
+                            <h5 class="title"><a href="{{ route('get.detail.product', $productHots->id) }}">{{$productHots->name}}</a></h5>
 
                             <div class="price">{{number_format($productHots->price, 0, ',' , '.')}}đ</div>
                         </div>
@@ -176,7 +176,9 @@
                                     <i class="fa fa-shopping-bag"></i>
                                 </a>
                             </li>
-                            <li><a href="/Product-Details" data-tip="View Detail"><i class="fa fa-eye"></i></a></li>
+
+                            <li><a href="{{ route('get.detail.product', $productHots->id) }}" data-tip="View Detail"><i class="fa fa-eye"></i></a></li>
+
                         </ul>
                     </div>
                 </div>

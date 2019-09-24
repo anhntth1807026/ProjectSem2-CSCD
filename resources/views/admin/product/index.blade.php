@@ -1,5 +1,10 @@
 @extends('admin.layout.master')
 @section('content')
+    <style>
+        .rating .active {
+            color: #ff9705 !important;
+        }
+    </style>
     <div class="container">
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
@@ -59,13 +64,35 @@
                     </tr>
                     </thead>
                     @foreach ($list as $key => $products)
+
                         <tbody id="myTable">
+                        <?php
+                        $avg = 0;
+                        if ($products->pro_total_rating) {
+                            $avg = round($products->pro_total_number / $products->pro_total_rating, 2);
+                        }
+                        ?>
                         <tr id="tr_{{ $products -> id }}">
 
                             <td scope="row"><input type="checkbox" class="checkbox" data-id="{{ $products -> id }}">
                             </td>
                             <td scope="col">{{ $products-> id }}</td>
-                            <td scope="col">{{ $products->name }}</td>
+                            <td scope="col">
+                                {{ $products->name }}
+                                <ul>
+                                    <li style="list-style: none">
+                                        <span>Đánh giá : </span>
+                                        <span class="rating">
+                                    @for($i =1; $i <= 5; $i ++)
+                                                <i class="fas fa-star {{ $i <= $avg ? 'active' : '' }}"
+                                                   style="color: #999"></i>
+                                            @endfor
+                                </span>
+                                        <span>{{ $avg }}</span>
+                                    </li>
+                                </ul>
+
+                            </td>
                             <td scope="col">{{ isset($products->category->name) ? $products->category->name : '[N/A]' }}</td>
                             <td scope="col">
                                 @foreach(explode("@",$products->thumbnail) as $image)

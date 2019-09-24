@@ -16,13 +16,16 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->integer('pro_category_id')->index();
             $table->text('description');
             $table->text('thumbnail');
             $table->integer('quantity');
             $table->double('price');
             $table->integer('pro_hot')->default(0);
-            $table->timestamps();
+            $table->integer('pro_total_rating')->default(0)->comment('Tổng số đánh giá');
+            $table->integer('pro_total_number')->default(0)->comment('Tổng số điểm đánh giá');
             $table->integer('status')->default(1);
+            $table->timestamps();
         });
     }
 

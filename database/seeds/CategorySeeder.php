@@ -16,13 +16,13 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             [
                 'id' => '1',
-                'name' => 'Chăm sóc nhà cửa',
+                'name' => 'Đồ dùng gia đình',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
                 'id' => '2',
-                'name' => 'Chăm sóc cơ thể',
+                'name' => 'Đồ dùng cá nhân',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ]

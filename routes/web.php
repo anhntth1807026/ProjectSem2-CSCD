@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use JD\Cloudder\Facades\Cloudder;
+
 //
 //Route::get('/', function () {
 //    return view('welcome');
@@ -60,9 +61,8 @@ Route::get('/Blog/Blog5', function () {
 });
 
 
-Route::get('/Product-Details', function () {
-    return view('client.productdetails');
-});
+Route::get('product/{id}', 'ProductDetailController@productDetail')->name('get.detail.product');
+
 
 Route::get('/Policy', function () {
     return view('client.policy');
@@ -140,7 +140,7 @@ Route::group(['prefix' => 'admin/contact'], function () {
     Route::get('/', 'AdminContactController@index')->name('admin.contact');
 });
 
-Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], function (){
+Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], function () {
     Route::get('/pay', 'ShoppingCartController@formPay')->name('form.pay');
     Route::post('/pay', 'ShoppingCartController@saveInforShoppingCart');
     Route::get('/pay-online', 'ShoppingCartController@showFormPay')->name('form.pay_online');
@@ -150,3 +150,11 @@ Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], fu
 Route::get('register/verify/{code}', 'Auth\RegisterController@verifyUser')->name('verify.user');
 
 Route::get('/api-get-chart-data', 'AdminTransactionController@getChartDataApi');
+
+Route::group(['prefix' => 'ajax', 'middleware' => 'CheckLoginUser'], function () {
+    Route::post('/rating/{id}', 'RatingController@saveRating')->name('post.rating.product');
+});
+
+Route::group(['prefix' => 'rating'], function () {
+    Route::get('/', 'AdminRatingController@index')->name('admin.list.rating');
+});
