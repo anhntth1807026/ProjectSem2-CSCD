@@ -139,12 +139,14 @@ $(document).ready(function () {
     });
 
 
+
     $('#btn-search').click(function () {
         var page = $('input[name="currentPage"]').val();
         var categoryId = $('select[name="categoryId"]').val();
         var keyword = $('input[name="keyword"]').val();
         location.href = `${BASE_URL}/admin/product?page=${page}&pro_category_id=${categoryId}&keyword=${keyword}`;
     });
+
     $('#btn-search-list-product').click(function () {
 
         onSearch()

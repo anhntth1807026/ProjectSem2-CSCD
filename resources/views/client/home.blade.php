@@ -176,7 +176,9 @@
                                     <i class="fa fa-shopping-bag"></i>
                                 </a>
                             </li>
+
                             <li><a href="{{ route('get.detail.product', $productHots->id) }}" data-tip="View Detail"><i class="fa fa-eye"></i></a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -232,7 +234,8 @@
         </div>
         <br>
 
-        <p style=" text-align: center;font-size: 24px;color: #d56b2d"><a href="{{ route('list.product') }}" class="w3-button w3-round">Xem
+
+        <p style=" text-align: center;font-size: 24px;color: #d56b2d"><a href="{{ route('list.product') }}" class="w3-button w3-round" style="text-decoration: none">Xem
                 Thêm</a></p>
         <br>
 
@@ -262,7 +265,7 @@
         </div>
         <br>
 
-        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round">Xem
+        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round" style="text-decoration: none">Xem
                 Thêm</a></p>
         <br>
         <hr>
@@ -347,7 +350,7 @@
 
         <br>
 
-        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round">Xem
+        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round" style="text-decoration: none">Xem
                 Thêm</a></p>
         <br>
     </div>

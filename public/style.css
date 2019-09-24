@@ -1,17 +1,13 @@
 /* -----------------------------------------------------------------------------------
-
     Template Name: Lavoro Responsive eCommerce Template.
     Template URI: http://bootexperts.com
     Description: This is html5 template
     Author: BootExperts
     Author URI: http://bootexperts.com
     Version: 1.0
-
 -----------------------------------------------------------------------------------
-
     CSS INDEX
     ===================
-
 	1.  Theme Default CSS (body, link color, section etc)
 	2. header area
 		2.1  mainmenu area
@@ -2903,7 +2899,7 @@ blockquote {
 }
 .team-img img {
     border: 7px solid transparent;
-    border-radius: 100%;
+    /*border-radius: 100%;*/
     height: 100%;
     width: 100%;
 }
@@ -3291,5 +3287,3 @@ input#rememberme {
 .slider-danger.slider-ghost .slider-handle {
     border-color: #d9534f;
 }
-
-
