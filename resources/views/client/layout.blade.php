@@ -84,7 +84,7 @@
 
                             <li class="expand"><a href="/Blog">Bài Viết</a></li>
 
-                            <li class="expand"><a href="/Policy">Chính Sách</a>
+                            <li class="expand"><a href="">Chính Sách</a>
                                 <ul class="restrain sub-menu">
                                     <li><a href="/Policy/Data-Confidentiality">Bảo mật thông tin</a></li>
                                     <li><a href="/Policy/Delivery-Transport">Vận chuyển, giao nhận</a></li>
@@ -134,7 +134,7 @@
             <!-- mainmenu area end -->
             <!-- top details area start -->
             <div class="col-md-3 col-sm-12 nopadding-left">
-                <div class="top-detail" style="margin-top: 5px">
+                <div class="top-detail" style=" padding-top: 30px; margin-top: 5px">
 
                     <!-- addcart top start -->
                     <div class="disflow">
@@ -183,25 +183,25 @@
                     </div>
                     <!-- addcart top start -->
                     <!-- search divition start -->
-                    <div class="disflow">
-                        <div class="header-search expand">
-                            <div class="search-icon fa fa-search"></div>
-                            <div class="product-search restrain">
-                                <div class="container nopadding-right">
-                                    <form action="index.html" id="searchform" method="get">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" maxlength="128"
-                                                   placeholder="Search product...">
-                                            <span class="input-group-btn">
-                                                <button type="submit" class="btn btn-default"><i
-                                                        class="fa fa-search"></i></button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{{--                    <div class="disflow">--}}
+{{--                        <div class="header-search expand">--}}
+{{--                            <div class="search-icon fa fa-search"></div>--}}
+{{--                            <div class="product-search restrain">--}}
+{{--                                <div class="container nopadding-right">--}}
+{{--                                    <form action="index.html" id="searchform" method="get">--}}
+{{--                                        <div class="input-group">--}}
+{{--                                            <input type="text" class="form-control" maxlength="128"--}}
+{{--                                                   placeholder="Search product...">--}}
+{{--                                            <span class="input-group-btn">--}}
+{{--                                                <button type="submit" class="btn btn-default"><i--}}
+{{--                                                        class="fa fa-search"></i></button>--}}
+{{--                                            </span>--}}
+{{--                                        </div>--}}
+{{--                                    </form>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                     <!-- search divition end -->
                     <div class="disflow">
                         <div class="expand dropps-menu">

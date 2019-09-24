@@ -66,56 +66,60 @@
     </style>
     </head>
     <body>
-    <div>
-        <img class="mySlides" src="https://www.gunite.co.uk/wp-content/uploads/2017/09/Policy-and-Procedures-1140x427.jpg" style="width:70%; margin: auto; display: block;">
-    </div>
+    <div class="container">
+        <div>
+            <img class="mySlides" src="https://www.gunite.co.uk/wp-content/uploads/2017/09/Policy-and-Procedures-1140x427.jpg" style="width:70%; margin: auto; display: block;">
+        </div>
+        <br>
 
-    <div class="w3-row-padding w3-padding-64 w3-container">
-        <div class="w3-content">
-            <h3 style="text-align: center">CHÍNH SÁCH BẢO MẬT THANH TOÁN</h3>
-            <h4 style="text-align: center;margin: 40px 0 40px 0;opacity: 0.75">KHÀNG HÀNG "ẨN DANH"</h4>
-            <div class="content1">
-                <h5>Cam kết bảo mật</h5>
-                <p>Hệ thống thanh toán thẻ được cung cấp bởi các đối tác cổng thanh toán (“Đối Tác Cổng Thanh Toán”) đã
-                    được
-                    cấp phép hoạt động hợp pháp tại Việt Nam. Theo đó, các tiêu chuẩn bảo mật thanh toán thẻ tại
-                    www.laidayrefill.com đảm bảo tuân thủ theo các tiêu chuẩn bảo mật ngành.
-                </p>
-            </div>
+        <div class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+                <h3 style="text-align: center">CHÍNH SÁCH BẢO MẬT THANH TOÁN</h3>
+                <h4 style="text-align: center;margin: 40px 0 40px 0;opacity: 0.75">KHÀNG HÀNG "ẨN DANH"</h4>
+                <div class="content1">
+                    <h5>Cam kết bảo mật</h5>
+                    <p>Hệ thống thanh toán thẻ được cung cấp bởi các đối tác cổng thanh toán (“Đối Tác Cổng Thanh Toán”) đã
+                        được
+                        cấp phép hoạt động hợp pháp tại Việt Nam. Theo đó, các tiêu chuẩn bảo mật thanh toán thẻ tại
+                        www.laidayrefill.com đảm bảo tuân thủ theo các tiêu chuẩn bảo mật ngành.
+                    </p>
+                </div>
 
-            <div class="content1 w3-padding-32">
-                <h5>Quy định bảo mật</h5>
-                <p>Chính sách giao dịch thanh toán bằng thẻ quốc tế và thẻ nội địa (internet banking) đảm bảo tuân thủ
-                    các tiêu chuẩn bảo mật của các Đối Tác Cổng Thanh Toán gồm:</p>
-                <ul>
-                    <li><p>- Thông tin tài chính của Khách hàng sẽ được bảo vệ trong suốt quá trình giao dịch bằng giao
-                            thức SSL (Secure Sockets Layer).</p></li>
-                    <li><p>- Chứng nhận tiêu chuẩn bảo mật dữ liệu thông tin thanh toán (PCI DSS) do Trustwave cung
-                            cấp.</p></li>
-                    <li><p>- Mật khẩu sử dụng một lần (OTP) được gửi qua SMS để đảm bảo việc truy cập tài khoản được xác
-                            thực.</p></li>
-                    <li><p>- Tiêu chuẩn mã hóa MD5 128 bit.</p></li>
-                    <li><p>- Các nguyên tắc và quy định bảo mật thông tin trong ngành tài chính ngân hàng theo quy định
-                            của Ngân hàng nhà nước Việt Nam.</p></li>
-                </ul>
-                <p>Chính sách bảo mật giao dịch trong thanh toán của www.laidayrefill.com áp dụng với Khách hàng:</p>
-                <ul>
-                    <li><p>- Lại Đây Refill cung cấp tiện ích lưu giữ thông tin thẻ để sử dụng cho các lần thanh toán
-                            sau trên www.laidayrefill.com với nguyên tắc Lại Đây Refill chỉ lưu chuỗi đã được mã hóa bởi
-                            Đối Tác Cổng Thanh Toán cung cấp cho Tiki, vì vậy Khách hàng lựa chọn sử dụng tiện ích lưu
-                            giữ thông tin thẻ thì việc bảo mật thông tin thẻ thanh toán Khách hàng được thực hiện bởi
-                            Đối Tác Cổng Thanh Toán đã được cấp phép.</p></li>
-                    <li><p>- Đối với thẻ quốc tế: thông tin thẻ thanh toán của Khách hàng mà có khả năng sử dụng để xác
-                            lập giao dịch không được lưu trên hệ thống của www.laidayrefill.com, Đối Tác Cổng Thanh Toán
-                            sẽ lưu giữ và bảo mật theo tiêu chuẩn quốc tế PCI DSS.</p></li>
-                    <li><p>- Đối với thẻ nội địa (internet banking), Lại Đây Refill chỉ lưu trữ mã đơn hàng, mã giao
-                            dịch và tên ngân hàng.</p></li>
-                </ul>
-                <p>Lại Đây Refill cam kết đảm bảo thực hiện nghiêm túc các biện pháp bảo mật cần thiết cho mọi hoạt động
-                    thanh toán thực hiện trên www.laidayrefill.com</p>
+                <div class="content1 w3-padding-32">
+                    <h5>Quy định bảo mật</h5>
+                    <p>Chính sách giao dịch thanh toán bằng thẻ quốc tế và thẻ nội địa (internet banking) đảm bảo tuân thủ
+                        các tiêu chuẩn bảo mật của các Đối Tác Cổng Thanh Toán gồm:</p>
+                    <ul>
+                        <li><p>- Thông tin tài chính của Khách hàng sẽ được bảo vệ trong suốt quá trình giao dịch bằng giao
+                                thức SSL (Secure Sockets Layer).</p></li>
+                        <li><p>- Chứng nhận tiêu chuẩn bảo mật dữ liệu thông tin thanh toán (PCI DSS) do Trustwave cung
+                                cấp.</p></li>
+                        <li><p>- Mật khẩu sử dụng một lần (OTP) được gửi qua SMS để đảm bảo việc truy cập tài khoản được xác
+                                thực.</p></li>
+                        <li><p>- Tiêu chuẩn mã hóa MD5 128 bit.</p></li>
+                        <li><p>- Các nguyên tắc và quy định bảo mật thông tin trong ngành tài chính ngân hàng theo quy định
+                                của Ngân hàng nhà nước Việt Nam.</p></li>
+                    </ul>
+                    <p>Chính sách bảo mật giao dịch trong thanh toán của www.laidayrefill.com áp dụng với Khách hàng:</p>
+                    <ul>
+                        <li><p>- Lại Đây Refill cung cấp tiện ích lưu giữ thông tin thẻ để sử dụng cho các lần thanh toán
+                                sau trên www.laidayrefill.com với nguyên tắc Lại Đây Refill chỉ lưu chuỗi đã được mã hóa bởi
+                                Đối Tác Cổng Thanh Toán cung cấp cho Tiki, vì vậy Khách hàng lựa chọn sử dụng tiện ích lưu
+                                giữ thông tin thẻ thì việc bảo mật thông tin thẻ thanh toán Khách hàng được thực hiện bởi
+                                Đối Tác Cổng Thanh Toán đã được cấp phép.</p></li>
+                        <li><p>- Đối với thẻ quốc tế: thông tin thẻ thanh toán của Khách hàng mà có khả năng sử dụng để xác
+                                lập giao dịch không được lưu trên hệ thống của www.laidayrefill.com, Đối Tác Cổng Thanh Toán
+                                sẽ lưu giữ và bảo mật theo tiêu chuẩn quốc tế PCI DSS.</p></li>
+                        <li><p>- Đối với thẻ nội địa (internet banking), Lại Đây Refill chỉ lưu trữ mã đơn hàng, mã giao
+                                dịch và tên ngân hàng.</p></li>
+                    </ul>
+                    <p>Lại Đây Refill cam kết đảm bảo thực hiện nghiêm túc các biện pháp bảo mật cần thiết cho mọi hoạt động
+                        thanh toán thực hiện trên www.laidayrefill.com</p>
+                </div>
             </div>
         </div>
     </div>
+
     @endsection
     <script>
         function onClick(element) {
