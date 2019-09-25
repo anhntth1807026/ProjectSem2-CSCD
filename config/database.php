@@ -63,6 +63,24 @@ return [
             ]) : [],
         ],
 
+<<<<<<< HEAD
+=======
+        'pgsql' => [
+            'driver' => 'pgsql',
+            'url' => '',
+            'host' => '127.0.0.1',
+            'port' => '5432',
+            'database' => 'zero-waste',
+            'username' => 'postgres',
+            'password' => 'Bach@2111',
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
+>>>>>>> a4f7cbb5f7c7db1177cedae40f680f333cb35f01
 //        'pgsql' => [
 //            'driver' => 'pgsql',
 //            'url' => '',

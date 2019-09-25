@@ -87,7 +87,7 @@
             <div class="headline_color"></div>
             <div class="headline_inner align_center">
                 {{--                <div class="headline_aligner"></div>--}}
-                <div class="headline_text headline_subtitle"><h1 class="entry-title">Meet Our Team</h1>
+                <div class="headline_text headline_subtitle"><h1 class="entry-title">Về Chúng Tôi</h1>
                 </div>
             </div>
         </div>
@@ -96,10 +96,10 @@
         <div class="w3-container w3-light-white" style="padding:100px 16px">
             <div class="w3-row-padding container-fluid">
                 <div class="w3-col m6">
-                    <div data-aos="zoom-out-up" data-aos-duration="1500"><h2>Chào mừng bạn đến với TreeHugger</h2>
+                    <div data-aos="zoom-out-up" data-aos-duration="1500"><h2>Chào mừng bạn đến với Zero Waste</h2>
                         <p>
-                            Tree Hugger là nơi dành cho những ai quan tâm đến lối sống xanh, bền vững và
-                            thân thiện với môi trường. Tại Tree Hugger, bạn sẽ cảm thấy hạnh phúc, tình yêu và lòng biết
+                            Zero Waste là nơi dành cho những ai quan tâm đến lối sống xanh, bền vững và
+                            thân thiện với môi trường. Tại Zero Waste, bạn sẽ cảm thấy hạnh phúc, tình yêu và lòng biết
                             ơn đối với các sản phẩm do người Việt Nam làm ra vì lợi ích của cộng đồng và cho lối sống
                             đơn giản và lành mạnh.
                         </p>
@@ -144,10 +144,10 @@
                 </div>
                 <div class="col-md-7 order-md-2">
                     <h2 class="featurette-heading">Vậy nên <span class="text-muted">chúng tôi</span></h2>
-                    <p class="lead">Tree Hugger được thành lập như một sáng kiến ​​nhằm giảm lượng bao bì nhựa sử dụng
+                    <p class="lead">Zero Waste được thành lập như một sáng kiến ​​nhằm giảm lượng bao bì nhựa sử dụng
                         một lần hoặc các sản phẩm khó phân hủy, bao gồm các sản phẩm gia dụng thông thường, cho cả người
                         lớn và trẻ em, hoặc mang đi. Chúng tôi cũng chú ý đến các thành phần trong mỗi sản phẩm. Tại
-                        Tree Hugger, chúng tôi luôn cung cấp thông tin chi tiết về sản phẩm để nạp và mua. Tính minh
+                        Zero Waste, chúng tôi luôn cung cấp thông tin chi tiết về sản phẩm để nạp và mua. Tính minh
                         bạch của chúng tôi giúp người tiêu dùng dễ dàng kiểm tra nguồn và chất lượng sản phẩm của chúng
                         tôi bất cứ lúc nào. Chúng tôi luôn ưu tiên sử dụng các thành phần tự nhiên trong quá trình sản
                         xuất.
