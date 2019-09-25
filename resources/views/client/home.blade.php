@@ -66,7 +66,7 @@
 
 
     {{--    Tiêu chí của chúng tôi--}}
-    <div class="w3-container" style="padding:40px 40px; background-color: #e5df27; color: #0c0c0c" id="about">
+    <div class="w3-container" style="padding:40px 40px; background-color: #f3e1c9; color: #0c0c0c" id="about">
         <h3 class="w3-center" data-aos="fade-right" data-aos-duration="1500"><b>Tiêu Chí Của Chúng Tôi</b></h3>
         <p class="w3-center w3-large" data-aos="fade-left" data-aos-duration="1500" style="font-size: 20px">Thay vì dùng tiền mặt, bạn có thể mang những chai lọ đã sử dụng với số lượng phù hợp để đổi lấy những sản phẩm của chúng tôi.</p>
 

@@ -62,7 +62,7 @@
                         <ul>
                             <li class="expand"><a href="{{ route('home') }}">Trang Chủ</a>
                             </li>
-                            <li class="expand"><a href="/List-Product">Shop</a>
+                            <li class="expand"><a href="/List-Product">Sản Phẩm</a>
                                 <div class="restrain mega-menu megamenu4">
 											<span>
 												<a class="mega-menu-title"
