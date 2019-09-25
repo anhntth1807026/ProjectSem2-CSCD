@@ -14,4 +14,11 @@ class BlogController extends Controller
        ];
        return view('client.home', $viewData);
    }
+    function index_In_Blog(){
+        $blog = Article::paginate(3);
+        $viewData = [
+            'blog' => $blog,
+        ];
+        return view('client.blog', $viewData);
+    }
 }

@@ -40,24 +40,23 @@ Route::post('contact', 'ContactController@saveContact');
 Route::get('/List-Product', 'ListProductController@index')->name('list.product');
 
 
-Route::get('/Blog', function () {
-    return view('client.blog');
-});
+Route::get('/Blog','BlogController@index_In_Blog' )->name('get.blog');
+
 Route::get('/Blog/Blog1', function () {
     return view('client.blog.blog1');
 });
-Route::get('/Blog/Blog2', function () {
-    return view('client.blog.blog2');
-});
-Route::get('/Blog/Blog3', function () {
-    return view('client.blog.blog3');
-});
-Route::get('/Blog/Blog4', function () {
-    return view('client.blog.blog4');
-});
-Route::get('/Blog/Blog5', function () {
-    return view('client.blog.blog5');
-});
+//Route::get('/Blog/Blog2', function () {
+//    return view('client.blog.blog2');
+//});
+//Route::get('/Blog/Blog3', function () {
+//    return view('client.blog.blog3');
+//});
+//Route::get('/Blog/Blog4', function () {
+//    return view('client.blog.blog4');
+//});
+//Route::get('/Blog/Blog5', function () {
+//    return view('client.blog.blog5');
+//});
 
 
 Route::get('product/{id}', 'ProductDetailController@productDetail')->name('get.detail.product');

@@ -37,105 +37,35 @@
             <h1 style="text-align: center">BÀI VIẾT MỚI NHẤT</h1>
             <div class="w3-row" style="margin-top: 50px">
                 <div class="w3-col l8 s12">
+                    @foreach($blog as $item)
+                        <div class="w3-margin w3-white">
+                            <img
+                                    src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_600,h_320/{{$item->thumbnail}}"
+                                    alt="Nature">
+                            <div class="w3-container">
+                                <br>
+                                <h4><b>{{$item-> title}}</b></h4>
+                                <span class="w3-opacity">{{$item-> updated_at}}</span>
+                            </div>
 
-                    {{--                BLOG 1 --}}
-                    <div class="w3-margin w3-white">
-                        <img
-                            src="https://www.lv.com/-/life/media/business-homepage/business-homepage-hero-banner.jpg?h=550&w=1440&hash=3CAC9354A378179F86006B6C85DCFEA7DF6B73A8"
-                            alt="Nature"
-                            style="width:100%">
-                        <div class="w3-container">
-                            <br>
-                            <h3><b>VẬY LÀM SAO ĐỂ BẮT ĐẦU MỘT LỐI SỐNG XANH?</b></h3>
-                            <h5>Đây có lẽ một trong những câu hỏi mà mọi người đang đặt ra, nhưng bạn có biết chúng ta
-                                đều
-                                phải mất 21 ngày để thay đổi một thói quen mới?</h5>
-                            <span class="w3-opacity">10-9-2019 </span>
-                        </div>
-
-                        <div class="w3-container">
-                            <p>“Change the way you look at things and the things you look at change” - Wayne Dyer </p>
-                            <div class="w3-row">
-                                <div class="w3-col m8 s12">
-                                    <p>
-                                        <button class="w3-button w3-padding-large w3-white w3-border"><b>XEM THÊM »</b>
-                                        </button>
-                                    </p>
-                                </div>
-                                <div class="w3-col m4 w3-hide-small">
-                                    <p><span class="w3-padding-large w3-right"><b>BÌNH LUẬN  </b> <span
-                                                class="w3-tag">0</span></span></p>
+                            <div class="w3-container">
+                                <p>{{$item-> description}}</p>
+                                <div class="w3-row">
+                                    <div class="w3-col m8 s12">
+                                        <p>
+                                            <button class="w3-button w3-padding-large w3-white w3-border"><b>XEM THÊM »</b>
+                                            </button>
+                                        </p>
+                                    </div>
+                                    <div class="w3-col m4 w3-hide-small">
+                                        <p><span class="w3-padding-large w3-right"><b>BÌNH LUẬN</b> <span
+                                                        class="w3-tag">0</span></span></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <hr>
-
-                    {{--                BLOG 2--}}
-                    <div class="w3-margin w3-white">
-                        <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Norway" style="width:100%">
-                        <div class="w3-container">
-                            <br>
-                            <h3><b>BẠN CÓ BIẾT SỰ KHÁC NHAU GIỮA CÁC KHÁI NIỆM ?</b></h3>
-                            <h5>“GREEN”, “SUSTAINABLE”, “ECO-FRIENDLY”,
-                                “ETHICAL”, “FAIRTRADE”, “CLEAN”, “ORGANIC”, “NON-TOXIC”, VÀ “CONSCIOUS”.</h5>
-                            <span class="w3-opacity" style="font-size: 20px">9-9-2019</span>
-                        </div>
-
-                        <div class="w3-container">
-                            <p>Nếu dùng những từ này một cách bất cẩn, đặc biệt là bộ phận marketing, sẽ dễ gây bối rối,
-                                hiểu sai, hiểu lệch do các từ này dường như đồng nghĩa, hay gần nghĩa., </p>
-                            <div class="w3-row">
-                                <div class="w3-col m8 s12">
-                                    <p>
-                                        <button class="w3-button w3-padding-large w3-white w3-border"><b>XEM THÊM »</b>
-                                        </button>
-                                    </p>
-                                </div>
-                                <div class="w3-col m4 w3-hide-small">
-                                    <p><span class="w3-padding-large w3-right"><b>BÌNH LUẬN  </b> <span
-                                                class="w3-badge">3</span></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    {{--                BLOG 3  --}}
-                    <div class="w3-margin w3-white">
-                        <img
-                            src="https://www.citypassguide.com/media/slideshow/noise-pollution-banner.jpg.1758x854_q85_crop.jpg"
-                            alt="Nature"
-                            style="width:100%">
-                        <div class="w3-container">
-                            <br>
-                            <h3><b>THỰC TRẠNG Ô NHIỄM MÔI TRƯỜNG Ở VIỆT NAM.</b></h3>
-                            <h5>CÁC GIẢI PHÁP KHẮC PHỤC</h5>
-                            <span class="w3-opacity">7-9-2019 </span>
-                        </div>
-
-                        <div class="w3-container">
-                            <p>Hiện nay, vấn đề ô nhiễm môi trường đang là chủ đề nóng trên các mặt báo và nhận được rất
-                                nhiều sự quan tâm của người dân. Trong đó, đặc biệt là vấn đề ô nhiễm nguồn nước ở Việt
-                                Nam
-                                đã và đang ngày càng trở nên nghiêm trọng hơn. </p>
-                            <div class="w3-row">
-                                <div class="w3-col m8 s12">
-                                    <p>
-                                        <button class="w3-button w3-padding-large w3-white w3-border"><b>XEM THÊM »</b>
-                                        </button>
-                                    </p>
-                                </div>
-                                <div class="w3-col m4 w3-hide-small">
-                                    <p><span class="w3-padding-large w3-right"><b>BÌNH LUẬN  </b> <span
-                                                class="w3-tag">1</span></span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                        <hr>
+                        @endforeach
                 <div class="w3-col l4">
                     <div class="w3-margin w3-margin-top">
                         <img src="http://www2.pictures.livingly.com/mp/_00932onPJdx.jpg" style="width:100%">
@@ -188,41 +118,41 @@
                     </div>
                     <hr>
 
-                    <div class="w3-margin">
-                        <div class="w3-container w3-padding">
-                            <h4>Thẻ Tên</h4>
-                        </div>
-                        <div class="w3-container w3-white">
-                            <p><span class="w3-tag w3-black w3-margin-bottom"><a href="#" style="text-decoration: none">Travel</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">New York</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">London</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">IKEA</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">NORWAY</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">DIY</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">Ideas</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">Baby</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">Family</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">News</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">Clothing</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">Shopping</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">Sports</a></span>
-                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"
-                                                                                                style="text-decoration: none">Games</a></span>
-                            </p>
-                        </div>
-                    </div>
+{{--                    <div class="w3-margin">--}}
+{{--                        <div class="w3-container w3-padding">--}}
+{{--                            <h4>Thẻ Tên</h4>--}}
+{{--                        </div>--}}
+{{--                        <div class="w3-container w3-white">--}}
+{{--                            <p><span class="w3-tag w3-black w3-margin-bottom"><a href="#" style="text-decoration: none">Travel</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">New York</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">London</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">IKEA</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">NORWAY</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">DIY</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">Ideas</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">Baby</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">Family</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">News</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">Clothing</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">Shopping</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">Sports</a></span>--}}
+{{--                                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="#"--}}
+{{--                                                                                                style="text-decoration: none">Games</a></span>--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
