@@ -39,6 +39,7 @@
     <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
 
     {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
+
     @stack('styles')
 </head>
 <body>
@@ -76,7 +77,7 @@
 
                             <li class="expand"><a href="/Blog">Bài Viết</a></li>
 
-                            <li class="expand"><a href="">Chính Sách</a>
+                            <li class="expand"><a href="#">Chính Sách</a>
                                 <ul class="restrain sub-menu">
                                     <li><a href="/Policy/Data-Confidentiality">Bảo mật thông tin</a></li>
                                     <li><a href="/Policy/Delivery-Transport">Vận chuyển, giao nhận</a></li>
@@ -107,7 +108,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="">Bài Viết</a></li>
-                                    <li><a href="#">Chính Sách</a>
+                                    <li><a href="">Chính Sách</a>
                                         <ul>
                                             <li><a href="">Bảo mật thông tin</a></li>
                                             <li><a href="">Vận chuyển, giao nhận</a></li>

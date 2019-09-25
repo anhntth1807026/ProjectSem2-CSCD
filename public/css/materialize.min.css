@@ -3194,7 +3194,7 @@ nav ul a span.badge {
     float: left;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 .75rem;
+    padding: 0.90px;
     min-height: 1px
 }
 

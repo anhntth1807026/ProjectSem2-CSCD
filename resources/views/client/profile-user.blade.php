@@ -150,35 +150,35 @@
     @endpush
     <div class="container emp-profile" style="margin-top: 70px; background: #f4f4f4">
         <div class="row form-profile">
-            <div class="col-md-4">
-                Trang chủ
-            </div>
-            <div class="col-md-8">
-                Thông tin tài khoản
+{{--            <div class="col-md-4">--}}
+{{--                Trang chủ--}}
+{{--            </div>--}}
+            <div class="col-md-8" style="text-align: center">
+                <strong>Thông tin tài khoản</strong>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <form method="post" enctype="multipart/form-data">
-                    <div class="profile-img">
-                        <img
-                            src="https://avatars.servers.getgo.com/2205256774854474505_medium.jpg"
-                            alt=""/>
-                        <div class="file btn btn-lg btn-primary">
-                            Change Photo
-                            <input type="file" class="form-control" multiple="multiple" style="height:150px"
-                                   name="thumbnail[]"
-                                   placeholder="Thumbnail">
-                        </div>
-                    </div>
-                </form>
-                <div class="profile-work">
-                        <a href=""><i class="fas fa-users"></i>&nbsp; Thông tin tài khoản</a><br/>
-                        <a href=""><i class="fas fa-bell"></i>&nbsp;&nbsp; Thông báo</a><br/>
-                        <a href=""><i class="fas fa-clipboard-list"></i>&nbsp;&nbsp; Quản lí đơn hàng</a>
-                    </div>
-            </div>
-            <div class="col-md-7 form-profile-user">
+{{--            <div class="col-md-4">--}}
+{{--                <form method="post" enctype="multipart/form-data">--}}
+{{--                    <div class="profile-img">--}}
+{{--                        <img--}}
+{{--                            src="https://avatars.servers.getgo.com/2205256774854474505_medium.jpg"--}}
+{{--                            alt=""/>--}}
+{{--                        <div class="file btn btn-lg btn-primary">--}}
+{{--                            Change Photo--}}
+{{--                            <input type="file" class="form-control" multiple="multiple" style="height:150px"--}}
+{{--                                   name="thumbnail[]"--}}
+{{--                                   placeholder="Thumbnail">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </form>--}}
+{{--                <div class="profile-work">--}}
+{{--                        <a href=""><i class="fas fa-users"></i>&nbsp; Thông tin tài khoản</a><br/>--}}
+{{--                        <a href=""><i class="fas fa-bell"></i>&nbsp;&nbsp; Thông báo</a><br/>--}}
+{{--                        <a href=""><i class="fas fa-clipboard-list"></i>&nbsp;&nbsp; Quản lí đơn hàng</a>--}}
+{{--                    </div>--}}
+{{--            </div>--}}
+            <div class="container form-profile-user">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <strong>Whoops!</strong> There were some problems with your input.<br><br>
