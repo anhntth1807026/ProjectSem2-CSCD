@@ -14,7 +14,7 @@ class ShoppingCartController extends Controller
     private $vnp_TmnCode = "P1U75DCO"; //Mã website tại VNPAY
     private $vnp_HashSecret = "JCNSINRXUGJYIXAKWWWIBZFIEABHYUDK"; //Chuỗi bí mật
     private $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-    private $vnp_Returnurl = "http://localhost/vnpay_php/vnpay_return.php";
+    private $vnp_Returnurl = "http://127.0.0.1:8000/checkout-success";
 
 //    thêm giỏ hàng
     public function addProduct(Request $request, $id)
@@ -37,7 +37,7 @@ class ShoppingCartController extends Controller
 
     public function deleteCartItem($key)
     {
-        if ($key == 'all'){
+        if ($key == 'all') {
             \Cart::destroy();
         } else {
             \Cart::remove($key);
@@ -51,8 +51,6 @@ class ShoppingCartController extends Controller
     public function listShoppingCart()
     {
         $products = \Cart::content();
-
-//        dd($products);
         return view('shopping.cart', compact('products'));
     }
 
@@ -106,18 +104,19 @@ class ShoppingCartController extends Controller
 
     public function showFormPay(Request $request)
     {
-        if ($request->vnp_ResponseCode == '00') {
-            $transactionID = $request->vnp_txnRef;
-
-            $transaction = Transaction::find($transactionID);
-            if ($transaction) {
-                \Cart::destroy();
-
-                return redirect()->to('/')->with('success', 'Xác nhận giao dịch thành công');
-            }
-
-            return redirect()->to('/')->with('danger', 'Mã đơn hàng không tồn tại');
-        }
+//        if ($request->vnp_ResponseCode == '00') {
+//            $transactionID = $request->vnp_txnRef;
+//
+//            $transaction = Transaction::find($transactionID);
+//            if ($transaction) {
+//                \Cart::destroy();
+//
+//                $transaction->save();
+//                return redirect()->to('/')->with('success', 'Xác nhận giao dịch thành công');
+//            }
+//
+//            return redirect()->to('/')->with('error', 'Mã đơn hàng không tồn tại');
+//        }
 
         $products = \Cart::content();
 
@@ -160,7 +159,7 @@ class ShoppingCartController extends Controller
             "vnp_CreateDate" => date('YmdHis'),
             "vnp_CurrCode" => "VND",
             "vnp_IpAddr" => $_SERVER['REMOTE_ADDR'], //IP
-            "vnp_Locale" => $request->vnp_Locale,
+            "vnp_Locale" => "vn",
             "vnp_OrderInfo" => $request->note,
             "vnp_OrderType" => "billpayment",
             "vnp_ReturnUrl" => $this->vnp_Returnurl,
@@ -198,6 +197,12 @@ class ShoppingCartController extends Controller
         );
 
         return $returnData;
+    }
+
+    public function checkoutSuccess()
+    {
+        \Cart::destroy();
+        return view('shopping.checkout-success');
     }
 }
 
