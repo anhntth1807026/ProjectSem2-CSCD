@@ -94,7 +94,7 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
     Route::delete('/user/delete/{id}', 'AdminUserController@delete')->name('admin.delete.user');
 });
 
-Route::get('/admin/chart', function () {
+Route::get('/admin/dashboard', function () {
     return view('admin.dashboard.chart');
 });
 
@@ -150,7 +150,7 @@ Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], fu
 Route::get('register/verify/{code}', 'Auth\RegisterController@verifyUser')->name('verify.user');
 
 Route::get('/api-get-chart-data', 'AdminTransactionController@getChartDataApi');
-
+Route::get('/api-get-pie-chart-data', 'AdminTransactionController@getPieChartDataApi');
 Route::group(['prefix' => 'ajax', 'middleware' => 'CheckLoginUser'], function () {
     Route::post('/rating/{id}', 'RatingController@saveRating')->name('post.rating.product');
 });

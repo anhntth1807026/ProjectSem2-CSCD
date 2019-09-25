@@ -110,7 +110,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="/admin/chart">
+            <a class="nav-link" href="/admin/dashboard">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -186,6 +186,7 @@
 {{--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--}}
 <script src="{{asset('js/myChart.js')}}"></script>
 <script src="{{asset('js/chart.js/dist/Chart.bundle.js')}}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </body>
 
 </html>
