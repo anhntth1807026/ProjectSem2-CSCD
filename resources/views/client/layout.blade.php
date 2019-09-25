@@ -273,7 +273,7 @@
     <div class="container" style="padding-right: 0px;padding-left: 0px">
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6 mt-2 mb-4" style="margin-bottom: 30px;text-align: center">
-                <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">CHÚNG TÔI</h5>
+                <a><img src="{{ asset('img/logob.jpg') }}" style="width: 170px; height: 70px"></a>
                 <ul class="f-address">
                     <li style="margin-bottom: 10px">
                         <div class="row">
