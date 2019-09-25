@@ -80,6 +80,21 @@ return [
 
 //        'pgsql' => [
 //            'driver' => 'pgsql',
+//            'url' => 'postgres://qlbftishghpdtm:01928bb89e2699b87d943e85cbf6620167aa1f1513a4a55ecd8bb5a26337436d@ec2-54-221-212-126.compute-1.amazonaws.com:5432/d1b1bie1inu60d',
+//            'host' => 'ec2-54-221-212-126.compute-1.amazonaws.com',
+//            'port' => '5432',
+//            'database' => 'd1b1bie1inu60d',
+//            'username' => 'qlbftishghpdtm',
+//            'password' => '01928bb89e2699b87d943e85cbf6620167aa1f1513a4a55ecd8bb5a26337436d',
+//            'charset' => 'utf8',
+//            'prefix' => '',
+//            'prefix_indexes' => true,
+//            'schema' => 'public',
+//            'sslmode' => 'prefer',
+//        ],
+
+//        'pgsql' => [
+//            'driver' => 'pgsql',
 //            'url' => 'postgres://vxqoozyyeknlke:b92fedfae068fab365f770f15e21e7c444e8443bda973b430f90cf52baa4030c@ec2-50-19-254-63.compute-1.amazonaws.com:5432/d87r70dmaqaouc',
 //            'host' => 'ec2-50-19-254-63.compute-1.amazonaws.com',
 //            'port' => '5432',
