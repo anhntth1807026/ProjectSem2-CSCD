@@ -20,9 +20,9 @@ class AdminTransactionController extends Controller
         $choosedStatus = Input::get('tr_status');
         if ((!Input::has('tr_status') || $choosedStatus == 3)){
             $choosedStatus = 3;
-            $transactions = Transaction::with('users:id,name')->orderByRaw('created_at DESC')->paginate(10);
+            $transactions = Transaction::with('users')->orderByRaw('created_at DESC')->paginate(10);
         } else {
-            $transactions = Transaction::where(['tr_status' => $choosedStatus])->with('users:id,name')->orderByRaw('created_at DESC')->paginate(10);
+            $transactions = Transaction::where(['tr_status' => $choosedStatus])->with('users')->orderByRaw('created_at DESC')->paginate(10);
         }
 
 //        $transactions = Transaction::with('users:id,name')->paginate(5);
@@ -62,7 +62,7 @@ class AdminTransactionController extends Controller
             ->orderBy('created_at','desc')
             ->get();
         foreach ($transactions as $data) {
-            $data->statusLabel = $data->getStatusAttribute();
+            $data->status = $data->getStatusAttribute();
         }
         return response()->json(['list_obj' => $transactions], 200);
     }

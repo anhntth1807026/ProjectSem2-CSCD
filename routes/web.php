@@ -40,7 +40,6 @@ Route::post('contact', 'ContactController@saveContact');
 Route::get('/List-Product', 'ListProductController@index')->name('list.product');
 
 
-
 Route::get('/Blog', function () {
     return view('client.blog');
 });
@@ -147,10 +146,15 @@ Route::group(['prefix' => 'shopping-cart', 'middleware' => 'CheckLoginUser'], fu
     Route::post('/pay-online', 'ShoppingCartController@savePayOnine');
 });
 
-Route::get('register/verify/{code}', 'Auth\RegisterController@verifyUser')->name('verify.user');
+Route::get('/checkout-success', 'ShoppingCartController@checkoutSuccess');
 
+Route::get('register/verify/{code}', 'Auth\RegisterController@verifyUser')->name('verify.user');
+// chart
 Route::get('/api-get-chart-data', 'AdminTransactionController@getChartDataApi');
 Route::get('/api-get-pie-chart-data', 'AdminTransactionController@getPieChartDataApi');
+
+Route::get('/api-get-data-to-time', 'AdminTransactionController@getDataToTimeApi');
+
 Route::group(['prefix' => 'ajax', 'middleware' => 'CheckLoginUser'], function () {
     Route::post('/rating/{id}', 'RatingController@saveRating')->name('post.rating.product');
 });
