@@ -63,6 +63,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
         ]);
+
 //            [
 //                'id' => '2',
 //                'name' => 'Duong Thi Anh',
@@ -82,8 +83,7 @@ class UsersTableSeeder extends Seeder
 //                'address' => 'Bac Ninh',
 //                'phone' => '0184655972',
 //                'gender' => 'nam',
-//            ],
-//        ]);
+        ]);
 //        if (config('roles.models.defaultUser')::where('email', '=', 'admin@admin.com')->first() === null) {
 //            $newUser = config('roles.models.defaultUser')::create([
 //                'name'     => 'Admin',

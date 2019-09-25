@@ -1,38 +1,9 @@
 @extends('client.layout')
 @section('content')
 
-    <header class=" w3-display-container w3-grayscale-min" id="home">
-        <div class=" w3-section" style="">
-            <img class="mySlides" src="{{ asset('img/slide-pics/bg1.jpg') }}" style="width:100%">
-            <img class="mySlides" src="{{ asset('img/slide-pics/bg2.jpg') }}" style="width:100%">
-            <img class="mySlides" src="{{ asset('img/slide-pics/bg3.jpg') }}" style="width:100%">
-        </div>
-        <div class="w3-display-left w3-text-white" style="padding:48px">
-            <span class="w3-jumbo w3-hide-small" data-aos="zoom-in"
-                  data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới.</span><br>
-            <span class="w3-xxlarge w3-hide-large w3-hide-medium" data-aos="zoom-in" data-aos-duration="3000">Bắt Đầu Một Hành Trình Mới</span><br>
-            <span class="w3-large" data-aos="zoom-in" data-aos-duration="3000">Ngưng Sử Dụng Đồ Dùng Làm Từ Nhựa Và Các Sản Phẩm Gây Hại Cho Môi Trường.</span>
-            <p><a href="#about"
-                  class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"
-                  data-aos="zoom-in" data-aos-duration="3000" style="text-decoration: none;" title="Bắt đầu tìm hiểu">Tìm
-                    Hiểu Nhiều Hơn Và Bắt Đầu Từ Hôm Nay</a></p>
-        </div>
-        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-            <i class="fa fa-facebook-official w3-hover-opacity" title="Facebook"></i>
-            <i class="fa fa-instagram w3-hover-opacity" title="Instagram"></i>
-            <i class="fa fa-snapchat w3-hover-opacity" title="Snapchat"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity" title="Pinterest"></i>
-            <i class="fa fa-twitter w3-hover-opacity" title="Twitter"></i>
-            <i class="fa fa-linkedin w3-hover-opacity" title="Linkedin"></i>
-        </div>
-    </header>
-
-    <br>
-    <br>
-    <br>
 
     <div class="videoblogmain">
-        <h2 style="text-align: center">CHÚNG TA CÙNG TÌM HIỂU THỰC TRẠNG CỦA TRÁI ĐẤT HIỆN NAY</h2>
+        {{--        <h2 style="text-align: center">CHÚNG TA CÙNG TÌM HIỂU THỰC TRẠNG CỦA TRÁI ĐẤT HIỆN NAY</h2>--}}
         <br>
         <video autoplay muted loop id="myVideo">
             <source src="{{ asset('video/Thực trạng môi trường.mp4') }}" type="video/mp4">
@@ -60,10 +31,7 @@
                          style="width:100%">
                 </div>
             </div>
-
             <br>
-
-
         </div>
         <div class="w3-container">
             <h1 style="text-align: center">BÀI VIẾT MỚI NHẤT</h1>
@@ -77,8 +45,10 @@
                             alt="Nature"
                             style="width:100%">
                         <div class="w3-container">
+                            <br>
                             <h3><b>VẬY LÀM SAO ĐỂ BẮT ĐẦU MỘT LỐI SỐNG XANH?</b></h3>
-                            <h5>Đây có lẽ một trong những câu hỏi mà mọi người đang đặt ra, nhưng bạn có biết chúng ta đều
+                            <h5>Đây có lẽ một trong những câu hỏi mà mọi người đang đặt ra, nhưng bạn có biết chúng ta
+                                đều
                                 phải mất 21 ngày để thay đổi một thói quen mới?</h5>
                             <span class="w3-opacity">10-9-2019 </span>
                         </div>
@@ -105,6 +75,7 @@
                     <div class="w3-margin w3-white">
                         <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Norway" style="width:100%">
                         <div class="w3-container">
+                            <br>
                             <h3><b>BẠN CÓ BIẾT SỰ KHÁC NHAU GIỮA CÁC KHÁI NIỆM ?</b></h3>
                             <h5>“GREEN”, “SUSTAINABLE”, “ECO-FRIENDLY”,
                                 “ETHICAL”, “FAIRTRADE”, “CLEAN”, “ORGANIC”, “NON-TOXIC”, VÀ “CONSCIOUS”.</h5>
@@ -138,6 +109,7 @@
                             alt="Nature"
                             style="width:100%">
                         <div class="w3-container">
+                            <br>
                             <h3><b>THỰC TRẠNG Ô NHIỄM MÔI TRƯỜNG Ở VIỆT NAM.</b></h3>
                             <h5>CÁC GIẢI PHÁP KHẮC PHỤC</h5>
                             <span class="w3-opacity">7-9-2019 </span>
@@ -145,7 +117,8 @@
 
                         <div class="w3-container">
                             <p>Hiện nay, vấn đề ô nhiễm môi trường đang là chủ đề nóng trên các mặt báo và nhận được rất
-                                nhiều sự quan tâm của người dân. Trong đó, đặc biệt là vấn đề ô nhiễm nguồn nước ở Việt Nam
+                                nhiều sự quan tâm của người dân. Trong đó, đặc biệt là vấn đề ô nhiễm nguồn nước ở Việt
+                                Nam
                                 đã và đang ngày càng trở nên nghiêm trọng hơn. </p>
                             <div class="w3-row">
                                 <div class="w3-col m8 s12">
@@ -168,8 +141,10 @@
                         <img src="http://www2.pictures.livingly.com/mp/_00932onPJdx.jpg" style="width:100%">
                         <div class="w3-container w3-white">
                             <h4><b>SỰ THẬT</b></h4>
-                            <p>Các vấn đề môi trường lớn hiện tại bao gồm biến đổi khí hậu, ô nhiễm môi trường, suy thoái
-                                môi trường, và cạn kiệt tài nguyên thiên nhiên. Các vận động hành lang về bảo tồn nhằm bảo
+                            <p>Các vấn đề môi trường lớn hiện tại bao gồm biến đổi khí hậu, ô nhiễm môi trường, suy
+                                thoái
+                                môi trường, và cạn kiệt tài nguyên thiên nhiên. Các vận động hành lang về bảo tồn nhằm
+                                bảo
                                 vệ loài nguy cấp và bảo vệ bất kỳ môi trường tự nhiên có hệ sinh thái có giá trị, vấn đề
                                 thực phẩm biến đổi gen và ấm lên toàn cầu.</p>
                         </div>
@@ -251,5 +226,6 @@
                 </div>
             </div>
         </div>
+    </div>
 
 @endsection

@@ -10,10 +10,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('css/my-style.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    {{--    <link rel="stylesheet" href="{{asset('css/custom.css')}}">--}}
     <link rel="stylesheet" href="{{asset('css/sb-admin.min.css')}}">
-    {{--    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">--}}
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
     <title>Admin - Dashboard</title>
 
@@ -30,15 +28,6 @@
     </button>
 
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for..." aria-label="Search"
-                   aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div>
     </form>
 
     <ul class="navbar-nav ml-auto ml-md-0">
@@ -78,8 +67,6 @@
                 <i class="fas fa-user-circle fa-fw"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                {{--                <a class="dropdown-item" href="{{ route('admin.login') }}" data-toggle="modal"--}}
-                {{--                   data-target="#logoutModal">Logout</a>--}}
                 <ul class="restrain language">
 
                     @if(Auth::check())
@@ -110,7 +97,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="/admin/chart">
+            <a class="nav-link" href="/admin/dashboard">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -179,13 +166,13 @@
         });
     }
 </script>
-{{--<script src="{{asset('js/app.js')}}"></script>--}}
-{{--<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>--}}
+
 <script src="{{asset('js/custom.js')}}"></script>
 <script src="{{asset('js/sb-admin.min.js')}}"></script>
-{{--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--}}
 <script src="{{asset('js/myChart.js')}}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <script src="{{asset('js/chart.js/dist/Chart.bundle.js')}}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </body>
 
 </html>

@@ -39,6 +39,8 @@
     <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
 
     {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
+
+    @stack('styles')
 </head>
 <body>
 <!--Header-->
@@ -50,8 +52,6 @@
             <div class="col-md-4 col-sm-12 text-center">
                 <div class="top-logo">
                     <a><img src="{{ asset('img/logob.jpg') }}" style="width: 170px; height: 70px"></a>
-                    {{--                    <a><img src="img/logo.jpg" style="width: 170px; height: 70px"></a>--}}
-                    {{--                    href="{{ asset('img/logo.jpg')  }}" style="width: 170px; height: 70px"--}}
                 </div>
             </div>
             <!-- logo end -->
@@ -62,20 +62,17 @@
                         <ul>
                             <li class="expand"><a href="{{ route('home') }}">Trang Chủ</a>
                             </li>
-
                             <li class="expand"><a href="/List-Product">Shop</a>
-
                                 <div class="restrain mega-menu megamenu4">
 											<span>
-												<a class="mega-menu-title" href="/List-Product?page=&pro_category_id=2&keyword=">Đồ dùng cá nhân</a>
-
+												<a class="mega-menu-title"
+                                                   href="/List-Product?page=&pro_category_id=2&keyword=">Đồ dùng cá nhân</a>
 											</span>
                                     <span class="block-last">
-												<a class="mega-menu-title" href="/List-Product?page=&pro_category_id=1&keyword=">Đồ dùng gia đình</a>
-
+												<a class="mega-menu-title"
+                                                   href="/List-Product?page=&pro_category_id=1&keyword=">Đồ dùng gia đình</a>
 											</span>
                                 </div>
-
                             </li>
 
                             <li class="expand"><a href="/Blog">Bài Viết</a></li>
@@ -142,38 +139,6 @@
                                     <a href="{{ route('list.shopping.cart') }}"><span id="count-cart"
                                                                                       class="cart-quantity">{{ \Cart::count() }}</span></a>
                                 </div>
-                                {{--                                <div class="restrain small-cart-content">--}}
-                                {{--                                    <ul class="cart-list">--}}
-                                {{--                                        <li>--}}
-                                {{--                                            <a class="sm-cart-product" href="product-details.html">--}}
-                                {{--                                                <img src="" alt="">--}}
-                                {{--                                            </a>--}}
-                                {{--                                            <div class="small-cart-detail">--}}
-                                {{--                                                <a class="remove" href="#"><i class="fa fa-times-circle"></i></a>--}}
-                                {{--                                                <a href="#" class="edit-btn"><img src="" alt="Edit Button"/></a>--}}
-                                {{--                                                <a class="small-cart-name" href="product-details.html">Voluptas--}}
-                                {{--                                                    nulla</a>--}}
-                                {{--                                                <span class="quantitys"><strong>1</strong>x<span>$75.00</span></span>--}}
-                                {{--                                            </div>--}}
-                                {{--                                        </li>--}}
-                                {{--                                        <li>--}}
-                                {{--                                            <a class="sm-cart-product" href="product-details.html">--}}
-                                {{--                                                <img src="" alt="">--}}
-                                {{--                                            </a>--}}
-                                {{--                                            <div class="small-cart-detail">--}}
-                                {{--                                                <a class="remove" href="#"><i class="fa fa-times-circle"></i></a>--}}
-                                {{--                                                <a href="#" class="edit-btn"><img src="" alt="Edit Button"/></a>--}}
-                                {{--                                                <a class="small-cart-name" href="product-details.html">Donec ac--}}
-                                {{--                                                    tempus</a>--}}
-                                {{--                                                <span class="quantitys"><strong>1</strong>x<span>$75.00</span></span>--}}
-                                {{--                                            </div>--}}
-                                {{--                                        </li>--}}
-                                {{--                                    </ul>--}}
-                                {{--                                    <p class="total">Subtotal: <span class="amount">$155.00</span></p>--}}
-                                {{--                                    <p class="buttons">--}}
-                                {{--                                        <a href="checkout.html" class="button">Checkout</a>--}}
-                                {{--                                    </p>--}}
-                                {{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -269,7 +234,7 @@
     <div class="container" style="padding-right: 0px;padding-left: 0px">
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6 mt-2 mb-4" style="margin-bottom: 30px;text-align: center">
-                <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px">CHÚNG TÔI</h5>
+                <a><img src="{{ asset('img/logob.jpg') }}" style="width: 170px; height: 70px"></a>
                 <ul class="f-address">
                     <li style="margin-bottom: 10px">
                         <div class="row">
@@ -326,12 +291,6 @@
         </div>
     </div>
 </footer>
-
-{{--<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>--}}
-{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
-{{--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>--}}
-{{--<script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>--}}
-
 
 <a id="BackToTop" title="Chuyển Lên Đầu Trang"></a>
 

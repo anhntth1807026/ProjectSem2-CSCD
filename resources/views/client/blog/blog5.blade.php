@@ -351,23 +351,16 @@
         </div>
     </div>
 
-    <ul class="comment-section">
-
+    <<ul class="comment-section">
         <li class="write-new">
-
             <form action="#" method="post">
-
                 <textarea placeholder="Write your comment here" name="comment"></textarea>
-
                 <div>
                     <img src="{{ asset('video/avatar_user_1.jpg') }}" width="35" alt="Profile of Bradley Jones"
                          title="Bradley Jones"/>
                     <button type="submit">Submit</button>
                 </div>
-
             </form>
-
         </li>
-
     </ul>
 @endsection
