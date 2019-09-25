@@ -222,10 +222,11 @@
         }
 
     </style>
+
     <div>
-        <img class="mySlides" src="{{ asset('/img/blog/cover1.jpg') }}" style="width:100%">
+        <img class="" src="{{ asset('/img/blog/cover1.jpg') }}" style="width:100%;margin-left: 132px;margin-right: 132px">
     </div>
-    <div class="w3-display-left w3-text-white" style="padding:22rem">
+    <div class="w3-display-left w3-text-white" style="padding:22rem;margin-left: 200px">
         <h4 style="text-align: center"><b>VẬY LÀM SAO ĐỂ BẮT ĐẦU MỘT LỐI SỐNG XANH?</b>
         </h4>
         <p class="w3-opacity" style="text-align: center">10-9-2019, 10h20</p>
@@ -462,10 +463,8 @@
         </div>
     </div>
 
-
-    <h3 style="text-align: center">BÌNH LUẬN</h3>
     <ul class="comment-section">
-
+        <h3 style="text-align: center">BÌNH LUẬN</h3>
         <li class="comment user-comment">
 
             <div class="info">

@@ -285,118 +285,124 @@
             background-color: #232323;
         }
     </style>
-    <div>
-        <img class="mySlides" src="https://www.gunite.co.uk/wp-content/uploads/2017/09/Policy-and-Procedures-1140x427.jpg" style="width:70%; margin: auto; display: block;">
-    </div>
 
-    <div class="w3-row-padding w3-padding-64 w3-container">
-        <div class="w3-content">
-            <h3 style="text-align: center">CHÍNH SÁCH VẬN CHUYỂN, GIAO NHẬN</h3>
-            <h4 style="text-align: center;margin: 40px 0 40px 0;opacity: 0.75">KHÀNG HÀNG "HƯỞNG LỢI"</h4>
-            <div class="content">
-                <p>Lại Đây Refill Station giao hàng thanh toán tận nơi trên toàn quốc thông qua các đối tác giao nhận uy
-                    tín
-                    như Giao Hàng Nhanh, Ahamove, Giao Hàng Tiết Kiệm. Thời gian và phí giao hàng tùy thuộc vào từng khu
-                    vực
-                    khác nhau. Thông tin chi phí vận chuyển và thời gian giao hàng đến tại nơi cho khách hàng sẽ được
-                    Lại
-                    Đây Refill thông báo cho khách hàng xác nhận trước khi chuyển hàng.
-                </p>
-            </div>
+    <div class="container">
+        <div>
+            <img class="mySlides" src="https://www.gunite.co.uk/wp-content/uploads/2017/09/Policy-and-Procedures-1140x427.jpg" style="width:70%; margin: auto; display: block;">
+        </div>
+        <br>
 
-            <div class="content1 w3-padding-32">
-                <p>Lại Đây Refill không nhận giao hàng các đơn hàng có giá trị dưới 99.000đ</p>
-                <p>Thời gian giao hàng tính từ lúc khách đặt hàng và thanh toán thành công.</p>
-                <p>Đơn đặt hàng từ 8h30 – 17h00 thì chúng tôi sẽ liên hệ ngay trong ngày.</p>
-                <p>Đơn hàng phát sinh sau 17h được tính là đơn hàng đặt vào 10h sáng hôm sau.</p>
-                <p>Đơn đặt hàng sau 17h00 thứ 7 và Chủ Nhật thì chúng tôi sẽ liên hệ vào sáng thứ 2 tuần sau.</p>
-            </div>
+        <div class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+                <h3 style="text-align: center">CHÍNH SÁCH VẬN CHUYỂN, GIAO NHẬN</h3>
+                <h4 style="text-align: center;margin: 40px 0 40px 0;opacity: 0.75">KHÀNG HÀNG "HƯỞNG LỢI"</h4>
+                <div class="content">
+                    <p>Lại Đây Refill Station giao hàng thanh toán tận nơi trên toàn quốc thông qua các đối tác giao nhận uy
+                        tín
+                        như Giao Hàng Nhanh, Ahamove, Giao Hàng Tiết Kiệm. Thời gian và phí giao hàng tùy thuộc vào từng khu
+                        vực
+                        khác nhau. Thông tin chi phí vận chuyển và thời gian giao hàng đến tại nơi cho khách hàng sẽ được
+                        Lại
+                        Đây Refill thông báo cho khách hàng xác nhận trước khi chuyển hàng.
+                    </p>
+                </div>
 
-            <div class="content1 w3-padding-32">
-                <p>Về thời gian giao hàng, Lại Đây cùng các đối tác giao nhận sắp xếp lịch giao hàng như sau:</p>
-                <ul style="margin-left: 20px">
-                    <li><p>- Giao hàng trong ngày hoặc từ 1 – 2 ngày cho khách hàng có địa chỉ ở Tp.HCM.</p></li>
-                    <li><p>- Giao hàng từ 3 – 5 ngày cho khách hàng có địa chỉ ở các tỉnh thành phố khác (trừ thời gian
-                            cao
-                            điểm như: lễ, tết ...)</p></li>
-                </ul>
-                <p>Lại Đây Refill không cam kết 100% đơn hàng sẽ được giao trong khoảng thời gian nêu trên. Một số
-                    trường
-                    hợp thời gian có thể bị kéo dài, Lại Đây Refill sẽ chủ động thông báo trước cho khách hàng.</p>
-            </div>
+                <div class="content1 w3-padding-32">
+                    <p>Lại Đây Refill không nhận giao hàng các đơn hàng có giá trị dưới 99.000đ</p>
+                    <p>Thời gian giao hàng tính từ lúc khách đặt hàng và thanh toán thành công.</p>
+                    <p>Đơn đặt hàng từ 8h30 – 17h00 thì chúng tôi sẽ liên hệ ngay trong ngày.</p>
+                    <p>Đơn hàng phát sinh sau 17h được tính là đơn hàng đặt vào 10h sáng hôm sau.</p>
+                    <p>Đơn đặt hàng sau 17h00 thứ 7 và Chủ Nhật thì chúng tôi sẽ liên hệ vào sáng thứ 2 tuần sau.</p>
+                </div>
 
-            <div class="content1 w3-padding-32">
-                <p>Bởi việc vận chuyển hàng hóa do các đơn vị cung cấp dịch vụ vận chuyển thực hiện nên chúng tôi không
-                    bảo
-                    đảm chắc chắn và không chịu trách nhiệm về bất kỳ tổn thất, chi phí thiệt hại, hoặc bất cứ chi phí
-                    phát
-                    sinh nào khác do việc giao hàng chậm trễ gây ra.</p>
-            </div>
+                <div class="content1 w3-padding-32">
+                    <p>Về thời gian giao hàng, Lại Đây cùng các đối tác giao nhận sắp xếp lịch giao hàng như sau:</p>
+                    <ul style="margin-left: 20px">
+                        <li><p>- Giao hàng trong ngày hoặc từ 1 – 2 ngày cho khách hàng có địa chỉ ở Tp.HCM.</p></li>
+                        <li><p>- Giao hàng từ 3 – 5 ngày cho khách hàng có địa chỉ ở các tỉnh thành phố khác (trừ thời gian
+                                cao
+                                điểm như: lễ, tết ...)</p></li>
+                    </ul>
+                    <p>Lại Đây Refill không cam kết 100% đơn hàng sẽ được giao trong khoảng thời gian nêu trên. Một số
+                        trường
+                        hợp thời gian có thể bị kéo dài, Lại Đây Refill sẽ chủ động thông báo trước cho khách hàng.</p>
+                </div>
 
-            <div class="content1 w3-padding-32">
-                <p>Để kiểm tra lộ trình đơn hàng của mình, khách hàng vui lòng cung cấp cho Lại Đây Refill chính xác số
-                    điện
-                    thoại đã đặt hàng.</p>
-            </div>
+                <div class="content1 w3-padding-32">
+                    <p>Bởi việc vận chuyển hàng hóa do các đơn vị cung cấp dịch vụ vận chuyển thực hiện nên chúng tôi không
+                        bảo
+                        đảm chắc chắn và không chịu trách nhiệm về bất kỳ tổn thất, chi phí thiệt hại, hoặc bất cứ chi phí
+                        phát
+                        sinh nào khác do việc giao hàng chậm trễ gây ra.</p>
+                </div>
 
-            <div class="content1 w3-padding-32">
-                <p>Sau khi nhận hàng và thanh toán, khách hàng vui lòng kiểm tra ngay, đồng thời giữ lại bao bì đóng gói
-                    hay
-                    thông tin đính kèm để Lại Đây Refill có thể xử lý chính xác và kịp thời nếu đơn hàng có sự cố.</p>
-            </div>
+                <div class="content1 w3-padding-32">
+                    <p>Để kiểm tra lộ trình đơn hàng của mình, khách hàng vui lòng cung cấp cho Lại Đây Refill chính xác số
+                        điện
+                        thoại đã đặt hàng.</p>
+                </div>
 
-            <div class="content1 w3-padding-32">
-                <p>Trường hợp không thể giao hàng theo thời gian đã định, Lại Đây Refill sẽ thông báo cho khách hàng về
-                    sự
-                    chậm trễ này trong thời gian sớm nhất.</p>
-                <p>Trường hợp giao hàng chậm, Lại Đây Refill chấp nhận vô điều kiện về việc hủy đơn hàng của khách
-                    hàng.</p>
-            </div>
+                <div class="content1 w3-padding-32">
+                    <p>Sau khi nhận hàng và thanh toán, khách hàng vui lòng kiểm tra ngay, đồng thời giữ lại bao bì đóng gói
+                        hay
+                        thông tin đính kèm để Lại Đây Refill có thể xử lý chính xác và kịp thời nếu đơn hàng có sự cố.</p>
+                </div>
 
-            <h4>CÂU HỎI THƯỜNG GẶP</h4>
+                <div class="content1 w3-padding-32">
+                    <p>Trường hợp không thể giao hàng theo thời gian đã định, Lại Đây Refill sẽ thông báo cho khách hàng về
+                        sự
+                        chậm trễ này trong thời gian sớm nhất.</p>
+                    <p>Trường hợp giao hàng chậm, Lại Đây Refill chấp nhận vô điều kiện về việc hủy đơn hàng của khách
+                        hàng.</p>
+                </div>
 
-            <div class="content1 w3-padding-32">
-                <h5 style="color: red">Tôi có thể yêu cầu giao hàng vào giờ nhất định được không?</h5>
-                <p>Hiện tại các đối tác giao nhận của Lại Đây chỉ hỗ trợ việc chọn NGÀY giao hàng và chưa thể hỗ trợ quý
-                    khách chọn GIỜ giao hàng. Trước khi giao đơn vị giao nhận sẽ báo giờ cụ thể có thể tới giao để bạn
-                    tiện
-                    sắp xếp nhận hàng. Lại Đây đang cố gắng cải thiện vấn đề này để mang lại cho quý khách trải nghiệm
-                    mua
-                    sắm tốt hơn.</p>
-            </div>
+                <h4>CÂU HỎI THƯỜNG GẶP</h4>
 
-            <div class="content1 w3-padding-32">
-                <h5 style="color: red">Tôi đang rất cần sản phẩm, Lại Đây có thể giao gấp cho tôi được không?</h5>
-                <p>Nếu bạn ở khu vực Tp.HCM, vui lòng liên hệ số 028 6270 2141 để được hỗ trợ hết mức. Lại Đây sẽ kiểm
-                    tra
-                    và báo lại bạn thời gian có thể giao sớm nhất và mức phí phát sinh thêm (tùy thuộc vị trí của bạn).
-                    Trong một số trường hợp thuận lợi, bạn có thể nhận hàng sau 60 phút kể từ lúc đặt hàng.</p>
-                <p>Nếu bạn ở các tỉnh khác, hiện tại thời gian giao hàng của Lại Đây nêu trên đã là nhanh nhất có thể.
-                    Bạn
-                    không thể yêu cầu giao nhanh hơn.</p>
-            </div>
+                <div class="content1 w3-padding-32">
+                    <h5 style="color: red">Tôi có thể yêu cầu giao hàng vào giờ nhất định được không?</h5>
+                    <p>Hiện tại các đối tác giao nhận của Lại Đây chỉ hỗ trợ việc chọn NGÀY giao hàng và chưa thể hỗ trợ quý
+                        khách chọn GIỜ giao hàng. Trước khi giao đơn vị giao nhận sẽ báo giờ cụ thể có thể tới giao để bạn
+                        tiện
+                        sắp xếp nhận hàng. Lại Đây đang cố gắng cải thiện vấn đề này để mang lại cho quý khách trải nghiệm
+                        mua
+                        sắm tốt hơn.</p>
+                </div>
 
-            <div class="content1 w3-padding-32">
-                <h5 style="color: red">Sau bao lâu tôi sẽ nhận được hàng?</h5>
-                <p>Thời gian bạn nhận được hàng tùy thuộc vào địa chỉ nhận hàng của quý khách.</p>
-                <ul>
-                    <li><p>- Khu vực Thành phố Hồ Chí Minh: Quý khách có thể nhận hàng trong vòng 1 ngày đối với các
-                            quận nội-ngoại thành và trong vòng 2 ngày đối với các huyện (tính từ thời điểm hoàn tất xác
-                            nhận đơn hàng).</p>
-                    </li>
-                    <li><p>- Khu vực Đà Nẵng, Hà Nội và các tỉnh/thành từ Bình Định trở vào: Quý khách nhận hàng trong
-                            vòng 2 đến 3 ngày (tính từ thời điểm hoàn tất xác nhận đơn hàng).</p></li>
-                    <li><p>- Các tỉnh/thành từ Quảng Ngãi trở ra: Quý khách nhận hàng trong vòng 3 đến 5 ngày (tính từ
-                            thời điểm hoàn tất xác nhận đơn hàng).</p></li>
-                </ul>
-                <p>Trước khi giao hàng, đơn vị vận chuyển sẽ liên hệ với quý khách qua điện thoại để hẹn chính xác ngày
-                    và giờ giao hàng. Quý khách lưu ý cung cấp số điện thoại đúng để đối tác giao nhận có thể liện hệ
-                    thuận tiện với quý khách.</p>
-                <p>Lại Đây Refill hay đối tác giao nhận sẽ không chịu trách nhiệm trong trường hợp địa chỉ giao hàng,
-                    điện thoại người nhận hàng không chính xác hay mất liên lạc.</p>
+                <div class="content1 w3-padding-32">
+                    <h5 style="color: red">Tôi đang rất cần sản phẩm, Lại Đây có thể giao gấp cho tôi được không?</h5>
+                    <p>Nếu bạn ở khu vực Tp.HCM, vui lòng liên hệ số 028 6270 2141 để được hỗ trợ hết mức. Lại Đây sẽ kiểm
+                        tra
+                        và báo lại bạn thời gian có thể giao sớm nhất và mức phí phát sinh thêm (tùy thuộc vị trí của bạn).
+                        Trong một số trường hợp thuận lợi, bạn có thể nhận hàng sau 60 phút kể từ lúc đặt hàng.</p>
+                    <p>Nếu bạn ở các tỉnh khác, hiện tại thời gian giao hàng của Lại Đây nêu trên đã là nhanh nhất có thể.
+                        Bạn
+                        không thể yêu cầu giao nhanh hơn.</p>
+                </div>
+
+                <div class="content1 w3-padding-32">
+                    <h5 style="color: red">Sau bao lâu tôi sẽ nhận được hàng?</h5>
+                    <p>Thời gian bạn nhận được hàng tùy thuộc vào địa chỉ nhận hàng của quý khách.</p>
+                    <ul>
+                        <li><p>- Khu vực Thành phố Hồ Chí Minh: Quý khách có thể nhận hàng trong vòng 1 ngày đối với các
+                                quận nội-ngoại thành và trong vòng 2 ngày đối với các huyện (tính từ thời điểm hoàn tất xác
+                                nhận đơn hàng).</p>
+                        </li>
+                        <li><p>- Khu vực Đà Nẵng, Hà Nội và các tỉnh/thành từ Bình Định trở vào: Quý khách nhận hàng trong
+                                vòng 2 đến 3 ngày (tính từ thời điểm hoàn tất xác nhận đơn hàng).</p></li>
+                        <li><p>- Các tỉnh/thành từ Quảng Ngãi trở ra: Quý khách nhận hàng trong vòng 3 đến 5 ngày (tính từ
+                                thời điểm hoàn tất xác nhận đơn hàng).</p></li>
+                    </ul>
+                    <p>Trước khi giao hàng, đơn vị vận chuyển sẽ liên hệ với quý khách qua điện thoại để hẹn chính xác ngày
+                        và giờ giao hàng. Quý khách lưu ý cung cấp số điện thoại đúng để đối tác giao nhận có thể liện hệ
+                        thuận tiện với quý khách.</p>
+                    <p>Lại Đây Refill hay đối tác giao nhận sẽ không chịu trách nhiệm trong trường hợp địa chỉ giao hàng,
+                        điện thoại người nhận hàng không chính xác hay mất liên lạc.</p>
+                </div>
             </div>
         </div>
+
     </div>
+
 
     {{--<footer id="footer">--}}
     {{--    <div class="container">--}}

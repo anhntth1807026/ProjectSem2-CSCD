@@ -25,32 +25,32 @@
         <div class="w3-row-padding">
             <div class="w3-col m6">
                 <div data-aos="zoom-out-up" data-aos-duration="1500"><h2 style="text-align: center">Chào mừng bạn <br>
-                        đến với LaiDayStation</h2>
+                        đến với Zero Waste</h2>
                     <br>
                     <p style="font-size: 22px;font-kerning: none;font-weight: lighter;text-align: center">
-                        Lai Day Station là nơi dành cho những ai <br> quan tâm đến lối sống xanh, bền vững và
+                        Zero Waste là nơi dành cho những ai <br> quan tâm đến lối sống xanh, bền vững và
                         thân thiện với môi
                         trường. <br>
-                        <br>Tại LaiDay, bạn sẽ cảm thấy hạnh phúc, <br> tình yêu và lòng biết ơn <br> đối với các
+                        <br>Tại đây, bạn sẽ cảm thấy hạnh phúc, <br> tình yêu và lòng biết ơn <br> đối với các
                         sản phẩm do người
                         Việt Nam làm ra. <br><br> Vì lợi ích của cộng đồng và cho lối sống đơn giản và lành mạnh.
                     </p>
                     <br>
                     <div class="w3-row-padding" style="text-align: center">
                         <div class="w3-quarter">
-                            <i class="fab fa-mixcloud" style="font-size: 50px;color: #58d4e7"></i>
+                            <i class="fab fa-mixcloud" style="font-size: 30px;color: #58d4e7"></i>
                             <p style="margin-top: 10px;font-size: 15px;color: #58d4e7">SINH THÁI</p>
                         </div>
                         <div class="w3-quarter">
-                            <i class="far fa-heart" style="font-size: 50px;color: #7ce095"></i>
+                            <i class="far fa-heart" style="font-size: 30px;color: #7ce095"></i>
                             <p style="margin-top: 10px;font-size: 15px;color: #7ce095">TRỒNG CÂY</p>
                         </div>
                         <div class="w3-quarter">
-                            <i class="far fa-star" style="font-size: 50px;color: #58d4e7"></i>
+                            <i class="far fa-star" style="font-size: 30px;color: #58d4e7"></i>
                             <p style="margin-top: 10px;font-size: 15px;color: #58d4e7">NĂNG ĐỘNG</p>
                         </div>
                         <div class="w3-quarter">
-                            <i class="far fa-trash-alt" style="font-size: 50px;color: #7ce095"></i>
+                            <i class="far fa-trash-alt" style="font-size: 30px;color: #7ce095"></i>
                             <p style="margin-top: 10px;font-size: 15px;color: #7ce095">TÁI CHẾ</p>
                         </div>
                     </div>
@@ -67,30 +67,29 @@
 
     {{--    Tiêu chí của chúng tôi--}}
     <div class="w3-container" style="padding:40px 40px; background-color: #e5df27; color: #0c0c0c" id="about">
-        <h3 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Tiêu Chí Của Chúng Tôi</h3>
-        <p class="w3-center w3-large" data-aos="fade-left" data-aos-duration="1500" style="font-size: 24px">Thiên Nhiên
-            Là Chìa Khóa Của Tương
-            Lai</p>
+        <h3 class="w3-center" data-aos="fade-right" data-aos-duration="1500"><b>Tiêu Chí Của Chúng Tôi</b></h3>
+        <p class="w3-center w3-large" data-aos="fade-left" data-aos-duration="1500" style="font-size: 20px">Thay vì dùng tiền mặt, bạn có thể mang những chai lọ đã sử dụng với số lượng phù hợp để đổi lấy những sản phẩm của chúng tôi.</p>
+
         <div class="w3-row-padding w3-center" data-aos="fade-up" data-aos-duration="1200" style="margin-top:50px">
             <div class="w3-quarter">
                 <img src="{{ asset('/img/new-image/icon-1.webp') }}" alt="" title="Hãy chuẩn bị thật kĩ nhé!">
-                <p class="w3-large" style="margin-top: 15px">Byo</p>
-                <p style="margin-top: 20px">Mang thoe nhiều chai, ọ nhất có thể.
+                <p class="w3-large" style="margin-top: 15px"><b>Byo</b></p>
+                <p style="margin-top: 20px">Mang theo nhiều chai lọ nhất có thể.
 
-                    Rửa sạch và để khô, bóc sạch những nhãn dán nếu vẫn còn.
+                    Rửa sạch và để khô, sau đó bóc sạch nhãn dán nếu vẫn còn.
 
-                    Nếu không có hoặc quên mang hộp đựng của mình, hãy hỏi và mượn từ phía ban tổ chức địa phương.</p>
+                    Hãy chuẩn bị sẵn một chiếc hộp để đựng đồ. Nếu không có hoặc quên mang theo, hãy hỏi và mượn từ phía ban tổ chức địa phương.</p>
             </div>
             <div class="w3-quarter">
                 <img src="{{ asset('/img/new-image/icon-2.webp') }}" alt=""
                      title="Đừng quên dán nhãn để đánh dấu hộp của bạn.">
-                <p class="w3-large" style="margin-top: 15px">Stick</p>
-                <p style="margin-top: 20px">Dán nhãn vào hộp đựng đồ của bạn, hãy cân nhắc về việc đó.</p>
+                <p class="w3-large" style="margin-top: 15px"><b>Stick</b></p>
+                <p style="margin-top: 20px">Dán nhãn vào hộp đựng chai lọ của bạn.</p>
             </div>
             <div class="w3-quarter">
                 <img src="{{ asset('/img/new-image/icon-3.webp') }}" alt=""
                      title="Cân để biết trọng lượng của những điều tuyệt vời mà bạn mang tới.">
-                <p class="w3-large" style="margin-top: 15px">Tare&Write</p>
+                <p class="w3-large" style="margin-top: 15px"><b>Tare&Write</b></p>
                 <p style="margin-top: 20px">Cân hộp của bạn tại quầy.
 
                     Viết số cân nặng vào nhãn.
@@ -99,12 +98,12 @@
             <div class="w3-quarter">
                 <img src="{{ asset('/img/new-image/icon-4.webp') }}" alt=""
                      title="Đừng bỏ lỡ bước cuối cùng của chương trình nhé!">
-                <p class="w3-large" style="margin-top: 15px">REFILL</p>
+                <p class="w3-large" style="margin-top: 15px"><b>Refill</b></p>
                 <p style="margin-top: 20px">Cho những sản phẩm bảo vệ môi trường bạn thích vào hộp.
 
-                    Một hộp chỉ được có một loại sản phẩm.
+                    Mỗi hộp chỉ được có một loại sản phẩm.
 
-                    Hãy tính đến việc sẽ có vài sản phẩm cần thời gian để chúa đầy thùng.
+                    Hãy tính đến việc phải thay đổi lựa chọn vì số lượng có hạn của những sản phẩm.
                 </p>
             </div>
         </div>
@@ -113,6 +112,7 @@
 
     {{--    Bán chạy nhất--}}
     <div class="container">
+        <br>
         <h1 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Bán Chạy Nhất</h1>
         <div class="row">
             @foreach($productHot as $productHots)
@@ -239,35 +239,35 @@
                 Thêm</a></p>
         <br>
 
-        <hr>
-        <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px">
-            <h3 style="text-align: center" data-aos="fade-up" data-aos-duration="1200">GIẢI PHÁP CỦA CHÚNG TÔI</h3>
-            <br>
-            <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-                <div class="w3-quarter" data-aos="zoom-in-right" data-aos-duration="1200">
-                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/01-2-o1.jpg" alt="Sandwich"
-                         style="width:100%">
-                </div>
-                <div class="w3-quarter" data-aos="zoom-out-up" data-aos-duration="1200">
-                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/02-2-o.jpg" alt="Steak"
-                         style="width:100%">
-                </div>
-                <div class="w3-quarter" data-aos="zoom-out-up" data-aos-duration="1200">
-                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/03-2-o.jpg" alt="Cherries"
-                         style="width:100%">
-                </div>
-                <div class="w3-quarter" data-aos="zoom-in-left" data-aos-duration="1200">
-                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/04-2-o1.jpg"
-                         alt="Pasta and Wine"
-                         style="width:100%">
-                </div>
-            </div>
-        </div>
-        <br>
+{{--        <hr>--}}
+{{--        <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px">--}}
+{{--            <h3 style="text-align: center" data-aos="fade-up" data-aos-duration="1200">GIẢI PHÁP CỦA CHÚNG TÔI</h3>--}}
+{{--            <br>--}}
+{{--            <div class="w3-row-padding w3-padding-16 w3-center" id="food">--}}
+{{--                <div class="w3-quarter" data-aos="zoom-in-right" data-aos-duration="1200">--}}
+{{--                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/01-2-o1.jpg" alt="Sandwich"--}}
+{{--                         style="width:100%">--}}
+{{--                </div>--}}
+{{--                <div class="w3-quarter" data-aos="zoom-out-up" data-aos-duration="1200">--}}
+{{--                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/02-2-o.jpg" alt="Steak"--}}
+{{--                         style="width:100%">--}}
+{{--                </div>--}}
+{{--                <div class="w3-quarter" data-aos="zoom-out-up" data-aos-duration="1200">--}}
+{{--                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/03-2-o.jpg" alt="Cherries"--}}
+{{--                         style="width:100%">--}}
+{{--                </div>--}}
+{{--                <div class="w3-quarter" data-aos="zoom-in-left" data-aos-duration="1200">--}}
+{{--                    <img src="https://eco-nature.cmsmasters.net/wp-content/uploads/2014/07/04-2-o1.jpg"--}}
+{{--                         alt="Pasta and Wine"--}}
+{{--                         style="width:100%">--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <br>--}}
 
-        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round" style="text-decoration: none">Xem
-                Thêm</a></p>
-        <br>
+{{--        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round" style="text-decoration: none">Xem--}}
+{{--                Thêm</a></p>--}}
+{{--        <br>--}}
         <hr>
 
         <br>

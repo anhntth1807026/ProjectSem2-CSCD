@@ -166,6 +166,12 @@
             margin-top: 18px;
         }
 
+        @media (max-width: 600px) {
+            .example {
+            }
+        }
+
+
 
         @media (max-width: 800px) {
             .comment p {
@@ -224,9 +230,9 @@
 
     </style>
     <div>
-        <img class="mySlides" src="{{ asset('/img/blog/cover1.jpg') }}" style="width:100%">
+        <img class="example" src="{{ asset('/img/blog/cover1.jpg') }}" style="width:100%;margin-left: 132px;margin-right: 132px">
     </div>
-    <div class="w3-display-left w3-text-white" style="padding:22rem">
+    <div class="w3-display-left w3-text-white" style="padding:22rem;margin-left: 200px">
         <h4 style="text-align: center"><b>NĂM ĐIỀU ĐƠN GIẢN CHO CUỘC SỐNG XANH HƠN</b>
         </h4>
         <p class="w3-opacity" style="text-align: center">11-9-2019, 20h20</p>
@@ -345,106 +351,7 @@
         </div>
     </div>
 
-
-    <h3 style="text-align: center">BÌNH LUẬN</h3>
-
     <ul class="comment-section">
-
-        <li class="comment user-comment">
-
-            <div class="info">
-                <a href="#">Anie Silverston</a>
-                <span>4 hours ago</span>
-            </div>
-
-            <a class="avatar" href="#">
-                <img src="{{ asset('video/avatar_user_1.jpg') }}" width="35" alt="Profile Avatar"
-                     title="Anie Silverston"/>
-            </a>
-
-            <p>Suspendisse gravida sem?</p>
-
-        </li>
-
-        <li class="comment user-comment">
-
-            <div class="info">
-                <a href="#">Jack Smith</a>
-                <span>3 hours ago</span>
-            </div>
-
-            <a class="avatar" href="#">
-                <img src="{{ asset('video/avatar_user_2.jpg') }}" width="35" alt="Profile Avatar" title="Jack Smith"/>
-            </a>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie
-                portitor.</p>
-
-        </li>
-
-        <li class="comment user-comment">
-
-            <div class="info">
-                <a href="#">Bradley Jones</a>
-                <span>1 hour ago</span>
-            </div>
-
-            <a class="avatar" href="#">
-                <img src="{{ asset('video/avatar_user_1.jpg') }}" width="35" alt="Profile Avatar"
-                     title="Bradley Jones"/>
-            </a>
-
-            <p>Suspendisse gravida sem sit amet molestie portitor?</p>
-
-        </li>
-
-        <li class="comment author-comment">
-
-            <div class="info">
-                <a href="#">Jack Smith</a>
-                <span>1 hour ago</span>
-            </div>
-
-            <a class="avatar" href="#">
-                <img src="{{ asset('video/avatar_author.jpg') }}" width="35" alt="Profile Avatar" title="Jack Smith"/>
-            </a>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisee gravida sem sit amet molestie
-                porttitor.</p>
-
-        </li>
-
-        <li class="comment author-comment">
-
-            <div class="info">
-                <a href="#">Jack Smith</a>
-                <span>1 hour ago</span>
-            </div>
-
-            <a class="avatar" href="#">
-                <img src="{{ asset('video/avatar_user_1.jpg') }}" width="35" alt="Profile Avatar" title="Jack Smith"/>
-            </a>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisee gravida sem sit amet molestie
-                porttitor.</p>
-
-        </li>
-
-        <li class="comment author-comment">
-
-            <div class="info">
-                <a href="#">Jack Smith</a>
-                <span>1 hour ago</span>
-            </div>
-
-            <a class="avatar" href="#">
-                <img src="{{ asset('video/avatar_user_1.jpg') }}" width="35" alt="Profile Avatar" title="Jack Smith"/>
-            </a>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisee gravida sem sit amet molestie
-                porttitor.</p>
-
-        </li>
 
         <li class="write-new">
 
