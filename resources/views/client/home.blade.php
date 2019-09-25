@@ -282,75 +282,69 @@
             <br>
             <br>
             <div class="row">
+                @foreach($blog as $item)
                 <div class="col-md-4 col-sm-6" data-aos="zoom-in-right" data-aos-duration="1200">
                     <div class="product-grid8">
                         <div class="product-image8">
                             <a href="#">
-                                <img src="https://i.pinimg.com/564x/a5/98/f0/a598f0dba0f014dd86df54776b4712d2.jpg"
+                                <img src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_350,h_250/{{$item -> thumbnail}}"
                                      alt="Norway" style="width:100%">
                             </a>
-                            <ul class="social">
-                                <li><a href="" class="fa fa-search"></a></li>
-                                <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                <li><a href="" class="fa fa-shopping-cart"></a></li>
-                            </ul>
-                            <span class="product-discount-label">HOT</span>
                         </div>
                         <div class="product-content">
-                            <span>10-9-2019</span>
-                            <br>
-                            <h3 class="title"><a href="#">BẠN CÓ BIẾT SỰ KHÁC NHAU GIỮA CÁC KHÁI NIỆM?</a></h3>
+                            <h2 class="title"><a href="#" style="text-decoration: none">{{$item -> title}}</a></h2>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6" data-aos="zoom-out-up" data-aos-duration="1200">
-                    <div class="product-grid8">
-                        <div class="product-image8">
-                            <a href="#">
-                                <img src="https://i.pinimg.com/564x/ba/b3/41/bab341d888f568959f64a987597e2b02.jpg"
-                                     alt="Norway" style="width:100%">
-                            </a>
-                            <ul class="social">
-                                <li><a href="" class="fa fa-search"></a></li>
-                                <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                <li><a href="" class="fa fa-shopping-cart"></a></li>
-                            </ul>
-                            <span class="product-discount-label">NÊN</span>
-                        </div>
-                        <div class="product-content">
-                            <span>9-9-2019</span>
-                            <br>
-                            <h3 class="title"><a href="#">VẬY LÀM SAO ĐỂ BẮT ĐẦU MỘT LỐI SỐNG XANH?</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in-left" data-aos-duration="1200">
-                    <div class="product-grid8">
-                        <div class="product-image8">
-                            <a href="#">
-                                <img src="https://i.pinimg.com/564x/ab/fa/91/abfa913ed4f6b1b31567145539b3ae87.jpg"
-                                     alt="Norway" style="width:100%">
-                            </a>
-                            <ul class="social">
-                                <li><a href="" class="fa fa-search"></a></li>
-                                <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                <li><a href="" class="fa fa-shopping-cart"></a></li>
-                            </ul>
-                            <span class="product-discount-label">NÊN</span>
-                        </div>
-                        <div class="product-content">
-                            <span>7-9-2019</span>
-                            <br>
-                            <h3 class="title"><a href="#">THỰC TRẠNG Ô NHIỄM MÔI TRƯỜNG Ở VIỆT NAM.</a></h3>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+{{--                <div class="col-md-4 col-sm-6" data-aos="zoom-out-up" data-aos-duration="1200">--}}
+{{--                    <div class="product-grid8">--}}
+{{--                        <div class="product-image8">--}}
+{{--                            <a href="#">--}}
+{{--                                <img src="https://i.pinimg.com/564x/ba/b3/41/bab341d888f568959f64a987597e2b02.jpg"--}}
+{{--                                     alt="Norway" style="width:100%">--}}
+{{--                            </a>--}}
+{{--                            <ul class="social">--}}
+{{--                                <li><a href="" class="fa fa-search"></a></li>--}}
+{{--                                <li><a href="" class="fa fa-shopping-bag"></a></li>--}}
+{{--                                <li><a href="" class="fa fa-shopping-cart"></a></li>--}}
+{{--                            </ul>--}}
+{{--                            <span class="product-discount-label">NÊN</span>--}}
+{{--                        </div>--}}
+{{--                        <div class="product-content">--}}
+{{--                            <span>9-9-2019</span>--}}
+{{--                            <br>--}}
+{{--                            <h3 class="title"><a href="#">VẬY LÀM SAO ĐỂ BẮT ĐẦU MỘT LỐI SỐNG XANH?</a></h3>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4 col-sm-6" data-aos="zoom-in-left" data-aos-duration="1200">--}}
+{{--                    <div class="product-grid8">--}}
+{{--                        <div class="product-image8">--}}
+{{--                            <a href="#">--}}
+{{--                                <img src="https://i.pinimg.com/564x/ab/fa/91/abfa913ed4f6b1b31567145539b3ae87.jpg"--}}
+{{--                                     alt="Norway" style="width:100%">--}}
+{{--                            </a>--}}
+{{--                            <ul class="social">--}}
+{{--                                <li><a href="" class="fa fa-search"></a></li>--}}
+{{--                                <li><a href="" class="fa fa-shopping-bag"></a></li>--}}
+{{--                                <li><a href="" class="fa fa-shopping-cart"></a></li>--}}
+{{--                            </ul>--}}
+{{--                            <span class="product-discount-label">NÊN</span>--}}
+{{--                        </div>--}}
+{{--                        <div class="product-content">--}}
+{{--                            <span>7-9-2019</span>--}}
+{{--                            <br>--}}
+{{--                            <h3 class="title"><a href="#">THỰC TRẠNG Ô NHIỄM MÔI TRƯỜNG Ở VIỆT NAM.</a></h3>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
 
         <br>
 
-        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="#" class="w3-button w3-round" style="text-decoration: none">Xem
+        <p style="text-align: center;font-size: 24px;color: #d56b2d"><a href="/Blog" class="w3-button w3-round" style="text-decoration: none">Xem
                 Thêm</a></p>
         <br>
     </div>

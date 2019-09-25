@@ -39,10 +39,6 @@
     <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
 
     {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    @stack('styles')
 </head>
 <body>
 <!--Header-->
@@ -84,7 +80,7 @@
 
                             <li class="expand"><a href="/Blog">Bài Viết</a></li>
 
-                            <li class="expand"><a href="">Chính Sách</a>
+                            <li class="expand"><a href="#">Chính Sách</a>
                                 <ul class="restrain sub-menu">
                                     <li><a href="/Policy/Data-Confidentiality">Bảo mật thông tin</a></li>
                                     <li><a href="/Policy/Delivery-Transport">Vận chuyển, giao nhận</a></li>
@@ -115,7 +111,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="">Bài Viết</a></li>
-                                    <li><a href="#">Chính Sách</a>
+                                    <li><a href="">Chính Sách</a>
                                         <ul>
                                             <li><a href="">Bảo mật thông tin</a></li>
                                             <li><a href="">Vận chuyển, giao nhận</a></li>

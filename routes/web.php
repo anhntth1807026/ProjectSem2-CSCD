@@ -83,6 +83,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/cart', 'HomeController@cart')->name('cart');
+Route::get('/article', 'BlogController@index')->name('get.article');
 
 Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
     Route::resource('/product', 'ProductController');
