@@ -5,16 +5,16 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="/admin/chart">Dashboard</a>
+                    <a href="/admin/chart">Thống Kê</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('category.index') }}">Category</a>
+                    <a href="{{ route('category.index') }}">Thể Loại</a>
                 </li>
                 <li class="breadcrumb-item active">List</li>
             </ol>
             <div class="col-auto">
                 <div class="pull-left">
-                    <a class="btn btn-success" href="{{ route('category.create') }}">Create New Category</a>
+                    <a class="btn btn-success" href="{{ route('category.create') }}">Tạo thể loại mới</a>
                 </div>
             </div>
         </div>
@@ -29,9 +29,9 @@
                     <thead>
                     <tr>
                         <th scope="col"><input type="checkbox" id="checkAll"></th>
-                        <th scope="col">No</th>
-                        <th scope="col">Name</th>
-                        <th width="280px">Action</th>
+                        <th scope="col">Số Thứ Tự</th>
+                        <th scope="col">Tên</th>
+                        <th width="280px">Thao Tác</th>
                     </tr>
                     </thead>
                     @foreach ($category as $key => $categories)
@@ -42,11 +42,11 @@
                         <td scope="col">{{ $categories->name }}</td>
                         <td>
                             <form action="{{ route('category.destroy', $categories->id ) }}" method="POST">
-                                <a class="btn btn-primary" href="{{ route('category.edit', $categories->id ) }}">Edit</a>
+                                <a class="btn btn-primary" href="{{ route('category.edit', $categories->id ) }}">Sửa</a>
                                 @csrf
                                 @method('DELETE')
                                 <a href="javascript:void(0)" id="btn-delete-{{ $categories->id }}" class="mr-2 btn btn-danger btn-delete"
-                                   title="Delete this category">Delete</a>
+                                   title="Delete this category">Xóa</a>
                             </form>
                         </td>
                     </tr>
@@ -62,7 +62,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-outline-primary mb-2" id="btn-apply-all">Apply to all</button>
+                        <button type="button" class="btn btn-outline-primary mb-2 delete-all" id="btn-apply-all">Xác Nhận</button>
                     </div>
                 </div>
             </div>

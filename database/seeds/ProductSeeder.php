@@ -14,7 +14,6 @@ class ProductSeeder extends Seeder
                 array(
                     'id' => 1,
                     'name' => 'Bàn Chải Người Lớn',
-
                     'description' => 'Bàn Chải Tre Kiểu Nón có gì đặc biệt?
 Bàn chải tre được sản xuất và thiết kế một cách thông minh và kỹ lưỡng, với mục đích giảm thải rác một cách đáng kể ngay cả trong khâu đóng gói. 
 Những ưu điểm sau đây của Bàn Chải Tre Hình Nón sẽ khiến bạn cực kì an tâm khi mua sắm và sử dụng sản phẩm: 

@@ -71,6 +71,9 @@ Route::get('/article', 'BlogController@index')->name('get.article');
 Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
     Route::resource('/product', 'ProductController');
     Route::post('/product/delete-multiple', ['as' =>'product.delete-multiple', 'uses' => 'ProductController@destroyMultiple']);
+    Route::post('/article/delete-multiple', ['as' =>'article.delete-multiple', 'uses' => 'ArticleController@destroyMultiple']);
+    Route::post('/contact/delete-multiple', ['as' =>'contact.delete-multiple', 'uses' => 'ContactController@destroyMultiple']);
+    Route::post('/category/delete-multiple', ['as' =>'category.delete-multiple', 'uses' => 'CategoryController@destroyMultiple']);
     Route::resource('/category', 'CategoryController');
     Route::resource('/article', 'ArticleController');
     Route::get('/user', 'AdminUserController@index')->name('admin.get.user');

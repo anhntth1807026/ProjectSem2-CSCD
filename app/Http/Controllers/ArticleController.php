@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\ValidationException;
 use JD\Cloudder\Facades\Cloudder;
 
@@ -119,6 +120,11 @@ class ArticleController extends Controller
         $article->delete();
 
         return response()->json(['status' => true, 'message' => "Article deleted successfully"]);
+    }
+    public function destroyMultiple(Request $request)
+    {
+        Article::destroy(Input::get('ids'));
+        return Input::get('ids');
     }
 
 }

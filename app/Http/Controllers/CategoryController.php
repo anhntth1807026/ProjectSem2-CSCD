@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class CategoryController extends Controller
 {
@@ -60,5 +61,10 @@ class CategoryController extends Controller
         $category->delete();
 
         return response()->json(['status' => true, 'message' => "Category deleted successfully"]);
+    }
+    public function destroyMultiple(Request $request)
+    {
+        Category::destroy(Input::get('ids'));
+        return Input::get('ids');
     }
 }
