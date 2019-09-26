@@ -63,6 +63,21 @@ return [
             ]) : [],
         ],
 
+//        'pgsql' => [
+//            'driver' => 'pgsql',
+//            'url' => '',
+//            'host' => '127.0.0.1',
+//            'port' => '5432',
+//            'database' => 'zero-waste',
+//            'username' => 'postgres',
+//            'password' => '2000',
+//            'charset' => 'utf8',
+//            'prefix' => '',
+//            'prefix_indexes' => true,
+//            'schema' => 'public',
+//            'sslmode' => 'prefer',
+//        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => '',
@@ -78,20 +93,6 @@ return [
             'sslmode' => 'prefer',
         ],
 
-//        'pgsql' => [
-//            'driver' => 'pgsql',
-//            'url' => '',
-//            'host' => '127.0.0.1',
-//            'port' => '5432',
-//            'database' => 'zero-waste',
-//            'username' => 'postgres',
-//            'password' => 'Chungta21@@',
-//            'charset' => 'utf8',
-//            'prefix' => '',
-//            'prefix_indexes' => true,
-//            'schema' => 'public',
-//            'sslmode' => 'prefer',
-//        ],
 
 //        'pgsql' => [
 //            'driver' => 'pgsql',
