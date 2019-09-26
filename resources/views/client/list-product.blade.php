@@ -25,10 +25,10 @@
                     </select>
                 </div>
                 <!--Ranger Slider-->
-
             </div>
             <div class="col-sm-9" style="padding-left: 20px;" >
                 <h2 id="title-category" style="text-align:center; font-family: auto; margin: 31px ">Tất cả các sản phẩm</h2>
+
                 @foreach($list as $item)
                     <div class="col-md-4 col-sm-6">
                         <div class="product-grid6">

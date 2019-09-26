@@ -70,7 +70,7 @@ return [
             'port' => '5432',
             'database' => 'zero-waste',
             'username' => 'postgres',
-            'password' => 'Chungta21@@',
+            'password' => '2000',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,

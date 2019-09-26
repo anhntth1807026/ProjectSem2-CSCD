@@ -42,8 +42,7 @@
 }
 
 html {
-    font-family: sans-serif;
-    line-height: 1.15;
+    font-family: "Segoe UI",Arial,sans-serif;    line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
@@ -60,8 +59,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
     margin: 0;
-    font-family: Nunito, sans-serif;
-    font-size: .9rem;
+    font-family: "Segoe UI",Arial,sans-serif;    font-size: .9rem;
     font-weight: 400;
     line-height: 1.6;
     color: #212529;
@@ -176,8 +174,7 @@ a:not([href]):not([tabindex]):focus {
 }
 
 code, kbd, pre, samp {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-    font-size: 1em
+    font-family: "Segoe UI",Arial,sans-serif;    font-size: 1em
 }
 
 pre {
@@ -5089,8 +5086,7 @@ button.close {
     z-index: 1070;
     display: block;
     margin: 0;
-    font-family: Nunito, sans-serif;
-    font-style: normal;
+    font-family: "Segoe UI",Arial,sans-serif;    font-style: normal;
     font-weight: 400;
     line-height: 1.6;
     text-align: left;
@@ -5200,8 +5196,7 @@ button.close {
     left: 0;
     z-index: 1060;
     max-width: 276px;
-    font-family: Nunito, sans-serif;
-    font-style: normal;
+    font-family: "Segoe UI",Arial,sans-serif;    font-style: normal;
     font-weight: 400;
     line-height: 1.6;
     text-align: left;
@@ -8239,8 +8234,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .text-monospace {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace
-}
+    font-family: "Segoe UI",Arial,sans-serif;}
 
 .text-justify {
     text-align: justify !important

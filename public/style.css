@@ -61,7 +61,7 @@ img {max-width:100%;height:auto}
 p {margin:0 0 10px;}
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -395,7 +395,7 @@ ul.cart-list li {
 }
 .small-cart-detail .small-cart-name {
     color: #fff;
-    font-family: Segoe UI,Arial,sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
@@ -439,7 +439,7 @@ span.amount {
     display: block;
     padding: 8px 25px;
     font-weight: 400;
-    font-family: Segoe UI,Arial,sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 12px;
     text-align: center;
     white-space: nowrap;
@@ -557,7 +557,7 @@ span.amount {
 }
 .hm-1 .slider-content a.btn-title{
     color: #362f2d;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 13px;
     border: 1px solid #362f2d;
     padding: 11px 29px;
@@ -648,7 +648,7 @@ span.amount {
     text-transform: uppercase;
     border: 1px solid #ebebeb;
     letter-spacing: 2px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 .features-tab .nav > li > a:focus,.features-tab .nav > li > a:hover {
     background-color: inherit;
@@ -780,7 +780,7 @@ h2.product-name {
 h2.product-name a{
     font-size: 12px;
     font-weight: 700;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     color: #3f3f3f;
 }
 h2.product-name a:hover{color: #c2a476}
@@ -793,7 +793,7 @@ span.old-price{
 span.sale-text{
     background: #fff none repeat scroll 0 0;
     color: #3f3f3f;
-    font-family: Roboto;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 12px;
     height: 26px;
     border: 1px solid #3f3f3f;
@@ -824,7 +824,7 @@ span.sale-text{
     margin: 5px 0;
     font-size: 13px;
     color: #3f3f3f;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 700;
 }
 .single-product:hover .add-to-wishlist a{
@@ -988,7 +988,7 @@ span.sale-text{
     position: relative;
     font-size: 11px;
     text-transform: uppercase;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 700;
     color: #3f3f3f;
     line-height: 27px;
@@ -1043,7 +1043,7 @@ span.sale-text{
     color: #3f3f3f;
     font-size: 13px;
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     margin-bottom: 30px;
 }
 span.old-price {
@@ -1078,7 +1078,7 @@ span.old-price {
     display: block;
     line-height: 86px;
     color: #3f3f3f;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     position: relative;
@@ -1095,7 +1095,7 @@ span.old-price {
 .crusial-content p {
     font-size: 13px;
     color: #3f3f3f;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     display: block;
     width: 80%;
     font-style: italic;
@@ -1186,7 +1186,7 @@ span.old-price {
     margin-top: 3px;
     float: left;
     margin-bottom: 0;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 400;
     font-size: 12px;
     color: #e2e2e2;
@@ -1390,7 +1390,7 @@ span.old-price {
     content: "";
     display: block;
     float: left;
-    font-family: "FontAwesome";
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 15px;
     font-weight: normal;
     height: 55px;
@@ -1618,7 +1618,7 @@ span.old-price {
 }
 .deal-banner-area .cdown {
     float: left;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
     margin-right: 3%;
@@ -1761,7 +1761,7 @@ aside.sidebar-content {
 }
 .sidebar-title h6 {
     color: #3f3f3f;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0px;
@@ -1793,7 +1793,7 @@ aside.sidebar-content ul li a:hover{color: #c2a476;}
     border-radius: 3px;
     display: block;
     float: left;
-    font-family: Roboto;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 17px;
@@ -1811,7 +1811,7 @@ aside.sidebar-content ul li a:hover{color: #c2a476;}
     position: relative;
     font-size: 13px;
     color: #3f3f3f;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     border-bottom: 1px solid #f7f6f8;
     padding-bottom: 15px;
 }
@@ -1872,7 +1872,7 @@ aside.sidebar-content ul li a:hover{color: #c2a476;}
     border: none;
     color: #3f3f3f;
     font-weight: 700;
-    font-family: 'Lato', sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 15px;
     cursor: pointer;
     transition: .3s;
@@ -2054,7 +2054,7 @@ aside.sidebar-content ul li a:hover{color: #c2a476;}
 .bx-controls-direction a.bx-next:before,
 .bx-controls-direction a.bx-prev:before{
     content: "\f104";
-    font-family: 'FontAwesome';
+    font-family: "Segoe UI",Arial,sans-serif;
     display: inline-block;
     font-size: 30px;
 }
@@ -2106,7 +2106,7 @@ aside.sidebar-content ul li a:hover{color: #c2a476;}
     text-decoration: none;
     color: #3f3f3f;
     border-bottom: none;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 .single-product-tab .details-tab li a:hover{color: #c2a476}
 ul.details-tab li {
@@ -2200,7 +2200,7 @@ span.email-notes{color: #42414f;
     box-shadow: none;
     color: #fff;
     display: inline-block;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 12px;
     font-weight: 700;
     height: 40px;
@@ -2319,7 +2319,7 @@ p.alrdyReg{
 }
 .regSaveTime li:before {
     content: "\f111";
-    font-family: FontAwesome;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 10px;
     font-style: normal;
     font-weight: normal;
@@ -2341,7 +2341,7 @@ a.checkPageBtn {
     margin-bottom: 34px;
     text-align: center;
     width: 100px;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 a.checkPageBtn:hover{
     color: #c2a476
@@ -2398,7 +2398,7 @@ a.checkPageBtn:hover{
 }
 .category-checkout ul li a:before {
     content: "\f105";
-    font-family: FontAwesome;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-style: normal;
     font-weight: normal;
     left: 0;
@@ -2410,7 +2410,7 @@ a.checkPageBtn:hover{
     color: #3f3f3f;
     padding-left: 15px;
     position: relative;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 .category-checkout ul li a:hover { color: #c2a476; }
 div#checkoutMethod {
@@ -2440,7 +2440,7 @@ div#checkoutMethod {
     border: 1px solid #f2f2f2;
     border-collapse: collapse;
     color: #000;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 12px;
     font-weight: 400;
     padding: 10px;
@@ -2454,7 +2454,7 @@ div#checkoutMethod {
 .cart-table tbody tr td {
     border: 1px solid #f2f2f2;
     border-collapse: collapse;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 12px;
     font-weight: normal;
     vertical-align: top;
@@ -2476,7 +2476,7 @@ div#checkoutMethod {
     line-height: 25px;
     color: #6d6d6d;
     font-weight: 400;
-    font-family: Roboto;
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 .wishlist-concept textarea {
     display: block;
@@ -2488,7 +2488,7 @@ div#checkoutMethod {
     margin: 5px 0;
     font-size: 13px;
     color: #3f3f3f;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 700;
 }
 .wishlist-concept form input {
@@ -2538,7 +2538,7 @@ a.cart-button-wi:hover{
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    font-family: Montserrat;
+    font-family: "Segoe UI",Arial,sans-serif;
     text-decoration: none;
 }
 .cartPage-btn ul li a.cbtn:hover{background: #c2a476}
@@ -2577,7 +2577,7 @@ h4.cart-title {
     border: 1px solid #EBEBEB;
     border-collapse: collapse;
     color: #000;
-    font-family: Arial;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 12px;
     background: #EBEBEB;
     font-weight: 300;
@@ -2588,7 +2588,7 @@ h4.cart-title {
 .cart-table tbody tr td {
     border: 1px solid #e1e1e1;
     border-collapse: collapse;
-    font-family: arial;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 12px;
     font-weight: normal;
     padding: 35px 48px;
@@ -2610,7 +2610,7 @@ h4.cart-title {
 }
 .cart-price, .cart-subtotal {
     color: #3f3f3f;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 12px;
     font-weight: 400
 }
@@ -2686,7 +2686,7 @@ input.coupon-input, .selectOption input {
     background: none repeat scroll 0 0 #f0f0f0;
     border: medium none;
     display: block;
-    font-family: Arial;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 14px;
     margin-bottom: 29px;
     padding: 7px;
@@ -2697,7 +2697,7 @@ input.coupon-input, .selectOption input {
     border: medium none;
     color: #252525;
     border: 1px solid #d3d3d3;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 12px;
     font-weight: bold;
     height: 38px;
@@ -2726,7 +2726,7 @@ input.coupon-input, .selectOption input {
     appearance: none;
     /*background: url(../img/select.png) no-repeat scroll 95% 47%/10px auto #f0f0f0;*/
     border: medium none;
-    font-family: Arial;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 14px;
     height: 34px;
     line-height: 34px;
@@ -2742,7 +2742,7 @@ input.coupon-input, .selectOption input {
 .cart-totals li {
     color: #3f3f3f;
     display: block;
-    font-family: "Montserrat", sans-serif
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 .cart-totals li.cartSubT {
     font-size: 14px;
@@ -2760,7 +2760,7 @@ a.proceedbtn {
     background: #c2a476;
     color: #fff;
     display: block;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 12px;
     font-weight: bold;
     height: 40px;
@@ -2772,7 +2772,7 @@ a.proceedbtn {
 .multiCheckout > a {
     color: #c2a476;
     display: block;
-    font-family: Arial;
+    font-family: "Segoe UI",Arial,sans-serif;
     font-size: 14px;
     font-weight: normal;
     margin-bottom: 30px;
@@ -2787,7 +2787,7 @@ a.proceedbtn {
     font-weight: 400;
     text-transform: uppercase;
     color: #3f3f3f;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 .cart-area-start .cart-table tbody tr td a:hover{color: #c2a376}
 .cart-area-start {margin: 50px 0 50px;}
@@ -2963,7 +2963,7 @@ blockquote {
 }
 .vote-area label{
     font-weight: 400;
-    font-family: Roboto;
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 .vote-area input {
     vertical-align: middle;
@@ -3081,7 +3081,7 @@ span.legend {
     text-transform: uppercase;
 }
 .form-fields label {
-    font-family: Montserrat,Arial,Helvetica,sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
     margin: 0 0 5px;
     color: #000000;
     font-weight: 400;

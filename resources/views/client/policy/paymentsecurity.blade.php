@@ -3,9 +3,9 @@
 @section('content')
     <style>
         body, h1, h2, h3, h4, h5, h6, p {
-            /*font-family: 'Oxygen', Arial, Helvetica, 'Nimbus Sans L', sans-serif;*/
-            font-family: 'sofia_proregular',sans-serif;
-            line-height: 28px;
+            /*!*font-family: 'Oxygen', Arial, Helvetica, 'Nimbus Sans L', sans-serif;*!*/
+            /*font-family: 'sofia_proregular',sans-serif;*/
+            /*line-height: 28px;*/
         }
 
         p {
