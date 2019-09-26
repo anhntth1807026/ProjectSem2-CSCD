@@ -277,7 +277,7 @@
 
             <div class="col-lg-4 col-md-6 col-sm-6 mt-2 mb-4" style="margin-bottom: 30px;text-align: center">
                 <h5 class="mb-4 font-weight-bold" style="margin-bottom: 25px;margin-right: 12px">LIÊN HỆ</h5>
-                <div class="input-group" style="text-align: center">
+                <div class="input-group" style="width: 90%; margin: 22px">
                     <input type="text" class="form-control" placeholder="Địa Chỉ Email:">
                     {{--                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>--}}
                 </div>
