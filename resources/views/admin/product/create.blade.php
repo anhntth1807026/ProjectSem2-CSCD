@@ -5,12 +5,12 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="/admin/chart">Dashboard</a>
+                    <a href="/admin/chart">Thống Kê</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{route('product.index')}}">Product</a>
+                    <a href="{{route('product.index')}}">Sản Phẩm</a>
                 </li>
-                <li class="breadcrumb-item active">Add</li>
+                <li class="breadcrumb-item active">Thêm Sản Phảm</li>
             </ol>
         </div>
 
