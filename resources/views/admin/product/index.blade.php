@@ -9,16 +9,16 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="/admin/chart">Dashboard</a>
+                    <a href="/admin/chart">Thống Kê</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('product.index') }}">Product</a>
+                    <a href="{{ route('product.index') }}">Sản Phẩm</a>
                 </li>
-                <li class="breadcrumb-item active">List</li>
+                <li class="breadcrumb-item active">Danh Sách</li>
             </ol>
             <div class="col-auto">
                 <div class="pull-left">
-                    <a class="btn btn-success" href="{{ route('product.create') }}">Create New Product</a>
+                    <a class="btn btn-success" href="{{ route('product.create') }}">Tạo Sản Phẩm Mới</a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 <input type="hidden" name="currentPage" value="{{$currentPage}}">
             </div>
             <div class="form-group float-left">
-                <button type="submit" id="btn-search" class="btn btn-outline-primary mb-2">Search</button>
+                <button type="submit" id="btn-search" class="btn btn-outline-primary mb-2">Tìm Kiếm</button>
             </div>
         </div>
         <div class="row container-fluid">
@@ -110,14 +110,14 @@
                             <td scope="col">
                                 <form action="{{ route('product.destroy', $products->id) }}" method="POST">
                                     <a class="btn btn-info" href="{{ route('product.show', $products->id) }}"
-                                       title="View product detail">Detail</a>
-                                    <a class="btn btn-primary mr-2" href="{{ route('product.edit',$products->id) }}">Edit</a>
+                                       title="View product detail">Chi Tiết</a>
+                                    <a class="btn btn-primary mr-2" href="{{ route('product.edit',$products->id) }}">Sửa</a>
                                     @csrf
                                     @method('DELETE')
                                     <a href="javascript:void(0)" id="btn-delete-{{ $products->id }}"
                                        class="btn btn-danger btn-delete"
                                        style="margin-top: 5px"
-                                       title="Delete this product">Delete</a>
+                                       title="Delete this product">Xóa</a>
                                 </form>
                             </td>
                         </tr>
@@ -134,7 +134,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <button type="button" class="btn btn-outline-primary mb-2 delete-all" id="btn-apply-all">Apply to all</button>
+                    <button type="button" class="btn btn-outline-primary mb-2 delete-all" id="btn-apply-all">Xác Nhận</button>
                 </div>
             </div>
             <div class="row">

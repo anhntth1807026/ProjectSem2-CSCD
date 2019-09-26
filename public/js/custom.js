@@ -94,6 +94,9 @@ $(document).ready(function () {
 
                 $.ajax({
                     url: '/admin/product/delete-multiple',
+                    url: '/admin/article/delete-multiple',
+                    url: '/admin/contact/delete-multiple',
+                    url: '/admin/category/delete-multiple',
                     type: 'POST',
                     data: {
                         '_token': $('meta[name= csrf-token]').attr('content'),

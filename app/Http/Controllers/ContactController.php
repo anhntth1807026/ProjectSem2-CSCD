@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Contact;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class ContactController extends Controller
 {
@@ -18,5 +19,10 @@ class ContactController extends Controller
         Contact::insert($data);
 
         return redirect()->back();
+    }
+    public function destroyMultiple(Request $request)
+    {
+        Contact::destroy(Input::get('ids'));
+        return Input::get('ids');
     }
 }

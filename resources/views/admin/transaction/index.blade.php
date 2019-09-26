@@ -7,12 +7,12 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="/admin/chart">Dashboard</a>
+                    <a href="/admin/chart">Thống Kê</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{route('admin.list.transaction')}}">Transaction</a>
+                    <a href="{{route('admin.list.transaction')}}">Đơn Hàng</a>
                 </li>
-                <li class="breadcrumb-item active">List</li>
+                <li class="breadcrumb-item active">Danh Sách</li>
 
             </ol>
 

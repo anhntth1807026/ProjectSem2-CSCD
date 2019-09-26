@@ -4,16 +4,16 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="/admin/chart">Dashboard</a>
+                    <a href="/admin/chart">Thống Kê</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('product.index') }}">Product</a>
+                    <a href="{{ route('product.index') }}">Sản Phẩm</a>
                 </li>
                 <li class="breadcrumb-item active">List</li>
             </ol>
             <div class="col-auto">
                 <div class="pull-left">
-                    <a class="btn btn-success" href="{{ route('product.create') }}">Create New Product</a>
+                    <a class="btn btn-success" href="{{ route('product.create') }}">Tạo Mới Sản</a>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
                         <th scope="col">Tên</th>
                         <th scope="col">Email</th>
                         <th scope="col">Nội dung</th>
-                        <th width="240px">Action</th>
+                        <th width="240px">Thao Tác</th>
                     </tr>
                     </thead>
                     @foreach ($contact as $key => $contacts)
@@ -63,7 +63,14 @@
                     @endforeach
                 </table>
             </div>
-
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div class="col-7" style="">
+                        <nav aria-label="Page navigation example">
+                            {{$contact->links()}}
+                        </nav>
+                    </div>
+                </div>
         </div>
         <div class="row">
             <div class="form-group mr-3">
@@ -73,7 +80,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <button type="button" class="btn btn-outline-primary mb-2" id="btn-apply-all">Apply to all</button>
+                <button type="button" class="btn btn-outline-primary mb-2 delete-all" id="btn-apply-all">Xác Nhận</button>
             </div>
         </div>
     </div>

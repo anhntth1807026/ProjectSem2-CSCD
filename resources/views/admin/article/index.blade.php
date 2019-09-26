@@ -4,16 +4,16 @@
         <div class="row">
             <ol class="breadcrumb col-auto mr-auto">
                 <li class="breadcrumb-item">
-                    <a href="/admin/chart">Dashboard</a>
+                    <a href="/admin/chart">Thống Kê</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('article.index') }}">Article</a>
+                    <a href="{{ route('article.index') }}">Bài Viết</a>
                 </li>
-                <li class="breadcrumb-item active">List</li>
+                <li class="breadcrumb-item active">Danh Sách</li>
             </ol>
             <div class="col-auto">
                 <div class="pull-left">
-                    <a class="btn btn-success" href="{{ route('article.create') }}">Create New Article</a>
+                    <a class="btn btn-success" href="{{ route('article.create') }}">Tạo Bài Viết Mới</a>
                 </div>
             </div>
         </div>
@@ -61,14 +61,14 @@
                             <td scope="col">
                                 <form action="{{ route('article.destroy', $articles->id) }}" method="POST">
                                     <a class="btn btn-info" href="{{ route('article.show', $articles->id) }}"
-                                       title="View product detail">Detail</a>
-                                    <a class="btn btn-primary " href="{{ route('article.edit',$articles->id) }}">Edit</a>
+                                       title="View product detail">Chi Tiết</a>
+                                    <a class="btn btn-primary " href="{{ route('article.edit',$articles->id) }}">Sửa</a>
                                     @csrf
                                     @method('DELETE')
                                     <a href="javascript:void(0)" id="btn-delete-{{ $articles->id }}"
                                        class="btn btn-danger btn-delete"
                                        style=""
-                                       title="Delete this product">Delete</a>
+                                       title="Delete this product">Xóa</a>
                                 </form>
                             </td>
                         </tr>
@@ -87,7 +87,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <button type="button" class="btn btn-outline-primary mb-2" id="btn-apply-all">Apply to all</button>
+                <button type="button" class="btn btn-outline-primary mb-2 delete-all" id="btn-apply-all">Xác Nhận</button>
             </div>
         </div>
         <div class="row">
