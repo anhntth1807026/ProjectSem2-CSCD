@@ -26,6 +26,5 @@ class ProductDetailController extends Controller
         ];
 
         return view('product.detail', $data);
-
     }
 }

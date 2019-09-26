@@ -58,7 +58,7 @@ class ProductController extends Controller
         $obj = new Product();
         $obj->name = $request->get('name');
         $obj->pro_category_id = $request->get('pro_category_id');
-        $obj->description = $request->get('description');
+        $obj->pro_description = $request->get('pro_description');
 
 
 //        \Log::info($obj);
@@ -116,7 +116,7 @@ class ProductController extends Controller
 //        $product->update($request->all());
 
         $product->name = $request->get('name');
-        $product->description = $request->get('description');
+        $product->pro_description = $request->get('pro_description');
 
         $image_urls = '';
 

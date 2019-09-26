@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{asset('css/sb-admin.min.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
+    <script type="text/javascript" src="{{ asset('ckeditor/ckeditor.js') }}"></script>
     <title>Admin - Dashboard</title>
 
 </head>
