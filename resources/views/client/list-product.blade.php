@@ -33,7 +33,7 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="product-grid6">
                             <div class="product-image6">
-                                <a href="#">
+                                <a href="{{ route('get.detail.product', $item->id) }}">
                                     <img class="pic-1" src="https://res.cloudinary.com/dx8lbwzhw/image/upload/{{$item->thumbnail}}"
                                          title="Bấm để xem hình ảnh chi tiết">
                                 </a>
@@ -43,7 +43,7 @@
                                 <div class="price">{{number_format($item->price, 0, ',', '.')}} VNĐ</div>
                             </div>
                             <ul class="social">
-                                <li><a href="/Product-Details" data-tip="Xem chi tiết"><i class="fa fa-search"></i></a></li>
+                                <li><a href="{{ route('get.detail.product', $item->id) }}" data-tip="Xem chi tiết"><i class="fa fa-search"></i></a></li>
                                 <li><a href="{{ route('add.shopping.cart', $item->id) }}" class="card-link add-cart"
                                         data-id="{{$item->id}}"
                                         data-name="{{$item->name}}"

@@ -19,7 +19,7 @@ class ArticlesTableSeeder extends Seeder
                'id'=> 1,
                'user_id'=> 1,
                'title' => 'Môi Trường Là Gì, Biện Pháp Bảo Vệ Môi Trường',
-               'thumbnail'=> 'bao-ve-moi-truong_gaeg39.jpg',
+               'thumbnail'=> '20190528-X7nXC70Zeu7v9IBweGI0_lzufcl',
                'description'=> 'Duy trì một môi trường trong lành nơi chúng ta đang sinh sống là việc hết sức quan trọng đối với tất cả mọi người, nhưng đặc biệt quan trọng hơn nếu trẻ em được tìm hiểu về môi trường, vì đây là thế hệ sẽ tạo ra các thay đổi trong tương lai, có thể ngăn chặn hoặc đẩy lùi các vấn đề như hâm nóng toàn cầu hay nạn chặt phá rừng.',
                'detail'=>'Duy trì một môi trường trong lành nơi chúng ta đang sinh sống là việc hết sức quan trọng đối với tất cả mọi người, nhưng đặc biệt quan trọng hơn nếu trẻ em được tìm hiểu về môi trường, vì đây là thế hệ sẽ tạo ra các thay đổi trong tương lai, có thể ngăn chặn hoặc đẩy lùi các vấn đề như hâm nóng toàn cầu hay nạn chặt phá rừng.
 
@@ -55,7 +55,7 @@ Bạn đã khi nào nói chuyện với con về việc bảo vệ môi trườn
                'id'=> 2,
                'user_id'=> 2,
                'title'=> 'Vậy làm sao để bắt đầu lối sống xanh?',
-               'thumbnail'=> 'hands-holding-globe_lby_GratiTuesday_20190723_axe37i.jpg',
+               'thumbnail'=> 'images_k5aq4c',
                'description'=> 'Đây có lẽ một trong những câu hỏi mà mọi người đang đặt ra, nhưng bạn có biết chúng ta đều phải mất 21 ngày để thay đổi một thói quen mới?Và để bắt đầu một thói quen mới, chính mình phải thay đối cách nhìn cuộc sống này, vì chỉ khi ta thay đổi từ trong ta, những thứ xung quanh mới bắt đầu thay đổi. ',
                'detail'=> '1.Thở để cảm.
 
@@ -213,7 +213,7 @@ Thực sự “SÂU SẮC, BIẾT NGHĨ “và nhận thức phải đi cùng vi
                'id'=> 5,
                'user_id'=> 2,
                'title'=> 'Sử dụng túi vải, ống hút tre: Đây là cách đơn giản mà giới trẻ Việt đang làm để bảo vệ môi trường hàng ngày',
-               'thumbnail'=> 'img5032-15216502964411347187774-1521650361834820305226-15282134994171677901078_yii56c.png',
+               'thumbnail'=> '500_F_214490100_ZkWQ5OKhbnd9CDY5dDMYPxnooJxUerY3_n2k3ak',
                'description'=> 'Những hành động nhỏ nhưng thiết thực chắc chắn sẽ góp phần rất lớn trong việc bảo vệ môi trường.
 Lối sống tích cực, đơn giản, thân thiện và gần gũi với môi trường đang là điều mà nhiều bạn trẻ theo đuổi. Sớm nhận thức được những hành động nhỏ sẽ góp phần rất lớn trong việc giảm thiểu ô nhiễm môi trường nên rất nhiều bạn trẻ đã cụ thể hoá việc bảo vệ môi trường thông qua những hành động, thói quen đơn giản hàng ngày.
 

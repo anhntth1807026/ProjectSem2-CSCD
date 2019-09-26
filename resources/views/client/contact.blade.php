@@ -1,6 +1,9 @@
 @extends('client.layout')
 @section('content')
 
+    <div class="">
+        <img class="" src="http://static1.squarespace.com/static/57c3111059cc68dae826a800/5b475fc6352f53728bd5c022/5b47719f575d1fb088625034/1534837889594/zero_waste_leaves_letters_grey.png?format=1500w" style="width:100%;">
+    </div>
     <div class="content-banner" style="padding-top: 76px;">
         <div class="container" style="text-align: center">
             <h2 class="title-page" style="margin-top: 0;

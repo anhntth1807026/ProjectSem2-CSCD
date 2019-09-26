@@ -17,11 +17,12 @@ class ProductDetailController extends Controller
     {
 
         $productDetail = Product::find($id);
-
+        $productHot = Product::orderBy('id', 'desc')->Where('pro_hot', [1])->paginate(4);
         $cateProduct = Category::find($productDetail->pro_category_id);
 
         $data = [
             'productDetail' => $productDetail,
+            'productHot' => $productHot,
             'cateProduct' => $cateProduct
         ];
 
