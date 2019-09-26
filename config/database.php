@@ -63,8 +63,6 @@ return [
             ]) : [],
         ],
 
-<<<<<<< HEAD
-=======
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => '',
@@ -72,7 +70,7 @@ return [
             'port' => '5432',
             'database' => 'zero-waste',
             'username' => 'postgres',
-            'password' => 'Bach@2111',
+            'password' => 'Chungta21@@',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
@@ -80,7 +78,6 @@ return [
             'sslmode' => 'prefer',
         ],
 
->>>>>>> a4f7cbb5f7c7db1177cedae40f680f333cb35f01
 //        'pgsql' => [
 //            'driver' => 'pgsql',
 //            'url' => '',
@@ -96,20 +93,20 @@ return [
 //            'sslmode' => 'prefer',
 //        ],
 
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'url' => 'postgres://qlbftishghpdtm:01928bb89e2699b87d943e85cbf6620167aa1f1513a4a55ecd8bb5a26337436d@ec2-54-221-212-126.compute-1.amazonaws.com:5432/d1b1bie1inu60d',
-            'host' => 'ec2-54-221-212-126.compute-1.amazonaws.com',
-            'port' => '5432',
-            'database' => 'd1b1bie1inu60d',
-            'username' => 'qlbftishghpdtm',
-            'password' => '01928bb89e2699b87d943e85cbf6620167aa1f1513a4a55ecd8bb5a26337436d',
-            'charset' => 'utf8',
-            'prefix' => '',
-            'prefix_indexes' => true,
-            'schema' => 'public',
-            'sslmode' => 'prefer',
-        ],
+//        'pgsql' => [
+//            'driver' => 'pgsql',
+//            'url' => 'postgres://qlbftishghpdtm:01928bb89e2699b87d943e85cbf6620167aa1f1513a4a55ecd8bb5a26337436d@ec2-54-221-212-126.compute-1.amazonaws.com:5432/d1b1bie1inu60d',
+//            'host' => 'ec2-54-221-212-126.compute-1.amazonaws.com',
+//            'port' => '5432',
+//            'database' => 'd1b1bie1inu60d',
+//            'username' => 'qlbftishghpdtm',
+//            'password' => '01928bb89e2699b87d943e85cbf6620167aa1f1513a4a55ecd8bb5a26337436d',
+//            'charset' => 'utf8',
+//            'prefix' => '',
+//            'prefix_indexes' => true,
+//            'schema' => 'public',
+//            'sslmode' => 'prefer',
+//        ],
 
 
         'sqlsrv' => [
