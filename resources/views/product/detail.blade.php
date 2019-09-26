@@ -294,63 +294,7 @@
                             </div>
                         </div>
                     </div>
-                    {{--                    <div class="w3-container">--}}
-                    {{--                        <div class="row w3-row-padding w3-section">--}}
-                    {{--                            <div class="w3-col s3 column">--}}
-                    {{--                                <a href="#ex1" rel="modal:open">--}}
-                    {{--                                    <img class="demo"--}}
-                    {{--                                         src="https://i.pinimg.com/564x/63/de/76/63de7637de6840e0371944a2d06f8d19.jpg"--}}
-                    {{--                                         style="width:100%" alt="Nature" onclick="myFunction(this);">--}}
-                    {{--                                </a>--}}
-                    {{--                                <div id="ex1" class="modal">--}}
-                    {{--                                    <img class="demo"--}}
-                    {{--                                          src="https://i.pinimg.com/564x/63/de/76/63de7637de6840e0371944a2d06f8d19.jpg"--}}
-                    {{--                                          style="width:100%" alt="Nature" onclick="myFunction(this);">--}}
-                    {{--                                    <a href="#" rel="modal:close"></a>--}}
-                    {{--                                </div>--}}
-                    {{--                            </div>--}}
-                    {{--                            <div class="w3-col s3 column">--}}
-                    {{--                                <a href="#ex1" rel="modal:open">--}}
-                    {{--                                    <img class="demo"--}}
-                    {{--                                         src="https://i.pinimg.com/564x/44/df/b6/44dfb6001522c553ee034d74b6d127a3.jpg"--}}
-                    {{--                                         style="width:100%" alt="Snow" onclick="myFunction(this);">--}}
-                    {{--                                </a>--}}
-                    {{--                                <div id="ex1" class="modal">--}}
-                    {{--                                    <img class="demo"--}}
-                    {{--                                         src="https://i.pinimg.com/564x/44/df/b6/44dfb6001522c553ee034d74b6d127a3.jpg"--}}
-                    {{--                                         style="width:100%" alt="Snow" onclick="myFunction(this);">--}}
-                    {{--                                    <a href="#" rel="modal:close"></a>--}}
-                    {{--                                </div>--}}
-                    {{--                            </div>--}}
-                    {{--                            <div class="w3-col s3 column">--}}
-                    {{--                                <a href="#ex1" rel="modal:open">--}}
-                    {{--                                    <img class="demo"--}}
-                    {{--                                         src="https://i.pinimg.com/564x/44/df/b6/44dfb6001522c553ee034d74b6d127a3.jpg"--}}
-                    {{--                                         style="width:100%" alt="Snow" onclick="myFunction(this);">--}}
-                    {{--                                </a>--}}
-                    {{--                                <div id="ex1" class="modal">--}}
-                    {{--                                    <img class="demo"--}}
-                    {{--                                         src="https://i.pinimg.com/564x/44/df/b6/44dfb6001522c553ee034d74b6d127a3.jpg"--}}
-                    {{--                                         style="width:100%" alt="Snow" onclick="myFunction(this);">--}}
-                    {{--                                    <a href="#" rel="modal:close"></a>--}}
-                    {{--                                </div>--}}
-                    {{--                            </div>--}}
-                    {{--                            <div class="w3-col s3 column">--}}
-                    {{--                                <a href="#ex1" rel="modal:open">--}}
-                    {{--                                    <img class="demo"--}}
-                    {{--                                         src="https://i.pinimg.com/564x/44/df/b6/44dfb6001522c553ee034d74b6d127a3.jpg"--}}
-                    {{--                                         style="width:100%" alt="Snow" onclick="myFunction(this);">--}}
-                    {{--                                </a>--}}
-                    {{--                                <div id="ex1" class="modal">--}}
-                    {{--                                    <img class="demo"--}}
-                    {{--                                         src="https://i.pinimg.com/564x/44/df/b6/44dfb6001522c553ee034d74b6d127a3.jpg"--}}
-                    {{--                                         style="width:100%" alt="Snow" onclick="myFunction(this);">--}}
-                    {{--                                    <a href="#" rel="modal:close"></a>--}}
-                    {{--                                </div>--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
-                    {{--                </div>--}}
+
                     <div class="w3-col m6">
                         <p style="font-size: 30px">{{ $productDetail->name }}</p>
                         <div class="rating_price">
@@ -473,91 +417,39 @@
         <br>
         <br>
         <div class="row">
+            @foreach($productHot as $productHots)
             <div class="col-md-3 col-sm-6">
                 <div class="product-grid6">
                     <div class="product-image6">
-                        <a href="#">
+                        <a href="{{ route('get.detail.product', $productHots->id) }}">
                             <img class="pic-1"
-                                 src="https://i.pinimg.com/564x/96/aa/c7/96aac7f9358d1dd68f0814b93edc216b.jpg">
+                                 src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_300,h_350/{{$productHots->thumbnail}}">
                         </a>
                     </div>
                     <div class="product-content">
-                        <h3 class="title"><a href="#">Túi Lưới Đi Chợ 100% Cotton</a></h3>
-                        <div class="price">25,000 Đ
-                            <span>17,000 Đ</span>
-                        </div>
+                        <h3 class="title"><a href="{{ route('get.detail.product', $productHots->id) }}">{{$productHots->name}}</a></h3>
+                        <div class="price">{{number_format($productHots->price, 0, ',' , '.')}}đ</div>
                     </div>
                     <ul class="social">
-                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li>
+                            <a href="{{ route('add.shopping.cart', $productHots->id) }}"
+                               class="card-link add-cart"
+                               data-id="{{$productHots->id}}"
+                               data-name="{{$productHots->name}}"
+                               data-thumbnail="{{$productHots->thumbnail}}"
+                               data-price="{{$productHots->price}}"
+                               data-tip="Thêm vào giỏ hàng"
+                            >
+                                <i class="fa fa-shopping-bag"></i>
+                            </a>
+                        </li>
+
+                        <li><a href="{{ route('get.detail.product', $productHots->id) }}" data-tip="Xem chi tiết sản phẩm"><i
+                                        class="fa fa-eye"></i></a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="product-grid6">
-                    <div class="product-image6">
-                        <a href="#">
-                            <img class="pic-1"
-                                 src="https://i.pinimg.com/564x/13/d2/cb/13d2cb069106fbabd0f3fda0d219e93e.jpg">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="title"><a href="#">Bàn Chải Tre Kiểu Nón Người Lớn</a></h3>
-                        <div class="price">79,000 Đ
-                            <span>75,000 Đ</span>
-                        </div>
-                    </div>
-                    <ul class="social">
-                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="product-grid6">
-                    <div class="product-image6">
-                        <a href="#">
-                            <img class="pic-1"
-                                 src="https://i.pinimg.com/564x/f6/2b/1d/f62b1d689075947e277b87f4b4f8c824.jpg">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="title"><a href="#">Ly thông minh xếp gọn - Silicon an toàn BPA-free & chuẩn FDA -
-                                350ml</a></h3>
-                        <div class="price">200,000 Đ
-                            <span>160,000 Đ</span>
-                        </div>
-                    </div>
-                    <ul class="social">
-                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="product-grid6">
-                    <div class="product-image6">
-                        <a href="#">
-                            <img class="pic-1"
-                                 src="https://i.pinimg.com/564x/4f/4c/7a/4f4c7a32dce52f118aafe432a049772c.jpg">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="title"><a href="#">REFILL Vụn xà bông</a></h3>
-                        <div class="price">400 Đ/1 Miếng
-                            <span>350 Đ/1 Miếng</span>
-                        </div>
-                    </div>
-                    <ul class="social">
-                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <br>
