@@ -14,7 +14,8 @@ class ShoppingCartController extends Controller
     private $vnp_TmnCode = "P1U75DCO"; //Mã website tại VNPAY
     private $vnp_HashSecret = "JCNSINRXUGJYIXAKWWWIBZFIEABHYUDK"; //Chuỗi bí mật
     private $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-    private $vnp_Returnurl = "http://127.0.0.1:8000/checkout-success";
+//    private $vnp_Returnurl = "http://127.0.0.1:8000/checkout-success";
+    private $vnp_Returnurl = "http://zerowastet1808a.herokuapp.com/checkout-success";
 
 //    thêm giỏ hàng
     public function addProduct(Request $request, $id)
