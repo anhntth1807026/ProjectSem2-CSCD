@@ -1,7 +1,41 @@
 @extends('client.layout')
 
 @section('content')
-    <div class="container">
+    <style>
+        /*@media screen and (max-width: 800px) {*/
+        /*    .inputnameform {*/
+        /*        margin-right: 0.01px;*/
+        /*        width: 320px;*/
+        /*    }*/
+
+        /*    .inputageform {*/
+        /*        width: 320px;*/
+        /*    }*/
+        /*}*/
+
+        @media screen and (min-width: 1300px) {
+            .inputnameform {
+                padding-right: 10px
+            }
+
+            .inputageform {
+                padding-left: 10px;
+            }
+
+            .inputphoneform {
+                padding-right: 10px;
+            }
+        }
+
+        @media screen and (min-width: 1300px) {
+            form {
+                margin-right: 350px;
+                margin-left: 350px;
+            }
+        }
+
+    </style>
+    <div class="content">
         <form method="POST" action="{{ route('get.register') }}">
             @csrf
             <div id="register" class="form-container" data-form-container
@@ -23,16 +57,24 @@
                 @endif
                 <div class="input-container">
                     <div class="row form-inline">
-                        <div class="col-12">
-                            <div class="col-6">
-                                <input type="text" name="name" data-min-length="3"
-                                       placeholder="{{ __('Name') }}">
-                            </div>
-                            <div class="col-6">
-                                <input type="number" name="age" data-min-length="1" style="margin-bottom: 31px "
-                                       placeholder="{{ __('Age') }}">
-                            </div>
+                        <div class="col-lg-6 col-12 inputnameform">
+                            <input type="text" name="name" data-min-length="3"
+                                   placeholder="{{ __('Name') }}">
                         </div>
+                        <div class="col-lg-6 col-12 inputageform">
+                            <input type="number" name="age" data-min-length="1" style="margin-bottom: 31px "
+                                   placeholder="{{ __('Age') }}">
+                        </div>
+                        {{--                        --}}{{--                        <div class="col-12">--}}
+                        {{--                        <div class="col-lg-6">--}}
+                        {{--                            <input type="text" name="name" data-min-length="3"--}}
+                        {{--                                   placeholder="{{ __('Name') }}">--}}
+                        {{--                        </div>--}}
+                        {{--                        <div class="col-lg-6">--}}
+                        {{--                            <input type="number" name="age" data-min-length="1" style="margin-bottom: 31px "--}}
+                        {{--                                   placeholder="{{ __('Age') }}">--}}
+                        {{--                        </div>--}}
+                        {{--                        --}}{{--                        </div>--}}
                     </div>
 
                     <div class="row">
@@ -59,21 +101,20 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-12">
-                            <div class="col-6 form-inline">
-                                <input type="number" name="phone" data-min-length="10"
-                                       placeholder="{{ __('Phone') }}">
-                            </div>
-
-                            <div class="col-6">
-                                <select name="gender" class="form-control">
-                                    <option selected value="">Gender</option>
-                                    <option value="Nam">Male</option>
-                                    <option value="Nữ">Female</option>
-                                    <option value="Khác">Other</option>
-                                </select>
-                            </div>
+                        <div class="col-lg-6 form-inline inputphoneform">
+                            <input type="number" name="phone" data-min-length="10"
+                                   placeholder="{{ __('Phone') }}">
                         </div>
+
+                        <div class="col-lg-6" style="margin-top: 13px">
+                            <select name="gender" class="form-control">
+                                <option selected value="">Gender</option>
+                                <option value="Nam">Male</option>
+                                <option value="Nữ">Female</option>
+                                <option value="Khác">Other</option>
+                            </select>
+                        </div>
+
                     </div>
 
                     <div class="row submit-row">

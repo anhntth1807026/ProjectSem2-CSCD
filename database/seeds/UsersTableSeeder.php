@@ -18,18 +18,52 @@ class UsersTableSeeder extends Seeder
          * Add Users
          *
          */
-//        DB::table('users')->truncate();
-//        DB::table('users')->insert([
-//            [
-//                'id' => '1',
-//                'name' => 'Nguyen Van An',
-//                'email' => 'nguyenvanan@gmail.com',
-//                'password' => 'nguyenvanan',
-//                'age' => '20',
-//                'address' => 'Bac Ninh',
-//                'phone' => '0165478912',
-//                'gender' => 'nam',
-//            ],
+        DB::table('users')->truncate();
+        DB::table('users')->insert([
+            [
+                'id' => '1',
+                'name' => 'Nguyen Van An',
+                'email' => 'nguyenvanan@gmail.com',
+                'password' => bcrypt('123456'),
+                'age' => 20,
+                'address' => 'Số 8, Tôn Thất Thuyết, Mỹ Đình, Hà Nội',
+                'phone' => '0165478912',
+                'gender' => 'Nam',
+                'activation_code'=> '156927547115d892c257e8f9',
+                'active'=> true,
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],
+            [
+                'id' => '2',
+                'name' => 'Duong Van Bao',
+                'email' => 'duongvanbao@gmail.com',
+                'password' => bcrypt('123456'),
+                'age' => 28,
+                'address' => 'Ngõ 5, Hồ Tùng Mậu, Mỹ Đình, Hà Nội',
+                'phone' => '0165632781',
+                'gender' => 'Nam',
+                'activation_code'=> '235927547115d892c257e8f9',
+                'active'=> true,
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],
+            [
+                'id' => '3',
+                'name' => 'Tran Thi Chi',
+                'email' => 'tranthichi@gmail.com',
+                'password' => bcrypt('123456'),
+                'age' => 23,
+                'address' => 'Đội 7, Thụy Ứng, Hòa Bình, Hà Nội',
+                'phone' => '0365458974',
+                'gender' => 'Nữ',
+                'activation_code'=> '235327547885d892c257e8f9',
+                'active'=> true,
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],
+        ]);
+
 //            [
 //                'id' => '2',
 //                'name' => 'Duong Thi Anh',
@@ -49,7 +83,6 @@ class UsersTableSeeder extends Seeder
 //                'address' => 'Bac Ninh',
 //                'phone' => '0184655972',
 //                'gender' => 'nam',
-//            ],
 //        ]);
 //        if (config('roles.models.defaultUser')::where('email', '=', 'admin@admin.com')->first() === null) {
 //            $newUser = config('roles.models.defaultUser')::create([
@@ -74,5 +107,6 @@ class UsersTableSeeder extends Seeder
 //            $newUser;
 //            $newUser->attachRole($userRole);
 //        }
+        \Illuminate\Support\Facades\DB::statement("ALTER SEQUENCE users_id_seq RESTART 4");
     }
 }

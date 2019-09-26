@@ -72,7 +72,7 @@ class AdminTransactionController extends Controller
         $start_date = Input::get('startDate');
         $end_date = Input::get('endDate');
         $chart_data = Transaction::select(DB::raw('sum(tr_total) as revenue'), DB::raw('date(created_at) as day'))
-            ->whereRaw('created_at >= "' . $start_date . ' 00:00:00" AND created_at <= "' . $end_date . ' 23:59:59" AND status = 1')
+            ->whereBetween('transactions.created_at', array($start_date . ' 00:00:00', $end_date . ' 23:59:59'))
             ->groupBy('day')
             ->orderBy('day', 'desc')
             ->get();
@@ -80,4 +80,23 @@ class AdminTransactionController extends Controller
         return $chart_data;
     }
 
+    public function getPieChartDataApi()
+    {
+        //DB::connection()->enableQueryLog();
+        $start_date = Input::get('startDate');
+        $end_date = Input::get('endDate');
+//        $chart_data = OrderDetail::select(DB::raw('sum(quantity) as totalQuantity'), DB::raw('product_id as product_id'))
+//            ->whereRaw('created_at >= "'.$start_date.' 00:00:00" AND created_at <= "'.$end_date . ' 23:59:59"')
+//            ->groupBy('product_id')
+//            ->get();
+        $orders = Transaction::whereRaw('tr_status=1')->get();
+        $id = $orders->pluck('id')->all();
+        $chart_data = Order::select(DB::raw('sum(or_quantity) as or_quantity'), 'or_product_id')
+            ->whereBetween('orders.created_at', array($start_date . ' 00:00:00', $end_date . ' 23:59:59'))
+            ->whereIn('or_transaction_id',$id)
+            ->groupBy('or_product_id')
+            ->orderBy('or_quantity', 'desc')
+            ->get();
+        return $chart_data;
+    }
 }

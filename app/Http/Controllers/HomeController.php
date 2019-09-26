@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
@@ -32,9 +33,11 @@ class HomeController extends Controller
 //        ])->get();
         $product = Product::latest()->paginate(8);
         $productHot = Product::orderBy('id', 'desc')->Where('pro_hot', [1])->paginate(8);
+        $blog = Article::paginate(3);
         $viewData = [
             'product' => $product,
-            'productHot' => $productHot
+            'productHot' => $productHot,
+            'blog' => $blog
         ];
         return view('client.home', $viewData);
     }

@@ -3,7 +3,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-3" style="position: sticky; top: 0;">
+            <div class="col-sm-3">
                 <!-- Search form -->
                 <div class="md-form mt-0">
                     <div style="display: flex">
@@ -25,15 +25,15 @@
                     </select>
                 </div>
                 <!--Ranger Slider-->
-
             </div>
-            <div class="col-sm-9">
-                <h2 id="title-category" style="text-align:center; margin: 31px ">Tất cả các sản phẩm</h2>
+            <div class="col-sm-9" style="padding-left: 20px;" >
+                <h2 id="title-category" style="text-align:center; font-family: auto; margin: 31px ">Tất cả các sản phẩm</h2>
+
                 @foreach($list as $item)
                     <div class="col-md-4 col-sm-6">
                         <div class="product-grid6">
                             <div class="product-image6">
-                                <a href="#">
+                                <a href="{{ route('get.detail.product', $item->id) }}">
                                     <img class="pic-1" src="https://res.cloudinary.com/dx8lbwzhw/image/upload/{{$item->thumbnail}}"
                                          title="Bấm để xem hình ảnh chi tiết">
                                 </a>
@@ -43,7 +43,7 @@
                                 <div class="price">{{number_format($item->price, 0, ',', '.')}} VNĐ</div>
                             </div>
                             <ul class="social">
-                                <li><a href="/Product-Details" data-tip="Xem chi tiết"><i class="fa fa-search"></i></a></li>
+                                <li><a href="{{ route('get.detail.product', $item->id) }}" data-tip="Xem chi tiết"><i class="fa fa-search"></i></a></li>
                                 <li><a href="{{ route('add.shopping.cart', $item->id) }}" class="card-link add-cart"
                                         data-id="{{$item->id}}"
                                         data-name="{{$item->name}}"

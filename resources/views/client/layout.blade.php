@@ -39,6 +39,8 @@
     <script src="{{ asset('plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
 
     {{--    <link rel="stylesheet" href="{{Request::is('client/profile') ? '': asset('css/materialize.min.css')}}">--}}
+
+    @stack('styles')
 </head>
 <body>
 <!--Header-->
@@ -49,7 +51,7 @@
             <!-- logo start -->
             <div class="col-md-4 col-sm-12 text-center">
                 <div class="top-logo">
-                    <a><img src="{{ asset('img/logob.jpg') }}" style="width: 170px; height: 70px"></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset('img/logob.jpg') }}" style="width: 170px; height: 70px"></a>
                 </div>
             </div>
             <!-- logo end -->
@@ -60,7 +62,7 @@
                         <ul>
                             <li class="expand"><a href="{{ route('home') }}">Trang Chủ</a>
                             </li>
-                            <li class="expand"><a href="/List-Product">Shop</a>
+                            <li class="expand"><a href="/List-Product">Sản Phẩm</a>
                                 <div class="restrain mega-menu megamenu4">
 											<span>
 												<a class="mega-menu-title"
@@ -75,7 +77,7 @@
 
                             <li class="expand"><a href="/Blog">Bài Viết</a></li>
 
-                            <li class="expand"><a href="">Chính Sách</a>
+                            <li class="expand"><a href="#">Chính Sách</a>
                                 <ul class="restrain sub-menu">
                                     <li><a href="/Policy/Data-Confidentiality">Bảo mật thông tin</a></li>
                                     <li><a href="/Policy/Delivery-Transport">Vận chuyển, giao nhận</a></li>
@@ -106,7 +108,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="">Bài Viết</a></li>
-                                    <li><a href="#">Chính Sách</a>
+                                    <li><a href="">Chính Sách</a>
                                         <ul>
                                             <li><a href="">Bảo mật thông tin</a></li>
                                             <li><a href="">Vận chuyển, giao nhận</a></li>

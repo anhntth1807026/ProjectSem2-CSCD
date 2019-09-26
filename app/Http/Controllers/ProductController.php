@@ -156,12 +156,14 @@ class ProductController extends Controller
         return response()->json(['status' => true, 'message' => "Product deleted successfully"]);
     }
 
-//    public function destroyMultiple(Request $request)
-//    {
+    public function destroyMultiple(Request $request)
+    {
 //        Product::whereIn('id', $request->get('ids'))->delete();
 //        return response()->json(['status' => true, 'message' => "Product deleted successfully"]);
-////        return back();
-//    }
+        Product::destroy(Input::get('ids'));
+        return Input::get('ids');
+//        return back();
+    }
 
     public function getCategories()
     {
