@@ -85,7 +85,7 @@ return [
             'port' => '5432',
             'database' => 'zero-waste',
             'username' => 'postgres',
-            'password' => '2000',
+            'password' => 'Chungta21@@',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,

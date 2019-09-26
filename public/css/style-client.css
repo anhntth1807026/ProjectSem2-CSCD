@@ -1021,8 +1021,9 @@ footer .input-group-addon {
 #BackToTop::after {
     content: "\f06c";
     /*content: "\f299";*/
-    content: "\f18c";
-    font-family: "Segoe UI", Arial, sans-serif;
+    /*content: "\f18c";*/
+    font-family: FontAwesome;
+    font-weight: normal;
     font-style: normal;
     font-size: 35px;
     line-height: 60px;
