@@ -13,7 +13,7 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $article = Article::with('users:id,name')->paginate(6);
+        $article = Article::with('users:id,name')->paginate(3);
 
         return view('admin.article.index')
             ->with('article', $article);
