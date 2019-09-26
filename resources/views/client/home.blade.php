@@ -24,8 +24,8 @@
     <div class="w3-container w3-light-white" style="padding:100px 16px">
         <div class="w3-row-padding">
             <div class="w3-col m6">
-                <div data-aos="zoom-out-up" data-aos-duration="1500"><h2 style="text-align: center">Chào mừng bạn <br>
-                        đến với Zero Waste</h2>
+                <div data-aos="zoom-out-up" data-aos-duration="1500"><h2 style="text-align: center">Chào mừng bạn đến với<br>
+                        Zero Waste</h2>
                     <br>
                     <p style="font-size: 22px;font-kerning: none;font-weight: lighter;text-align: center">
                         Zero Waste là nơi dành cho những ai <br> quan tâm đến lối sống xanh, bền vững và
@@ -144,14 +144,12 @@
                                    data-name="{{$productHots->name}}"
                                    data-thumbnail="{{$productHots->thumbnail}}"
                                    data-price="{{$productHots->price}}"
-                                   data-tip="Add to Cart"
-                                >
+                                   data-tip="Thêm vào giỏ hàng">
                                     <i class="fa fa-shopping-bag"></i>
                                 </a>
                             </li>
 
-                            <li><a href="{{ route('get.detail.product', $productHots->id) }}" data-tip="View Detail"><i
-                                            class="fa fa-eye"></i></a></li>
+                            <li><a href="{{ route('get.detail.product', $productHots->id) }}" data-tip="Xem chi tiết"><i class="fa fa-eye"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -195,13 +193,11 @@
                                    data-name="{{$item->name}}"
                                    data-thumbnail="{{$item->thumbnail}}"
                                    data-price="{{$item->price}}"
-                                   data-tip="Add to Cart"
-                                >
+                                   data-tip="Thêm vào giỏ hàng">
                                     <i class="fa fa-shopping-bag"></i>
                                 </a>
                             </li>
-                            <li><a href="{{ route('get.detail.product', $item->id) }}" data-tip="View Detail"><i
-                                            class="fa fa-eye"></i></a></li>
+                            <li><a href="{{ route('get.detail.product', $item->id) }}" data-tip="Xem chi tiết"><i class="fa fa-eye"></i></a></li>
                         </ul>
                     </div>
                 </div>

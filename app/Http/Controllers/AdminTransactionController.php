@@ -91,12 +91,11 @@ class AdminTransactionController extends Controller
 //            ->get();
         $orders = Transaction::whereRaw('tr_status=1')->get();
         $id = $orders->pluck('id')->all();
-        $chart_data = Order::select(DB::raw('sum(or_quantity) as totalQuantity'), 'or_product_id')
-            ->whereBetween('transactions.created_at', array($start_date . ' 00:00:00', $end_date . ' 23:59:59'))
-//            ->whereBetween('updated_at >= "'.$start_date.' 00:00:00" AND updated_at <= "'.$end_date . ' 23:59:59"')
-            ->whereIn('or_product_id',$id)
-            ->groupBy('tr_product_id')
-            ->orderBy('totalQuantity', 'desc')
+        $chart_data = Order::select(DB::raw('sum(or_quantity) as or_quantity'), 'or_product_id')
+            ->whereBetween('orders.created_at', array($start_date . ' 00:00:00', $end_date . ' 23:59:59'))
+            ->whereIn('or_transaction_id',$id)
+            ->groupBy('or_product_id')
+            ->orderBy('or_quantity', 'desc')
             ->get();
         return $chart_data;
     }

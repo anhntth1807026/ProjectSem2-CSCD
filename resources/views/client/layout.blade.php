@@ -51,7 +51,7 @@
             <!-- logo start -->
             <div class="col-md-4 col-sm-12 text-center">
                 <div class="top-logo">
-                    <a><img src="{{ asset('img/logob.jpg') }}" style="width: 170px; height: 70px"></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset('img/logob.jpg') }}" style="width: 170px; height: 70px"></a>
                 </div>
             </div>
             <!-- logo end -->
