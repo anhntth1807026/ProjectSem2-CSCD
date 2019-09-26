@@ -330,7 +330,7 @@
                            data-thumbnail="{{$productDetail->thumbnail}}"
                            data-price="{{$productDetail->price}}"
                            data-tip="Thêm vào giỏ hàng"
-                           style="font-size: 20px; background-color: lawngreen"
+                           style="font-size: 20px; background-color: #e3ebdb"
                         >
                             <i class="fa fa-shopping-bag"> Thêm vào giỏ hàng</i>
                         </a>
