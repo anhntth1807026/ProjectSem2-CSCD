@@ -10,7 +10,7 @@
                 <li class="breadcrumb-item">
                     <a href="{{route('product.index')}}">Sản Phẩm</a>
                 </li>
-                <li class="breadcrumb-item active">Thêm Sản Phảm</li>
+                <li class="breadcrumb-item active">Thêm Sản Phẩm</li>
             </ol>
         </div>
 
@@ -30,13 +30,13 @@
                     @csrf
                     <div class="row">
                         <div class="col-6 form-group">
-                            <label>Name</label>
+                            <label>Tên</label>
                             <input style="width: 70%" type="text" name="name" class="form-control"
-                                   placeholder="Please enter the name">
+                                   placeholder="Nhập tên sản phẩm">
                         </div>
 
                         <div class="col-6 form-group">
-                            <label for="">Category: </label>
+                            <label for="">Thể Loại: </label>
                             <select style="width: 71%" name="pro_category_id" id="" class="form-control">
                                 <option value="">--Chọn loại sản phẩm--</option>
                                 @if(isset($categories))
@@ -49,29 +49,29 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Description</label>
+                        <label for="exampleInputPassword1">Mô Tả Sản Phẩm</label>
                         <textarea class="form-control" style="height:150px" name="pro_description"
-                                  placeholder="Description"></textarea>
+                                  placeholder="Nhập miêu tả cho sản phẩm"></textarea>
                         <script type="text/javascript">
                             CKEDITOR.replace('pro_description');
                         </script>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Thumbnail</label>
+                        <label for="exampleInputPassword1">Hình Ảnh</label>
                         <input style=" height: 100px" type="file" class="form-control"
                                multiple="multiple" name="thumbnail[]"
-                               placeholder="Thumbnail">
+                               placeholder="Chọn hình ảnh sản phẩm">
                     </div>
                     <div class="row">
                         <div class="col form-group">
-                            <label for="exampleInputPassword1">Quantity</label>
+                            <label for="exampleInputPassword1">Số Lượng</label>
                             <input style="width: 75%" type="number" name="quantity" class="form-control"
-                                   placeholder="Please enter quantity">
+                                   placeholder="Nhập số lượng sản phẩm">
                         </div>
                         <div class="col form-group">
-                            <label for="exampleInputPassword1">Price</label>
+                            <label for="exampleInputPassword1">Giá</label>
                             <input style="width: 70%" type="number" name="price" class="form-control"
-                                   placeholder="Please enter price">
+                                   placeholder="Nhập giá cho sản phẩm">
                         </div>
                         <div class="col form-group">
                             <label for="">Sản phẩm nổi bật</label>
@@ -98,10 +98,7 @@
                             </div>
                         </div>
                     </div>
-
-
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Xác Nhận</button>
                 </form>
             </div>
         </div>
