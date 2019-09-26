@@ -51,10 +51,13 @@
                     <div class="form-group">
                         <label>Description</label>
                         <textarea class="form-control" name="description"
-                                  value="{{ $product->description }}"
+                                  value="{{ $product->pro_description }}"
                                   placeholder="Description">
-                            {{ $product->description }}
+                            {{ $product->pro_description }}
                         </textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('pro_description');
+                        </script>
                     </div>
                     <div class="form-group">
                         <label>Thumbnail</label>

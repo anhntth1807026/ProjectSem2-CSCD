@@ -50,8 +50,11 @@
 
                     <div class="form-group">
                         <label for="exampleInputPassword1">Description</label>
-                        <textarea class="form-control" style="height:150px" name="description"
+                        <textarea class="form-control" style="height:150px" name="pro_description"
                                   placeholder="Description"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('pro_description');
+                        </script>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Thumbnail</label>

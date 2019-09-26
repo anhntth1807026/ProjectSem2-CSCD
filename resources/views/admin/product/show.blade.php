@@ -33,7 +33,10 @@
                 </tr>
                 <tr>
                     <th>Description</th>
-                    <td>{{ $product-> description }}</td>
+                    <td>{{ $product-> pro_description }}</td>
+                    <script type="text/javascript">
+                        CKEDITOR.replace('pro_description');
+                    </script>
                 </tr>
                 <tr>
                     <th>Quantity</th>
