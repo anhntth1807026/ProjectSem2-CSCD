@@ -455,7 +455,7 @@ body, html {
     text-align: center;
     position: relative;
     transition: all .5s ease 0s;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .product-grid6:hover {
@@ -817,6 +817,7 @@ footer .input-group-addon {
 
 /*blog   */
 .product-grid8 {
+    margin: 10px;
     font-family: Poppins, sans-serif;
     position: relative;
     z-index: 1

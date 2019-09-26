@@ -249,26 +249,26 @@
             data.addColumn('string', 'Product Name');
             data.addColumn('number', 'Quantity');
             for (var i = 0; i < 5; i++) {
-                data.addRow([chart_data[i].product.name, Number(chart_data[i].totalQuantity)]);
+                data.addRow([chart_data[i].product.name, Number(chart_data[i].or_quantity)]);
             }
             ;
             var rest = 0;
             for (var i = 5; i < chart_data.length; i++) {
-                rest += Number(chart_data[i].totalQuantity);
+                rest += Number(chart_data[i].or_quantity);
             }
             ;
             var all = 0;
             for (var i = 0; i < chart_data.length; i++) {
-                all += Number(chart_data[i].totalQuantity);
+                all += Number(chart_data[i].or_quantity);
             }
             ;
-            var percentage1 = (chart_data[0].totalQuantity / all) * 100;
+            var percentage1 = (chart_data[0].or_quantity / all) * 100;
             if (percentage1 <= 20) {
-                $('.advice-content-best-seller').html('<span>The <a href="' + '/admin/order?product_id=' + chart_data[0].product_id + '">' + chart_data[0].product.name + '</a> is doing great but compared with all its percentage overall is not too big</span>');
+                $('.advice-content-best-seller').html('<span>The <a href="' + '/admin/order?or_product_id=' + chart_data[0].or_product_id + '">' + chart_data[0].name + '</a> is doing great but compared with all its percentage overall is not too big</span>');
             } else if (percentage1 < 50 && percentage1 > 20) {
-                $('.advice-content-best-seller').html('<span>The <a href="' + '/admin/order?product_id=' + chart_data[0].product_id + '">' + chart_data[0].product.name + '</a> is doing so great this time that you should think of importing more of it</span>');
+                $('.advice-content-best-seller').html('<span>The <a href="' + '/admin/order?or_product_id=' + chart_data[0].or_product_id + '">' + chart_data[0].name + '</a> is doing so great this time that you should think of importing more of it</span>');
             } else if (percentage1 <= 50) {
-                $('.advice-content-best-seller').html('<span>The <a href="' + '/admin/order?product_id=' + chart_data[0].product_id + '">' + chart_data[0].product.name + '</a> takes more than half of your sales, you should not only import more of it but also promoting other products too. Such as <a href="' + '/admin/order?product_id=' + chart_data[1].product_id + '">' + chart_data[1].product.name + '</span>');
+                $('.advice-content-best-seller').html('<span>The <a href="' + '/admin/order?or_product_id=' + chart_data[0].or_product_id + '">' + chart_data[0].name + '</a> takes more than half of your sales, you should not only import more of it but also promoting other products too. Such as <a href="' + '/admin/order?or_product_id=' + chart_data[1].or_product_id + '">' + chart_data[1].product.name + '</span>');
             }
             data.addRow(['Other Products', rest]);
             var options = {
@@ -284,7 +284,7 @@
             function selectHandler(e) {
                 for (var i = 0; i < chart.getSelection().length; i++) {
                     var item = chart.getSelection()[i];
-                    window.location.href = '/admin/order?product_id=' + chart_data[item.row].product_id;
+                    window.location.href = '/admin/order?or_product_id=' + chart_data[item.row].or_product_id;
                 }
             }
         }
