@@ -19,7 +19,7 @@ class ArticlesTableSeeder extends Seeder
                'id'=> 1,
                'user_id'=> 1,
                'title' => 'Môi Trường Là Gì, Biện Pháp Bảo Vệ Môi Trường',
-               'thumbnail'=> 'bao-ve-moi-truong_gaeg39.jpg',
+               'thumbnail'=> '20190528-X7nXC70Zeu7v9IBweGI0_lzufcl',
                'description'=> 'Duy trì một môi trường trong lành nơi chúng ta đang sinh sống là việc hết sức quan trọng đối với tất cả mọi người, nhưng đặc biệt quan trọng hơn nếu trẻ em được tìm hiểu về môi trường, vì đây là thế hệ sẽ tạo ra các thay đổi trong tương lai, có thể ngăn chặn hoặc đẩy lùi các vấn đề như hâm nóng toàn cầu hay nạn chặt phá rừng.',
                'detail'=>'Duy trì một môi trường trong lành nơi chúng ta đang sinh sống là việc hết sức quan trọng đối với tất cả mọi người, nhưng đặc biệt quan trọng hơn nếu trẻ em được tìm hiểu về môi trường, vì đây là thế hệ sẽ tạo ra các thay đổi trong tương lai, có thể ngăn chặn hoặc đẩy lùi các vấn đề như hâm nóng toàn cầu hay nạn chặt phá rừng.
 
@@ -55,7 +55,7 @@ Bạn đã khi nào nói chuyện với con về việc bảo vệ môi trườn
                'id'=> 2,
                'user_id'=> 2,
                'title'=> 'Vậy làm sao để bắt đầu lối sống xanh?',
-               'thumbnail'=> 'hands-holding-globe_lby_GratiTuesday_20190723_axe37i.jpg',
+               'thumbnail'=> 'images_k5aq4c',
                'description'=> 'Đây có lẽ một trong những câu hỏi mà mọi người đang đặt ra, nhưng bạn có biết chúng ta đều phải mất 21 ngày để thay đổi một thói quen mới?Và để bắt đầu một thói quen mới, chính mình phải thay đối cách nhìn cuộc sống này, vì chỉ khi ta thay đổi từ trong ta, những thứ xung quanh mới bắt đầu thay đổi. ',
                'detail'=> '1.Thở để cảm.
 
@@ -87,72 +87,6 @@ Vậy bạn của ngày hôm nay, sẽ chọn câu nói nào cho 20 năm tiếp 
            ],
            [
                'id'=> 3,
-               'user_id'=> 3,
-               'title'=> 'BẠN CÓ BIẾT SỰ KHÁC NHAU GIỮA CÁC KHÁI NIỆM “GREEN”, “SUSTAINABLE”, “ECO-FRIENDLY”, “ETHICAL”, “FAIRTRADE”, “CLEAN”, “ORGANIC”, “NON-TOXIC”, VÀ “CONSCIOUS”?',
-               'thumbnail'=> 'Green-Term-Deposit_original_tccnpd.jpg',
-               'description'=> 'Green = tạm dịch “Xanh”
-
-Sustainable = tạm dịch “Bền vững”
-
-Eco-friendly = tạm dịch “thân thiện với môi trường, sinh thái”
-
-Ethical = tạm dịch “Có đạo đức”
-
-Fairtrade = tạm dịch “Thương mại bình đẳng”
-
-Clean = tạm dịch “Sạch”
-
-Organic = tạm dịch “Hữu cơ”
-
-Non-Toxic = tạm dịch “Không độc hại”
-
-Artisan = tạm dịch “Thủ công”
-
-Conscious = tạm dịch “Có trách nhiệm, có ý thức”
-
-Thoughful = tạm dịch “Sâu sắc, biết nghĩ cho người khác, biết nghĩ xa cho sau nay”',
-               'detail'=> '“XANH”, “THÂN THIỆN VỚI MÔI TRƯỜNG” VÀ “BỀN VỮNG”
-
-Ý nghĩa của từ "XANH" không còn đơn giản chỉ là để nói về một màu sắc. Hiện nay, từ ngữ này được sử dụng một cách liên tục trong ngôn ngữ giao tiếp thông thường để nói về hầu hết tất cả mọi thứ liên quan đến việc đem lại lợi ích cho môi trường, từ các hành động, phong trào cho đến cả trong kiến trúc và thời trang.
-
-“THÂN THIỆN VỚI MÔI TRƯỜNG” thì lại không mang một nghĩa quá rộng. Nó nói tới một thứ gì đó không gây hại cho Trái Đất.
-
-Còn “BỀN VỮNG” lại là thuật ngữ được định nghĩa chính xác nhất ở đây, và nó đại diện cho một phạm vi rộng các vấn đề và hoạt động, theo Liên Hợp Quốc, “Bền vững” có nghĩa là KHÔNG GÂY ẢNH HƯỞNG ĐẾN KHẢ NĂNG, CƠ HỘI CỦA THẾ HỆ TƯƠNG LAI TRONG VIỆC ĐÁP ỨNG, THOẢ MÃN NHU CẦU TRONG CUỘC SỐNG LÚC ĐÓ.
-
-Sự bền vững chủ yếu hướng tới tương lai. Nó nói đến các công cụ hay hành động đang tạo ra giá trị lợi ích cho môi trường, xã hội và kinh tế, đồng thời không sử dụng quá nhiều tài nguyên hoặc gây ô nhiễm. Tất cả các khía cạnh này đều được bao hàm trong một từ “Bền vững”
-
-So với ‘Xanh” và “Thân thiện với môi trường”, “Bền vững” có tiêu chuẩn cao hơn nhiều. Tính bền vững bao gồm các hoạt động thân thiện với môi trường và các sản phẩm xanh, nhưng “Xanh” lại không phải lúc nào cũng có nghĩa là “Bền vững”. Ví dụ, một sản phẩm được làm từ nguyên liệu tái tạo có thể được coi là xanh, nhưng nếu việc phân tích cả vòng đời của sản phẩm này chỉ ra rằng người ta đã phải dùng nhiều năng lượng để sản xuất và vận chuyển món hàng này, và nếu nó chưa có một phương pháp hợp lí để xử lý sản phẩm này sau khi dùng xong thì nó vẫn chưa được xem là bền vững.
-
-Thành thật mà nói, không có nhiều sản phẩm trong thế giới đồ tiêu dùng ngoài kia thực sự bền vững. Mà thay vào đó là một số sản phẩm bền vững hơn một chút khi so sánh với các sản phẩm thay thế của nó.
-
-“SẠCH”, “KHÔNG ĐỘC HẠI” VÀ “HỮU CƠ”
-
-Nhu cầu tăng về các sản phẩm an toàn, chủ yếu là trong ngành công nghiệp chăm sóc sức khỏe và làm đẹp, đã tạo ra các thuật ngữ “SẠCH” và “KHÔNG ĐỘC HẠI”, và chúng khá là tương tự nhau. “Sạch” nói đến các thành phần, tự nhiên hoặc tổng hợp, không có hại cho sức khỏe của bạn. Sản phẩm “Không độc hại” thì không chứa các thành phần có thể gây hại cho sức khỏe hoặc môi trường. Khi nói về các sản phẩm làm đẹp hay sản phẩm làm sạch, sau này Lại Đây sẽ thường sử dụng “Không độc hại”, đơn giản vì nó chính xác và phù hợp hơn so với thuật ngữ lối sống sạch.
-
-“HỮU CƠ” là một thuật ngữ có tính pháp lý, được USDA sử dụng để chứng nhận thực phẩm, sản phẩm làm đẹp và các sản phẩm nông nghiệp khác được sản xuất theo một phương pháp cụ thể - chủ yếu là không có hóa chất tổng hợp có hại cho môi trường và sức khỏe con người. Vì vậy, chúng ta chỉ sử dụng thuật ngữ này khi nói về thực phẩm, nhà hàng, sản phẩm làm đẹp... có sử dụng các thành phần được chứng nhận hữu cơ.
-
-“CÓ ĐẠO ĐỨC”, “THƯƠNG MẠI BÌNH ĐẲNG” VÀ “THỦ CÔNG”
-
-Kể từ những năm 1980, thương mại toàn cầu đã thay đổi tích cực hơn, đặc biệt là ở các khu vực đang phát triển của thế giới.
-
-Nó bắt đầu với phong trào “THƯƠNG MẠI BÌNH ĐẲNG” để bảo vệ nhà sản xuất cà phê, ca cao và chè với mức giá thấp trên thị trường quốc tế. Đây là một thuật ngữ được định nghĩa chính xác và chỉ được sử dụng khi có chứng nhận từ một cơ quan quản lý quốc tế, như Chứng nhận Thương mại bình đẳng, Liên đoàn Thương mại bình đẳng, Trao đổi công bằng, hoặc Tổ chức Thương mại bình đẳng Thế giới. Lại Đây Refill sẽ chỉ sử dụng thuật ngữ này với các sản phẩm đã được chứng nhận và có một logo thể hiện điều này.
-
-Xu hướng Thương mại CÓ ĐẠO ĐỨC nói đến các điều kiện làm việc của công nhân sản xuất quần áo, đồ chơi, thực phẩm và các sản phẩm khác cho các công ty đa quốc gia, cũng như việc họ được trả lương như thế nào cho công việc của mình. Đây là một thuật ngữ rộng không được chứng nhận hay được định nghĩa chính xác nhưng nó vẫn có tác dụng trong việc mô tả chung về loại sản phẩm mà bạn muốn mua.
-
-Thuật ngữ “THỦ CÔNG” đi ngược lại với dây chuyền công nghiệp sản xuất sản phẩm. Các sản phẩm thủ công thường được làm bằng tay và được chế tạo với sự tự động hóa tối thiểu bởi những công nhân lành nghề ở các nước đang phát triển. Tuy nhiên, thực tế là một cái gì đó được làm bằng tay không có nghĩa là nó bền vững.
-
-“CÓ TRÁCH NHIỆM, CÓ Ý THỨC” và “SÂU SẮC, BIẾT NGHĨ”
-
-“CÓ TRÁCH NHIỆM, CÓ Ý THỨC” thường hướng đến nhận thức của người tiêu dùng và tiêu chuẩn cao về sức khoẻ và môi trường, tinh thần. Là người tiêu dùng có trách nhiệm tức là biết cách đọc và hiểu nhãn mắc, thông tin sản phẩm, và biết là với các sản phẩm bền vững, hữu cơ, thân thiện với động vật… thì chi phí bỏ ra sẽ phải cao hơn. “Có trách nhiệm, có ý thức” là từ chỉ về một lối sống, cũng là một từ để mô tả về con người, doanh nghiệp, hay cách nghĩ về đồ vật, chứ không hẳn là nói về sản phẩm cụ thể.
-
-Trong khi đó, “SÂU SẮC, BIẾT NGHĨ” lại hướng về sự quan tâm đến nhu cầu của người khác, được thông tin đầy đủ về 1 đề tài nào đó để ra quyết định hay hình thành 1 quan điểm. “SÂU SẮC, BIẾT NGHĨ” thể hiện hết những ý, những từ nêu trên trong bài này, và nó có thể được xem như một mục tiêu bao quát. “Sâu sắc, biết nghĩ” còn vượt xa hơn cả việc trở thành một người mua hàng và một người tái chế có trách nhiệm. Mua sản phẩm địa phương là tốt, nhưng phương pháp phân tích khi nói về việc đọc các nhãn mác hay chọn loại bao bì thân thiện với môi trường chỉ là điểm khởi đầu.
-
-Thực sự “SÂU SẮC, BIẾT NGHĨ “và nhận thức phải đi cùng việc theo đuổi một lối sống hoàn toàn mới, một lối sống ưu tiên sự tối giản, “less is more”. Chấp nhận “thời trang chậm”, là LỐI SỐNG MÀ VIỆC THIẾT KẾ, SẢN XUẤT, MUA SẮM, SỬ DỤNG CHUYỂN ĐỘNG CHẬM RÃI HƠN, CHÚNG TA MUA ÍT HƠN VÀ TẬP TỪ BỎ NHỮNG MÓN ĐỒ KHÔNG CẦN THIẾT. Tự nuôi trồng thức ăn hoặc mua thực phẩm tại cửa hàng của nông dân. Học cách tự làm các sản phẩm chăm sóc da với nguyên liệu tự nhiên. Làm sạch môi trường sống xung quanh bằng cách loại bỏ các chất gây ô nhiễm và bỏ thói bừa bộn. Bán và tặng những thứ không còn cần thiết với bạn nữa. Chọn cuộc sống với một ngôi nhà nhỏ nằm trong khu phố đi bộ và có phương tiện giao thông công cộng. Đọc nhiều tài liệu, sách báo có chất lượng về các chủ đề môi trường và nhân quyền, và hãy là một công dân “sâu sắc, biết nghĩ cho người khác, biết nghĩ cho sau này”.',
-               'created_at' => '2018-01-12 05:47:42',
-               'updated_at' => '2019-07-12 13:48:52',
-           ],
-           [
-               'id'=> 4,
                'user_id'=> 1,
                'title'=> 'Từ bỏ ống hút nhựa để bảo vệ môi trường: Không phải cứ thay bằng ống tre, inox... là tốt',
                'thumbnail'=> 'photo1552286341605-1552286341918-crop-15522864630421255258773_nzajnp.jpg',
@@ -209,11 +143,77 @@ Nhược điểm duy nhất của ống hút gạo - cũng như ống cỏ và �
                'created_at' => '2018-03-12 09:47:42',
                'updated_at' => '2019-09-21 02:27:32',
            ],
+            [
+                'id'=> 4,
+                'user_id'=> 3,
+                'title'=> 'BẠN CÓ BIẾT SỰ KHÁC NHAU GIỮA CÁC KHÁI NIỆM “GREEN”, “SUSTAINABLE”, “ECO-FRIENDLY”, “ETHICAL”, “FAIRTRADE”, “CLEAN”, “ORGANIC”, “NON-TOXIC”, VÀ “CONSCIOUS”?',
+                'thumbnail'=> 'Green-Term-Deposit_original_tccnpd.jpg',
+                'description'=> 'Green = tạm dịch “Xanh”
+
+Sustainable = tạm dịch “Bền vững”
+
+Eco-friendly = tạm dịch “thân thiện với môi trường, sinh thái”
+
+Ethical = tạm dịch “Có đạo đức”
+
+Fairtrade = tạm dịch “Thương mại bình đẳng”
+
+Clean = tạm dịch “Sạch”
+
+Organic = tạm dịch “Hữu cơ”
+
+Non-Toxic = tạm dịch “Không độc hại”
+
+Artisan = tạm dịch “Thủ công”
+
+Conscious = tạm dịch “Có trách nhiệm, có ý thức”
+
+Thoughful = tạm dịch “Sâu sắc, biết nghĩ cho người khác, biết nghĩ xa cho sau nay”',
+                'detail'=> '“XANH”, “THÂN THIỆN VỚI MÔI TRƯỜNG” VÀ “BỀN VỮNG”
+
+Ý nghĩa của từ "XANH" không còn đơn giản chỉ là để nói về một màu sắc. Hiện nay, từ ngữ này được sử dụng một cách liên tục trong ngôn ngữ giao tiếp thông thường để nói về hầu hết tất cả mọi thứ liên quan đến việc đem lại lợi ích cho môi trường, từ các hành động, phong trào cho đến cả trong kiến trúc và thời trang.
+
+“THÂN THIỆN VỚI MÔI TRƯỜNG” thì lại không mang một nghĩa quá rộng. Nó nói tới một thứ gì đó không gây hại cho Trái Đất.
+
+Còn “BỀN VỮNG” lại là thuật ngữ được định nghĩa chính xác nhất ở đây, và nó đại diện cho một phạm vi rộng các vấn đề và hoạt động, theo Liên Hợp Quốc, “Bền vững” có nghĩa là KHÔNG GÂY ẢNH HƯỞNG ĐẾN KHẢ NĂNG, CƠ HỘI CỦA THẾ HỆ TƯƠNG LAI TRONG VIỆC ĐÁP ỨNG, THOẢ MÃN NHU CẦU TRONG CUỘC SỐNG LÚC ĐÓ.
+
+Sự bền vững chủ yếu hướng tới tương lai. Nó nói đến các công cụ hay hành động đang tạo ra giá trị lợi ích cho môi trường, xã hội và kinh tế, đồng thời không sử dụng quá nhiều tài nguyên hoặc gây ô nhiễm. Tất cả các khía cạnh này đều được bao hàm trong một từ “Bền vững”
+
+So với ‘Xanh” và “Thân thiện với môi trường”, “Bền vững” có tiêu chuẩn cao hơn nhiều. Tính bền vững bao gồm các hoạt động thân thiện với môi trường và các sản phẩm xanh, nhưng “Xanh” lại không phải lúc nào cũng có nghĩa là “Bền vững”. Ví dụ, một sản phẩm được làm từ nguyên liệu tái tạo có thể được coi là xanh, nhưng nếu việc phân tích cả vòng đời của sản phẩm này chỉ ra rằng người ta đã phải dùng nhiều năng lượng để sản xuất và vận chuyển món hàng này, và nếu nó chưa có một phương pháp hợp lí để xử lý sản phẩm này sau khi dùng xong thì nó vẫn chưa được xem là bền vững.
+
+Thành thật mà nói, không có nhiều sản phẩm trong thế giới đồ tiêu dùng ngoài kia thực sự bền vững. Mà thay vào đó là một số sản phẩm bền vững hơn một chút khi so sánh với các sản phẩm thay thế của nó.
+
+“SẠCH”, “KHÔNG ĐỘC HẠI” VÀ “HỮU CƠ”
+
+Nhu cầu tăng về các sản phẩm an toàn, chủ yếu là trong ngành công nghiệp chăm sóc sức khỏe và làm đẹp, đã tạo ra các thuật ngữ “SẠCH” và “KHÔNG ĐỘC HẠI”, và chúng khá là tương tự nhau. “Sạch” nói đến các thành phần, tự nhiên hoặc tổng hợp, không có hại cho sức khỏe của bạn. Sản phẩm “Không độc hại” thì không chứa các thành phần có thể gây hại cho sức khỏe hoặc môi trường. Khi nói về các sản phẩm làm đẹp hay sản phẩm làm sạch, sau này Lại Đây sẽ thường sử dụng “Không độc hại”, đơn giản vì nó chính xác và phù hợp hơn so với thuật ngữ lối sống sạch.
+
+“HỮU CƠ” là một thuật ngữ có tính pháp lý, được USDA sử dụng để chứng nhận thực phẩm, sản phẩm làm đẹp và các sản phẩm nông nghiệp khác được sản xuất theo một phương pháp cụ thể - chủ yếu là không có hóa chất tổng hợp có hại cho môi trường và sức khỏe con người. Vì vậy, chúng ta chỉ sử dụng thuật ngữ này khi nói về thực phẩm, nhà hàng, sản phẩm làm đẹp... có sử dụng các thành phần được chứng nhận hữu cơ.
+
+“CÓ ĐẠO ĐỨC”, “THƯƠNG MẠI BÌNH ĐẲNG” VÀ “THỦ CÔNG”
+
+Kể từ những năm 1980, thương mại toàn cầu đã thay đổi tích cực hơn, đặc biệt là ở các khu vực đang phát triển của thế giới.
+
+Nó bắt đầu với phong trào “THƯƠNG MẠI BÌNH ĐẲNG” để bảo vệ nhà sản xuất cà phê, ca cao và chè với mức giá thấp trên thị trường quốc tế. Đây là một thuật ngữ được định nghĩa chính xác và chỉ được sử dụng khi có chứng nhận từ một cơ quan quản lý quốc tế, như Chứng nhận Thương mại bình đẳng, Liên đoàn Thương mại bình đẳng, Trao đổi công bằng, hoặc Tổ chức Thương mại bình đẳng Thế giới. Lại Đây Refill sẽ chỉ sử dụng thuật ngữ này với các sản phẩm đã được chứng nhận và có một logo thể hiện điều này.
+
+Xu hướng Thương mại CÓ ĐẠO ĐỨC nói đến các điều kiện làm việc của công nhân sản xuất quần áo, đồ chơi, thực phẩm và các sản phẩm khác cho các công ty đa quốc gia, cũng như việc họ được trả lương như thế nào cho công việc của mình. Đây là một thuật ngữ rộng không được chứng nhận hay được định nghĩa chính xác nhưng nó vẫn có tác dụng trong việc mô tả chung về loại sản phẩm mà bạn muốn mua.
+
+Thuật ngữ “THỦ CÔNG” đi ngược lại với dây chuyền công nghiệp sản xuất sản phẩm. Các sản phẩm thủ công thường được làm bằng tay và được chế tạo với sự tự động hóa tối thiểu bởi những công nhân lành nghề ở các nước đang phát triển. Tuy nhiên, thực tế là một cái gì đó được làm bằng tay không có nghĩa là nó bền vững.
+
+“CÓ TRÁCH NHIỆM, CÓ Ý THỨC” và “SÂU SẮC, BIẾT NGHĨ”
+
+“CÓ TRÁCH NHIỆM, CÓ Ý THỨC” thường hướng đến nhận thức của người tiêu dùng và tiêu chuẩn cao về sức khoẻ và môi trường, tinh thần. Là người tiêu dùng có trách nhiệm tức là biết cách đọc và hiểu nhãn mắc, thông tin sản phẩm, và biết là với các sản phẩm bền vững, hữu cơ, thân thiện với động vật… thì chi phí bỏ ra sẽ phải cao hơn. “Có trách nhiệm, có ý thức” là từ chỉ về một lối sống, cũng là một từ để mô tả về con người, doanh nghiệp, hay cách nghĩ về đồ vật, chứ không hẳn là nói về sản phẩm cụ thể.
+
+Trong khi đó, “SÂU SẮC, BIẾT NGHĨ” lại hướng về sự quan tâm đến nhu cầu của người khác, được thông tin đầy đủ về 1 đề tài nào đó để ra quyết định hay hình thành 1 quan điểm. “SÂU SẮC, BIẾT NGHĨ” thể hiện hết những ý, những từ nêu trên trong bài này, và nó có thể được xem như một mục tiêu bao quát. “Sâu sắc, biết nghĩ” còn vượt xa hơn cả việc trở thành một người mua hàng và một người tái chế có trách nhiệm. Mua sản phẩm địa phương là tốt, nhưng phương pháp phân tích khi nói về việc đọc các nhãn mác hay chọn loại bao bì thân thiện với môi trường chỉ là điểm khởi đầu.
+
+Thực sự “SÂU SẮC, BIẾT NGHĨ “và nhận thức phải đi cùng việc theo đuổi một lối sống hoàn toàn mới, một lối sống ưu tiên sự tối giản, “less is more”. Chấp nhận “thời trang chậm”, là LỐI SỐNG MÀ VIỆC THIẾT KẾ, SẢN XUẤT, MUA SẮM, SỬ DỤNG CHUYỂN ĐỘNG CHẬM RÃI HƠN, CHÚNG TA MUA ÍT HƠN VÀ TẬP TỪ BỎ NHỮNG MÓN ĐỒ KHÔNG CẦN THIẾT. Tự nuôi trồng thức ăn hoặc mua thực phẩm tại cửa hàng của nông dân. Học cách tự làm các sản phẩm chăm sóc da với nguyên liệu tự nhiên. Làm sạch môi trường sống xung quanh bằng cách loại bỏ các chất gây ô nhiễm và bỏ thói bừa bộn. Bán và tặng những thứ không còn cần thiết với bạn nữa. Chọn cuộc sống với một ngôi nhà nhỏ nằm trong khu phố đi bộ và có phương tiện giao thông công cộng. Đọc nhiều tài liệu, sách báo có chất lượng về các chủ đề môi trường và nhân quyền, và hãy là một công dân “sâu sắc, biết nghĩ cho người khác, biết nghĩ cho sau này”.',
+                'created_at' => '2018-01-12 05:47:42',
+                'updated_at' => '2019-07-12 13:48:52',
+            ],
            [
                'id'=> 5,
                'user_id'=> 2,
                'title'=> 'Sử dụng túi vải, ống hút tre: Đây là cách đơn giản mà giới trẻ Việt đang làm để bảo vệ môi trường hàng ngày',
-               'thumbnail'=> 'img5032-15216502964411347187774-1521650361834820305226-15282134994171677901078_yii56c.png',
+               'thumbnail'=> '500_F_214490100_ZkWQ5OKhbnd9CDY5dDMYPxnooJxUerY3_n2k3ak',
                'description'=> 'Những hành động nhỏ nhưng thiết thực chắc chắn sẽ góp phần rất lớn trong việc bảo vệ môi trường.
 Lối sống tích cực, đơn giản, thân thiện và gần gũi với môi trường đang là điều mà nhiều bạn trẻ theo đuổi. Sớm nhận thức được những hành động nhỏ sẽ góp phần rất lớn trong việc giảm thiểu ô nhiễm môi trường nên rất nhiều bạn trẻ đã cụ thể hoá việc bảo vệ môi trường thông qua những hành động, thói quen đơn giản hàng ngày.
 

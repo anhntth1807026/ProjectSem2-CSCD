@@ -4,8 +4,8 @@
     <style>
         body, h1, h2, h3, h4, h5, h6, p {
             /*font-family: 'Oxygen', Arial, Helvetica, 'Nimbus Sans L', sans-serif;*/
-            font-family: 'sofia_proregular',sans-serif;
-            line-height: 28px;
+            /*font-family: 'sofia_proregular',sans-serif;*/
+            /*line-height: 28px;*/
         }
 
         p {
@@ -132,7 +132,7 @@
         }
 
         .product-grid6 {
-            font-family: "Segoe UI", Arial, sans-serif;
+            /*font-family: "Segoe UI", Arial, sans-serif;*/
             text-align: center;
             position: relative;
             transition: all .5s ease 0s

@@ -97,8 +97,7 @@ img {
 }
 
 code, kbd, pre, samp {
-    font-family: monospace, monospace;
-    font-size: 1em
+    font-family: "Segoe UI",Arial,sans-serif;    font-size: 1em
 }
 
 hr {
@@ -179,8 +178,7 @@ textarea {
 
 /* End extract */
 html, body {
-    font-family: Verdana, sans-serif;
-    font-size: 15px;
+    font-family: "Segoe UI",Arial,sans-serif;    font-size: 15px;
     line-height: 1.5
 }
 
@@ -213,8 +211,7 @@ h6 {
 }
 
 .w3-serif {
-    font-family: serif
-}
+    font-family: "Segoe UI",Arial,sans-serif;}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Segoe UI", Arial, sans-serif;
@@ -979,8 +976,7 @@ a {
 }
 
 .w3-code, .w3-codespan {
-    font-family: Consolas, "courier new";
-    font-size: 16px
+    font-family: "Segoe UI",Arial,sans-serif;    font-size: 16px
 }
 
 .w3-code {

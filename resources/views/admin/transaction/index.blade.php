@@ -89,6 +89,14 @@
                 </tbody>
             </table>
         </div>
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7" style="">
+                <nav aria-label="Page navigation example">
+                    {{$transactions->links()}}
+                </nav>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>

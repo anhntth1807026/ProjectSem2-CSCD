@@ -170,9 +170,7 @@
 
 <script src="{{asset('js/custom.js')}}"></script>
 <script src="{{asset('js/sb-admin.min.js')}}"></script>
-<script src="{{asset('js/myChart.js')}}"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<script src="{{asset('js/chart.js/dist/Chart.bundle.js')}}"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </body>
 

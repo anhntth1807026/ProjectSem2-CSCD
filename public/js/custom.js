@@ -91,15 +91,9 @@ $(document).ready(function () {
             alert(" Please check at least one product to delete")
         } else {
             if (confirm("Are you sure wanna to process action ?")) {
-                // var strIds = idArr.join(",");
 
-                // switch (action) {
-                //     case '1':
-                //         deleteAll(idArr);
-                //         break;
-                // }
                 $.ajax({
-                    url: '/product/delete-multiple',
+                    url: '/admin/product/delete-multiple',
                     type: 'POST',
                     data: {
                         '_token': $('meta[name= csrf-token]').attr('content'),
