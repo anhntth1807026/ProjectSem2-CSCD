@@ -102,8 +102,7 @@
 .card__collection {
     position: relative;
     display: block;
-    font-family: 'Do Hyeon', sans-serif;
-    overflow: hidden;
+    font-family: "Segoe UI",Arial,sans-serif;    overflow: hidden;
 }
 .card__collection .cards {
     /*width: 300px;*/
