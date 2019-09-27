@@ -75,7 +75,6 @@
                             </table>
                             <div class="row" id="">
                                 <div class="col-md-12">
-                                    <a href="" class="btn">Cập nhật</a>
                                     <a href="{{ asset('/shopping/delete/all') }}" class="btn">Xoá giỏ hàng</a>
                                     <h6 class="pull-right">Tổng tiền cần thanh toán {{ Cart::subtotal() }} <a
                                             href="{{ route('form.pay') }}" class="btn btn-success">Thanh Toán</a></h6>

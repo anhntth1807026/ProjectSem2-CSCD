@@ -21,6 +21,9 @@
                     <i class="fa fa-calendar"></i>&nbsp;
                     <span></span><i class="fa fa-caret-down"></i>
                 </div>
+{{--                <div class="font-weight-bold ml-4 mt-3 text-uppercase">--}}
+{{--                    Total Revenue : <span class="total-revenue"></span> (VND)--}}
+{{--                </div>--}}
             </div>
         </div>
         <div class="table-responsive">
@@ -187,8 +190,55 @@
                         swal('Action failed', 'Cannot retrieve data from API', 'error');
                     }
                 });
+
             });
         });
+
+        // $(function () {
+        //     var start = moment().subtract(29, 'days');
+        //     var end = moment();
+        //     $.ajax({
+        //         url: '/api-get-chart-data?startDate=' + start.format('YYYY-MM-DD') + '&endDate=' + end.format('YYYY-MM-DD'),
+        //         method: 'GET',
+        //         success: function (resp) {
+        //             if (resp.length == 0) {
+        //                 swal('No data exists for line chart', 'Please choose another time range.', 'warning');
+        //                 return;
+        //             }
+        //             ;
+        //             drawChart(resp);
+        //             var totalRevenue = 0;
+        //             var lastRevenue = parseInt(resp[0].revenue);
+        //             var last = resp.length;
+        //             var firstRevenue = parseInt(resp[resp.length - 1].revenue);
+        //             var difference = lastRevenue - firstRevenue;
+        //             // if (difference < 0) {
+        //             //     if (-difference > 100000) {
+        //             //         $('.advice-content').text('Going down considerably => You should check out 5 best-sellers below to have an effective marketing strategy');
+        //             //     } else {
+        //             //         $('.advice-content').text('Going down but unconsiderably => You shouldn\'t be worried too much , keep working on the social media');
+        //             //     }
+        //             // }
+        //             // if (difference > 0) {
+        //             //     if (difference > 2000000) {
+        //             //         $('.advice-content').text('Raising up considerably => You are having an effective marketing strategy! Keep going');
+        //             //     } else {
+        //             //         $('.advice-content').text('Raising up but unconsiderably => You shouldn\'t be worried too much , keep working on the social media');
+        //             //     }
+        //             // }
+        //             for (var i = 0; i < resp.length; i++) {
+        //                 totalRevenue += parseInt(resp[i].revenue);
+        //             }
+        //             ;
+        //             $('.total-revenue').text(totalRevenue);
+        //             $('.total-revenue').formatNumber();
+        //
+        //         },
+        //         error: function () {
+        //             swal('Something is wrong', 'Cannot retrieve data from API', 'error');
+        //         }
+        //     });
+        // });
     </script>
 
 @endsection

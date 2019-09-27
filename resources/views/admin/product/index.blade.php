@@ -36,7 +36,7 @@
             <div class="form-group float-left mr-2">
                 <input type="text" class="form-control mb-2 mr-sm-2" name="keyword"
                        placeholder="Enter keyword to search" value="{{$currentKeyword}}">
-                <input type="hidden" name="currentPage" value="{{$currentPage}}">
+                <input type="hidden" name="currentPages" value="{{$currentPages}}">
             </div>
             <div class="form-group float-left">
                 <button type="submit" id="btn-search" class="btn btn-outline-primary mb-2">Tìm Kiếm</button>

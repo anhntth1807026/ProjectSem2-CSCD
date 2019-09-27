@@ -85,18 +85,18 @@
                                 <div class="form-group">
                                     <div class="col-md-12"><label>Địa chỉ:</label></div>
                                     <div class="col-md-12">
-                                        <input type="text" name="address" class="form-control" value=""/>
+                                        <input type="text" name="address" class="form-control" value="" required />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12"><label>Số điện thoại:</label></div>
                                     <div class="col-md-12"><input type="text" name="phone" class="form-control"
-                                                                  value=""/></div>
+                                                                  value="" required /></div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12"><label>Email:</label></div>
                                     <div class="col-md-12"><input type="text" name="email" class="form-control"
-                                                                  value=""/></div>
+                                                                  value="" required /></div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12"><label for="language">Loại hàng hóa </label></div>

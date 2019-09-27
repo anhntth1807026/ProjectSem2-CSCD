@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container" style="width: 35%">
         <form method="POST" action="{{ route('get.login') }}">
             @csrf
             <div id="login-form" class="form-container" data-form-container

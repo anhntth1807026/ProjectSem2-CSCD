@@ -157,48 +157,48 @@
         </div>
 
         {{--    Tiêu chí của chúng tôi--}}
-        <div class="w3-container" style="padding:70px 16px; background-color: #84b466; color: #0c0c0c" id="about">
-            <h3 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Tiêu Chí Của Chúng Tôi</h3>
-            <p class="w3-center w3-large" data-aos="fade-left" data-aos-duration="1500">Thiên Nhiên Là Chìa Khóa Của
-                Tương
-                Lai</p>
-            <div class="w3-row-padding w3-center" data-aos="fade-up" data-aos-duration="2000" style="margin-top:64px">
-                <div class="w3-quarter">
-                    <img src="{{ asset('/img/new-image/icon-1.webp') }}" alt="" title="Hãy chuẩn bị thật kĩ nhé!">
-                    <p class="w3-large">Byo</p>
-                    <p>Mang theo nhiều chai, lọ nhất có thể.
-                        Rửa sạch và để khô, bóc sạch những nhãn dán nếu vẫn còn.
-                        Nếu không có hoặc quên mang hộp đựng của mình, hãy hỏi và mượn từ phía ban tổ chức địa
-                        phương.</p>
-                </div>
-                <div class="w3-quarter">
-                    <img src="{{ asset('/img/new-image/icon-2.webp') }}" alt=""
-                         title="Đừng quên dán nhãn để đánh dấu hộp của bạn.">
-                    <p class="w3-large">Stick</p>
-                    <p>Dán nhãn vào hộp đựng đồ của bạn, hãy cân nhắc về việc đó.</p>
-                </div>
-                <div class="w3-quarter">
-                    <img src="{{ asset('/img/new-image/icon-3.webp') }}" alt=""
-                         title="Cân để biết trọng lượng của những điều tuyệt vời mà bạn mang tới.">
-                    <p class="w3-large">Tare&Write</p>
-                    <p>Cân hộp của bạn tại quầy.
+{{--        <div class="w3-container" style="padding:70px 16px; background-color: #84b466; color: #0c0c0c" id="about">--}}
+{{--            <h3 class="w3-center" data-aos="fade-right" data-aos-duration="1500">Tiêu Chí Của Chúng Tôi</h3>--}}
+{{--            <p class="w3-center w3-large" data-aos="fade-left" data-aos-duration="1500">Thiên Nhiên Là Chìa Khóa Của--}}
+{{--                Tương--}}
+{{--                Lai</p>--}}
+{{--            <div class="w3-row-padding w3-center" data-aos="fade-up" data-aos-duration="2000" style="margin-top:64px">--}}
+{{--                <div class="w3-quarter">--}}
+{{--                    <img src="{{ asset('/img/new-image/icon-1.webp') }}" alt="" title="Hãy chuẩn bị thật kĩ nhé!">--}}
+{{--                    <p class="w3-large">Byo</p>--}}
+{{--                    <p>Mang theo nhiều chai, lọ nhất có thể.--}}
+{{--                        Rửa sạch và để khô, bóc sạch những nhãn dán nếu vẫn còn.--}}
+{{--                        Nếu không có hoặc quên mang hộp đựng của mình, hãy hỏi và mượn từ phía ban tổ chức địa--}}
+{{--                        phương.</p>--}}
+{{--                </div>--}}
+{{--                <div class="w3-quarter">--}}
+{{--                    <img src="{{ asset('/img/new-image/icon-2.webp') }}" alt=""--}}
+{{--                         title="Đừng quên dán nhãn để đánh dấu hộp của bạn.">--}}
+{{--                    <p class="w3-large">Stick</p>--}}
+{{--                    <p>Dán nhãn vào hộp đựng đồ của bạn, hãy cân nhắc về việc đó.</p>--}}
+{{--                </div>--}}
+{{--                <div class="w3-quarter">--}}
+{{--                    <img src="{{ asset('/img/new-image/icon-3.webp') }}" alt=""--}}
+{{--                         title="Cân để biết trọng lượng của những điều tuyệt vời mà bạn mang tới.">--}}
+{{--                    <p class="w3-large">Tare&Write</p>--}}
+{{--                    <p>Cân hộp của bạn tại quầy.--}}
 
-                        Viết số cân nặng vào nhãn.
-                    </p>
-                </div>
-                <div class="w3-quarter">
-                    <img src="{{ asset('/img/new-image/icon-4.webp') }}" alt=""
-                         title="Đừng bỏ lỡ bước cuối cùng của chương trình nhé!">
-                    <p class="w3-large">REFILL</p>
-                    <p>Cho những sản phẩm bảo vệ môi trường bạn thích vào hộp.
+{{--                        Viết số cân nặng vào nhãn.--}}
+{{--                    </p>--}}
+{{--                </div>--}}
+{{--                <div class="w3-quarter">--}}
+{{--                    <img src="{{ asset('/img/new-image/icon-4.webp') }}" alt=""--}}
+{{--                         title="Đừng bỏ lỡ bước cuối cùng của chương trình nhé!">--}}
+{{--                    <p class="w3-large">REFILL</p>--}}
+{{--                    <p>Cho những sản phẩm bảo vệ môi trường bạn thích vào hộp.--}}
 
-                        Một hộp chỉ được có một loại sản phẩm.
+{{--                        Một hộp chỉ được có một loại sản phẩm.--}}
 
-                        Hãy tính đến việc sẽ có vài sản phẩm cần thời gian để chứa đầy thùng.
-                    </p>
-                </div>
-            </div>
-        </div>
+{{--                        Hãy tính đến việc sẽ có vài sản phẩm cần thời gian để chứa đầy thùng.--}}
+{{--                    </p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
         <!-- Team Section -->
         <div class="container w3-padding-32 w3-center">

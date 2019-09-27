@@ -13,7 +13,7 @@
             </ol>
             <div class="col-auto">
                 <div class="pull-left">
-                    <a class="btn btn-success" href="{{ route('product.create') }}">Tạo Mới Sản</a>
+
                 </div>
             </div>
         </div>
@@ -72,16 +72,16 @@
                     </div>
                 </div>
         </div>
-        <div class="row">
-            <div class="form-group mr-3">
-                <select class="form-control mr-2" id="select-action">
-                    <option value="0">--Chọn thao tác--</option>
-                    <option value="-1">Xoá</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-outline-primary mb-2 delete-all" id="btn-apply-all">Xác Nhận</button>
-            </div>
-        </div>
+{{--        <div class="row">--}}
+{{--            <div class="form-group mr-3">--}}
+{{--                <select class="form-control mr-2" id="select-action">--}}
+{{--                    <option value="0">--Chọn thao tác--</option>--}}
+{{--                    <option value="-1">Xoá</option>--}}
+{{--                </select>--}}
+{{--            </div>--}}
+{{--            <div class="form-group">--}}
+{{--                <button type="button" class="btn btn-outline-primary mb-2 delete-all" id="btn-apply-all">Xác Nhận</button>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
 @endsection

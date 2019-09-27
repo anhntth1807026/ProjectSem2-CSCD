@@ -241,5 +241,6 @@ Hộp cơm làm từ bã mía có thể phân huỷ thành phân bón hữu cơ 
                'updated_at' => '2019-08-13 22:17:30',
            ]
         ]);
+        DB::statement("ALTER SEQUENCE articles_id_seq RESTART 6");
     }
 }

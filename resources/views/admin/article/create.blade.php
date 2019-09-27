@@ -53,6 +53,9 @@
                         <label for="exampleInputPassword1">Detail</label>
                         <textarea class="form-control" style="height:150px" name="detail"
                                   placeholder="Detail"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('detail');
+                        </script>
                     </div>
 
 

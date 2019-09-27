@@ -52,5 +52,6 @@ class ContactsTableSeeder extends Seeder
                 'c_content'=> 'Vâng anh',
             ],
         ]);
+        DB::statement("ALTER SEQUENCE contacts_id_seq RESTART 7");
     }
 }

@@ -70,16 +70,16 @@
                                 <div class="form-group">
                                     <div class="col-md-12"><strong>Địa chỉ:</strong></div>
                                     <div class="col-md-12">
-                                        <input type="text" name="address" class="form-control" value="" />
+                                        <input type="text" name="address" class="form-control" value="" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12"><strong>Số điện thoại:</strong></div>
-                                    <div class="col-md-12"><input type="text" name="phone" class="form-control" value="" /></div>
+                                    <div class="col-md-12"><input type="text" name="phone" class="form-control" value="" required></div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12"><strong>Email:</strong></div>
-                                    <div class="col-md-12"><input type="text" name="email" class="form-control" value="" /></div>
+                                    <div class="col-md-12"><input type="text" name="email" class="form-control" value="" required></div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12"><strong>Ghi chú:</strong></div>
