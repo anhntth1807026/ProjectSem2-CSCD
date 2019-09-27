@@ -89,7 +89,7 @@ class LoginController extends Controller
             'name' => $user->name,
             'provider_id' => $user->id,
             'email' => $user->email,
-            'password' => bcrypt($user->password),
+//            'password' => bcrypt($user->password),
         ]);
     }
 

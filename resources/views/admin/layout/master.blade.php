@@ -22,7 +22,7 @@
 
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Admin</a>
+    <a class="navbar-brand mr-1" href="#">Admin</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -66,6 +66,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-user-circle fa-fw"></i>
+
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                 <ul class="restrain language">
@@ -87,7 +88,6 @@
                 </ul>
 
             </div>
-
         </li>
     </ul>
 
@@ -110,17 +110,17 @@
             <div class="dropdown-container">
                 <a class="dropdown-item" href="{{ route('admin.get.user') }}"><i class="fas fa-user"></i>
                     Thành viên</a>
-                <a class="dropdown-item" href="{{route('category.index')}}"><i class="fas fa-archive"></i>
+                <a class="dropdown-item" href="{{route('category.index')}}"><i class="fa fa-list" aria-hidden="true"></i>
                     Danh mục</a>
                 <a class="dropdown-item" href="{{route('product.index')}}"><i class="fab fa-product-hunt"></i>
                     Sản phẩm</a>
-                <a class="dropdown-item" href="{{route('admin.list.rating')}}"><i class="fab fa-product-hunt"></i>
+                <a class="dropdown-item" href="{{route('admin.list.rating')}}"><i class="fa fa-star" aria-hidden="true"></i>
                     Đánh giá</a>
-                <a class="dropdown-item" href="{{route('article.index')}}"><i class="fab fa-product-hunt"></i>
+                <a class="dropdown-item" href="{{route('article.index')}}"><i class="fa fa-book" aria-hidden="true"></i>
                     Bài viết</a>
-                <a class="dropdown-item" href="{{route('admin.list.transaction')}}"><i class="fab fa-product-hunt"></i>
+                <a class="dropdown-item" href="{{route('admin.list.transaction')}}"><i class="fa fa-bell" aria-hidden="true"></i>
                     Đơn Hàng</a>
-                <a class="dropdown-item" href="{{route('admin.contact')}}"><i class="fab fa-product-hunt"></i>
+                <a class="dropdown-item" href="{{route('admin.contact')}}"><i class="fa fa-phone" aria-hidden="true"></i>
                     Liên hệ</a>
             </div>
         </li>

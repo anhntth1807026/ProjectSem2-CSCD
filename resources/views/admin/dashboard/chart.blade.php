@@ -36,16 +36,16 @@
                     <div class="font-weight-bold ml-4 mt-3 text-uppercase">
                         Total Revenue : <span class="total-revenue"></span> (VND)
                     </div>
-                    <div class="advice ml-5">
-                        <div class="text-danger"><strong>Revenue Status :</strong></div>
-                        <div class="advice-content" style="font-style: italic;"></div>
-                    </div>
+{{--                    <div class="advice ml-5">--}}
+{{--                        <div class="text-danger"><strong>Revenue Status :</strong></div>--}}
+{{--                        <div class="advice-content" style="font-style: italic;"></div>--}}
+{{--                    </div>--}}
                     <div id="linechart_material" style="margin: 30px;"></div>
-                    <div class="advice ml-5 m-b-50">
-                        <div class="text-danger"><strong>Best-sellers Status :</strong></div>
-                        <div class="advice-content-best-seller" style="font-style: italic;"></div>
-                    </div>
-                    <div id="piechart" style="width: 600px; height: 500px;"></div>
+{{--                    <div class="advice ml-5 m-b-50">--}}
+{{--                        <div class="text-danger"><strong>Best-sellers Status :</strong></div>--}}
+{{--                        <div class="advice-content-best-seller" style="font-style: italic;"></div>--}}
+{{--                    </div>--}}
+{{--                    <div id="piechart" style="width: 600px; height: 500px;"></div>--}}
                     <!-- <div id="curve_chart" style="width: 900px; height: 500px"></div> -->
                     @if (Session::has('message'))
                         <div class="alert {{ Session::get('message-class') }}">{{ Session::get('message') }}</div>
@@ -78,20 +78,20 @@
                     var last = resp.length;
                     var firstRevenue = parseInt(resp[resp.length - 1].revenue);
                     var difference = lastRevenue - firstRevenue;
-                    if (difference < 0) {
-                        if (-difference > 10000) {
-                            $('.advice-content').text('Going down considerably => You should check out 5 best-sellers below to have an effective marketing strategy');
-                        } else {
-                            $('.advice-content').text('Going down but unconsiderably => You shouldn\'t be worried too much , keep working on the social media');
-                        }
-                    }
-                    if (difference > 0) {
-                        if (difference > 2000000) {
-                            $('.advice-content').text('Raising up considerably => You are having an effective marketing strategy! Keep going');
-                        } else {
-                            $('.advice-content').text('Raising up but unconsiderably => You shouldn\'t be worried too much , keep working on the social media');
-                        }
-                    }
+                    // if (difference < 0) {
+                    //     if (-difference > 100000) {
+                    //         $('.advice-content').text('Going down considerably => You should check out 5 best-sellers below to have an effective marketing strategy');
+                    //     } else {
+                    //         $('.advice-content').text('Going down but unconsiderably => You shouldn\'t be worried too much , keep working on the social media');
+                    //     }
+                    // }
+                    // if (difference > 0) {
+                    //     if (difference > 2000000) {
+                    //         $('.advice-content').text('Raising up considerably => You are having an effective marketing strategy! Keep going');
+                    //     } else {
+                    //         $('.advice-content').text('Raising up but unconsiderably => You shouldn\'t be worried too much , keep working on the social media');
+                    //     }
+                    // }
                     for (var i = 0; i < resp.length; i++) {
                         totalRevenue += parseInt(resp[i].revenue);
                     }

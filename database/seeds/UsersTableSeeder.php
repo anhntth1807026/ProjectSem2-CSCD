@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class UsersTableSeeder extends Seeder
 {
@@ -106,6 +107,6 @@ class UsersTableSeeder extends Seeder
 //            $newUser;
 //            $newUser->attachRole($userRole);
 //        }
-        \Illuminate\Support\Facades\DB::statement("ALTER SEQUENCE users_id_seq RESTART 4");
+        DB::statement("ALTER SEQUENCE users_id_seq RESTART 4");
     }
 }

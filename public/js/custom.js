@@ -13,6 +13,31 @@ $(document).ready(function () {
 
             $.ajax({
                 url: '/admin/product/' + deleteId,
+                // url: '/admin/user/delete/' + deleteId,
+                method: 'DELETE',
+                // type: 'POST',
+                data: {
+                    '_token': $('meta[name= csrf-token]').attr('content')
+                },
+                success: function (data) {
+                    console.log(data);
+                    currentItem.closest("tr").remove();
+                },
+                error: function (data) {
+                    console.log('err', data);
+                }
+            });
+        }
+    });
+
+    $('.btn-delete').click(function () {
+        if (confirm('Are you sure wanna delete this product ?')) {
+            var deleteId = $(this).attr('id').replace('btn-delete-', '');
+            var currentItem = $(this);
+
+            $.ajax({
+                // url: '/admin/product/' + deleteId,
+                url: '/admin/user/delete/' + deleteId,
                 method: 'DELETE',
                 // type: 'POST',
                 data: {
@@ -29,6 +54,8 @@ $(document).ready(function () {
         }
     });
 });
+
+
 
 $(document).ready(function () {
     // $("#search").on("keyup", function () {
@@ -94,8 +121,82 @@ $(document).ready(function () {
 
                 $.ajax({
                     url: '/admin/product/delete-multiple',
+                    // url: '/admin/article/delete-multiple',
+                    // url: '/admin/contact/delete-multiple',
+                    // url: '/admin/category/delete-multiple',
+                    type: 'POST',
+                    data: {
+                        '_token': $('meta[name= csrf-token]').attr('content'),
+                        'ids': idArr
+                    },
+                    success: function () {
+                        $(".checkbox:checked").each(function () {
+                            $(this).closest("tr").remove();
+                        });
+                        alert("Delete All Success with Ids :" + idArr)
+                    },
+                    error: function () {
+                        alert("Error");
+                    }
+
+                })
+            }
+        }
+    });
+    $('.delete-all').on('click', function (e) {
+
+        var idArr = [];
+        $(".checkbox:checked").each(function () {
+            idArr.push($(this).attr('data-id'));
+        });
+
+        if (idArr.length <= 0) {
+            alert(" Please check at least one product to delete")
+        } else {
+            if (confirm("Are you sure wanna to process action ?")) {
+
+                $.ajax({
+                    // url: '/admin/product/delete-multiple',
                     url: '/admin/article/delete-multiple',
-                    url: '/admin/contact/delete-multiple',
+                    // url: '/admin/contact/delete-multiple',
+                    // url: '/admin/category/delete-multiple',
+                    type: 'POST',
+                    data: {
+                        '_token': $('meta[name= csrf-token]').attr('content'),
+                        'ids': idArr
+                    },
+                    success: function () {
+                        $(".checkbox:checked").each(function () {
+                            $(this).closest("tr").remove();
+                        });
+                        alert("Delete All Success with Ids :" + idArr)
+                    },
+                    error: function () {
+                        alert("Error");
+                    }
+
+                })
+            }
+        }
+    });
+
+
+    $('.delete-all').on('click', function (e) {
+
+        var idArr = [];
+        $(".checkbox:checked").each(function () {
+            idArr.push($(this).attr('data-id'));
+        });
+
+        if (idArr.length <= 0) {
+            alert(" Please check at least one product to delete")
+        } else {
+            if (confirm("Are you sure wanna to process action ?")) {
+
+                $.ajax({
+                    // url: '/admin/product/delete-multiple',
+                    // url: '/admin/article/delete-multiple',
+                    // url: '/admin/contact/delete-multiple',
                     url: '/admin/category/delete-multiple',
                     type: 'POST',
                     data: {
@@ -138,14 +239,13 @@ $(document).ready(function () {
 
 
     $('#btn-search').click(function () {
-        var page = $('input[name="currentPage"]').val();
+        var page = $('input[name="currentPages"]').val();
         var categoryId = $('select[name="categoryId"]').val();
         var keyword = $('input[name="keyword"]').val();
         location.href = `${BASE_URL}/admin/product?page=${page}&pro_category_id=${categoryId}&keyword=${keyword}`;
     });
 
     $('#btn-search-list-product').click(function () {
-
         onSearch()
     });
 
@@ -159,8 +259,6 @@ $(document).ready(function () {
     $('#select-category').on('change', function() {
          onSearch()
     });
-
-
 
     function onSearch() {
         var page = $('input[name="currentPage"]').val();

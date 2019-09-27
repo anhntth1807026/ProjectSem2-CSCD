@@ -35,7 +35,7 @@ class ProductController extends Controller
         $products = $products->paginate(6);
         $data = [
             'list' => $products->appends(Input::except('page')),
-            'currentPage' => $request->get('page'),
+            'currentPages' => $request->get('page'),
             'currentCategoryId' => $request->get('pro_category_id'),
             'currentKeyword' => $request->get('keyword'),
             'categories' => Category::all()

@@ -292,7 +292,7 @@
     </div>
 </footer>
 
-<a id="BackToTop" title="Chuyển Lên Đầu Trang"></a>
+<a id="BackToTop"  style="text-decoration: none" title="Chuyển Lên Đầu Trang"></a>
 
 <script>
     var btn = $('#BackToTop');

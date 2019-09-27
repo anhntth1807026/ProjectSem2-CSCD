@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $category = Category::latest()->paginate(3);
+        $category = Category::latest()->paginate(10);
 
         return view('admin.category.index')
             ->with('category', $category);
@@ -29,7 +29,7 @@ class CategoryController extends Controller
 
         $obj->save();
 
-        return redirect()->route('admin.category.index')
+        return redirect()->route('category.index')
             ->with('success', 'Category created successfully.');
     }
 
@@ -49,7 +49,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $category = Category::find($id);
-        $request->validated();
+//        $request->validated();
 
         $category->update($request->all());
         return response()->json(['status' => true, 'message' => "Category updated successfully"]);

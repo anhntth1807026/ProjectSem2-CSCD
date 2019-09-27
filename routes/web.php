@@ -72,14 +72,13 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
     Route::resource('/product', 'ProductController');
     Route::post('/product/delete-multiple', ['as' =>'product.delete-multiple', 'uses' => 'ProductController@destroyMultiple']);
     Route::post('/article/delete-multiple', ['as' =>'article.delete-multiple', 'uses' => 'ArticleController@destroyMultiple']);
-    Route::post('/contact/delete-multiple', ['as' =>'contact.delete-multiple', 'uses' => 'ContactController@destroyMultiple']);
     Route::post('/category/delete-multiple', ['as' =>'category.delete-multiple', 'uses' => 'CategoryController@destroyMultiple']);
     Route::resource('/category', 'CategoryController');
     Route::resource('/article', 'ArticleController');
     Route::get('/user', 'AdminUserController@index')->name('admin.get.user');
-    Route::get('/user/edit/{id}', 'AdminUserController@editUser')->name('admin.edit.user');
+    Route::get('/user/edit/{id}', 'AdminUserController@edit')->name('admin.edit.user');
     Route::put('/user/update/{id}', 'AdminUserController@update')->name('admin.update.user');
-    Route::delete('/user/delete/{id}', 'AdminUserController@delete')->name('admin.delete.user');
+    Route::delete('/user/delete/{id}', 'AdminUserController@destroy')->name('admin.delete.user');
 });
 
 Route::get('/admin/dashboard', function () {

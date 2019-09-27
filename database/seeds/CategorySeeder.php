@@ -27,5 +27,6 @@ class CategorySeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s'),
             ]
         ]);
+        DB::statement("ALTER SEQUENCE categories_id_seq RESTART 3");
     }
 }

@@ -68,9 +68,7 @@
     {{--    Tiêu chí của chúng tôi--}}
     <div class="w3-container" style="padding:40px 40px; background-color: #f3e1c9; color: #0c0c0c" id="about">
         <h3 class="w3-center" data-aos="fade-right" data-aos-duration="1500"><b>Tiêu Chí Của Chúng Tôi</b></h3>
-        <p class="w3-center w3-large" data-aos="fade-left" data-aos-duration="1500" style="font-size: 20px">Thay vì dùng
-            tiền mặt, bạn có thể mang những chai lọ đã sử dụng với số lượng phù hợp để đổi lấy những sản phẩm của chúng
-            tôi.</p>
+        <p class="w3-center w3-large" data-aos="fade-left" data-aos-duration="1500" style="font-size: 20px">Thay vì vứt bỏ chai lọ đã qua sử dụng, bạn có thể mang chúng đến cửa hàng của chúng tôi để đổi lấy những item giảm giá cho lần mua sắm kế tiếp.</p>
 
         <div class="w3-row-padding w3-center" data-aos="fade-up" data-aos-duration="1200" style="margin-top:50px">
             <div class="w3-quarter">
@@ -130,7 +128,7 @@
                             </a>
                         </div>
                         <div class="product-content">
-                            <h5 class="title"><a
+                            <h5 class="title"><a style="text-decoration: none"
                                         href="{{ route('get.detail.product', $productHots->id) }}">{{$productHots->name}}</a>
                             </h5>
 
@@ -174,7 +172,7 @@
                             </a>
                         </div>
                         <div class="product-content">
-                            <h5 class="title"><a href="{{ route('get.detail.product', $item->id) }}">{{$item->name}}</a>
+                            <h5 class="title"><a style="text-decoration: none" href="{{ route('get.detail.product', $item->id) }}">{{$item->name}}</a>
                             </h5>
 
                             <div class="price">{{number_format($item->price, 0, ',' , '.')}}đ</div>
@@ -227,13 +225,13 @@
                     <div class="col-md-4 col-sm-6" data-aos="zoom-in-right" data-aos-duration="1200">
                         <div class="product-grid8">
                             <div class="product-image8">
-                                <a href="#">
+                                <a href="{{route('get.blogDetail', $item->id)}}">
                                     <img src="https://res.cloudinary.com/dx8lbwzhw/image/upload/w_350,h_250/{{$item -> thumbnail}}"
                                          alt="Norway" style="width:100%">
                                 </a>
                             </div>
                             <div class="product-content">
-                                <h2 class="title"><a href="#" style="text-decoration: none">{{$item -> title}}</a></h2>
+                                <h2 class="title"><a href="{{route('get.blogDetail', $item->id)}}" style="text-decoration: none">{{$item -> title}}</a></h2>
                             </div>
                         </div>
                     </div>

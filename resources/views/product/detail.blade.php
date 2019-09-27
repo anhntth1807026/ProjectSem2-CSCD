@@ -316,12 +316,12 @@
                         <br>
                         <p style="font-size: 25px">{{ number_format($productDetail->price, 0, ',', '.') }}
                             VNĐ</p>
-                        <P>{{ $productDetail->description }}</P>
-                        <p style="font-size: 25px">Số Lượng :
-                        <div class="form-group">
-                            <input style="width: 30%;" type="number" name="qty" class="form-control" min="1" value="1"
-                                   onchange="updateCart(this.value, '{{ $productDetail->rowId }}')">
-                        </div>
+                        <P>{{ $productDetail->pro_description }}</P>
+{{--                        <p style="font-size: 25px">Số Lượng :--}}
+{{--                        <div class="form-group">--}}
+{{--                            <input style="width: 30%;" type="number" name="qty" class="form-control" min="1" value="1"--}}
+{{--                                   onchange="updateCart(this.value, '{{ $productDetail->rowId }}')">--}}
+{{--                        </div>--}}
                         </p>
                         <a href="{{ route('add.shopping.cart', $productDetail->id) }}"
                            class="card-link add-cart w3-button w3-hover-blue-grey w3-margin-bottom"
